@@ -1,0 +1,24 @@
+---
+- hosts: rackspace
+  remote_user: jamalex
+  tasks:
+    - name: print something
+      command: 'echo "{{ testing }}"'
+
+    - name: do some randomness
+      action: randomness
+      register: result
+      retries: 5
+      delay: 0.1
+      until: result.stdout.find("red") != -1
+
+  handlers:
+    - name: randomness
+      shell: "echo {{ item }}"
+
+      with_random_choice:
+      - "go through the door"
+      - "drink from the goblet"
+      - "press the red button"
+      - "do nothing"
+

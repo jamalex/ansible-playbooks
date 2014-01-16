@@ -1,0 +1,62 @@
+# What ports, IPs and protocols we listen for
+Port {{ ssh_port }}
+
+# Use these options to restrict which interfaces/protocols sshd will bind to
+#ListenAddress ::
+#ListenAddress 0.0.0.0
+
+# could add the following if we don't want direct external SSH to this server
+ListenAddress {{ internal_ip }}
+
+Protocol 2
+
+# HostKeys for protocol version 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+
+#Privilege Separation is turned on for security
+UsePrivilegeSeparation yes
+
+# Lifetime and size of ephemeral version 1 server key
+KeyRegenerationInterval 3600
+ServerKeyBits 768
+
+# Logging
+SyslogFacility AUTH
+LogLevel VERBOSE
+
+# from https://calomel.org/openssh.html
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512-96,hmac-sha2-512,hmac-sha2-256-96,hmac-sha2-256,hmac-sha1-96,hmac-sha1
+Compression yes
+
+# Authentication:
+LoginGraceTime 30
+PermitRootLogin {{ permit_root_login }}
+StrictModes yes
+
+RSAAuthentication yes
+PubkeyAuthentication yes
+#AuthorizedKeysFile %h/.ssh/authorized_keys
+
+# Don't read the user's ~/.rhosts and ~/.shosts files
+IgnoreRhosts yes
+
+# Change to no to disable tunnelled clear text passwords
+#PasswordAuthentication yes
+
+X11Forwarding no
+X11DisplayOffset 10
+
+PrintLastLog yes
+
+TCPKeepAlive no
+
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+# AllowUsers ramesh john jason
+# AllowGroups sysadmin dba sudo
+
+# Set this to 'yes' to enable PAM authentication, account processing, and session processing.
+UsePAM yes
