@@ -1,0 +1,12 @@
+---
+
+- name: Install role-specific required system packages.
+  apt: pkg={{ item }} state=installed update-cache=yes
+  with_items: system_packages
+  sudo: True
+
+- name: Install role-specific required Python packages.
+  pip: name={{ item }}
+  with_items: python_packages
+  sudo: True
+

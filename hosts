@@ -1,13 +1,13 @@
 localhost       ansible_connection=local
 
 [rackspace]
-gatehouse       ansible_ssh_host=gatehouse.learningequality.org     external_ip=23.253.32.238       internal_ip=10.209.72.164
-keep            ansible_ssh_host=keep.learningequality.org          external_ip=162.242.175.54      internal_ip=10.209.69.192
-# scriptorium     ansible_ssh_host=scriptorium.learningequality.org   external_ip=162.209.60.139      internal_ip=10.208.0.139    ansible_ssh_port=4242
-field           ansible_ssh_host=field.learningequality.org         external_ip=162.242.161.163     internal_ip=10.208.23.100
-hall            ansible_ssh_host=hall.learningequality.org          external_ip=162.242.164.4       internal_ip=10.208.22.95
-citadel         ansible_ssh_host=citadel.learningequality.org       external_ip=166.78.101.226      internal_ip=10.177.128.131
-dungeon         ansible_ssh_host=dungeon.learningequality.org       external_ip=192.237.241.183     internal_ip=10.208.21.108
+gatehouse       ansible_ssh_host=gatehouse.learningequality.org
+keep            ansible_ssh_host=keep.learningequality.org
+# scriptorium     ansible_ssh_host=scriptorium.learningequality.org ansible_ssh_port=4242
+field           ansible_ssh_host=field.learningequality.org
+hall            ansible_ssh_host=hall.learningequality.org
+citadel         ansible_ssh_host=citadel.learningequality.org
+dungeon         ansible_ssh_host=dungeon.learningequality.org
 
 
 [rackspace:vars]

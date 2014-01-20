@@ -1,0 +1,7 @@
+127.0.0.1   localhost
+127.0.0.1   {{ ansible_hostname }}
+{% for host in groups['rackspace'] %}
+{% if host != ansible_hostname %}
+{{ hostvars[host]['ansible_eth1'].ipv4.address }}  {{ host }}
+{% endif %}
+{% endfor %}

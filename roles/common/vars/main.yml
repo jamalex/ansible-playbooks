@@ -1,0 +1,7 @@
+---
+
+common_system_packages:
+  - git
+  - python-pip
+
+db_server: 48e2bc57fa7b4d9d864b165c70369c434cd8c457.rackspaceclouddb.com

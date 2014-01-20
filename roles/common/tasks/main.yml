@@ -1,7 +1,0 @@
----
-- name: set the remote /etc/hosts to point to each of the servers in the Ansible hosts file
-  #lineinfile: dest=/etc/hosts regexp=.*${item} line="${hostvars.${item}.ansible_default_ipv4.address} ${item}" state=present
-  lineinfile: dest=/etc/hosts_temp regexp=.*{{ item }} line="{{ item }} {{ item }}" state=present
-  # only_if: is_set('${hostvars.${item}.ansible_default_ipv4.address}')
-  with_items: '{{ groups.rackspace }}'
-  sudo: True

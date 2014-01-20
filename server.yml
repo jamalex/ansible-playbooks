@@ -5,3 +5,4 @@
 - hosts: "{{ host }}"
   roles:
     - common
+    - server

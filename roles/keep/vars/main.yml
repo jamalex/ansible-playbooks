@@ -1,0 +1,10 @@
+---
+
+system_packages:
+  - openssl
+  - python-m2crypto
+  - python-mysqldb
+  - apache2
+
+python_packages:
+  - MySQL-python

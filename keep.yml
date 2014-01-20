@@ -2,6 +2,8 @@
 - hosts: rackspace
   tasks:
     ping: True
-- hosts: "{{ host }}"
+- hosts: keep
   roles:
     - common
+    # - server
+    - keep
