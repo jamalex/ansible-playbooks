@@ -1,0 +1,9 @@
+---
+
+system_packages:
+  - varnish
+  - nginx
+  - openssl
+
+# python_packages:
+#   - MySQL-python

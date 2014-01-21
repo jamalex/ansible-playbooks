@@ -2,11 +2,43 @@
 
 - name: Install role-specific required system packages.
   apt: pkg={{ item }} state=installed update-cache=yes
-  with_items: system_packages
+  with_items: "{{ system_packages }}"
   sudo: True
 
 - name: Install role-specific required Python packages.
   pip: name={{ item }}
-  with_items: python_packages
+  with_items: "{{ python_packages }}"
   sudo: True
 
+- name: Setup general Apache config file.
+  template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+  sudo: True
+  signal:
+    - restart apache2
+
+- name: Setup KA Lite Apache site conf file.
+  template: src=ka-lite-apache2-site.j2 dest=/etc/apache2/sites-available/001-kalite
+  sudo: True
+  signal:
+    - restart apache2
+
+- name: Enable the KA Lite Apache site.
+  file: /etc/apache2/sites-enabled/001-kalite src=/etc/apache2/sites-available/001-kalite state=link
+  sudo: True
+  signal:
+    - restart apache2
+
+- name: Remove default dummy Apache conf file.
+  file: /etc/apache2/sites-enabled/000-default state=absent
+  sudo: True
+  signal:
+    - restart apache2
+
+- name: Create the /var/www directory and set it as belonging to the apache user.
+  file: /var/www owner=apache state=directory
+  sudo: True
+
+- name: Clone the KA Lite git repository and checkout the desired branch.
+  sudo: True
+  sudo_user: apache
+  git: clone=git@github.com:learningequality/ka-lite.git branch={{ ka_lite_git_branch }} dest=/var/www/ka-lite

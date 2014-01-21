@@ -8,3 +8,16 @@ system_packages:
 
 python_packages:
   - MySQL-python
+
+
+apache_request_timeout: 300
+
+apache_StartServers: 25
+apache_MinSpareThreads: 25
+apache_MaxSpareThreads: 50
+apache_ThreadLimit: 64
+apache_ThreadsPerChild: 50
+apache_MaxClients: 250
+apache_MaxRequestsPerChild: 1000
+
+ka_lite_git_branch: master

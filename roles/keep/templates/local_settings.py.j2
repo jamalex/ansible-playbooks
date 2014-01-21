@@ -1,0 +1,22 @@
+#DEBUG = True
+
+CENTRAL_SERVER = True
+
+SECRET_KEY = "{{ ka_lite_secret_key }}"
+
+POSTMARK_API_KEY = "postmark_api_key"
+POSTMARK_SENDER = "postmark_sender"
+POSTMARK_TEST_MODE = False
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "{{ ka_lite_db_name }}",
+        "USER": "{{ ka_lite_db_user }}",
+        "PASSWORD": "{{ ka_lite_db_pass }}",
+        "HOST": "{{ db_server_host }}",
+    }
+}
+
+SESSION_ENGINE = "django.contrib.sessions.backends.file"
+
