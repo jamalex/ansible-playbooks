@@ -7,3 +7,12 @@ system_packages:
 
 # python_packages:
 #   - MySQL-python
+
+# recommended to be same (or double) the number of processors
+nginx_worker_processes: 8
+
+# default is 1024
+nginx_worker_connections: 4096
+
+# default is 65
+nginx_keepalive_timeout: 30

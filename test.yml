@@ -1,24 +1,25 @@
 ---
-- hosts: rackspace
-  remote_user: jamalex
-  tasks:
-    - name: print something
-      command: 'echo "{{ testing }}"'
+- hosts: localhost
+  roles:
+    - common
+    - test
+  # tasks:
+  #   - name: print something
+  #     command: 'echo "{{ system_packages }}"'
 
-    - name: do some randomness
-      action: randomness
-      register: result
-      retries: 5
-      delay: 0.1
-      until: result.stdout.find("red") != -1
+  #   - name: do some randomness
+  #     command: 'echo "qqq"'
+  #     register: randomness
+  #     retries: 5
+  #     delay: 0.1
 
-  handlers:
-    - name: randomness
-      shell: "echo {{ item }}"
+  # handlers:
+  #   - name: randomness
+  #     shell: "echo {{ item }}"
 
-      with_random_choice:
-      - "go through the door"
-      - "drink from the goblet"
-      - "press the red button"
-      - "do nothing"
+  #     with_random_choice:
+  #     - "go through the door"
+  #     - "drink from the goblet"
+  #     - "press the red button"
+  #     - "do nothing"
 

@@ -3,7 +3,7 @@
 # ('host' and 'user' must be specified)
 
 - hosts: '{{ host }}'
-  sudo: True
+  sudo: yes
 
   vars_prompt:
     - name: pubkey

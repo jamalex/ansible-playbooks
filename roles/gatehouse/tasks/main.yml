@@ -1,12 +1,27 @@
 ---
 
-- name: Install role-specific required system packages.
-  apt: pkg={{ item }} state=installed update-cache=yes
-  with_items: "{{ system_packages }}"
-  sudo: True
+# nginx with SSL certificates and virtual hosts
+# varnish with caching
 
-# - name: Install role-specific required Python packages.
-#   pip: name={{ item }}
-#   with_items: "{{ python_packages }}"
-#   sudo: True
+- name: Setup general Nginx config file.
+  template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+  sudo: yes
+  notify: restart nginx
+
+- name: Setup KA Lite Nginx config file.
+  template: src=ka-lite-nginx.j2 dest=/etc/nginx/sites-available/ka-lite
+  sudo: yes
+  notify: restart nginx
+
+- name: Enable the KA Lite Apache site.
+  file: /etc/nginx/sites-enabled/001-ka-lite src=/etc/nginx/sites-available/ka-lite state=link
+  sudo: yes
+  notify: restart nginx
+
+- name: Setup FLE Varnish config file.
+  template: src=fle.vcl.j2 dest=/etc/varnish/default.vcl
+  sudo: yes
+  notify: restart varnish
+
+
 

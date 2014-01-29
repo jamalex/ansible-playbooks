@@ -3,5 +3,11 @@
 common_system_packages:
   - git
   - python-pip
+  - htop
+  - iotop
 
 db_server_host: 48e2bc57fa7b4d9d864b165c70369c434cd8c457.rackspaceclouddb.com
+
+citadel_fle_port: 7000
+
+keep_kalite_port: 8008

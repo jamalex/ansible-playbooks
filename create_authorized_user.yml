@@ -6,7 +6,7 @@
 # ansible-playbook -i hosts create_authorized_user.yml -e "host=blah user=_new_user_name_ ansible_ssh_user=root" --ask-pass
 
 - hosts: '{{ host }}'
-  sudo: True
+  sudo: yes
 
   vars_prompt:
     - name: password

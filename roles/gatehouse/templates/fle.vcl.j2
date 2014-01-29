@@ -1,0 +1,130 @@
+
+backend citadel {
+    .host = "citadel";
+    .port = "{{ citadel_fle_port }}";
+}
+
+acl purge {
+    "localhost";
+    "127.0.0.1";
+}
+
+// Called at the beginning of a request, after the complete request has been
+// received and parsed. Its purpose is to decide whether or not to serve the
+// request, how to do it, and, if applicable, which backend to use.
+// return(pass) -> vcl_pass (send request on to the backend)
+// return(lookup) -> vcl_hit or vcl_miss (use the cache, if possible)
+sub vcl_recv {
+
+    // Strip cookies for static/media files:
+    if (req.url ~ "^/(static|media)/") {
+        unset req.http.Cookie;
+        return(lookup);
+    }
+
+    // Remove has_js and Google Analytics __* cookies.
+    set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(__[a-z]+|has_js)=[^;]*", "");
+    // Remove a ";" prefix, if present.
+    set req.http.Cookie = regsub(req.http.Cookie, "^;\s*", "");
+    // Remove empty cookies.
+    if (req.http.Cookie ~ "^\s*$") {
+        unset req.http.Cookie;
+    }
+    if (req.request == "PURGE") {
+        if (!client.ip ~ purge) {
+            error 405 "Not allowed.";
+        }
+        return(lookup);
+    }
+}
+
+sub vcl_hit {
+    if (req.request == "PURGE") {
+        purge;
+        error 200 "Purged.";
+    }
+}
+
+sub vcl_miss {
+    if (req.request == "PURGE") {
+        purge;
+        error 200 "Purged.";
+    }
+}
+
+sub vcl_hash {
+    // add the cookie data to the hash
+    if (req.http.Cookie) {
+        hash_data(req.http.Cookie);
+    }
+}
+
+sub vcl_error {
+    if (obj.status == 750) {
+        set obj.http.Location = obj.response;
+        set obj.status = 302;
+        return(deliver);
+    }
+}
+
+// ban_url
+
+sub vcl_fetch {
+
+    // Strip cookies for static/media files:
+    if (req.url ~ "^/(static|media)/") {
+        unset beresp.http.set-cookie;
+    }
+
+    // You don't wish to cache content for logged in users
+    elsif(req.http.Cookie ~ "(sessionid)") {
+        // if the page is being edited, ban the url to refresh for others
+        if (req.url ~ "\?edit$") {
+            ban_url("^" + regsub(req.url, "\?edit$", ""));
+        }
+        set beresp.http.X-Cacheable = "NO: Got Session";
+        return(hit_for_pass);
+    }
+
+    // You don't wish to cache content for logged in users
+    elsif(req.http.Cookie ~ "(sessionid_central)") {
+        // if the page is being edited, ban the url to refresh for others
+        if (req.url ~ "\?edit$") {
+            ban_url("^" + regsub(req.url, "\?edit$", ""));
+        }
+        set beresp.http.X-Cacheable = "NO: Got Session";
+        return(hit_for_pass);
+    }
+
+    // Do not cache pages that have csrf tokens
+    elsif(beresp.http.Set-Cookie ~ "(csrftoken)") {
+        set beresp.http.X-Cacheable = "NO: CSRF token was set";
+        return(hit_for_pass);
+    }
+
+    // Do not cache pages that have csrf tokens
+    elsif(beresp.http.Set-Cookie ~ "(csrftoken_central)") {
+        set beresp.http.X-Cacheable = "NO: CSRF token was set";
+        return(hit_for_pass);
+    }
+
+    // You are respecting the Cache-Control=private header from the backend
+    elsif (beresp.http.Cache-Control ~ "private") {
+        set beresp.http.X-Cacheable = "NO: Cache-Control=private";
+        return(hit_for_pass);
+    }
+
+    // You are extending the lifetime of the object artificially
+    elsif (beresp.ttl < 1s) {
+        set beresp.ttl   = 300s;
+        set beresp.grace = 300s;
+        set beresp.http.X-Cacheable = "YES: Forced";
+    }
+
+    // Varnish determined the object was cacheable
+    else {
+        set beresp.http.X-Cacheable = "YES";
+    }
+
+    return(deliver);
+}

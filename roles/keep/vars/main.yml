@@ -21,3 +21,7 @@ apache_MaxClients: 250
 apache_MaxRequestsPerChild: 1000
 
 ka_lite_git_branch: master
+ka_lite_path: /var/www/ka-lite
+keep_kalite_port: 8008
+
+postmark_sender: "kalite@adhocsync.com"

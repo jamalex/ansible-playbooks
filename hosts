@@ -8,7 +8,7 @@ field           ansible_ssh_host=field.learningequality.org
 hall            ansible_ssh_host=hall.learningequality.org
 citadel         ansible_ssh_host=citadel.learningequality.org
 dungeon         ansible_ssh_host=dungeon.learningequality.org
-
+kitchen         ansible_ssh_host=kitchen.learningequality.org
 
 [rackspace:vars]
 ansible_ssh_port=22

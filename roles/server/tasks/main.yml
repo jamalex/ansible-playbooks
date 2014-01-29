@@ -1,13 +1,27 @@
 ---
-- name: set the remote /etc/hosts to point to each of the servers in the Ansible hosts file
+
+- name: Set hostname to inventory name.
+  hostname: name={{ inventory_hostname }}
+  sudo: yes
+
+- name: Set the remote /etc/hosts to point to each of the servers in the Ansible hosts file
   template: src=hosts.j2 dest=/etc/hosts
-  sudo: True
+  sudo: yes
 
 - name: Install common required system packages.
   apt: pkg={{ item }} state=installed update-cache=yes
   with_items: common_system_packages
-  sudo: True
+  sudo: yes
 
-- name: Set hostname to inventory name.
-  hostname: name={{ inventory_hostname }}
-  sudo: True
+- name: Install role-specific required system packages.
+  apt: pkg={{ item }} state=installed update-cache=yes
+  with_items: system_packages
+  when: system_packages is defined
+  sudo: yes
+
+- name: Install role-specific required Python packages.
+  pip: name={{ item }}
+  with_items: python_packages
+  when: python_packages is defined
+  sudo: yes
+
