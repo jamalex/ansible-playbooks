@@ -5,7 +5,7 @@
 # these are defaults, in case one of these isn't defined in local_settings_secrets.py
 SECRET_KEY = "not so secret, this one"
 POSTMARK_API_KEY = "Q?"
-_DATABASE_PASSWORD = ""
+DATABASE_PASSWORD = ""
 
 # overwrite the above defaults with the actual values
 from local_settings_secrets import *
@@ -22,7 +22,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "{{ ka_lite_db_name }}",
         "USER": "{{ ka_lite_db_user }}",
-        "PASSWORD": _DATABASE_PASSWORD,
+        "PASSWORD": DATABASE_PASSWORD,
         "HOST": "{{ db_server_host }}",
     }
 }

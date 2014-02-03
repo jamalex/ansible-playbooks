@@ -36,25 +36,42 @@
   sudo_user: www-data
   notify: restart apache2
 
+- name: Ensure a local_settings_secret.py file exists.
+  sudo: yes
+  sudo_user: www-data
+  command: touch {{ ka_lite_path }}/kalite/local_settings_secrets.py creates={{ ka_lite_path }}/kalite/local_settings_secrets.py
+
 - name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_secret_key' is defined.
   lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_secret_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: ka_lite_secret_key is defined
 
+- name: Update the POSTMARK_API_KEY in local_settings_secret.py if variable 'postmark_api_key' is defined.
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^POSTMARK_API_KEY =' line='POSTMARK_API_KEY = "{{ postmark_api_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: postmark_api_key is defined
+
+- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'ka_lite_db_pass' is defined.
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ ka_lite_db_pass }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: ka_lite_db_pass is defined
+
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ ka_lite_path }}/kalite/manage.py clean_pyc"
+  changed_when: False
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.
   shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
-  shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
 
 - name: Migrate KA Lite database to latest schema.
-  shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
   shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
 
 - name: Create/update Django superuser for KA Lite.
-  shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email={{ ka_lite_django_superuser_name }} --username={{ ka_lite_django_superuser_name }} --noinput || {{ ka_lite_path }}/kalite/manage.py passwd {{ ka_lite_django_superuser_name }}"
+  shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_django_superuser_name }} --noinput || {{ ka_lite_path }}/kalite/manage.py passwd {{ ka_lite_django_superuser_name }}"
+
 
 - name: Copy database fixture to server.
   copy: src=data.json dest=/var/www/data.json owner=www-data

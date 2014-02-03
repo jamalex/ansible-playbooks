@@ -3,6 +3,8 @@
 #   tasks:
 #     ping: True
 - hosts: keep
+  vars_files:
+    - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
   roles:
     - common
     # - server
