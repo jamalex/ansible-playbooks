@@ -5,10 +5,10 @@ system_packages:
   - python-m2crypto
   - python-mysqldb
   - apache2
+  - libapache2-mod-wsgi
 
 python_packages:
   - MySQL-python
-
 
 apache_request_timeout: 300
 

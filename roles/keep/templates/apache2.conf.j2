@@ -141,7 +141,7 @@ LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %>s %O" common
 LogFormat "%{Referer}i -> %U" referer
 LogFormat "%{User-agent}i" agent
 
-CustomLog  logs/access_log combined
+CustomLog  ${APACHE_LOG_DIR}/access.log combined
 
 # Include generic snippets of statements
 Include conf.d/

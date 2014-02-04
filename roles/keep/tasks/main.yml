@@ -1,7 +1,30 @@
 ---
 
+- name: Package prerequisites for node.js
+  apt: pkg=python-software-properties state=installed
+  sudo: yes
+
+- name: Add the node.js PPA
+  command: add-apt-repository -y ppa:chris-lea/node.js creates=/etc/apt/sources.list.d/chris-lea-node_js-precise.list
+  sudo: yes
+
+- name: Install nodejs (with npm)
+  action: apt pkg=nodejs state=installed update-cache=yes
+  sudo: yes
+
+- name: Install required Node.js packages.
+  npm: name={{ item }} global=yes
+  with_items:
+    - grunt-cli
+  sudo: yes
+
 - name: Setup general Apache config file.
   template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+  sudo: yes
+  notify: restart apache2
+
+- name: Setup Apache ports config file.
+  template: src=apache-ports.conf.j2 dest=/etc/apache2/ports.conf
   sudo: yes
   notify: restart apache2
 
@@ -28,7 +51,24 @@
   git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_git_branch }} dest={{ ka_lite_path }}
   sudo: yes
   sudo_user: www-data
+  register: kalite_clone
   notify: restart apache2
+
+- name: Install required Node.js packages.
+  npm: name={{ item }} path={{ ka_lite_path }}
+  with_items:
+    - grunt
+    - less
+    - grunt-contrib-less
+  sudo: yes
+  sudo_user: www-data
+
+- name: Compile the static KA Lite resources by running the Gruntfile.
+  command: grunt chdir={{ ka_lite_path }}
+  sudo: yes
+  sudo_user: www-data
+  changed_when: False
+  when: kalite_clone.changed
 
 - name: Put the local_settings.py file into the KA Lite project directory.
   template: src=local_settings.py.j2 dest={{ ka_lite_path }}/kalite/local_settings.py
@@ -65,17 +105,30 @@
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.
   shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
+  register: syncdb
+  changed_when: "'Creating table ' in syncdb.stdout"
 
 - name: Migrate KA Lite database to latest schema.
   shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
+  register: migrate
+  changed_when: "'Migrating forwards' in migrate.stdout"
 
-- name: Create/update Django superuser for KA Lite.
-  shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_django_superuser_name }} --noinput || {{ ka_lite_path }}/kalite/manage.py passwd {{ ka_lite_django_superuser_name }}"
+- name: Create Django superuser for KA Lite if needed.
+  shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_django_superuser_name }} --noinput"
+  when: ka_lite_django_superuser_name is defined
+  register: createsuperuser
+  changed_when: "'Duplicate entry' not in createsuperuser.stderr"
+  failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
 
+- name: Set Django superuser password for KA Lite if needed.
+  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ ka_lite_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ ka_lite_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ ka_lite_django_superuser_pass }}\"); u.save()' | {{ ka_lite_path }}/kalite/manage.py shell"
+  when: ka_lite_django_superuser_name is defined and ka_lite_django_superuser_pass is defined
+  register: setpassword
+  changed_when: "'changed_password' in setpassword.stdout"
 
-- name: Copy database fixture to server.
-  copy: src=data.json dest=/var/www/data.json owner=www-data
+# - name: Copy database fixture to server.
+#   copy: src=data.json dest=/var/www/data.json owner=www-data
 
-- name: Load database fixture.
-  shell: "{{ ka_lite_path }}/kalite/manage.py loaddata /var/www/data.json"
+# - name: Load database fixture.
+#   shell: "{{ ka_lite_path }}/kalite/manage.py loaddata /var/www/data.json"
 
