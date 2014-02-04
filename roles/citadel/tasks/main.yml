@@ -1,0 +1,97 @@
+---
+
+- name: Create the /var/www directory and set it as belonging to the www-data user.
+  file: dest=/var/www owner=www-data state=directory
+  sudo: yes
+
+- name: Clone the FLE Site git repository and checkout the desired branch.
+  git: repo=https://github.com/fle-internal/fle-site.git version={{ fle_site_git_branch }} dest={{ fle_site_path }}
+  sudo: yes
+  sudo_user: www-data
+  notify: restart apache2
+
+- name: Put the local_settings.py file into the FLE Site project directory.
+  template: src=local_settings.py.j2 dest={{ fle_site_path }}/fle_site/local_settings.py
+  sudo: yes
+  sudo_user: www-data
+  notify: restart apache2
+
+- name: Ensure a local_settings_secret.py file exists.
+  sudo: yes
+  sudo_user: www-data
+  command: touch {{ fle_site_path }}/fle_site/local_settings_secrets.py creates={{ fle_site_path }}/fle_site/local_settings_secrets.py
+
+- name: Update the SECRET_KEY in local_settings_secret.py if variable 'fle_site_secret_key' is defined.
+  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ fle_site_secret_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: fle_site_secret_key is defined
+
+- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'fle_site_db_pass' is defined.
+  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ fle_site_db_pass }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: fle_site_db_pass is defined
+
+
+- name: Install Python package requirements
+  pip: requirements={{ fle_site_path }}/requirements.txt
+  sudo: yes
+
+- name: Find the location of the installed Django package.
+  command: "python -c 'import os, django; print os.path.dirname(django.__file__)'"
+  register: django_location
+  changed: False
+
+- name: Setup general Apache config file.
+  template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+  sudo: yes
+  notify: restart apache2
+
+- name: Setup Apache ports config file.
+  template: src=apache-ports.conf.j2 dest=/etc/apache2/ports.conf
+  sudo: yes
+  notify: restart apache2
+
+- name: Setup FLE Site Apache site conf file.
+  template: src=fle-site-apache2-site.j2 dest=/etc/apache2/sites-available/002-fle_site
+  sudo: yes
+  notify: restart apache2
+
+- name: Enable the FLE Site Apache site.
+  file: dest=/etc/apache2/sites-enabled/002-fle_site src=/etc/apache2/sites-available/002-fle_site state=link
+  sudo: yes
+  notify: restart apache2
+
+- name: Remove default dummy Apache conf file.
+  file: dest=/etc/apache2/sites-enabled/000-default state=absent
+  sudo: yes
+  notify: restart apache2
+
+
+- name: Clear any old pyc files left over from an old branch or version.
+  shell: "{{ fle_site_path }}/manage.py clean_pyc"
+  changed_when: False
+
+- name: Run syncdb on FLE Site database to ensure it is initialized.
+  shell: "{{ fle_site_path }}/manage.py syncdb --noinput"
+  register: syncdb
+  changed_when: "'Creating table ' in syncdb.stdout"
+
+- name: Migrate FLE Site database to latest schema.
+  shell: "{{ fle_site_path }}/manage.py migrate --merge"
+  register: migrate
+  changed_when: "'Migrating forwards' in migrate.stdout"
+
+- name: Create Django superuser for FLE Site if needed.
+  shell: "{{ fle_site_path }}/manage.py createsuperuser --email=admin@learningequality.org --username={{ fle_site_django_superuser_name }} --noinput"
+  when: fle_site_django_superuser_name is defined
+  register: createsuperuser
+  changed_when: "'Duplicate entry' not in createsuperuser.stderr"
+  failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
+
+- name: Set Django superuser password for FLE Site if needed.
+  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ fle_site_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ fle_site_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ fle_site_django_superuser_pass }}\"); u.save()' | {{ fle_site_path }}/manage.py shell"
+  when: fle_site_django_superuser_name is defined and fle_site_django_superuser_pass is defined
+  register: setpassword
+  changed_when: "'changed_password' in setpassword.stdout"

@@ -1,0 +1,35 @@
+---
+
+system_packages:
+  - python-mysqldb
+  - apache2
+  - libapache2-mod-wsgi
+  - python-imaging
+  - gcc
+  - libjpeg62
+  - libjpeg62-dev
+  - libfreetype6
+  - libfreetype6-dev
+  - zlib1g-dev
+  - python-dev
+
+python_packages:
+  - MySQL-python
+
+apache_request_timeout: 300
+
+apache_StartServers: 25
+apache_MinSpareThreads: 25
+apache_MaxSpareThreads: 50
+apache_ThreadLimit: 64
+apache_ThreadsPerChild: 50
+apache_MaxClients: 250
+apache_MaxRequestsPerChild: 1000
+
+fle_site_git_branch: master
+fle_site_path: /var/www/fle-site
+citadel_flesite_port: 8008
+
+fle_site_db_name: "fle_site"
+fle_site_db_user: "fle_site"
+
