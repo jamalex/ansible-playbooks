@@ -1,0 +1,15 @@
+---
+- hosts: "{{ host }}"
+  # port: 22
+  vars:
+    sshd_permit_root_login: "yes" # this should be switched to "no" once we make sure ssh keys are set up
+    sshd_password_authentication: "yes" # this should be switched to "no" once we make sure ssh keys are set up
+    ansible_ssh_port: 22
+  roles:
+    - common
+  tasks:
+    - name: Configure SSHD for the first time (will change SSH listening port from 22 to 4242)
+      template: src=roles/server/templates/sshd_config.j2 dest=/etc/ssh/sshd_config
+      sudo: yes
+      notify:
+        - restart ssh

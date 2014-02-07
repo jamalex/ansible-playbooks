@@ -25,3 +25,26 @@
   when: python_packages is defined
   sudo: yes
 
+- name: Add SSH ports to ufw rules.
+  ufw: policy=allow to_port={{ item }}
+  with_items:
+    - "{{ alternate_sshd_port }}"
+    - 22
+  sudo: yes
+
+- name: Add role-specific ports to ufw rules.
+  ufw: policy=allow to_port={{ item }}
+  with_items: allowed_ports
+  when: allowed_ports is defined
+  sudo: yes
+
+- name: Check UFW status.
+  command: ufw status
+  sudo: yes
+  register: ufw_status
+  changed_when: False
+
+- name: Enable UFW.
+  command: ufw --force enable
+  sudo: yes
+  when: "'Status: inactive' in ufw_status.stdout"

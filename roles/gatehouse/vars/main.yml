@@ -5,9 +5,6 @@ system_packages:
   - nginx
   - openssl
 
-# python_packages:
-#   - MySQL-python
-
 # recommended to be same (or double) the number of processors
 nginx_worker_processes: 8
 
@@ -16,3 +13,59 @@ nginx_worker_connections: 4096
 
 # default is 65
 nginx_keepalive_timeout: 30
+
+# this is the certificate name to be used in the Nginx config
+nginx_ssl_certificate_name_to_use: multi_domain_feb_2014
+
+# this is the certificate to generate a key and csr for
+nginx_ssl_certificate_name_to_install: multi_domain_feb_2014
+
+ssl_certificate_domains:
+  - learningequality.org
+  - kalite.learningequality.org
+  - kalite.adhocsync.com
+  - forums.learningequality.org
+
+primary_ssl_certificate_domain: learningequality.org
+
+
+allowed_ports:
+  - 80
+  - 443
+
+proxy_backends:
+
+  - name: citadel_fle_site
+    host: citadel
+    port: "{{ citadel_flesite_port }}"
+
+  - name: keep_ka_lite
+    host: keep
+    port: "{{ keep_kalite_port }}"
+
+
+virtual_hosts:
+
+  - hosts:
+      - learningequality.org
+    locations:
+      - path: /
+        backend: citadel_fle_site
+        varnish: yes
+    force_https: yes
+
+  - hosts:
+      - kalite.learningequality.org
+    locations:
+      - path: /
+        backend: keep_ka_lite
+    force_https: yes
+
+  - hosts:
+      - kalite.adhocsync.com
+    locations:
+      - path: = /
+        redirect: https://kalite.learningequality.org
+      - path: /
+        backend: keep_ka_lite
+    allow_https: yes

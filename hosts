@@ -11,5 +11,7 @@ dungeon         ansible_ssh_host=dungeon.learningequality.org
 kitchen         ansible_ssh_host=kitchen.learningequality.org
 
 [rackspace:vars]
-ansible_ssh_port=22
+# these need to be the sae (we need alternate_sshd_port for configuring SSHD)
+ansible_ssh_port=4242
+alternate_sshd_port=4242
 

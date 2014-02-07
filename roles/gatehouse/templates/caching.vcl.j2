@@ -1,14 +1,4 @@
 
-backend citadel {
-    .host = "citadel";
-    .port = "{{ citadel_fle_port }}";
-}
-
-acl purge {
-    "localhost";
-    "127.0.0.1";
-}
-
 // Called at the beginning of a request, after the complete request has been
 // received and parsed. Its purpose is to decide whether or not to serve the
 // request, how to do it, and, if applicable, which backend to use.
@@ -30,26 +20,7 @@ sub vcl_recv {
     if (req.http.Cookie ~ "^\s*$") {
         unset req.http.Cookie;
     }
-    if (req.request == "PURGE") {
-        if (!client.ip ~ purge) {
-            error 405 "Not allowed.";
-        }
-        return(lookup);
-    }
-}
 
-sub vcl_hit {
-    if (req.request == "PURGE") {
-        purge;
-        error 200 "Purged.";
-    }
-}
-
-sub vcl_miss {
-    if (req.request == "PURGE") {
-        purge;
-        error 200 "Purged.";
-    }
 }
 
 sub vcl_hash {
@@ -59,15 +30,13 @@ sub vcl_hash {
     }
 }
 
-sub vcl_error {
-    if (obj.status == 750) {
-        set obj.http.Location = obj.response;
-        set obj.status = 302;
-        return(deliver);
-    }
-}
-
-// ban_url
+// sub vcl_error {
+//     if (obj.status == 750) {
+//         set obj.http.Location = obj.response;
+//         set obj.status = 302;
+//         return(deliver);
+//     }
+// }
 
 sub vcl_fetch {
 

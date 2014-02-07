@@ -101,6 +101,7 @@
 
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ ka_lite_path }}/kalite/manage.py clean_pyc"
+  sudo: yes
   changed_when: False
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.

@@ -8,6 +8,9 @@
 - name: restart varnish
   service: name=varnish state=restarted
   sudo: yes
-- name: restart sshd
-  service: name=sshd state=restarted
+- name: clear varnish cache
+  command: varnishadm 'ban req.url ~ /'
+  sudo: yes
+- name: restart ssh
+  service: name=ssh state=restarted
   sudo: yes

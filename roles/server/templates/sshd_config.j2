@@ -1,12 +1,12 @@
 # What ports, IPs and protocols we listen for
-Port {{ ssh_port }}
+Port {{ alternate_sshd_port }}
 
 # Use these options to restrict which interfaces/protocols sshd will bind to
 #ListenAddress ::
 #ListenAddress 0.0.0.0
 
 # could add the following if we don't want direct external SSH to this server
-ListenAddress {{ internal_ip }}
+# ListenAddress { internal_ip }
 
 Protocol 2
 
@@ -26,14 +26,11 @@ ServerKeyBits 768
 SyslogFacility AUTH
 LogLevel VERBOSE
 
-# from https://calomel.org/openssh.html
-Ciphers aes256-ctr,aes192-ctr,aes128-ctr
-MACs hmac-sha2-512-96,hmac-sha2-512,hmac-sha2-256-96,hmac-sha2-256,hmac-sha1-96,hmac-sha1
 Compression yes
 
 # Authentication:
 LoginGraceTime 30
-PermitRootLogin {{ permit_root_login }}
+PermitRootLogin {{ sshd_permit_root_login }}
 StrictModes yes
 
 RSAAuthentication yes
@@ -44,7 +41,7 @@ PubkeyAuthentication yes
 IgnoreRhosts yes
 
 # Change to no to disable tunnelled clear text passwords
-#PasswordAuthentication yes
+PasswordAuthentication {{ sshd_password_authentication }}
 
 X11Forwarding no
 X11DisplayOffset 10

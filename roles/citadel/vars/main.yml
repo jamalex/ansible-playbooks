@@ -28,8 +28,9 @@ apache_MaxRequestsPerChild: 1000
 
 fle_site_git_branch: master
 fle_site_path: /var/www/fle-site
-citadel_flesite_port: 8008
 
 fle_site_db_name: "fle_site"
 fle_site_db_user: "fle_site"
 
+allowed_ports:
+  - "{{ citadel_flesite_port }}"

@@ -41,7 +41,7 @@
 - name: Find the location of the installed Django package.
   command: "python -c 'import os, django; print os.path.dirname(django.__file__)'"
   register: django_location
-  changed: False
+  changed_when: False
 
 - name: Setup general Apache config file.
   template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
@@ -71,6 +71,7 @@
 
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ fle_site_path }}/manage.py clean_pyc"
+  sudo: yes
   changed_when: False
 
 - name: Run syncdb on FLE Site database to ensure it is initialized.

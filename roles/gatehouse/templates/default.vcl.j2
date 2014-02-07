@@ -1,0 +1,22 @@
+{% for backend in proxy_backends %}
+backend {{ backend.name }} {
+    .host = "{{ backend.host }}";
+    .port = "{{ backend.port }}";
+}
+{% endfor %}
+
+sub vcl_recv {
+
+    if (! req.http.X-Custom-Backend) {
+        error 404 "Need an X-Custom-Backend header";
+    }
+
+    {% for backend in proxy_backends %}
+    if (req.http.X-Custom-Backend == "{{ backend.name }}") {
+        set req.backend = {{ backend.name }};
+    }
+    {% endfor %}
+
+}
+
+include "caching.vcl";

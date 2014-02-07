@@ -55,7 +55,10 @@ http {
     # proxy_buffers # TODO: deal with the response from your upstream
     # (Notice that there is an upper limit for what nginx will buffer, even on disk, before it transfer it synchronously to the client)
 
-    proxy_buffers
+    # proxy_buffers
+
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
 
     ##
     # Virtual Host Configs
