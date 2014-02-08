@@ -6,13 +6,13 @@ system_packages:
   - openssl
 
 # recommended to be same (or double) the number of processors
-nginx_worker_processes: 8
+nginx_worker_processes: 16
 
 # default is 1024
 nginx_worker_connections: 4096
 
 # default is 65
-nginx_keepalive_timeout: 30
+nginx_keepalive_timeout: 65
 
 # this is the certificate name to be used in the Nginx config
 nginx_ssl_certificate_name_to_use: multi_domain_feb_2014
@@ -76,6 +76,15 @@ virtual_hosts:
     locations:
       - path: /
         backend: keep_ka_lite
+      - path: = /
+        backend: keep_ka_lite
+        varnish: yes
+      - path: /faq
+        backend: keep_ka_lite
+        varnish: yes
+      - path: /content
+        backend: keep_ka_lite
+        varnish: yes
     force_https: yes
 
   - hosts:

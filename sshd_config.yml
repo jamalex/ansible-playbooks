@@ -1,10 +1,9 @@
 ---
-- hosts: "{{ host }}"
-  # port: 22
+- hosts: "{{ host|default('rackspace') }}"
   vars:
-    sshd_permit_root_login: "yes" # this should be switched to "no" once we make sure ssh keys are set up
-    sshd_password_authentication: "yes" # this should be switched to "no" once we make sure ssh keys are set up
-    ansible_ssh_port: 22
+    sshd_permit_root_login: "no"
+    sshd_password_authentication: "no"
+    # ansible_ssh_port: 22
   roles:
     - common
   tasks:

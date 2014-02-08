@@ -39,9 +39,6 @@ upstream {{ backend.name }} {
 
                 {% else %}
 
-                    access_log /var/log/nginx/access.log;
-                    error_log /var/log/nginx/error.log;
-
                     rewrite_log on;
 
                     proxy_set_header   Host             $host;
@@ -59,6 +56,10 @@ upstream {{ backend.name }} {
                         location {{ loc.path }} {
 
                             {% if loc.backend is defined %}
+
+                                access_log /var/log/nginx/access_{{ loc.backend }}.log;
+                                error_log /var/log/nginx/error_{{ loc.backend }}.log;
+
                                 {% if loc.varnish|default(False) %}
                                     proxy_pass  http://varnish{% if loc.rewrite|default(False) %}/{% endif %};
                                     proxy_set_header X-Custom-Backend "{{ loc.backend }}";

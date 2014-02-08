@@ -25,11 +25,20 @@
   when: python_packages is defined
   sudo: yes
 
+- name: Set timezone to America/Los_Angeles.
+  copy: src=timezone dest=/etc/timezone
+  notify: update tzdata
+  sudo: yes
+
 - name: Add SSH ports to ufw rules.
   ufw: policy=allow to_port={{ item }}
   with_items:
     - "{{ alternate_sshd_port }}"
     - 22
+  sudo: yes
+
+- name: Limit SSH login attempts.
+  ufw: policy=limit to_port={{ alternate_sshd_port }}
   sudo: yes
 
 - name: Add role-specific ports to ufw rules.
@@ -48,3 +57,4 @@
   command: ufw --force enable
   sudo: yes
   when: "'Status: inactive' in ufw_status.stdout"
+

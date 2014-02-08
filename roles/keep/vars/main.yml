@@ -12,13 +12,13 @@ python_packages:
 
 apache_request_timeout: 300
 
-apache_StartServers: 25
-apache_MinSpareThreads: 25
-apache_MaxSpareThreads: 50
-apache_ThreadLimit: 64
-apache_ThreadsPerChild: 50
-apache_MaxClients: 250
-apache_MaxRequestsPerChild: 1000
+apache_StartServers: 50
+apache_MinSpareThreads: 50
+apache_MaxSpareThreads: 100
+apache_ThreadLimit: 128
+apache_ThreadsPerChild: 100
+apache_MaxClients: 500
+apache_MaxRequestsPerChild: 2000
 
 ka_lite_git_branch: master
 ka_lite_path: /var/www/ka-lite
