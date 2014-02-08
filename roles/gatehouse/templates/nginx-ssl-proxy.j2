@@ -21,7 +21,7 @@ upstream {{ backend.name }} {
     {% set force_https = (vhost.force_https is defined and vhost.force_https) and nginx_ssl_certificate_name_to_use %}
     {% set allow_https = force_https or (vhost.allow_https is defined and vhost.allow_https) and nginx_ssl_certificate_name_to_use %}
 
-    {% for port in ["80", "443 ssl"] %}
+    {% for port in vhost.ports|default(["80", "443 ssl"]) %}
 
         {% set https = "ssl" in port %}
 

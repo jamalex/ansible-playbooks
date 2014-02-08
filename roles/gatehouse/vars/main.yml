@@ -32,6 +32,7 @@ primary_ssl_certificate_domain: learningequality.org
 allowed_ports:
   - 80
   - 443
+  - 7007
 
 proxy_backends:
 
@@ -42,6 +43,14 @@ proxy_backends:
   - name: keep_ka_lite
     host: keep
     port: "{{ keep_kalite_port }}"
+
+  - name: scriptorium_forums
+    host: scriptorium
+    port: 80
+
+  - name: old_adhocsync_dev_server
+    host: 174.129.228.112
+    port: 7007
 
 
 virtual_hosts:
@@ -63,9 +72,24 @@ virtual_hosts:
 
   - hosts:
       - kalite.adhocsync.com
+      - adhocsync.com
     locations:
       - path: = /
         redirect: https://kalite.learningequality.org
       - path: /
         backend: keep_ka_lite
     allow_https: yes
+
+  - hosts:
+      - forums.learningequality.org
+    locations:
+      - path: /
+        backend: scriptorium_forums
+    force_https: yes
+
+  - hosts:
+      - kalite.learningequality.org
+    ports: ["7007"]
+    locations:
+      - path: /
+        backend: old_adhocsync_dev_server

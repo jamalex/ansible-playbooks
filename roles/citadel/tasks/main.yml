@@ -33,6 +33,10 @@
   sudo_user: www-data
   when: fle_site_db_pass is defined
 
+- name: Copy GeoLiteCity file onto server.
+  copy: src=GeoLiteCity.dat dest={{ fle_site_path }}/fle_site/data/GeoLiteCity.dat
+  sudo: yes
+  sudo_user: www-data
 
 - name: Install Python package requirements
   pip: requirements={{ fle_site_path }}/requirements.txt

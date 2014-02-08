@@ -2,7 +2,7 @@
 - hosts: rackspace
   tasks:
     ping: True
-- hosts: "{{ host }}"
+- hosts: "{{ host|default('rackspace') }}"
   roles:
     - common
     - server

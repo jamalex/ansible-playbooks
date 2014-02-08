@@ -1,7 +1,7 @@
 ---
-# - hosts: rackspace
-#   tasks:
-#     ping: True
+- hosts: rackspace
+  tasks:
+    ping: True
 - hosts: gatehouse
   roles:
     - common

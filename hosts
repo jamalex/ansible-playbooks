@@ -3,7 +3,7 @@ localhost       ansible_connection=local
 [rackspace]
 gatehouse       ansible_ssh_host=gatehouse.learningequality.org
 keep            ansible_ssh_host=keep.learningequality.org
-# scriptorium     ansible_ssh_host=scriptorium.learningequality.org ansible_ssh_port=4242
+scriptorium     ansible_ssh_host=scriptorium.learningequality.org
 field           ansible_ssh_host=field.learningequality.org
 hall            ansible_ssh_host=hall.learningequality.org
 citadel         ansible_ssh_host=citadel.learningequality.org
