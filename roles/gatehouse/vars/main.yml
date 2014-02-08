@@ -33,6 +33,8 @@ allowed_ports:
   - 80
   - 443
   - 7007
+  - 8008
+
 
 proxy_backends:
 
@@ -64,6 +66,12 @@ virtual_hosts:
     force_https: yes
 
   - hosts:
+      - gatehouse.learningequality.org
+    locations:
+      - path: /
+        redirect: https://learningequality.org$request_uri
+
+  - hosts:
       - kalite.learningequality.org
     locations:
       - path: /
@@ -89,7 +97,8 @@ virtual_hosts:
 
   - hosts:
       - kalite.learningequality.org
-    ports: ["7007"]
+    ports: ["7007", "8008 ssl"]
     locations:
       - path: /
         backend: old_adhocsync_dev_server
+    allow_https: yes
