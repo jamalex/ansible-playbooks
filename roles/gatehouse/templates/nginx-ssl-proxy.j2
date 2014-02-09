@@ -31,7 +31,9 @@ upstream {{ backend.name }} {
 
                 listen {{ port }};
 
-                server_name {{ vhost.hosts|join(' ') }};
+                {% if vhost.hosts is defined %}
+                    server_name {{ vhost.hosts|join(' ') }};
+                {% endif %}
 
                 {% if not https and force_https %}
 

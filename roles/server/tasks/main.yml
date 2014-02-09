@@ -46,6 +46,8 @@
   with_items: allowed_ports
   when: allowed_ports is defined
   sudo: yes
+  tags:
+    - proxy
 
 - name: Check UFW status.
   command: ufw status

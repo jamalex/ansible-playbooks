@@ -4,21 +4,30 @@
   template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
   sudo: yes
   notify: restart nginx
+  tags:
+    - nginx
 
 - name: Setup Nginx site config file.
   template: src=nginx-ssl-proxy.j2 dest=/etc/nginx/sites-available/ssl-proxy
   sudo: yes
   notify: restart nginx
+  tags:
+    - nginx
+    - proxy
 
 - name: Enable the KA Lite Nginx site.
   file: dest=/etc/nginx/sites-enabled/000-ssl-proxy src=/etc/nginx/sites-available/ssl-proxy state=link
   sudo: yes
   notify: restart nginx
+  tags:
+    - nginx
 
 - name: Remove default dummy Nginx conf file.
   file: dest=/etc/nginx/sites-enabled/default state=absent
   sudo: yes
   notify: restart nginx
+  tags:
+    - nginx
 
 - name: Setup main Varnish config file.
   template: src=default.vcl.j2 dest=/etc/varnish/default.vcl
@@ -26,33 +35,58 @@
   notify:
     - restart varnish
     - clear varnish cache
+  tags:
+    - varnish
+    - proxy
+
+- name: Setup Varnish caching config file.
+  template: src=caching.vcl.j2 dest=/etc/varnish/caching.vcl
+  sudo: yes
+  notify:
+    - restart varnish
+    - clear varnish cache
+  tags:
+    - varnish
 
 - name: Create the /etc/nginx/ssl directory.
   file: dest=/etc/nginx/ssl state=directory
   sudo: yes
+  tags:
+    - ssl
 
 - name: Generate private SSL key along with a CSR.
   command: 'openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.key -out /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr -subj "/C=US/ST=California/O=Foundation for Learning Equality, Inc/CN={{ primary_ssl_certificate_domain }}" creates=/etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr'
   sudo: yes
   register: generate_csr
   when: nginx_ssl_certificate_name_to_install is defined
+  tags:
+    - ssl
 
 - name: Copy CSR file to local system.
   fetch: src=/etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr dest=roles/gatehouse/files/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr flat=yes fail_on_missing=yes
   when: generate_csr.changed
+  tags:
+    - ssl
 
 - name: Copy certificate files onto server.
   copy: src=ssl/ dest=/etc/nginx/ssl/
   register: cert_copy
   sudo: yes
+  tags:
+    - ssl
 
 - name: Unzip zip file containing certificates.
   shell: unzip -o *.zip | grep -v -E 'AddTrust|SSL' | grep -E '\w+\.crt' -o chdir=/etc/nginx/ssl/
   sudo: yes
   when: cert_copy.changed
   register: cert_unzip
+  tags:
+    - ssl
 
 - name: Bundle the certificates.
   shell: 'cat {{ cert_unzip.stdout }} PositiveSSLCA2.crt AddTrustExternalCARoot.crt > {{ nginx_ssl_certificate_name_to_install }}.ca-bundle chdir=/etc/nginx/ssl/'
   sudo: yes
   when: cert_copy.changed
+  tags:
+    - ssl
+

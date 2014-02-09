@@ -65,6 +65,7 @@ virtual_hosts:
         varnish: yes
     force_https: yes
 
+  # this one is only necessary because of the gatehouse link Dylan sent out for the internships page; can be deleted later
   - hosts:
       - gatehouse.learningequality.org
     locations:
@@ -111,3 +112,9 @@ virtual_hosts:
       - path: /
         backend: old_adhocsync_dev_server
     allow_https: yes
+
+  - ports:
+      - "80 default"
+    locations:
+      - path: /
+        redirect: https://learningequality.org/
