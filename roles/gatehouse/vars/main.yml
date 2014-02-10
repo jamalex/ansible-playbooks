@@ -107,6 +107,7 @@ virtual_hosts:
 
   - hosts:
       - kalite.learningequality.org
+      - kalite.adhocsync.com
     ports: ["7007", "8008 ssl"]
     locations:
       - path: /
