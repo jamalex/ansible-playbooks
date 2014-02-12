@@ -5,6 +5,8 @@
 - hosts: keep
   vars_files:
     - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
+  vars:
+    - set_hosts_file: yes
   roles:
     - common
     - server

@@ -3,6 +3,8 @@
   tasks:
     ping: True
 - hosts: "{{ host|default('rackspace') }}"
+  vars:
+    - set_hosts_file: yes
   roles:
     - common
     - server

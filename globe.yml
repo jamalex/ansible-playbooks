@@ -1,7 +1,4 @@
 ---
-- hosts: rackspace
-  tasks:
-    ping: True
 - hosts: globe
   vars_files:
     - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]

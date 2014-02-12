@@ -7,6 +7,7 @@
 - name: Set the remote /etc/hosts to point to each of the servers in the Ansible hosts file
   template: src=hosts.j2 dest=/etc/hosts
   sudo: yes
+  when: set_hosts_file is defined and set_hosts_file
 
 - name: Install common required system packages.
   apt: pkg={{ item }} state=installed update-cache=yes

@@ -1,7 +1,4 @@
 ---
-- hosts: rackspace
-  tasks:
-    ping: True
 - hosts: citadel
   vars_files:
     - [roles/citadel/vars/secrets.yml, roles/citadel/vars/main.yml]
