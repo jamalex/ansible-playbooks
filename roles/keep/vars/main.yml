@@ -6,13 +6,14 @@ system_packages:
   - python-mysqldb
   - apache2
   - libapache2-mod-wsgi
+  - mysql-client
 
 python_packages:
   - MySQL-python
 
 apache_request_timeout: 300
 
-apache_StartServers: 50
+apache_StartServers: 40
 apache_MinSpareThreads: 50
 apache_MaxSpareThreads: 100
 apache_ThreadLimit: 128

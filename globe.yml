@@ -1,0 +1,13 @@
+---
+- hosts: rackspace
+  tasks:
+    ping: True
+- hosts: globe
+  vars_files:
+    - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
+  vars:
+    ka_lite_db_name: "ka_lite_staging"
+  roles:
+    - common
+    - server
+    - keep

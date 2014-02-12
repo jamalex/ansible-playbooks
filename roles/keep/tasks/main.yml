@@ -107,11 +107,15 @@
 - name: Run syncdb on KA Lite database to ensure it is initialized.
   shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
   register: syncdb
+  sudo: yes
+  sudo_user: www-data
   changed_when: "'Creating table ' in syncdb.stdout"
 
 - name: Migrate KA Lite database to latest schema.
   shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
   register: migrate
+  sudo: yes
+  sudo_user: www-data
   changed_when: "'Migrating forwards' in migrate.stdout"
 
 - name: Create Django superuser for KA Lite if needed.
@@ -120,12 +124,16 @@
   register: createsuperuser
   changed_when: "'Duplicate entry' not in createsuperuser.stderr"
   failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
+  sudo: yes
+  sudo_user: www-data
 
 - name: Set Django superuser password for KA Lite if needed.
   shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ ka_lite_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ ka_lite_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ ka_lite_django_superuser_pass }}\"); u.save()' | {{ ka_lite_path }}/kalite/manage.py shell"
   when: ka_lite_django_superuser_name is defined and ka_lite_django_superuser_pass is defined
   register: setpassword
   changed_when: "'changed_password' in setpassword.stdout"
+  sudo: yes
+  sudo_user: www-data
 
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data

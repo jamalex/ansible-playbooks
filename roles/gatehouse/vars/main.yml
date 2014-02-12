@@ -46,6 +46,10 @@ proxy_backends:
     host: keep
     port: "{{ keep_kalite_port }}"
 
+  - name: globe_ka_lite
+    host: globe
+    port: "{{ keep_kalite_port }}"
+
   - name: scriptorium_forums
     host: scriptorium
     port: 80
@@ -87,6 +91,21 @@ virtual_hosts:
         backend: keep_ka_lite
         varnish: yes
     force_https: yes
+
+  - hosts:
+      - staging.learningequality.org
+    locations:
+      - path: /
+        backend: globe_ka_lite
+      - path: = /
+        backend: globe_ka_lite
+        varnish: yes
+      - path: /faq
+        backend: globe_ka_lite
+        varnish: yes
+      - path: /content
+        backend: globe_ka_lite
+        varnish: yes
 
   - hosts:
       - kalite.adhocsync.com
