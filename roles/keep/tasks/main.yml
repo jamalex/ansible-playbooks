@@ -156,18 +156,16 @@
 # - name: Copy built language packs to lang pack directory.
 #   shell: "cp /tmp/ka-lite-build/kalite/media/language_packs/0.10.3/*.* {{ ka_lite_path }}/kalite/media/language_packs/0.10.3/"
 #   sudo: yes
-#   notify:
-#     - restart apache2
 #   tags:
 #     - language_packs
+#   notify:
+#     - restart apache2
 
 # - name: Copy over srts to static/srt for 0.10.{2,0} support.
 #   shell: "cp -r /tmp/ka-lite-build/kalite/static/srt {{ ka_lite_path }}/kalite/static/"
 #   sudo: yes
 #   tags:
 #       - language_packs
-#   notify:
-#     - restart apache2
 
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
