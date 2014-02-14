@@ -161,7 +161,7 @@
 #   tags:
 #     - language_packs
 
-# - name: Copy over srts to static/srt.
+# - name: Copy over srts to static/srt for 0.10.{2,0} support.
 #   shell: "cp -r /tmp/ka-lite-build/kalite/static/srt {{ ka_lite_path }}/kalite/static/"
 #   sudo: yes
 #   tags:
