@@ -142,7 +142,7 @@
 #     - language_packs
 
 # - name: Build the language packs.
-#   shell: "python /tmp/ka-lite-build/kalite/manage.py update_language_packs --no-ka-trans --no-kalite-trans --no-exercises"
+#   shell: "python /tmp/ka-lite-build/kalite/manage.py update_language_packs --ver=0.10.3"
 #   sudo: yes
 #   tags:
 #     - language_packs
@@ -153,14 +153,8 @@
 #   tags:
 #     - language_packs
 
-# - name: Copy language_pack_availability.json to proper place.
-#   shell: "cp /tmp/ka-lite-build/kalite/media/language_packs/0.11.1/language_pack_availability.json {{ ka_lite_path }}/kalite/media/language_packs/"
-#   sudo: yes
-#   tags:
-#     - language_packs
-
 # - name: Copy built language packs to lang pack directory.
-#   shell: "cp /tmp/ka-lite-build/kalite/media/language_packs/*/*.* {{ ka_lite_path }}/kalite/media/language_packs/0.10.3/"
+#   shell: "cp /tmp/ka-lite-build/kalite/media/language_packs/0.10.3/*.* {{ ka_lite_path }}/kalite/media/language_packs/0.10.3/"
 #   sudo: yes
 #   notify:
 #     - restart apache2
