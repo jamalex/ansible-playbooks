@@ -135,9 +135,40 @@
   sudo: yes
   sudo_user: www-data
 
+# - name: Prepare directory where we build lang packs.
+#   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
+#   sudo: yes
+#   tags:
+#     - language_packs
+
+# - name: Build the language packs.
+#   shell: "python /tmp/ka-lite-build/kalite/manage.py update_language_packs --ver=0.10.3"
+#   sudo: yes
+#   tags:
+#     - language_packs
+
+# - name: Ensure 0.10.3 lang pack directory exists.
+#   file: dest={{ ka_lite_path }}/kalite/media/language_packs/0.10.3/ owner=www-data state=directory
+#   sudo: yes
+#   tags:
+#     - language_packs
+
+# - name: Copy built language packs to lang pack directory.
+#   shell: "cp /tmp/ka-lite-build/kalite/media/language_packs/0.10.3/*.* {{ ka_lite_path }}/kalite/media/language_packs/0.10.3/"
+#   sudo: yes
+#   tags:
+#     - language_packs
+#   notify:
+#     - restart apache2
+
+# - name: Copy over srts to static/srt for 0.10.{2,0} support.
+#   shell: "cp -r /tmp/ka-lite-build/kalite/static/srt {{ ka_lite_path }}/kalite/static/"
+#   sudo: yes
+#   tags:
+#       - language_packs
+
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
 
 # - name: Load database fixture.
 #   shell: "{{ ka_lite_path }}/kalite/manage.py loaddata /var/www/data.json"
-
