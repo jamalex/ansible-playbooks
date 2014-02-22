@@ -53,6 +53,8 @@
   sudo_user: www-data
   register: kalite_clone
   notify: restart apache2
+  tags:
+    - update_kalite
 
 - name: Install required Node.js packages.
   npm: name={{ item }} path={{ ka_lite_path }}
@@ -69,40 +71,70 @@
   sudo_user: www-data
   changed_when: False
   when: kalite_clone.changed
+  tags:
+    - update_kalite
 
 - name: Put the local_settings.py file into the KA Lite project directory.
   template: src=local_settings.py.j2 dest={{ ka_lite_path }}/kalite/local_settings.py
   sudo: yes
   sudo_user: www-data
   notify: restart apache2
+  tags:
+    - update_kalite
 
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
   sudo_user: www-data
   command: touch {{ ka_lite_path }}/kalite/local_settings_secrets.py creates={{ ka_lite_path }}/kalite/local_settings_secrets.py
+  tags:
+    - update_kalite
 
 - name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_secret_key' is defined.
   lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_secret_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: ka_lite_secret_key is defined
+  tags:
+    - update_kalite
 
 - name: Update the POSTMARK_API_KEY in local_settings_secret.py if variable 'postmark_api_key' is defined.
   lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^POSTMARK_API_KEY =' line='POSTMARK_API_KEY = "{{ postmark_api_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: postmark_api_key is defined
+  tags:
+    - update_kalite
 
 - name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'ka_lite_db_pass' is defined.
   lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ ka_lite_db_pass }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: ka_lite_db_pass is defined
+  tags:
+    - update_kalite
+
+- name: Make sure KA_CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: ka_crowdin_project_key is defined
+  tags:
+    - update_kalite
+
+- name: Make sure CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: crowdin_project_key is defined
+  tags:
+    - update_kalite
 
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ ka_lite_path }}/kalite/manage.py clean_pyc"
   sudo: yes
   changed_when: False
+  tags:
+    - update_kalite
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.
   shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
@@ -110,6 +142,8 @@
   sudo: yes
   sudo_user: www-data
   changed_when: "'Creating table ' in syncdb.stdout"
+  tags:
+    - update_kalite
 
 - name: Migrate KA Lite database to latest schema.
   shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
@@ -117,6 +151,8 @@
   sudo: yes
   sudo_user: www-data
   changed_when: "'Migrating forwards' in migrate.stdout"
+  tags:
+    - update_kalite
 
 - name: Create Django superuser for KA Lite if needed.
   shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_django_superuser_name }} --noinput"
@@ -135,17 +171,7 @@
   sudo: yes
   sudo_user: www-data
 
-- name: Make sure KA_CROWDIN_PROJECT_KEY exists in local_settings.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
-  sudo: yes
-  sudo_user: www-data
-  when: ka_crowdin_project_key is defined
 
-- name: Make sure CROWDIN_PROJECT_KEY exists in local_settings.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
-  sudo: yes
-  sudo_user: www-data
-  when: crowdin_project_key is defined
 
 # - name: Prepare directory where we build lang packs.
 #   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
