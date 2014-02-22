@@ -135,6 +135,18 @@
   sudo: yes
   sudo_user: www-data
 
+- name: Make sure KA_CROWDIN_PROJECT_KEY exists in local_settings.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: ka_crowdin_project_key is defined
+
+- name: Make sure CROWDIN_PROJECT_KEY exists in local_settings.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: crowdin_project_key is defined
+
 # - name: Prepare directory where we build lang packs.
 #   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
 #   sudo: yes
