@@ -86,6 +86,7 @@
   sudo: yes
   sudo_user: www-data
   command: touch {{ ka_lite_path }}/kalite/local_settings_secrets.py creates={{ ka_lite_path }}/kalite/local_settings_secrets.py
+  notify: restart apache2
   tags:
     - update_kalite
 
@@ -94,6 +95,7 @@
   sudo: yes
   sudo_user: www-data
   when: ka_lite_secret_key is defined
+  notify: restart apache2
   tags:
     - update_kalite
 
@@ -102,6 +104,7 @@
   sudo: yes
   sudo_user: www-data
   when: postmark_api_key is defined
+  notify: restart apache2
   tags:
     - update_kalite
 
@@ -110,6 +113,7 @@
   sudo: yes
   sudo_user: www-data
   when: ka_lite_db_pass is defined
+  notify: restart apache2
   tags:
     - update_kalite
 
@@ -118,6 +122,7 @@
   sudo: yes
   sudo_user: www-data
   when: ka_crowdin_project_key is defined
+  notify: restart apache2
   tags:
     - update_kalite
 
@@ -126,6 +131,25 @@
   sudo: yes
   sudo_user: www-data
   when: crowdin_project_key is defined
+  notify: restart apache2
+  tags:
+    - update_kalite
+
+- name: Make sure KHAN_API_CONSUMER_KEY exists in local_settings_secrets.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_KEY' line='KHAN_API_CONSUMER_KEY = "{{ khan_api_consumer_key }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: khan_api_consumer_key is defined
+  notify: restart apache2
+  tags:
+    - update_kalite
+
+- name: Make sure KHAN_API_CONSUMER_SECRET exists in local_settings_secrets.py
+  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_SECRET' line='KHAN_API_CONSUMER_SECRET = "{{ khan_api_consumer_secret }}"'
+  sudo: yes
+  sudo_user: www-data
+  when: khan_api_consumer_secret is defined
+  notify: restart apache2
   tags:
     - update_kalite
 
