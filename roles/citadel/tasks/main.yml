@@ -33,6 +33,12 @@
   sudo_user: www-data
   when: fle_site_db_pass is defined
 
+- name: Update the DISQUS_USER_API_KEY in local_settings_secret.py if variable 'disqus_user_api_key' is defined.
+  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DISQUS_USER_API_KEY =' line='DISQUS_USER_API_KEY = "{{ disqus_user_api_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: disqus_user_api_key is defined
+
 - name: Copy GeoLiteCity file onto server.
   copy: src=GeoLiteCity.dat dest={{ fle_site_path }}/fle_site/data/GeoLiteCity.dat
   sudo: yes
