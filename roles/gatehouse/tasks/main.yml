@@ -64,7 +64,7 @@
 
 - name: Copy CSR file to local system.
   fetch: src=/etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr dest=roles/gatehouse/files/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr flat=yes fail_on_missing=yes
-  when: generate_csr.changed
+  when: generate_csr.changed is defined and generate_csr.changed
   tags:
     - ssl
 
@@ -78,7 +78,7 @@
 - name: Unzip zip file containing certificates.
   shell: unzip -o *.zip | grep -v -E 'AddTrust|SSL' | grep -E '\w+\.crt' -o chdir=/etc/nginx/ssl/
   sudo: yes
-  when: cert_copy.changed
+  when: cert_copy.changed is defined and cert_copy.changed
   register: cert_unzip
   tags:
     - ssl
@@ -86,7 +86,7 @@
 - name: Bundle the certificates.
   shell: 'cat {{ cert_unzip.stdout }} PositiveSSLCA2.crt AddTrustExternalCARoot.crt > {{ nginx_ssl_certificate_name_to_install }}.ca-bundle chdir=/etc/nginx/ssl/'
   sudo: yes
-  when: cert_copy.changed
+  when: cert_copy.changed is defined and cert_copy.changed
   tags:
     - ssl
 
