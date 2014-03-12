@@ -18,14 +18,11 @@ upstream {{ backend.name }} {
 # ----- virtual hosts for all sites ----- #
 {% for vhost in virtual_hosts %}
 
-    {% set force_https = (vhost.force_https is defined and vhost.force_https) and nginx_ssl_certificate_name_to_use %}
-    {% set allow_https = force_https or (vhost.allow_https is defined and vhost.allow_https) and nginx_ssl_certificate_name_to_use %}
-
     {% for port in vhost.ports|default(["80", "443 ssl"]) %}
 
         {% set https = "ssl" in port %}
 
-        {% if not (https and not allow_https) %}
+        {% if vhost.allow_https|default(False) or not https %}
 
             server {
 
@@ -35,49 +32,51 @@ upstream {{ backend.name }} {
                     server_name {{ vhost.hosts|join(' ') }};
                 {% endif %}
 
-                {% if not https and force_https %}
+                rewrite_log on;
 
-                    return 301 https://$host$request_uri;
+                proxy_set_header   Host             $http_host;
+                proxy_set_header   X-Real-IP        $remote_addr;
+                proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
 
-                {% else %}
+                {% if https %}
+                    ssl_certificate /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_use }}.ca-bundle;
+                    ssl_certificate_key /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_use }}.key;
 
-                    rewrite_log on;
-
-                    proxy_set_header   Host             $http_host;
-                    proxy_set_header   X-Real-IP        $remote_addr;
-                    proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
-
-                    {% if https %}
-                        ssl_certificate /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_use }}.ca-bundle;
-                        ssl_certificate_key /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_use }}.key;
-
-                        keepalive_timeout 90;
-                    {% endif %}
-
-                    {% for loc in vhost.locations %}
-                        location {{ loc.path }} {
-
-                            {% if loc.backend is defined %}
-
-                                access_log /var/log/nginx/access_{{ loc.backend }}.log;
-                                error_log /var/log/nginx/error_{{ loc.backend }}.log;
-
-                                {% if loc.varnish|default(False) %}
-                                    proxy_pass  http://varnish{% if loc.rewrite|default(False) %}/{% endif %};
-                                    proxy_set_header X-Custom-Backend "{{ loc.backend }}";
-                                {% else %}
-                                    proxy_pass  http://{{ loc.backend }}{% if loc.rewrite|default(False) %}/{% endif %};
-                                {% endif %}
-                            {% endif %}
-
-                            {% if loc.redirect is defined %}
-                                return 301 {{ loc.redirect }};
-                            {% endif %}
-
-                        }
-                    {% endfor %}
-
+                    keepalive_timeout 90;
                 {% endif %}
+
+                {% for loc in vhost.locations|default(default_location) %}
+                    location {{ loc.path }} {
+
+                        {% set force_https = loc.force_https|default(vhost.force_https|default(False)) %}
+
+                        {% set backend = loc.backend|default(vhost.backend|default(None)) %}
+
+                        {# if the location, or else the vhost, is https-only, and this isn't https, then redirect #}
+                        {% if force_https and not https %}
+
+                            return 301 https://$host$request_uri;
+
+                        {% elif backend %}
+
+                            access_log /var/log/nginx/access_{{ backend }}.log;
+                            error_log /var/log/nginx/error_{{ backend }}.log;
+
+                            {% if loc.varnish|default(False) %}
+                                proxy_pass  http://varnish{% if loc.rewrite|default(False) %}/{% endif %};
+                                proxy_set_header X-Custom-Backend "{{ backend }}";
+                            {% else %}
+                                proxy_pass  http://{{ backend }}{% if loc.rewrite|default(False) %}/{% endif %};
+                            {% endif %}
+
+                        {% endif %}
+
+                        {% if loc.redirect is defined %}
+                            return 301 {{ loc.redirect }};
+                        {% endif %}
+
+                    }
+                {% endfor %}
 
             }
 

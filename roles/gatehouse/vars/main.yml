@@ -58,16 +58,20 @@ proxy_backends:
     host: 174.129.228.112
     port: 7007
 
+# this location will be added to any vhost in virtual_hosts that doesn't define a "locations" list
+default_location:
+  - path: /
 
 virtual_hosts:
 
   - hosts:
       - learningequality.org
+    backend: citadel_fle_site
+    force_https: yes
     locations:
       - path: /
-        backend: citadel_fle_site
         varnish: yes
-    force_https: yes
+    allow_https: yes
 
   # this one is only necessary because of the gatehouse link Dylan sent out for the internships page; can be deleted later
   - hosts:
@@ -78,33 +82,27 @@ virtual_hosts:
 
   - hosts:
       - kalite.learningequality.org
+    backend: keep_ka_lite
+    allow_https: yes
     locations:
       - path: /
-        backend: keep_ka_lite
-      - path: = /
-        backend: keep_ka_lite
+      - path: ~ ^/($|faq)
         varnish: yes
-      - path: /faq
-        backend: keep_ka_lite
+        force_https: yes
+      - path: ~ ^/(accounts|wiki|contact|securesync|admin)
+        force_https: yes
+      - path: ~ ^/(content|static|media)
         varnish: yes
-      - path: /content
-        backend: keep_ka_lite
-        varnish: yes
-    force_https: yes
 
   - hosts:
       - staging.learningequality.org
+    backend: globe_ka_lite
     locations:
       - path: /
-        backend: globe_ka_lite
-      - path: = /
-        backend: globe_ka_lite
+      - path: ~ ^/($|faq)
         varnish: yes
-      - path: /faq
-        backend: globe_ka_lite
-        varnish: yes
-      - path: /content
-        backend: globe_ka_lite
+      - path: ~ ^/(accounts|wiki|contact|securesync|admin)
+      - path: ~ ^/(content|static|media)
         varnish: yes
 
   - hosts:
@@ -119,18 +117,15 @@ virtual_hosts:
 
   - hosts:
       - forums.learningequality.org
-    locations:
-      - path: /
-        backend: scriptorium_forums
+    backend: scriptorium_forums
     force_https: yes
+    allow_https: yes
 
   - hosts:
       - kalite.learningequality.org
       - kalite.adhocsync.com
     ports: ["7007", "8008 ssl"]
-    locations:
-      - path: /
-        backend: old_adhocsync_dev_server
+    backend: old_adhocsync_dev_server
     allow_https: yes
 
   - ports:
