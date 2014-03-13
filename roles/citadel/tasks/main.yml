@@ -113,7 +113,6 @@
   sudo: yes
   notify: restart apache2
 
-
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ fle_site_path }}/manage.py clean_pyc"
   sudo: yes
@@ -141,3 +140,9 @@
   when: fle_site_django_superuser_name is defined and fle_site_django_superuser_pass is defined
   register: setpassword
   changed_when: "'changed_password' in setpassword.stdout"
+
+# - name: Load fixture 1.
+#   shell: "{{ fle_site_path }}/manage.py loaddata supporting_organization.json"
+
+# - name: Load fixture 2.
+#   shell: "{{ fle_site_path }}/manage.py loaddata org_type.json"
