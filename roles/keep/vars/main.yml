@@ -21,7 +21,7 @@ apache_ThreadsPerChild: 100
 apache_MaxClients: 500
 apache_MaxRequestsPerChild: 2000
 
-ka_lite_git_branch: release-0.11.1
+ka_lite_git_branch: master
 ka_lite_path: /var/www/ka-lite
 
 postmark_sender: "kalite@learningequality.org"
