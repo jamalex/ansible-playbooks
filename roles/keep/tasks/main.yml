@@ -196,28 +196,31 @@
   sudo_user: www-data
 
 
-
 # - name: Prepare directory where we build lang packs.
 #   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
 #   sudo: yes
+#   sudo_user: www-data
 #   tags:
 #     - language_packs
 
 # - name: Copy srts_remote_availability.json from dev central server
 #   get_url: url=http://kalite.learningequality.org:7007/media/testing/srts_remote_availability.json dest={{ ka_lite_path }}/data/subtitles/srts_remote_availability.json
 #   sudo: yes
+#   sudo_user: www-data
 #   tags:
 #     - language_packs
 
 # - name: Build the language packs.
 #   shell: "python {{ ka_lite_path }}/kalite/manage.py update_language_packs"
 #   sudo: yes
+#   sudo_user: www-data
 #   tags:
 #     - language_packs
 
 # - name: Build the language packs.
 #   shell: "python {{ ka_lite_path }}/kalite/manage.py update_language_packs --ver=0.10.3"
 #   sudo: yes
+#   sudo_user: www-data
 #   tags:
 #     - language_packs
 
@@ -225,4 +228,6 @@
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
 
 # - name: Load database fixture.
+#   sudo: yes
+#   sudo_user: www-data
 #   shell: "{{ ka_lite_path }}/kalite/manage.py loaddata /var/www/data.json"
