@@ -1,5 +1,23 @@
 ---
 
+- name: Package prerequisites for node.js
+  apt: pkg=python-software-properties state=installed
+  sudo: yes
+
+- name: Add the node.js PPA
+  command: add-apt-repository -y ppa:chris-lea/node.js creates=/etc/apt/sources.list.d/chris-lea-node_js-precise.list
+  sudo: yes
+
+- name: Install nodejs (with npm)
+  action: apt pkg=nodejs state=installed update-cache=yes
+  sudo: yes
+
+- name: Install required Node.js packages.
+  npm: name={{ item }} global=yes
+  with_items:
+    - grunt-cli
+  sudo: yes
+
 - name: Create the /var/www directory and set it as belonging to the www-data user.
   file: dest=/var/www owner=www-data state=directory
   sudo: yes
@@ -8,7 +26,24 @@
   git: repo=https://github.com/fle-internal/fle-site.git version={{ fle_site_git_branch }} dest={{ fle_site_path }}
   sudo: yes
   sudo_user: www-data
+  register: flesite_clone
   notify: restart apache2
+
+- name: Install required Node.js packages.
+  npm: name={{ item }} path={{ fle_site_path }}
+  with_items:
+    - grunt
+    - less
+    - grunt-contrib-less
+  sudo: yes
+  sudo_user: www-data
+
+- name: Compile the static KA Lite resources by running the Gruntfile.
+  command: grunt chdir={{ fle_site_path }}
+  sudo: yes
+  sudo_user: www-data
+  changed_when: False
+  when: flesite_clone.changed
 
 - name: Put the local_settings.py file into the FLE Site project directory.
   template: src=local_settings.py.j2 dest={{ fle_site_path }}/fle_site/local_settings.py
