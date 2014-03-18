@@ -195,6 +195,19 @@
   sudo: yes
   sudo_user: www-data
 
+- name: Create cron script that will build language packs.
+  template: src=ka-lite-lang-pack-builder.sh.j2 dest={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh
+  sudo: yes
+  sudo_user: www-data
+
+- name: Make the cron script executable.
+  action: file path={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh mode=0775 owner=www-data group=www-data
+  sudo: yes
+
+- name: Create cron job to run language pack builder script.
+  cron: name="build language packs" minute="0" hour="2" day="1,15" job="{{ ka_lite_path }}/ka-lite-lang-pack-builder.sh" user=www-data
+  sudo: yes
+  sudo_user: www-data
 
 # - name: Prepare directory where we build lang packs.
 #   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
