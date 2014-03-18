@@ -195,47 +195,32 @@
   sudo: yes
   sudo_user: www-data
 
+- name: Copy srts_remote_availability.json from our local seed file.
+  copy: src=srts_remote_availability.json dest={{ ka_lite_path }}/data/subtitles/srts_remote_availability.json force=no
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - language_packs
+
 - name: Create cron script that will build language packs.
   template: src=ka-lite-lang-pack-builder.sh.j2 dest={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh
   sudo: yes
   sudo_user: www-data
+  tags:
+    - language_packs
 
-- name: Make the cron script executable.
+- name: Make the language pack cron script executable.
   action: file path={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh mode=0775 owner=www-data group=www-data
   sudo: yes
+  tags:
+    - language_packs
 
 - name: Create cron job to run language pack builder script.
   cron: name="build language packs" minute="0" hour="2" day="1,15" job="{{ ka_lite_path }}/ka-lite-lang-pack-builder.sh" user=www-data
   sudo: yes
   sudo_user: www-data
-
-# - name: Prepare directory where we build lang packs.
-#   git: repo=https://github.com/learningequality/ka-lite.git dest=/tmp/ka-lite-build version=release-0.11 depth=1
-#   sudo: yes
-#   sudo_user: www-data
-#   tags:
-#     - language_packs
-
-# - name: Copy srts_remote_availability.json from dev central server
-#   get_url: url=http://kalite.learningequality.org:7007/media/testing/srts_remote_availability.json dest={{ ka_lite_path }}/data/subtitles/srts_remote_availability.json
-#   sudo: yes
-#   sudo_user: www-data
-#   tags:
-#     - language_packs
-
-# - name: Build the language packs.
-#   shell: "python {{ ka_lite_path }}/kalite/manage.py update_language_packs"
-#   sudo: yes
-#   sudo_user: www-data
-#   tags:
-#     - language_packs
-
-# - name: Build the language packs.
-#   shell: "python {{ ka_lite_path }}/kalite/manage.py update_language_packs --ver=0.10.3"
-#   sudo: yes
-#   sudo_user: www-data
-#   tags:
-#     - language_packs
+  tags:
+    - language_packs
 
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
