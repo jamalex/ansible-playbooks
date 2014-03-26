@@ -52,7 +52,7 @@ TCPKeepAlive no
 
 Subsystem sftp /usr/lib/openssh/sftp-server
 
-# AllowUsers ramesh john jason
+# AllowUsers {% for user in authorized_users %} {{ user }}{% endfor %}
 # AllowGroups sysadmin dba sudo
 
 # Set this to 'yes' to enable PAM authentication, account processing, and session processing.

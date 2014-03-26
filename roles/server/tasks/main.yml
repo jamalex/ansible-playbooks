@@ -1,5 +1,8 @@
 ---
 
+- name: Load the list of authorized users for the current host.
+  set_fact: 'authorized_users="{{ permissions[inventory_hostname] }}"'
+
 - name: Set hostname to inventory name.
   hostname: name={{ inventory_hostname }}
   sudo: yes
@@ -61,3 +64,39 @@
   sudo: yes
   when: "ufw_status.stdout is defined and 'Status: inactive' in ufw_status.stdout"
 
+- name: Generate random password (won't actually get used).
+  local_action: shell openssl passwd -in /dev/urandom | head -1
+  changed_when: no
+  register: password
+
+- name: Add accounts for admins and add them to the sudoers group.
+  user: "name='{{ item }}' password='{{ password.stdout }}' groups='sudo' shell='/bin/bash' update_password='on_create'"
+  with_items: admins.keys()
+  sudo: yes
+
+- name: Create the users' .ssh directories.
+  file: "dest=/home/{{ item }}/.ssh owner={{ item }} state=directory"
+  with_items: admins.keys()
+  sudo: yes
+
+- name: Add authorized_keys for admin SSH logins.
+  template: "src=authorized_keys.j2 dest=/home/{{ item }}/.ssh/authorized_keys"
+  when: item in authorized_users
+  with_items: admins.keys()
+  sudo: yes
+  sudo_user: "{{ item }}"
+  notify:
+    - restart ssh
+
+- name: Remove authorized_keys for unauthorized admin SSH logins.
+  copy: "content='' dest=/home/{{ item }}/.ssh/authorized_keys"
+  when: item not in authorized_users
+  with_items: admins.keys()
+  sudo: yes
+  sudo_user: "{{ item }}"
+  notify:
+    - restart ssh
+
+- name: Ensure sudoers don't need to enter password
+  lineinfile: "dest=/etc/sudoers state=present regexp='^%sudo[\t ]+ALL' line='%sudo ALL=(ALL:ALL) NOPASSWD: ALL' validate='visudo -cf %s'"
+  sudo: yes
