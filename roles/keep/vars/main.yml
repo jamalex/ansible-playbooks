@@ -29,7 +29,9 @@ postmark_sender: "kalite@learningequality.org"
 ka_lite_db_name: "ka_lite_central"
 ka_lite_db_user: "ka_lite_central"
 
-allowed_ports:
+ufw_enabled: yes
+
+ufw_allowed_ports:
   - "{{ keep_kalite_port }}"
 
 ka_crowdin_project_id: "khanacademy"

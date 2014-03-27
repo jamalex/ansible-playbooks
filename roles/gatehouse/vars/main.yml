@@ -29,7 +29,9 @@ ssl_certificate_domains:
 primary_ssl_certificate_domain: learningequality.org
 
 
-allowed_ports:
+ufw_enabled: yes
+
+ufw_allowed_ports:
   - 80
   - 443
   - 7007

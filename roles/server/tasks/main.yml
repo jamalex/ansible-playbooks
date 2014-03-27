@@ -39,16 +39,18 @@
   with_items:
     - "{{ alternate_sshd_port }}"
     - 22
+  when: ufw_enabled is defined and ufw_enabled|bool
   sudo: yes
 
 - name: Limit SSH login attempts.
   ufw: policy=limit to_port={{ alternate_sshd_port }}
+  when: ufw_enabled is defined and ufw_enabled|bool
   sudo: yes
 
 - name: Add role-specific ports to ufw rules.
   ufw: policy=allow to_port={{ item }}
-  with_items: allowed_ports
-  when: allowed_ports is defined
+  with_items: ufw_allowed_ports
+  when: ufw_allowed_ports is defined and ufw_enabled is defined and ufw_enabled|bool
   sudo: yes
   tags:
     - proxy
@@ -56,15 +58,21 @@
 - name: Check UFW status.
   command: ufw status
   sudo: yes
+  when: ufw_enabled is defined
   register: ufw_status
   changed_when: False
 
 - name: Enable UFW.
   command: ufw --force enable
   sudo: yes
-  when: "ufw_status.stdout is defined and 'Status: inactive' in ufw_status.stdout"
+  when: "ufw_status.stdout is defined and 'Status: inactive' in ufw_status.stdout and ufw_enabled|bool"
 
-- name: Generate random password (won't actually get used).
+- name: Disable UFW.
+  command: ufw --force disable
+  sudo: yes
+  when: "ufw_status.stdout is defined and 'Status: active' in ufw_status.stdout and not ufw_enabled|bool"
+
+- name: Generate random password (won't actually get used for logins).
   local_action: shell openssl passwd -in /dev/urandom | head -1
   changed_when: no
   register: password

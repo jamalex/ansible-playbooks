@@ -32,5 +32,7 @@ fle_site_path: /var/www/fle-site
 fle_site_db_name: "fle_site"
 fle_site_db_user: "fle_site"
 
-allowed_ports:
+ufw_enabled: yes
+
+ufw_allowed_ports:
   - "{{ citadel_flesite_port }}"
