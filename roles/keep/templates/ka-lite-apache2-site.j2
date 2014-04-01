@@ -4,15 +4,15 @@ Listen {{ keep_kalite_port }}
 
     ServerName kalite.learningequality.org
 
-    Alias /static {{ ka_lite_path }}/kalite/static
-    Alias /media {{ ka_lite_path }}/kalite/media
-    Alias /favicon.ico {{ ka_lite_path }}/kalite/static/images/favicon.ico
+    Alias /static {{ ka_lite_central_path }}/kalite/static
+    Alias /media {{ ka_lite_central_path }}/kalite/media
+    Alias /favicon.ico {{ ka_lite_central_path }}/kalite/static/images/favicon.ico
 
-    <Directory {{ ka_lite_path }}/kalite>
+    <Directory {{ ka_lite_central_path }}/kalite>
         Order deny,allow
         Allow from all
     </Directory>
 
-    WSGIScriptAlias / {{ ka_lite_path }}/kalite/ka-lite.wsgi
+    WSGIScriptAlias / {{ ka_lite_central_path }}/kalite/ka-lite.wsgi
 
 </VirtualHost>

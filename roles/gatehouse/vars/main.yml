@@ -44,11 +44,11 @@ proxy_backends:
     host: citadel
     port: "{{ citadel_flesite_port }}"
 
-  - name: keep_ka_lite
+  - name: keep_ka_lite_central
     host: keep
     port: "{{ keep_kalite_port }}"
 
-  - name: globe_ka_lite
+  - name: globe_ka_lite_central
     host: globe
     port: "{{ keep_kalite_port }}"
 
@@ -84,7 +84,7 @@ virtual_hosts:
 
   - hosts:
       - kalite.learningequality.org
-    backend: keep_ka_lite
+    backend: keep_ka_lite_central
     allow_https: yes
     locations:
       - path: /
@@ -98,7 +98,7 @@ virtual_hosts:
 
   - hosts:
       - staging.learningequality.org
-    backend: globe_ka_lite
+    backend: globe_ka_lite_central
     locations:
       - path: /
       - path: ~ ^/($|faq)
@@ -114,7 +114,7 @@ virtual_hosts:
       - path: = /
         redirect: https://kalite.learningequality.org
       - path: /
-        backend: keep_ka_lite
+        backend: keep_ka_lite_central
     allow_https: yes
 
   - hosts:

@@ -48,7 +48,7 @@
   sudo: yes
 
 - name: Clone the KA Lite git repository and checkout the desired branch.
-  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_git_branch }} dest={{ ka_lite_path }}
+  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
   register: kalite_clone
@@ -57,7 +57,7 @@
     - update_kalite
 
 - name: Install required Node.js packages.
-  npm: name={{ item }} path={{ ka_lite_path }}
+  npm: name={{ item }} path={{ ka_lite_central_path }}
   with_items:
     - grunt
     - less
@@ -66,7 +66,7 @@
   sudo_user: www-data
 
 - name: Compile the static KA Lite resources by running the Gruntfile.
-  command: grunt chdir={{ ka_lite_path }}
+  command: grunt chdir={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
   changed_when: False
@@ -75,7 +75,7 @@
     - update_kalite
 
 - name: Put the local_settings.py file into the KA Lite project directory.
-  template: src=local_settings.py.j2 dest={{ ka_lite_path }}/kalite/local_settings.py
+  template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/kalite/local_settings.py
   sudo: yes
   sudo_user: www-data
   notify: restart apache2
@@ -85,22 +85,22 @@
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
   sudo_user: www-data
-  command: touch {{ ka_lite_path }}/kalite/local_settings_secrets.py creates={{ ka_lite_path }}/kalite/local_settings_secrets.py
+  command: touch {{ ka_lite_central_path }}/kalite/local_settings_secrets.py creates={{ ka_lite_central_path }}/kalite/local_settings_secrets.py
   notify: restart apache2
   tags:
     - update_kalite
 
-- name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_secret_key' is defined.
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_secret_key }}"' owner="www-data"
+- name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_central_secret_key' is defined.
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_central_secret_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
-  when: ka_lite_secret_key is defined
+  when: ka_lite_central_secret_key is defined
   notify: restart apache2
   tags:
     - update_kalite
 
 - name: Update the POSTMARK_API_KEY in local_settings_secret.py if variable 'postmark_api_key' is defined.
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^POSTMARK_API_KEY =' line='POSTMARK_API_KEY = "{{ postmark_api_key }}"' owner="www-data"
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^POSTMARK_API_KEY =' line='POSTMARK_API_KEY = "{{ postmark_api_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: postmark_api_key is defined
@@ -108,17 +108,17 @@
   tags:
     - update_kalite
 
-- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'ka_lite_db_pass' is defined.
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ ka_lite_db_pass }}"' owner="www-data"
+- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'ka_lite_central_db_pass' is defined.
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ ka_lite_central_db_pass }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
-  when: ka_lite_db_pass is defined
+  when: ka_lite_central_db_pass is defined
   notify: restart apache2
   tags:
     - update_kalite
 
 - name: Make sure KA_CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
   sudo: yes
   sudo_user: www-data
   when: ka_crowdin_project_key is defined
@@ -127,7 +127,7 @@
     - update_kalite
 
 - name: Make sure CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
   sudo: yes
   sudo_user: www-data
   when: crowdin_project_key is defined
@@ -136,7 +136,7 @@
     - update_kalite
 
 - name: Make sure KHAN_API_CONSUMER_KEY exists in local_settings_secrets.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_KEY' line='KHAN_API_CONSUMER_KEY = "{{ khan_api_consumer_key }}"'
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_KEY' line='KHAN_API_CONSUMER_KEY = "{{ khan_api_consumer_key }}"'
   sudo: yes
   sudo_user: www-data
   when: khan_api_consumer_key is defined
@@ -145,7 +145,7 @@
     - update_kalite
 
 - name: Make sure KHAN_API_CONSUMER_SECRET exists in local_settings_secrets.py
-  lineinfile: dest={{ ka_lite_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_SECRET' line='KHAN_API_CONSUMER_SECRET = "{{ khan_api_consumer_secret }}"'
+  lineinfile: dest={{ ka_lite_central_path }}/kalite/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_SECRET' line='KHAN_API_CONSUMER_SECRET = "{{ khan_api_consumer_secret }}"'
   sudo: yes
   sudo_user: www-data
   when: khan_api_consumer_secret is defined
@@ -154,14 +154,14 @@
     - update_kalite
 
 - name: Clear any old pyc files left over from an old branch or version.
-  shell: "{{ ka_lite_path }}/kalite/manage.py clean_pyc"
+  shell: "{{ ka_lite_central_path }}/kalite/manage.py clean_pyc"
   sudo: yes
   changed_when: False
   tags:
     - update_kalite
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.
-  shell: "{{ ka_lite_path }}/kalite/manage.py syncdb --noinput"
+  shell: "{{ ka_lite_central_path }}/kalite/manage.py syncdb --noinput"
   register: syncdb
   sudo: yes
   sudo_user: www-data
@@ -170,7 +170,7 @@
     - update_kalite
 
 - name: Migrate KA Lite database to latest schema.
-  shell: "{{ ka_lite_path }}/kalite/manage.py migrate --merge"
+  shell: "{{ ka_lite_central_path }}/kalite/manage.py migrate --merge"
   register: migrate
   sudo: yes
   sudo_user: www-data
@@ -179,8 +179,8 @@
     - update_kalite
 
 - name: Create Django superuser for KA Lite if needed.
-  shell: "{{ ka_lite_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_django_superuser_name }} --noinput"
-  when: ka_lite_django_superuser_name is defined
+  shell: "{{ ka_lite_central_path }}/kalite/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_central_django_superuser_name }} --noinput"
+  when: ka_lite_central_django_superuser_name is defined
   register: createsuperuser
   changed_when: "'Duplicate entry' not in createsuperuser.stderr"
   failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
@@ -188,35 +188,35 @@
   sudo_user: www-data
 
 - name: Set Django superuser password for KA Lite if needed.
-  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ ka_lite_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ ka_lite_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ ka_lite_django_superuser_pass }}\"); u.save()' | {{ ka_lite_path }}/kalite/manage.py shell"
-  when: ka_lite_django_superuser_name is defined and ka_lite_django_superuser_pass is defined
+  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ ka_lite_central_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ ka_lite_central_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ ka_lite_central_django_superuser_pass }}\"); u.save()' | {{ ka_lite_central_path }}/kalite/manage.py shell"
+  when: ka_lite_central_django_superuser_name is defined and ka_lite_central_django_superuser_pass is defined
   register: setpassword
   changed_when: "'changed_password' in setpassword.stdout"
   sudo: yes
   sudo_user: www-data
 
 - name: Copy srts_remote_availability.json from our local seed file.
-  copy: src=srts_remote_availability.json dest={{ ka_lite_path }}/data/subtitles/srts_remote_availability.json force=no
+  copy: src=srts_remote_availability.json dest={{ ka_lite_central_path }}/data/subtitles/srts_remote_availability.json force=no
   sudo: yes
   sudo_user: www-data
   tags:
     - language_packs
 
 - name: Create cron script that will build language packs.
-  template: src=ka-lite-lang-pack-builder.sh.j2 dest={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh
+  template: src=ka-lite-lang-pack-builder.sh.j2 dest={{ ka_lite_central_path }}/ka-lite-lang-pack-builder.sh
   sudo: yes
   sudo_user: www-data
   tags:
     - language_packs
 
 - name: Make the language pack cron script executable.
-  action: file path={{ ka_lite_path }}/ka-lite-lang-pack-builder.sh mode=0775 owner=www-data group=www-data
+  action: file path={{ ka_lite_central_path }}/ka-lite-lang-pack-builder.sh mode=0775 owner=www-data group=www-data
   sudo: yes
   tags:
     - language_packs
 
 - name: Create cron job to run language pack builder script.
-  cron: name="build language packs" minute="0" hour="2" day="1,15" job="{{ ka_lite_path }}/ka-lite-lang-pack-builder.sh" user=www-data
+  cron: name="build language packs" minute="0" hour="2" day="1,15" job="{{ ka_lite_central_path }}/ka-lite-lang-pack-builder.sh" user=www-data
   sudo: yes
   sudo_user: www-data
   tags:
@@ -228,4 +228,4 @@
 # - name: Load database fixture.
 #   sudo: yes
 #   sudo_user: www-data
-#   shell: "{{ ka_lite_path }}/kalite/manage.py loaddata /var/www/data.json"
+#   shell: "{{ ka_lite_central_path }}/kalite/manage.py loaddata /var/www/data.json"
