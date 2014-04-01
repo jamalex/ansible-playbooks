@@ -1,3 +1,3 @@
 {% for version in lang_pack_versions %}
-python {{ ka_lite_central_path }}/kalite/manage.py update_language_packs --ver={{ version }}
+python {{ ka_lite_central_path }}/centralserver/manage.py update_language_packs --ver={{ version }}
 {% endfor %}
