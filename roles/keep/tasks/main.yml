@@ -153,47 +153,15 @@
   tags:
     - update_ka_lite_central
 
-- name: Clear any old pyc files left over from an old branch or version.
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py clean_pyc"
-  sudo: yes
-  changed_when: False
-  tags:
-    - update_ka_lite_central
-
 - name: Run syncdb on KA Lite database to ensure it is initialized.
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py syncdb --noinput"
-  register: syncdb
+  shell: "{{ ka_lite_central_path }}/centralserver/manage.py setup -u {{ ka_lite_central_django_superuser_name }} -p {{ ka_lite_central_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
+  register: setup
   sudo: yes
   sudo_user: www-data
-  changed_when: "'Creating table ' in syncdb.stdout"
+  changed_when: "' static file' in setup.stdout"
+  failed_when: "setup.stderr"
   tags:
     - update_ka_lite_central
-
-- name: Migrate KA Lite database to latest schema.
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py migrate --merge"
-  register: migrate
-  sudo: yes
-  sudo_user: www-data
-  changed_when: "'Migrating forwards' in migrate.stdout"
-  tags:
-    - update_ka_lite_central
-
-- name: Create Django superuser for KA Lite if needed.
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_central_django_superuser_name }} --noinput"
-  when: ka_lite_central_django_superuser_name is defined
-  register: createsuperuser
-  changed_when: "'Duplicate entry' not in createsuperuser.stderr"
-  failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
-  sudo: yes
-  sudo_user: www-data
-
-- name: Set Django superuser password for KA Lite if needed.
-  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ ka_lite_central_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ ka_lite_central_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ ka_lite_central_django_superuser_pass }}\"); u.save()' | {{ ka_lite_central_path }}/centralserver/manage.py shell"
-  when: ka_lite_central_django_superuser_name is defined and ka_lite_central_django_superuser_pass is defined
-  register: setpassword
-  changed_when: "'changed_password' in setpassword.stdout"
-  sudo: yes
-  sudo_user: www-data
 
 - name: Copy srts_remote_availability.json from our local seed file.
   copy: src=srts_remote_availability.json dest={{ ka_lite_central_path }}/data/subtitles/srts_remote_availability.json force=no
