@@ -51,10 +51,10 @@
   git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
-  register: kalite_clone
+  register: ka_lite_central_clone
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Install required Node.js packages.
   npm: name={{ item }} path={{ ka_lite_central_path }}
@@ -70,9 +70,9 @@
   sudo: yes
   sudo_user: www-data
   changed_when: False
-  when: kalite_clone.changed
+  when: ka_lite_central_clone.changed
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Put the local_settings.py file into the KA Lite project directory.
   template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/centralserver/local_settings.py
@@ -80,7 +80,7 @@
   sudo_user: www-data
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
@@ -88,7 +88,7 @@
   command: touch {{ ka_lite_central_path }}/centralserver/local_settings_secrets.py creates={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_central_secret_key' is defined.
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_central_secret_key }}"' owner="www-data"
@@ -97,7 +97,7 @@
   when: ka_lite_central_secret_key is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Update the POSTMARK_API_KEY in local_settings_secret.py if variable 'postmark_api_key' is defined.
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^POSTMARK_API_KEY =' line='POSTMARK_API_KEY = "{{ postmark_api_key }}"' owner="www-data"
@@ -106,7 +106,7 @@
   when: postmark_api_key is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'ka_lite_central_db_pass' is defined.
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ ka_lite_central_db_pass }}"' owner="www-data"
@@ -115,7 +115,7 @@
   when: ka_lite_central_db_pass is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Make sure KA_CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^KA_CROWDIN_PROJECT_KEY' line='KA_CROWDIN_PROJECT_KEY = "{{ ka_crowdin_project_key }}"'
@@ -124,7 +124,7 @@
   when: ka_crowdin_project_key is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Make sure CROWDIN_PROJECT_KEY exists in local_settings_secrets.py
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^CROWDIN_PROJECT_KEY' line='CROWDIN_PROJECT_KEY = "{{ crowdin_project_key }}"'
@@ -133,7 +133,7 @@
   when: crowdin_project_key is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Make sure KHAN_API_CONSUMER_KEY exists in local_settings_secrets.py
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_KEY' line='KHAN_API_CONSUMER_KEY = "{{ khan_api_consumer_key }}"'
@@ -142,7 +142,7 @@
   when: khan_api_consumer_key is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Make sure KHAN_API_CONSUMER_SECRET exists in local_settings_secrets.py
   lineinfile: dest={{ ka_lite_central_path }}/centralserver/local_settings_secrets.py regexp='^KHAN_API_CONSUMER_SECRET' line='KHAN_API_CONSUMER_SECRET = "{{ khan_api_consumer_secret }}"'
@@ -151,14 +151,14 @@
   when: khan_api_consumer_secret is defined
   notify: restart apache2
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Clear any old pyc files left over from an old branch or version.
   shell: "{{ ka_lite_central_path }}/centralserver/manage.py clean_pyc"
   sudo: yes
   changed_when: False
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Run syncdb on KA Lite database to ensure it is initialized.
   shell: "{{ ka_lite_central_path }}/centralserver/manage.py syncdb --noinput"
@@ -167,7 +167,7 @@
   sudo_user: www-data
   changed_when: "'Creating table ' in syncdb.stdout"
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Migrate KA Lite database to latest schema.
   shell: "{{ ka_lite_central_path }}/centralserver/manage.py migrate --merge"
@@ -176,7 +176,7 @@
   sudo_user: www-data
   changed_when: "'Migrating forwards' in migrate.stdout"
   tags:
-    - update_kalite
+    - update_ka_lite_central
 
 - name: Create Django superuser for KA Lite if needed.
   shell: "{{ ka_lite_central_path }}/centralserver/manage.py createsuperuser --email=admin@learningequality.org --username={{ ka_lite_central_django_superuser_name }} --noinput"

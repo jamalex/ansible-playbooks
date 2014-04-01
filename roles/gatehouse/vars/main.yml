@@ -46,11 +46,11 @@ proxy_backends:
 
   - name: keep_ka_lite_central
     host: keep
-    port: "{{ keep_kalite_port }}"
+    port: "{{ keep_ka_lite_central_port }}"
 
   - name: globe_ka_lite_central
     host: globe
-    port: "{{ keep_kalite_port }}"
+    port: "{{ keep_ka_lite_central_port }}"
 
   - name: scriptorium_forums
     host: scriptorium
