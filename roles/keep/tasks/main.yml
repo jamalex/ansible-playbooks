@@ -65,15 +65,6 @@
   sudo: yes
   sudo_user: www-data
 
-- name: Compile the static KA Lite resources by running the Gruntfile.
-  command: grunt chdir={{ ka_lite_central_path }}
-  sudo: yes
-  sudo_user: www-data
-  changed_when: False
-  when: ka_lite_central_clone.changed
-  tags:
-    - update_ka_lite_central
-
 - name: Put the local_settings.py file into the KA Lite project directory.
   template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/centralserver/local_settings.py
   sudo: yes
@@ -160,6 +151,15 @@
   sudo_user: www-data
   changed_when: "' static file' in setup.stdout"
   failed_when: "setup.stderr"
+  tags:
+    - update_ka_lite_central
+
+- name: Compile the static KA Lite resources by running the Gruntfile.
+  command: grunt chdir={{ ka_lite_central_path }}
+  sudo: yes
+  sudo_user: www-data
+  changed_when: False
+  when: ka_lite_central_clone.changed
   tags:
     - update_ka_lite_central
 
