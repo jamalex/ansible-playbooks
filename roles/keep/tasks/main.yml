@@ -48,7 +48,7 @@
   sudo: yes
 
 - name: Clone the KA Lite git repository and checkout the desired branch.
-  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }}
+  git: repo=https://github.com/fle-internal/ka-lite-central.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
   register: ka_lite_central_clone
