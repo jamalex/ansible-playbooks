@@ -175,6 +175,12 @@
   tags:
     - update_ka_lite_central
 
+- name: Create data/subtitles directory.
+  file: path={{ ka_lite_central_path }}/data/subtitles/ state=directory recurse=yes
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - language_packs
 
 - name: Copy srts_remote_availability.json from our local seed file.
   copy: src=srts_remote_availability.json dest={{ ka_lite_central_path }}/data/subtitles/srts_remote_availability.json force=no
