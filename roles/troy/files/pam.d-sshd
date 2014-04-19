@@ -1,0 +1,30 @@
+# PAM configuration for the Secure Shell service
+
+# Standard Un*x authentication.
+#@include common-auth
+
+# Standard Un*x authorization.
+#@include common-account
+
+# Standard Un*x session setup and teardown.
+#@include common-session
+
+# Set up user limits from /etc/security/limits.conf.
+#session    required     pam_limits.so
+# Set up SELinux capabilities (need modified pam)
+# session  required     pam_selinux.so multiple
+
+# Read environment variables from /etc/environment and
+# /etc/security/pam_env.conf.
+# session    required     pam_env.so # [1]
+
+# In Debian 4.0 (etch), locale-related environment variables were moved to
+# /etc/default/locale, so read that as well.
+# session    required     pam_env.so user_readenv=1 envfile=/etc/default/locale
+
+# Standard Un*x password updating.
+#@include common-password
+
+# session    optional     pam_mail.so standard noenv # [1]
+
+auth       requisite     pam_python.so dummy_pam.py

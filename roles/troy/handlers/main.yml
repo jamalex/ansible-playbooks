@@ -1,0 +1,3 @@
+- name: restart sshd_dummy
+  service: name=sshd_dummy state=restarted
+  sudo: yes

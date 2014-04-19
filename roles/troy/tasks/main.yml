@@ -1,0 +1,48 @@
+---
+
+# http://askubuntu.com/questions/48129/how-to-create-a-restricted-ssh-user-for-port-forwarding
+
+- name: Configure dummy SSHD config.
+  template: src=sshd_dummy_config.j2 dest=/etc/ssh/sshd_dummy_config
+  sudo: yes
+  notify:
+    - restart sshd_dummy
+
+- name: Configure dummy SSHD init script.
+  template: src=sshd_dummy.conf.j2 dest=/etc/init/sshd_dummy.conf
+  sudo: yes
+  notify:
+    - restart sshd_dummy
+
+- name: "Add 'dummy' group."
+  user: name='dummy'
+  sudo: yes
+
+- name: Add dummy account for SSH forwarding.
+  user: "name='{{ dummy_user_name }}' password='{{ dummy_user_password }}'"
+  when: dummy_user_password is defined
+  sudo: yes
+
+- name: Create a symlink for dummy SSHD daemon executable.
+  file: src=/usr/sbin/sshd dest=/usr/sbin/sshd_dummy state=link
+  sudo: yes
+  notify:
+    - restart sshd_dummy
+
+- name: Create the /lib/security directory.
+  file: dest=/lib/security state=directory
+  sudo: yes
+
+- name: Install Python PAM module for dummy logins.
+  copy: src=dummy_pam.py dest=/lib/security/dummy_pam.py
+  sudo: yes
+  tags: pam
+  notify:
+    - restart sshd_dummy
+
+- name: Configure PAM service.
+  copy: src=pam.d-sshd dest=/etc/pam.d/sshd_dummy
+  sudo: yes
+  tags: pam
+  notify:
+    - restart sshd_dummy
