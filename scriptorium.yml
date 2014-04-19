@@ -1,0 +1,13 @@
+---
+- hosts: rackspace
+  tasks:
+    ping: True
+- hosts: scriptorium
+  vars_files:
+    - [roles/scriptorium/vars/secrets.yml, roles/scriptorium/vars/main.yml]
+  vars:
+    - set_hosts_file: yes
+  roles:
+    - common
+    - server
+    - scriptorium
