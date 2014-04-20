@@ -47,7 +47,7 @@
   file: dest=/var/www owner=www-data state=directory
   sudo: yes
 
-- name: Clone the KA Lite git repository and checkout the desired branch.
+- name: Clone the ka-lite-central git repository and checkout the desired branch.
   git: repo=https://github.com/fle-internal/ka-lite-central.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
@@ -150,7 +150,7 @@
   sudo: yes
   sudo_user: www-data
   when: ka_lite_central_django_superuser_name is defined and ka_lite_central_django_superuser_email is defined and ka_lite_central_django_superuser_pass is defined
-  changed_when: "' static file' in setup.stdout"
+  changed_when: "'Migrating forwards' in setup.stdout"
   failed_when: "setup.stderr"
   tags:
     - update_ka_lite_central
@@ -161,7 +161,7 @@
   sudo: yes
   sudo_user: www-data
   when: ka_lite_central_django_superuser_name is not defined or ka_lite_central_django_superuser_email is not defined or ka_lite_central_django_superuser_pass is not defined
-  changed_when: "' static file' in setup.stdout"
+  changed_when: "'Migrating forwards' in setup.stdout"
   failed_when: "setup.stderr"
   tags:
     - update_ka_lite_central
