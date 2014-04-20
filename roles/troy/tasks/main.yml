@@ -19,7 +19,7 @@
   sudo: yes
 
 - name: Add dummy account for SSH forwarding.
-  user: "name='{{ dummy_user_name }}' password='{{ dummy_user_password }}'"
+  user: "name='{{ dummy_user_name }}' password='{{ dummy_user_password }}' shell='/bin/false'"
   when: dummy_user_password is defined
   sudo: yes
 

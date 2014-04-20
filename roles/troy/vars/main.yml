@@ -6,8 +6,12 @@ system_packages:
   - python-requests
   - libpam-python
 
-dummy_user_name: dummy3
+dummy_user_name: dummy
 
 dummy_sshd_port: 6060
 
-ufw_enabled: no
+ufw_enabled: yes
+
+ufw_allowed_ports:
+  - 6060
+  - 8008

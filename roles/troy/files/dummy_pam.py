@@ -12,11 +12,11 @@ def pam_sm_authenticate(pamh, flags, argv):
   # except pamh.exception, e:
   #   return e.pam_result
   # if user == None:
-  pamh.user = DEFAULT_USER
-  if random.random() > 0.5:
+  # pamh.user = DEFAULT_USER
+  # if random.random() > 0.5:
     return pamh.PAM_SUCCESS
-  else:
-    return pamh.PAM_ABORT
+  # else:
+    # return pamh.PAM_ABORT
 
 def pam_sm_setcred(pamh, flags, argv):
   return pamh.PAM_SUCCESS
