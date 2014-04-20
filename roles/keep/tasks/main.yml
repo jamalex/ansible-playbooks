@@ -29,12 +29,12 @@
   notify: restart apache2
 
 - name: Setup KA Lite Apache site conf file.
-  template: src=ka-lite-apache2-site.j2 dest=/etc/apache2/sites-available/001-kalite
+  template: src=ka-lite-apache2-site.j2 dest=/etc/apache2/sites-available/002-kalite-central
   sudo: yes
   notify: restart apache2
 
 - name: Enable the KA Lite Apache site.
-  file: dest=/etc/apache2/sites-enabled/001-kalite src=/etc/apache2/sites-available/001-kalite state=link
+  file: dest=/etc/apache2/sites-enabled/002-kalite-central src=/etc/apache2/sites-available/002-kalite-central state=link
   sudo: yes
   notify: restart apache2
 

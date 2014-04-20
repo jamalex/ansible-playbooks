@@ -33,6 +33,7 @@ ufw_enabled: yes
 
 ufw_allowed_ports:
   - "{{ keep_ka_lite_central_port }}"
+  - 8008
 
 ka_crowdin_project_id: "khanacademy"
 
@@ -41,5 +42,6 @@ crowdin_project_id: "ka-lite"
 lang_pack_versions:
   - 0.10.3
   - 0.11.1
+  - 0.12.0
 
 installer_base_url: "http://adhoc.learningequality.org:7007/media/installer/"
