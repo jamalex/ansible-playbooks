@@ -29,12 +29,12 @@
   notify: restart apache2
 
 - name: Setup KA Lite Apache site conf file.
-  template: src=ka-lite-apache2-site.j2 dest=/etc/apache2/sites-available/002-kalite-central
+  template: src=ka-lite-apache2-site.j2 dest=/etc/apache2/sites-available/001-kalite
   sudo: yes
   notify: restart apache2
 
 - name: Enable the KA Lite Apache site.
-  file: dest=/etc/apache2/sites-enabled/002-kalite-central src=/etc/apache2/sites-available/002-kalite-central state=link
+  file: dest=/etc/apache2/sites-enabled/001-kalite src=/etc/apache2/sites-available/001-kalite state=link
   sudo: yes
   notify: restart apache2
 
@@ -186,6 +186,39 @@
   copy: src=srts_remote_availability.json dest={{ ka_lite_central_path }}/data/subtitles/srts_remote_availability.json force=no
   sudo: yes
   sudo_user: www-data
+  tags:
+    - language_packs
+
+- name: Create the language_pack directory and set it as belonging to the www-data user.
+  file: dest={{ ka_lite_central_path }}/centralserver/media/language_packs owner=www-data state=directory
+  sudo: yes
+  tags:
+    - language_packs
+
+- name: Copy language packs from old ka-lite location.
+  shell: rsync -i --recursive --update /var/www/ka-lite/kalite/media/language_packs {{ ka_lite_central_path }}/centralserver/media/
+  register: rsync
+  sudo: yes
+  sudo_user: www-data
+  changed_when: "rsync.stdout"
+  tags:
+    - language_packs
+
+- name: Copy subtitles from old ka-lite location.
+  shell: rsync -i --recursive --update /var/www/ka-lite/kalite/static/srt {{ ka_lite_central_path }}/centralserver/static/
+  register: rsync
+  sudo: yes
+  sudo_user: www-data
+  changed_when: "rsync.stdout"
+  tags:
+    - language_packs
+
+- name: Copy data directory from old ka-lite location.
+  shell: rsync -i --recursive --update /var/www/ka-lite/data {{ ka_lite_central_path }}/
+  register: rsync
+  sudo: yes
+  sudo_user: www-data
+  changed_when: "rsync.stdout"
   tags:
     - language_packs
 

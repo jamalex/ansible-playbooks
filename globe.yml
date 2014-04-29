@@ -6,5 +6,4 @@
     ka_lite_central_db_name: "ka_lite_staging"  # TODO(bcipolli): change to ka_lite_central_staging later.
   roles:
     - common
-    - server
     - keep

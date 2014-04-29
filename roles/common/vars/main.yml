@@ -11,7 +11,7 @@ db_server_host: 48e2bc57fa7b4d9d864b165c70369c434cd8c457.rackspaceclouddb.com
 
 citadel_flesite_port: 8000
 
-keep_ka_lite_central_port: 9009
+keep_ka_lite_central_port: 8008
 
 admins:
   aron:
