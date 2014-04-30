@@ -60,6 +60,10 @@ proxy_backends:
     host: 174.129.228.112
     port: 7007
 
+  - name: field_kalite_demo
+    host: field
+    port: 8008
+
 # this location will be added to any vhost in virtual_hosts that doesn't define a "locations" list
 default_location:
   - path: /
@@ -129,6 +133,10 @@ virtual_hosts:
     ports: ["7007", "8008 ssl"]
     backend: old_adhocsync_dev_server
     allow_https: yes
+
+  - hosts:
+      - demo.learningequality.org
+    backend: field_kalite_demo
 
   - ports:
       - "80 default"
