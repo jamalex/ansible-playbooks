@@ -242,6 +242,15 @@
   tags:
     - language_packs
 
+- name: Ensure the ka-lite-central/data directory exists and set it as belonging to the www-data user.
+  file: dest={{ ka_lite_central_path }}/data owner=www-data state=directory
+  sudo: yes
+
+- name: Download and unpack the GeoIP data file if it doesn't yet exist.
+  shell: curl http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz | gunzip > {{ ka_lite_central_path }}/data/GeoLiteCity.dat creates={{ ka_lite_central_path }}/data/GeoLiteCity.dat
+  sudo: yes
+  sudo_user: www-data
+
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
 
