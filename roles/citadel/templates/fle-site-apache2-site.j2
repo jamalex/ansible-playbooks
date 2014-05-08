@@ -7,9 +7,14 @@ Listen {{ citadel_flesite_port }}
     Alias /media {{ fle_site_path }}/fle_site/media
     # Alias /favicon.ico /home/ubuntu/ka-lite/kalite/static/images/favicon.ico
 
-    # Alias /presentation /home/ubuntu/ka-lite-presentation
+    Alias /presentation {{ ka_lite_presentation_path }}
 
     <Directory {{ fle_site_path }}/fle_site>
+        Order deny,allow
+        Allow from all
+    </Directory>
+
+    <Directory {{ ka_lite_presentation_path }}>
         Order deny,allow
         Allow from all
     </Directory>

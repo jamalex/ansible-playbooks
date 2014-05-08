@@ -146,3 +146,9 @@
 
 # - name: Load fixture 2.
 #   shell: "{{ fle_site_path }}/manage.py loaddata org_type.json"
+
+- name: Clone the KA Lite presentation and checkout the desired branch.
+  git: repo=https://github.com/jamalex/ka-lite-presentation.git version={{ ka_lite_presentation_git_branch }} dest={{ ka_lite_presentation_path }}
+  sudo: yes
+  sudo_user: www-data
+  notify: restart apache2
