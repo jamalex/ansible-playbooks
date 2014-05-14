@@ -37,5 +37,5 @@ ufw_enabled: yes
 ufw_allowed_ports:
   - "{{ citadel_flesite_port }}"
 
-ka_lite_presentation_git_branch: master
+ka_lite_presentation_git_branch: x
 ka_lite_presentation_path: /var/www/ka-lite-presentation
