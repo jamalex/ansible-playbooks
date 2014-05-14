@@ -82,6 +82,11 @@
   with_items: admins.keys()
   sudo: yes
 
+- name: Remove accounts for former admins.
+  user: "name='{{ item }}' state=absent"
+  with_items: former_admins
+  sudo: yes
+
 - name: Create the users' .ssh directories.
   file: "dest=/home/{{ item }}/.ssh owner={{ item }} state=directory"
   with_items: admins.keys()
