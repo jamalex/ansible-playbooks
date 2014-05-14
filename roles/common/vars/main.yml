@@ -16,16 +16,13 @@ keep_ka_lite_central_port: 8008
 admins:
   aron:
     keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD4e2/2YqCEh4/4KsieCmQf17uJQFusI2mvd+OYTKhTJJWKcTOaeVIeWOxANbFQle2EK+ASoINCXzmStFlG3lIGDq2S/qKwb0PF9BQBAIsSGy3s43XNRbr9mLnbl9KR28fc3u/o5CwlQx/YQ9p+06LVHN0QNKdMcy5Jfon3C4t3yOck/+Iv3wpgwoaQzPiT2N94hOovsFU/tpPE5SxorFuY1V4l5A0ciMI2MKAcalyeoA0O4mehlPVXotHF8S0F2s9TBRJ/eGWINiFTcXrrd2LScPOPjlrIkf4z3yoZTyIKxC5ivx42oS4rTZiv8rF8jx1/bVP51k9cgkCyBXxTOXN aron@localhost
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCy0sjO50GxVwF86ZAG1SWJLnHSqjs9FrWSm+TGQQNWbU3xrlCIuADm7pizMHO8FR7uwJ7QF7sWTL7GLXLOPvWOqKPnIPUYB0peccylfq2MX/DU4+yDBzd4S/oK81gzqOxgexRSOt0Apn72SWeBE6RPYxr94emMHNYixH1fp5XhasVphjkE1EFgR56Baa5DJLIrVdKGuuZL1HpSrGMn0C7VFS7973rZ+1+xBWRJbQ93CYIhtmbp9jY/f4CxVbPTxsi1ll8BkHoai6O1m/CIJ91Bwom1yi7Rixw/pX8PS5IE1VyiRE8XgIfYwYmRcqGmiBs6a35t4DcQX6lPVGsax1mr aron@eudaimonia
   jamalex:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDvZbFyn5l3+JbD21ooVJ6pOoo7HaazEWiK3VAANgk0VaHz4K2PqPBOtFp5Geg4EixqHFF11Wa7jMTFw4svi6wAm3hLJeLi6Ghja//APRIHsKnVSR/2RPxoTlwrgmtZuZOr1xKdpALn7YulcItpCKvcFQWRg+J3ove1IJCxlFr/k7dDo2P8Ny18ULtLlaugyHQ3TE0kUP9W5hYkYFwMAr8Vvuuca7oXJXqXoISwkgRElGXPorMtWOmfyLWOV413kQvX21hz7sU6kyxStLxP9gZwwdZ9IjQ3tCucnAo5NLMYiOD99L3aevs59+3gihdIa9QDPp9b5lPICEC0tNruYX51 jamalex@ace
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgcmGfhjcENw4gUUD4Dhwyl0NmoQodtWSz1NB04P9ktXgXMljr8Hn8VQtZrG2Eu8HOdQI3p5Fd9cgRuD7W+07p/9sF1HnmAf+OJ5luCzmEzZpakXqOBULzyNuR4aPgX1z7HskDCETi3X9nY88R0PWP440MCfiffkM66tqV70PEOWw+87mR10SnsUdXYzitZ0pAt1JOTsZE+tgygV1yK4CTUf7r8HT/y+GNte0ixJ5MLvh8bXyBU2j9i6AAyNqG9IZOj5lCM0NbuTdjJz6rzGOIysvPqeoiTb8NbGi4PwcnPMznVhs7zOI+B8MGP1oMQPd5YLBDSbs2wyImuQ4D5WyD jamalex@fett
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9MX6JL2X9ZI0jsIS9NfGt688Q/v1ZrDg7nQ43tAjfOL1VZ7z1njc/01p/ymKP6P3dueBrbPUkyOWpaTu8BmPFz11TLcUCUkJ4OhoGlOQ+KpWgU+cATz5386WIAdmu903p3DaeNkte7QT71nJAVfLolYTCL21hRjAjBhFsSbCeVJ5Y8ppT2LiE94waPBAIQF/crQdoVGLgnU4uP0YgtvpMWUIQWfpmUB+ck/b9vMJVE4Wtd8s0XL0z5VvLnzfwCPCJK03AZXqVpo65OIBLt3DvHqM50fPCQc7Qq5q6cFU4IZF+xgBbPf6aZr6MJZiWHskDtFazWOUS2vSgVX4YdjUb jamalex@keep
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0pX4n0PkEzySjH2FR4gQ9TJIN54JQ2Mm+zpHKatqOSl9sUXrPZKO+dCfwNVfa/jJwg0YELEs7fsq1CCoVYzZ0AbH/OC0U/iHJKumjB9d7T/zKL4FJ9dEb4w5elYoTb8NFfeOunwwU7hsLO57hr/MFZxdNsDFkodHjIBqzQqe732OEPzLssbqpWU5YpHVjXu0buT6VMPCm9BVst+UKjjQ+TXhb2m1HJS95adtsfvXT+4viMkTQ6IFF5z9FiODpo3IIoUfKC4mqjW5DbjifaH+bSnGZaOXojMs7Umy9UQ3jNOu4g5qhoSVDYOrIDZsNyDaxMfMi5XYi2BnCcPGLbaxJ jamalex@wa
-  ben:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIkwXst/nmpqKyCjNNvkNH6iSjANZzAan5B5VkETKrB4FC3kaS5KiRBb2IsZ5+zmjG5ugAHugFgCC/zddxpKYE9/ixdVli0cTvtE8YGnpJ1uKcLQpTKN165rxOrPJ+B1TazebnsT+SNqak2WLgZNYxX8WhihsyFgAp1LGwDwO+8BElhwAUFwx24alVQhL457BspIa4AB1ZtgwyVcl9yo89jSDjSxLRaM6wrApIFr2s0Q5eFMddAbTYtTv/gPwk/bljl0rF0YTqqaEmHIObG5Xnq/D77Tc96fwgByJFANP7CWpXv68SvzQ/27QiHQRMadBlXkdxnKZWQa9q/QEd0SW9 bcipolli@ucsd.edu
 
 permissions:
   gatehouse:
@@ -36,25 +33,20 @@ permissions:
     - jamalex
   field:
     - jamalex
-    - ben
     - aron
   hall:
     - jamalex
-    - ben
     - aron
   citadel:
     - jamalex
   dungeon:
     - jamalex
-    - ben
     - aron
   kitchen:
     - jamalex
-    - ben
     - aron
   globe:
     - jamalex
-    - ben
     - aron
   troy:
     - jamalex
