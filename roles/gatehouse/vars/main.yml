@@ -79,13 +79,6 @@ virtual_hosts:
         varnish: yes
     allow_https: yes
 
-  # this one is only necessary because of the gatehouse link Dylan sent out for the internships page; can be deleted later
-  - hosts:
-      - gatehouse.learningequality.org
-    locations:
-      - path: /
-        redirect: https://learningequality.org$request_uri
-
   - hosts:
       - kalite.learningequality.org
     backend: keep_ka_lite_central
