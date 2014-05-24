@@ -23,6 +23,11 @@
   when: system_packages is defined
   sudo: yes
 
+- name: Install common required Python packages.
+  pip: name={{ item }}
+  with_items: common_python_packages
+  sudo: yes
+
 - name: Install role-specific required Python packages.
   pip: name={{ item }}
   with_items: python_packages
