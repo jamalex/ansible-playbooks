@@ -48,6 +48,10 @@ proxy_backends:
     host: keep
     port: "{{ keep_ka_lite_central_port }}"
 
+  - name: globe_fle_site
+    host: globe
+    port: "{{ citadel_flesite_port }}"
+
   - name: globe_ka_lite_central
     host: globe
     port: "{{ keep_ka_lite_central_port }}"
@@ -92,6 +96,12 @@ virtual_hosts:
         force_https: yes
       - path: ~ ^/(content|static|media)
         varnish: yes
+
+  - hosts:
+      - flestaging.learningequality.org
+    backend: globe_fle_site
+    locations:
+      - path: /
 
   - hosts:
       - staging.learningequality.org

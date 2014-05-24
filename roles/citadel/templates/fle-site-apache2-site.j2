@@ -3,9 +3,7 @@ Listen {{ citadel_flesite_port }}
 <VirtualHost *:{{ citadel_flesite_port }}>
 
     Alias /static/admin {{ django_location.stdout }}/contrib/admin/static/admin
-    Alias /static {{ fle_site_path }}/fle_site/static
-    Alias /media {{ fle_site_path }}/fle_site/media
-    # Alias /favicon.ico /home/ubuntu/ka-lite/kalite/static/images/favicon.ico
+    Alias /static {{ fle_site_path }}/_static_cache
 
     Alias /presentation {{ ka_lite_presentation_path }}
 

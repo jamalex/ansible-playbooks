@@ -28,6 +28,8 @@
   sudo_user: www-data
   register: flesite_clone
   notify: restart apache2
+  tags:
+    -- update_fle_site
 
 - name: Install required Node.js packages.
   npm: name={{ item }} path={{ fle_site_path }}
@@ -44,35 +46,47 @@
   sudo_user: www-data
   changed_when: False
   when: flesite_clone.changed
+  tags:
+    -- update_fle_site
 
 - name: Put the local_settings.py file into the FLE Site project directory.
   template: src=local_settings.py.j2 dest={{ fle_site_path }}/fle_site/local_settings.py
   sudo: yes
   sudo_user: www-data
   notify: restart apache2
+  tags:
+    -- update_fle_site
 
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
   sudo_user: www-data
   command: touch {{ fle_site_path }}/fle_site/local_settings_secrets.py creates={{ fle_site_path }}/fle_site/local_settings_secrets.py
+  tags:
+    -- update_fle_site
 
 - name: Update the SECRET_KEY in local_settings_secret.py if variable 'fle_site_secret_key' is defined.
   lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ fle_site_secret_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: fle_site_secret_key is defined
+  tags:
+    -- update_fle_site
 
 - name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'fle_site_db_pass' is defined.
   lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ fle_site_db_pass }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: fle_site_db_pass is defined
+  tags:
+    -- update_fle_site
 
 - name: Update the DISQUS_USER_API_KEY in local_settings_secret.py if variable 'disqus_user_api_key' is defined.
   lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DISQUS_USER_API_KEY =' line='DISQUS_USER_API_KEY = "{{ disqus_user_api_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: disqus_user_api_key is defined
+  tags:
+    -- update_fle_site
 
 - name: Copy GeoLiteCity file onto server.
   copy: src=GeoLiteCity.dat dest={{ fle_site_path }}/fle_site/data/GeoLiteCity.dat
@@ -117,16 +131,29 @@
   shell: "{{ fle_site_path }}/manage.py clean_pyc"
   sudo: yes
   changed_when: False
+  tags:
+    -- update_fle_site
 
 - name: Run syncdb on FLE Site database to ensure it is initialized.
   shell: "{{ fle_site_path }}/manage.py syncdb --noinput"
   register: syncdb
   changed_when: "'Creating table ' in syncdb.stdout"
+  tags:
+    -- update_fle_site
 
 - name: Migrate FLE Site database to latest schema.
   shell: "{{ fle_site_path }}/manage.py migrate --merge"
   register: migrate
   changed_when: "'Migrating forwards' in migrate.stdout"
+  tags:
+    -- update_fle_site
+
+- name: Run collectstatic to consolidate static files from all apps.
+  shell: "{{ fle_site_path }}/manage.py collectstatic --noinput"
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    -- update_fle_site
 
 - name: Create Django superuser for FLE Site if needed.
   shell: "{{ fle_site_path }}/manage.py createsuperuser --email=admin@learningequality.org --username={{ fle_site_django_superuser_name }} --noinput"
