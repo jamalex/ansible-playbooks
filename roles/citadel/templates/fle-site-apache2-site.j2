@@ -1,13 +1,14 @@
-Listen {{ citadel_flesite_port }}
+Listen {{ citadel_flehome_port }}
 
-<VirtualHost *:{{ citadel_flesite_port }}>
+<VirtualHost *:{{ citadel_flehome_port }}>
 
     Alias /static/admin {{ django_location.stdout }}/contrib/admin/static/admin
-    Alias /static {{ fle_site_path }}/_static_cache
+    Alias /static {{ fle_home_path }}/_static_cache
+    Alias /media {{ fle_home_path }}/fle_site/media
 
     Alias /presentation {{ ka_lite_presentation_path }}
 
-    <Directory {{ fle_site_path }}/fle_site>
+    <Directory {{ fle_home_path }}/fle_site>
         Order deny,allow
         Allow from all
     </Directory>
@@ -17,6 +18,6 @@ Listen {{ citadel_flesite_port }}
         Allow from all
     </Directory>
 
-    WSGIScriptAlias / {{ fle_site_path }}/fle_site/wsgi.py
+    WSGIScriptAlias / {{ fle_home_path }}/fle_site/wsgi.py
 
 </VirtualHost>

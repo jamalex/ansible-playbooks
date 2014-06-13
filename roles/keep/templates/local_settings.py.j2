@@ -12,6 +12,9 @@ from local_settings_secrets import *
 
 # -------------------------------
 
+# TEMP: until we fix securesync counters, just send models down as one huge batch
+SYNCING_MAX_RECORDS_PER_REQUEST = 100000
+
 CENTRAL_SERVER = True
 
 DEBUG = False

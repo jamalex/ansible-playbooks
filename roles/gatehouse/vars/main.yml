@@ -15,16 +15,17 @@ nginx_worker_connections: 4096
 nginx_keepalive_timeout: 65
 
 # this is the certificate name to be used in the Nginx config
-nginx_ssl_certificate_name_to_use: multi_domain_feb_2014
+nginx_ssl_certificate_name_to_use: multi_domain_june_2014
 
 # this is the certificate to generate a key and csr for
-nginx_ssl_certificate_name_to_install: multi_domain_feb_2014
+nginx_ssl_certificate_name_to_install: multi_domain_june_2014
 
 ssl_certificate_domains:
   - learningequality.org
   - kalite.learningequality.org
   - kalite.adhocsync.com
   - forums.learningequality.org
+  - hub.learningequality.org
 
 primary_ssl_certificate_domain: learningequality.org
 
@@ -40,17 +41,17 @@ ufw_allowed_ports:
 
 proxy_backends:
 
-  - name: citadel_fle_site
+  - name: citadel_fle_home
     host: citadel
-    port: "{{ citadel_flesite_port }}"
+    port: "{{ citadel_flehome_port }}"
 
   - name: keep_ka_lite_central
     host: keep
     port: "{{ keep_ka_lite_central_port }}"
 
-  - name: globe_fle_site
+  - name: globe_fle_home
     host: globe
-    port: "{{ citadel_flesite_port }}"
+    port: "{{ citadel_flehome_port }}"
 
   - name: globe_ka_lite_central
     host: globe
@@ -76,7 +77,7 @@ virtual_hosts:
 
   - hosts:
       - learningequality.org
-    backend: citadel_fle_site
+    backend: citadel_fle_home
     force_https: yes
     locations:
       - path: /
@@ -84,14 +85,11 @@ virtual_hosts:
     allow_https: yes
 
   - hosts:
-      - kalite.learningequality.org
+      - hub.learningequality.org
     backend: keep_ka_lite_central
     allow_https: yes
     locations:
       - path: /
-      - path: ~ ^/($|faq)
-        varnish: yes
-        force_https: yes
       - path: ~ ^/(accounts|wiki|contact|securesync|admin)
         force_https: yes
       - path: ~ ^/(content|static|media)
@@ -99,7 +97,7 @@ virtual_hosts:
 
   - hosts:
       - flestaging.learningequality.org
-    backend: globe_fle_site
+    backend: globe_fle_home
     locations:
       - path: /
 
@@ -117,9 +115,10 @@ virtual_hosts:
   - hosts:
       - kalite.adhocsync.com
       - adhocsync.com
+      - kalite.learningequality.org
     locations:
       - path: = /
-        redirect: https://kalite.learningequality.org
+        redirect: https://learningequality.org/ka-lite/
       - path: /
         backend: keep_ka_lite_central
     allow_https: yes
@@ -133,6 +132,7 @@ virtual_hosts:
   - hosts:
       - kalite.learningequality.org
       - kalite.adhocsync.com
+      - hub.learningequality.org
     ports: ["7007", "8008 ssl"]
     backend: old_adhocsync_dev_server
     allow_https: yes

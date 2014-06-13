@@ -26,16 +26,16 @@ apache_ThreadsPerChild: 50
 apache_MaxClients: 250
 apache_MaxRequestsPerChild: 1000
 
-fle_site_git_branch: master
-fle_site_path: /var/www/fle-site
+fle_home_git_branch: master
+fle_home_path: /var/www/fle-home
 
-fle_site_db_name: "fle_site"
-fle_site_db_user: "fle_site"
+fle_home_db_name: "fle_site"
+fle_home_db_user: "fle_site"
 
 ufw_enabled: yes
 
 ufw_allowed_ports:
-  - "{{ citadel_flesite_port }}"
+  - "{{ citadel_flehome_port }}"
 
 ka_lite_presentation_git_branch: x
 ka_lite_presentation_path: /var/www/ka-lite-presentation

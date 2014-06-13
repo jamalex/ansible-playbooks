@@ -22,17 +22,17 @@
   file: dest=/var/www owner=www-data state=directory
   sudo: yes
 
-- name: Clone the FLE Site git repository and checkout the desired branch.
-  git: repo=https://github.com/fle-internal/fle-site.git version={{ fle_site_git_branch }} dest={{ fle_site_path }}
+- name: Clone the FLE Home git repository and checkout the desired branch.
+  git: repo=https://github.com/fle-internal/fle-home.git version={{ fle_home_git_branch }} dest={{ fle_home_path }} update=true
   sudo: yes
   sudo_user: www-data
-  register: flesite_clone
+  register: flehome_clone
   notify: restart apache2
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Install required Node.js packages.
-  npm: name={{ item }} path={{ fle_site_path }}
+  npm: name={{ item }} path={{ fle_home_path }}
   with_items:
     - grunt
     - less
@@ -41,60 +41,64 @@
   sudo_user: www-data
 
 - name: Compile the static KA Lite resources by running the Gruntfile.
-  command: grunt chdir={{ fle_site_path }}
+  command: grunt chdir={{ fle_home_path }}
   sudo: yes
   sudo_user: www-data
   changed_when: False
-  when: flesite_clone.changed
+  when: flehome_clone.changed
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Put the local_settings.py file into the FLE Site project directory.
-  template: src=local_settings.py.j2 dest={{ fle_site_path }}/fle_site/local_settings.py
+  template: src=local_settings.py.j2 dest={{ fle_home_path }}/fle_site/local_settings.py
   sudo: yes
   sudo_user: www-data
   notify: restart apache2
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
   sudo_user: www-data
-  command: touch {{ fle_site_path }}/fle_site/local_settings_secrets.py creates={{ fle_site_path }}/fle_site/local_settings_secrets.py
+  command: touch {{ fle_home_path }}/fle_site/local_settings_secrets.py creates={{ fle_home_path }}/fle_site/local_settings_secrets.py
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
-- name: Update the SECRET_KEY in local_settings_secret.py if variable 'fle_site_secret_key' is defined.
-  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ fle_site_secret_key }}"' owner="www-data"
+- name: Update the SECRET_KEY in local_settings_secret.py if variable 'fle_home_secret_key' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ fle_home_secret_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
-  when: fle_site_secret_key is defined
+  when: fle_home_secret_key is defined
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
-- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'fle_site_db_pass' is defined.
-  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ fle_site_db_pass }}"' owner="www-data"
+- name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'fle_home_db_pass' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ fle_home_db_pass }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
-  when: fle_site_db_pass is defined
+  when: fle_home_db_pass is defined
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Update the DISQUS_USER_API_KEY in local_settings_secret.py if variable 'disqus_user_api_key' is defined.
-  lineinfile: dest={{ fle_site_path }}/fle_site/local_settings_secrets.py regexp='^DISQUS_USER_API_KEY =' line='DISQUS_USER_API_KEY = "{{ disqus_user_api_key }}"' owner="www-data"
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^DISQUS_USER_API_KEY =' line='DISQUS_USER_API_KEY = "{{ disqus_user_api_key }}"' owner="www-data"
   sudo: yes
   sudo_user: www-data
   when: disqus_user_api_key is defined
   tags:
-    -- update_fle_site
+    -- update_fle_home
+
+- name: Create the data directory and set it as belonging to the www-data user.
+  file: dest={{ fle_home_path }}/fle_site/data owner=www-data state=directory
+  sudo: yes
 
 - name: Copy GeoLiteCity file onto server.
-  copy: src=GeoLiteCity.dat dest={{ fle_site_path }}/fle_site/data/GeoLiteCity.dat
+  copy: src=GeoLiteCity.dat dest={{ fle_home_path }}/fle_site/data/GeoLiteCity.dat
   sudo: yes
   sudo_user: www-data
 
 - name: Install Python package requirements
-  pip: requirements={{ fle_site_path }}/requirements.txt
+  pip: requirements={{ fle_home_path }}/requirements.txt
   sudo: yes
 
 - name: Find the location of the installed Django package.
@@ -128,54 +132,66 @@
   notify: restart apache2
 
 - name: Clear any old pyc files left over from an old branch or version.
-  shell: "{{ fle_site_path }}/manage.py clean_pyc"
+  shell: "{{ fle_home_path }}/manage.py clean_pyc"
   sudo: yes
   changed_when: False
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Run syncdb on FLE Site database to ensure it is initialized.
-  shell: "{{ fle_site_path }}/manage.py syncdb --noinput"
+  shell: "{{ fle_home_path }}/manage.py syncdb --noinput"
   register: syncdb
   changed_when: "'Creating table ' in syncdb.stdout"
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Migrate FLE Site database to latest schema.
-  shell: "{{ fle_site_path }}/manage.py migrate --merge"
+  shell: "{{ fle_home_path }}/manage.py migrate --merge"
   register: migrate
   changed_when: "'Migrating forwards' in migrate.stdout"
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Run collectstatic to consolidate static files from all apps.
-  shell: "{{ fle_site_path }}/manage.py collectstatic --noinput"
+  shell: "{{ fle_home_path }}/manage.py collectstatic --noinput"
   sudo: yes
   sudo_user: www-data
   tags:
-    -- update_fle_site
+    -- update_fle_home
 
 - name: Create Django superuser for FLE Site if needed.
-  shell: "{{ fle_site_path }}/manage.py createsuperuser --email=admin@learningequality.org --username={{ fle_site_django_superuser_name }} --noinput"
-  when: fle_site_django_superuser_name is defined
+  shell: "{{ fle_home_path }}/manage.py createsuperuser --email=admin@learningequality.org --username={{ fle_home_django_superuser_name }} --noinput"
+  when: fle_home_django_superuser_name is defined
   register: createsuperuser
   changed_when: "'Duplicate entry' not in createsuperuser.stderr"
   failed_when: "createsuperuser.stderr and 'Duplicate entry' not in createsuperuser.stderr"
 
 - name: Set Django superuser password for FLE Site if needed.
-  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ fle_site_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ fle_site_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ fle_site_django_superuser_pass }}\"); u.save()' | {{ fle_site_path }}/manage.py shell"
-  when: fle_site_django_superuser_name is defined and fle_site_django_superuser_pass is defined
+  shell: "echo 'from django.contrib.auth.models import User; u = User.objects.get(username=\"{{ fle_home_django_superuser_name }}\"); print \"same_password\" if u.check_password(\"{{ fle_home_django_superuser_pass }}\") else \"changed_password\"; u.set_password(\"{{ fle_home_django_superuser_pass }}\"); u.save()' | {{ fle_home_path }}/manage.py shell"
+  when: fle_home_django_superuser_name is defined and fle_home_django_superuser_pass is defined
   register: setpassword
   changed_when: "'changed_password' in setpassword.stdout"
 
-# - name: Load fixture 1.
-#   shell: "{{ fle_site_path }}/manage.py loaddata supporting_organization.json"
+- name: Load fixture 1.
+  shell: "{{ fle_home_path }}/manage.py loaddata faq.json"
 
-# - name: Load fixture 2.
-#   shell: "{{ fle_site_path }}/manage.py loaddata org_type.json"
+- name: Load fixture 2.
+  shell: "{{ fle_home_path }}/manage.py loaddata user_guides.json"
 
 - name: Clone the KA Lite presentation and checkout the desired branch.
-  git: repo=https://github.com/jamalex/ka-lite-presentation.git version={{ ka_lite_presentation_git_branch }} dest={{ ka_lite_presentation_path }}
+  git: repo=https://github.com/jamalex/ka-lite-presentation.git version={{ ka_lite_presentation_git_branch }} dest={{ ka_lite_presentation_path }} update=true
   sudo: yes
   sudo_user: www-data
   notify: restart apache2
+
+- name: Check whether old fle-site media directory exists.
+  stat: path=/var/www/fle-site/fle_site/media
+  register: check_fle_site_media_path
+
+- name: Copy uploaded media files from old fle-site location.
+  shell: rsync -i --recursive --update /var/www/fle-site/fle_site/media {{ fle_home_path }}/fle_site/
+  register: rsync
+  sudo: yes
+  sudo_user: www-data
+  changed_when: "rsync.stdout"
+  when: check_fle_site_media_path.stat.exists
