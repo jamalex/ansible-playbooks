@@ -31,6 +31,22 @@
   tags:
     -- update_fle_home
 
+#- name: Manually switch the branch, since git submodule doesn't always do it.
+#  shell: git checkout {{ fle_home_git_branch }} chdir={{ fle_home_path }}
+#  sudo: yes
+#  sudo_user: www-data
+#  notify: restart apache2
+#  tags:
+#    -- update_fle_home
+
+#- name: Manually pull the latest code, since git submodule doesn't always do it.
+#  shell: git pull origin {{ fle_home_git_branch }} chdir={{ fle_home_path }}
+#  sudo: yes
+#  sudo_user: www-data
+#  notify: restart apache2
+#  tags:
+#    -- update_fle_home
+
 - name: Install required Node.js packages.
   npm: name={{ item }} path={{ fle_home_path }}
   with_items:
@@ -172,11 +188,11 @@
   register: setpassword
   changed_when: "'changed_password' in setpassword.stdout"
 
-- name: Load fixture 1.
-  shell: "{{ fle_home_path }}/manage.py loaddata faq.json"
+#- name: Load fixture 1.
+#  shell: "{{ fle_home_path }}/manage.py loaddata faq.json"
 
-- name: Load fixture 2.
-  shell: "{{ fle_home_path }}/manage.py loaddata user_guides.json"
+#- name: Load fixture 2.
+#  shell: "{{ fle_home_path }}/manage.py loaddata user_guides.json"
 
 - name: Clone the KA Lite presentation and checkout the desired branch.
   git: repo=https://github.com/jamalex/ka-lite-presentation.git version={{ ka_lite_presentation_git_branch }} dest={{ ka_lite_presentation_path }} update=true

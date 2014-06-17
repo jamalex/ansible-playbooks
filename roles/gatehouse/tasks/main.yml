@@ -78,6 +78,7 @@
 - name: Unzip zip file containing certificates.
   shell: unzip -o certificates.zip | grep -v -E 'AddTrust|SSL|COMODO' | grep -E '\w+\.crt' -o chdir=/etc/nginx/ssl/
   sudo: yes
+  when: cert_copy.changed is defined and cert_copy.changed
   register: cert_unzip
   tags:
     - ssl
