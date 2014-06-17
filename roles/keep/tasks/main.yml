@@ -236,7 +236,7 @@
     - language_packs
 
 - name: Create cron job to run language pack builder script.
-  cron: name="build language packs" minute="0" hour="2" day="1,15" job="{{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh" user=www-data
+  cron: name="build language packs" minute="0" hour="23" job="{{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh" user=www-data
   sudo: yes
   sudo_user: www-data
   tags:
