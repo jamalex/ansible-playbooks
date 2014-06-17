@@ -35,8 +35,10 @@ permissions:
     - jamalex
   keep:
     - jamalex
+    - aron
   scriptorium:
     - jamalex
+    - aron
   field:
     - jamalex
     - aron
@@ -45,6 +47,7 @@ permissions:
     - aron
   citadel:
     - jamalex
+    - aron
   dungeon:
     - jamalex
     - aron
