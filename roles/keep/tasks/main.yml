@@ -56,6 +56,16 @@
   tags:
     - update_ka_lite_central
 
+- name: Update ka-lite-central git submodules.
+  shell: git submodule update --init --recursive chdir={{ ka_lite_central_path }}
+  sudo: yes
+  sudo_user: www-data
+  register: ka_lite_central_submodule_update
+  changed_when: "'checked out' in ka_lite_central_submodule_update.stdout"
+  notify: restart apache2
+  tags:
+    - update_ka_lite_central
+
 - name: Install required Node.js packages.
   npm: name={{ item }} path={{ ka_lite_central_path }}
   with_items:
