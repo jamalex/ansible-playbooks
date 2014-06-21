@@ -27,7 +27,9 @@ ka_lite_central_path: /var/www/ka-lite-central
 
 postmark_sender: "kalite@learningequality.org"
 
-ka_lite_central_db_name: "ka_lite_central"
+# NOTE: we don't specify ka_lite_central_db_name here anymore,
+# instead requiring that it be specified in the playbook itself
+# (to prevent accidentally using production DB on staging server)
 ka_lite_central_db_user: "ka_lite_central"
 
 ufw_enabled: yes

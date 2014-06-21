@@ -7,6 +7,7 @@
     - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
   vars:
     - set_hosts_file: yes
+    - ka_lite_central_db_name: "ka_lite_central"
   roles:
     - common
     - server
