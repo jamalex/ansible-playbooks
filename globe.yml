@@ -1,18 +1,3 @@
 ---
-- hosts: globe
-  vars_files:
-    - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
-  vars:
-    ka_lite_central_db_name: "ka_lite_staging"
-  roles:
-    - common
-    - server
-    - keep
-
-- hosts: globe
-  vars_files:
-    - [roles/citadel/vars/secrets.yml, roles/citadel/vars/main.yml]
-  roles:
-    - common
-    # - server
-    - citadel
+- include: globe-keep.yml
+- include: globe-citadel.yml
