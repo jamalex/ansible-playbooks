@@ -6,10 +6,16 @@
 
 - name: Add the node.js PPA
   command: add-apt-repository -y ppa:chris-lea/node.js creates=/etc/apt/sources.list.d/chris-lea-node_js-precise.list
+  register: add_node_ppa
   sudo: yes
 
-- name: Install nodejs (with npm)
-  action: apt pkg=nodejs state=installed update-cache=yes
+- name: Update apt cache.
+  command: apt-get update
+  when: add_node_ppa.changed
+  sudo: yes
+
+- name: Install nodejs (with npm).
+  apt: pkg=nodejs state=installed
   sudo: yes
 
 - name: Install required Node.js packages.
