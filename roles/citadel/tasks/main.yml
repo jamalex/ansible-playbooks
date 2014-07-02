@@ -211,3 +211,8 @@
   sudo_user: www-data
   changed_when: "rsync.stdout"
   when: check_fle_site_media_path.stat.exists
+
+- name: Create cron job to download user resource files hourly.
+  cron: name="download user resources" minute="0" job="{{ fle_home_path }}/manage.py download_user_resource_files" user=www-data
+  sudo: yes
+  sudo_user: www-data
