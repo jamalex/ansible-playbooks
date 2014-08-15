@@ -162,7 +162,7 @@
     - update_ka_lite_central
 
 - name: Run setup command to ensure KA Lite is initialized (new install or upgrade).
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py setup --noinput -u {{ ka_lite_central_django_superuser_name }} -e {{ ka_lite_central_django_superuser_email }} -p {{ ka_lite_central_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
+  shell: "echo 'yes\n' | {{ ka_lite_central_path }}/centralserver/manage.py setup --noinput -u {{ ka_lite_central_django_superuser_name }} -e {{ ka_lite_central_django_superuser_email }} -p {{ ka_lite_central_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
   register: setup
   sudo: yes
   sudo_user: www-data
@@ -173,7 +173,7 @@
     - update_ka_lite_central
 
 - name: Run setup command to ensure KA Lite is initialized (upgrade).
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py setup --noinput"
+  shell: "echo 'yes\n' | {{ ka_lite_central_path }}/centralserver/manage.py setup --noinput"
   register: setup
   sudo: yes
   sudo_user: www-data
