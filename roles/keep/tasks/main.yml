@@ -280,7 +280,7 @@
     - "geoip"
 
 - name: Create cron job to update IP location JSONP file.
-  cron: 'name="update locations jsonp file" minute="0" hour="2" job="{{ ka_lite_central_path }}/centralserver/manage.py write_ip_locations --locations {{ ka_lite_central_path }}/centralserver/media/locations/locations.jsonp --locations_csv {{ ka_lite_central_path }}/centralserver/media/locations/locations.csv --countries {{ ka_lite_central_path }}/centralserver/media/locations/countries.txt"  user=www-data'
+  cron: 'name="update locations jsonp file" minute="0" hour="2" job="{{ ka_lite_central_path }}/centralserver/manage.py write_ip_locations --locations {{ ka_lite_central_path }}/centralserver/media/locations/locations.jsonp --locations_csv {{ ka_lite_central_path }}/centralserver/media/locations/locations.csv --countries {{ ka_lite_central_path }}/centralserver/media/locations/countries.txt --kml {{ ka_lite_central_path }}/centralserver/media/locations/locations.kml --country_csv {{ ka_lite_central_path }}/centralserver/media/locations/countries.csv  --continent_csv {{ ka_lite_central_path }}/centralserver/media/locations/continents.csv"  user=www-data'
   sudo: yes
   sudo_user: www-data
   tags:
