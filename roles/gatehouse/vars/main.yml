@@ -96,6 +96,7 @@ virtual_hosts:
     allow_https: yes
     locations:
       - path: /
+        force_https: yes
       - path: ~ ^/(accounts|wiki|contact|securesync|admin)
         force_https: yes
       - path: ~ ^/(content|static|media)
