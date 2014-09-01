@@ -279,8 +279,20 @@
   tags:
     - "geoip"
 
+- name: Ensure the ka-lite-central/data/logs/github/ directory exists and set it as belonging to the www-data user.
+  file: dest={{ ka_lite_central_path }}/data/logs/github owner=www-data state=directory
+  sudo: yes
+
+- name: Setup GitHub data download script file.
+  template: src=download_github_stats.sh.j2 dest={{ ka_lite_central_path }}/data/logs/github/download_github_stats.sh mode=0755
+  sudo: yes
+
+- name: Create cron job to download GitHub data.
+  cron: 'name="download github data" minute="0" hour="9" job="{{ ka_lite_central_path }}/data/logs/github/download_github_stats.sh" user=www-data'
+  shell:
+
 - name: Create cron job to update IP location JSONP file.
-  cron: 'name="update locations jsonp file" minute="0" hour="2" job="{{ ka_lite_central_path }}/centralserver/manage.py write_ip_locations --locations {{ ka_lite_central_path }}/centralserver/media/locations/locations.jsonp --locations_csv {{ ka_lite_central_path }}/centralserver/media/locations/locations.csv --countries {{ ka_lite_central_path }}/centralserver/media/locations/countries.txt --kml {{ ka_lite_central_path }}/centralserver/media/locations/locations.kml --country_csv {{ ka_lite_central_path }}/centralserver/media/locations/countries.csv  --continent_csv {{ ka_lite_central_path }}/centralserver/media/locations/continents.csv"  user=www-data'
+  cron: 'name="update locations jsonp file" minute="0" hour="2" job="{{ ka_lite_central_path }}/centralserver/manage.py write_ip_locations --locations {{ ka_lite_central_path }}/centralserver/media/locations/locations.jsonp --locations_csv {{ ka_lite_central_path }}/centralserver/media/locations/locations.csv --countries {{ ka_lite_central_path }}/centralserver/media/locations/countries.txt --kml {{ ka_lite_central_path }}/centralserver/media/locations/locations.kml --country_csv {{ ka_lite_central_path }}/centralserver/media/locations/countries.csv  --continent_csv {{ ka_lite_central_path }}/centralserver/media/locations/continents.csv" user=www-data'
   sudo: yes
   sudo_user: www-data
   tags:
