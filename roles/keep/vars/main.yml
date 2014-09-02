@@ -11,6 +11,7 @@ system_packages:
 python_packages:
   - MySQL-python
   - pygeoip
+  - requests
 
 apache_request_timeout: 300
 
