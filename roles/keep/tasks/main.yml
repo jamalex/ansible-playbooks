@@ -273,7 +273,7 @@
     - language_packs
 
 - name: Create cron job to run dubbed video mappings update script.
-  cron: name="generate dubbed video mappings" minute="0" hour="16" weekday="5" job="{{ ka_lite_central_path }}/ka-lite-dubbed-video-mapping-updater.sh"
+  cron: name="generate dubbed video mappings" minute="0" hour="16" weekday="5" job="{{ ka_lite_central_path }}/../ka-lite-dubbed-video-mapping-updater.sh"
   sudo: yes
   sudo_user: www-data
   tags:
