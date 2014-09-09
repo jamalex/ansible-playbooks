@@ -259,26 +259,6 @@
   tags:
     - language_packs
 
-- name: Create cron script that will generate dubbed video mappings.
-  template: src=ka-lite-dubbed-video-mapping-updater.sh.j2 dest={{ ka_lite_central_path }}/../ka-lite-dubbed-video-mapping-updater.sh
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - language_packs
-
-- name: Make the dubbed video mappings update cron script executable
-  file: path={{ ka_lite_central_path }}/../ka-lite-dubbed-video-mapping-updater.sh mode=0775 owner=www-data group=www-data
-  sudo: yes
-  tags:
-    - language_packs
-
-- name: Create cron job to run dubbed video mappings update script.
-  cron: name="generate dubbed video mappings" minute="0" hour="16" weekday="5" job="{{ ka_lite_central_path }}/../ka-lite-dubbed-video-mapping-updater.sh"
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - language_packs
-
 - name: Ensure the ka-lite-central/data directory exists and set it as belonging to the www-data user.
   file: dest={{ ka_lite_central_path }}/data owner=www-data state=directory
   sudo: yes
