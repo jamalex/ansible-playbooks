@@ -300,6 +300,15 @@
   tags:
     - "geoip"
 
+- name: Ensure the /var/backups/mysql directory exists and set it as belonging to the root user.
+  file: dest=/var/backups/mysql owner=root state=directory
+  sudo: yes
+
+- name: Create cron job to back up the database.
+  cron: 'name="back up the ka_lite_central database" minute="0" hour="1,13" job="mysqldump -h {{ db_server_host }} -u {{ ka_lite_central_db_user }} -p{{ ka_lite_central_db_pass }} ka_lite_central --single-transaction --quick | gzip > /var/backups/mysql/ka_lite_central_`date +\%Y-\%m-\%d_\%H-\%M-\%S`.sql.gz" user=root'
+  when: ka_lite_central_db_pass is defined
+  sudo: yes
+
 # - name: Copy database fixture to server.
 #   copy: src=data.json dest=/var/www/data.json owner=www-data
 
