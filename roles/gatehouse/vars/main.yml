@@ -110,6 +110,8 @@ virtual_hosts:
 
   - hosts:
       - staging.learningequality.org
+      - adhoc.learningequality.org
+    ports: ["80", "7007"]
     backend: globe_ka_lite_central
     locations:
       - path: /
@@ -141,7 +143,6 @@ virtual_hosts:
       - kalite.adhocsync.com
       - hub.learningequality.org
     ports: ["7007", "8008 ssl"]
-    # backend: old_adhocsync_dev_server
     locations:
       - path: /
         redirect: https://hub.learningequality.org/
