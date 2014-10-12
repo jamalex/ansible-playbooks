@@ -1,0 +1,15 @@
+---
+# - hosts: kitchen
+#   vars_files:
+#     - [roles/distributed/vars/secrets.yml, roles/distributed/vars/main.yml]
+#   roles:
+#     - common
+#     - server
+
+- hosts: kitchen
+  vars:
+    - ka_lite_distributed_port: 50130
+    - ka_lite_distributed_git_branch: develop
+    - ka_lite_distributed_prefix: ka-lite-develop
+  roles:
+    - distributed

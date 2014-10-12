@@ -1,0 +1,56 @@
+---
+
+- name: Create the /var/www directory and set it as belonging to the www-data user.
+  file: dest=/var/www owner=www-data state=directory
+  sudo: yes
+
+- name: Clone the ka-lite git repository and checkout the desired branch.
+  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest=/var/www/{{ ka_lite_distributed_prefix }} update=true
+  sudo: yes
+  sudo_user: www-data
+  register: ka_lite_distributed_clone
+
+- name: Put the local_settings.py file into the KA Lite project directory.
+  template: src=local_settings.py.j2 dest=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings.py
+  sudo: yes
+  sudo_user: www-data
+
+- name: Ensure a local_settings_secret.py file exists.
+  sudo: yes
+  sudo_user: www-data
+  command: touch /var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py creates=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py
+
+# - name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_distributed_secret_key' is defined.
+#   lineinfile: dest=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_distributed_secret_key }}"' owner="www-data"
+#   sudo: yes
+#   sudo_user: www-data
+#   when: ka_lite_distributed_secret_key is defined
+
+- name: Run setup command to ensure KA Lite is initialized (new install or upgrade).
+  shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/kalite/manage.py setup --noinput -u {{ ka_lite_distributed_django_superuser_name }} -e {{ ka_lite_distributed_django_superuser_email }} -p {{ ka_lite_distributed_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
+  register: setup
+  sudo: yes
+  sudo_user: www-data
+  when: ka_lite_distributed_django_superuser_name is defined and ka_lite_distributed_django_superuser_email is defined and ka_lite_distributed_django_superuser_pass is defined
+  changed_when: "'Migrating forwards' in setup.stdout"
+  # failed_when: "setup.stderr"
+
+- name: Run setup command to ensure KA Lite is initialized (upgrade).
+  shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/kalite/manage.py setup --noinput"
+  register: setup
+  sudo: yes
+  sudo_user: www-data
+  when: ka_lite_distributed_django_superuser_name is not defined or ka_lite_distributed_django_superuser_email is not defined or ka_lite_distributed_django_superuser_pass is not defined
+  changed_when: "'Migrating forwards' in setup.stdout"
+  # failed_when: "setup.stderr"
+
+- name: Create cron job to download GitHub data.
+  cron: 'name="run {{ ka_lite_distributed_prefix }} distributed server" special_time=reboot job="/var/www/{{ ka_lite_distributed_prefix }}/start.sh" user=www-data'
+  sudo: yes
+  sudo_user: www-data
+
+- name: Run/restart the distributed server.
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/start.sh"
+  sudo: yes
+  sudo_user: www-data
+  # when: ka_lite_distributed_clone.changed
