@@ -211,7 +211,7 @@
   register: check_fle_site_media_path
 
 - name: Copy uploaded media files from old fle-site location.
-  shell: rsync -i --recursive --update /var/www/fle-site/fle_site/media {{ fle_home_path }}/fle_site/
+  shell: "rsync -i --recursive --update /var/www/fle-site/fle_site/media {{ fle_home_path }}/fle_site/"
   register: rsync
   sudo: yes
   sudo_user: www-data
@@ -219,6 +219,15 @@
   when: check_fle_site_media_path.stat.exists
 
 - name: Create cron job to download user resource files hourly.
-  cron: name="download user resources" minute="0" job="{{ fle_home_path }}/manage.py download_user_resource_files" user=www-data
+  cron: 'name="download user resources" minute="0" job="{{ fle_home_path }}/manage.py download_user_resource_files" user=www-data'
   sudo: yes
   sudo_user: www-data
+
+- name: Ensure the /var/backups/mysql directory exists and set it as belonging to the root user.
+  file: dest=/var/backups/mysql owner=root state=directory
+  sudo: yes
+
+- name: Create cron job to back up the database.
+  cron: 'name="back up the fle_home database" minute="0" hour="3,15" job="mysqldump -h {{ db_server_host }} -u {{ fle_home_db_user }} -p{{ fle_home_db_pass }} {{ fle_home_db_name }} --single-transaction --quick | gzip > /var/backups/mysql/fle_home_`date +\%Y-\%m-\%d_\%H-\%M-\%S`.sql.gz" user=root'
+  when: fle_home_db_pass is defined
+  sudo: yes
