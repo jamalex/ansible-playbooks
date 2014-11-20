@@ -1,0 +1,9 @@
+---
+- hosts: kitchen
+  vars:
+    - ka_lite_distributed_port: 1187
+    - ka_lite_distributed_git_branch: develop
+    - ka_lite_distributed_prefix: ka-lite-translations
+  roles:
+    - distributed
+    - translations

@@ -1,0 +1,2489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: ka-lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-29 17:20-0700\n"
+"PO-Revision-Date: 2014-09-23 19:28-0400\n"
+"Last-Translator: dylanjbarth <dylan@learningequality.org>\n"
+"Language-Team: English, United States\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:35
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:362
+msgid "Mastery"
+msgstr "crwdns1970786:0crwdne1970786:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:35
+msgid "Percent of exercises mastered (at least 10 consecutive correct answers)"
+msgstr "crwdns1970463:0crwdne1970463:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:36
+msgid "Effort"
+msgstr "crwdns1970939:0crwdne1970939:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:36
+msgid "Combination of attempts on exercises and videos watched."
+msgstr "crwdns1970465:0crwdne1970465:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:37
+msgid "Attempts"
+msgstr "crwdns1970940:0crwdne1970940:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:37
+msgid "Number of times submitting an answer to an exercise."
+msgstr "crwdns1970467:0crwdne1970467:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:38
+msgid "Streak"
+msgstr "crwdns1970941:0crwdne1970941:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:38
+msgid "Maximum number of consecutive correct answers on an exercise."
+msgstr "crwdns1970469:0crwdne1970469:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:39
+msgid "Exercise points"
+msgstr "crwdns1970470:0crwdne1970470:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:39
+msgid "[Pointless at the moment; tracks mastery linearly]"
+msgstr "crwdns1970471:0crwdne1970471:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:40
+msgid "Time exercise completed"
+msgstr "crwdns1970472:0crwdne1970472:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:40
+msgid "Day/time the exercise was completed."
+msgstr "crwdns1970473:0crwdne1970473:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:41
+msgid "Video points"
+msgstr "crwdns1970474:0crwdne1970474:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:41
+msgid "Points earned while watching a video (750 max / video)."
+msgstr "crwdns1970475:0crwdne1970475:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:42
+msgid "Video time"
+msgstr "crwdns1970476:0crwdne1970476:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:42
+msgid "Total seconds spent watching a video."
+msgstr "crwdns1970477:0crwdne1970477:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:43
+msgid "Time video completed"
+msgstr "crwdns1970478:0crwdne1970478:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:43
+msgid "Day/time the video was completed."
+msgstr "crwdns1970479:0crwdne1970479:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:47
+msgid "Time Active (s)"
+msgstr "crwdns1970480:0crwdne1970480:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:47
+msgid "Total time spent actively logged in."
+msgstr "crwdns1970481:0crwdne1970481:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:48
+msgid "Active Time Per Login"
+msgstr "crwdns1970482:0crwdne1970482:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:48
+msgid "Duration of each login session."
+msgstr "crwdns1970942:0crwdne1970942:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:49
+msgid "Time Session Completed"
+msgstr "crwdns1970483:0crwdne1970483:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:49
+msgid "Day/time the login session finished."
+msgstr "crwdns1970484:0crwdne1970484:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:113
+msgid "You cannot choose a group outside of your group."
+msgstr "crwdns1970943:0crwdne1970943:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:116
+msgid "You cannot choose a facility outside of your own facility."
+msgstr "crwdns1970944:0crwdne1970944:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:120
+msgid "You cannot choose facility/group-wide data."
+msgstr "crwdns1970945:0crwdne1970945:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:123
+msgid "You cannot choose a user outside of yourself."
+msgstr "crwdns1970946:0crwdne1970946:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:377
+msgid "Did not specify facility, group, nor user."
+msgstr "crwdns1970947:0crwdne1970947:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/api_views.py:381
+msgid "Must specify a topic path"
+msgstr "crwdns1970948:0crwdne1970948:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:88
+msgid "Timeline plot"
+msgstr "crwdns1970949:0crwdne1970949:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:90
+#, python-format
+msgid "%(yaxis_name)s over time"
+msgstr "crwdns1970950:0%(yaxis_name)scrwdne1970950:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:104
+msgid "Scatter plot"
+msgstr "crwdns1970724:0crwdne1970724:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:106
+#, python-format
+msgid "%(yaxis_name)s versus %(xaxis_name)s"
+msgstr "crwdns1970951:0%(yaxis_name)scrwdnd1970951:0%(xaxis_name)scrwdne1970951:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:237
+msgid "% Mastery"
+msgstr "crwdns1970462:0crwdne1970462:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:238
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:245
+msgid "% Started"
+msgstr "crwdns1970485:0crwdne1970485:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:239
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:247
+msgid "Average Points"
+msgstr "crwdns1970486:0crwdne1970486:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:240
+msgid "Average Attempts"
+msgstr "crwdns1970487:0crwdne1970487:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:241
+msgid "Average Streak"
+msgstr "crwdns1970488:0crwdne1970488:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:242
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:118
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:190
+msgid "Struggling"
+msgstr "crwdns1970489:0crwdne1970489:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:243
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:248
+msgid "Last Completed"
+msgstr "crwdns1970490:0crwdne1970490:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:244
+msgid "% Completed"
+msgstr "crwdns1970491:0crwdne1970491:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:246
+msgid "Average Minutes Watched"
+msgstr "crwdns1970492:0crwdne1970492:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:275
+msgid "exercise"
+msgstr "crwdns1971255:0crwdne1971255:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:275
+msgid "video"
+msgstr "crwdns1971256:0crwdne1971256:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/views.py:374
+#, python-format
+msgid "Unknown report_type: %(report_type)s"
+msgstr "crwdns1970952:0%(report_type)scrwdne1970952:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:8
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:65
+msgid "Coach Reports"
+msgstr "crwdns1970712:0crwdne1970712:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:68
+msgid "for"
+msgstr "crwdns1971038:0crwdne1971038:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:78
+msgid "this device"
+msgstr "crwdns1970713:0crwdne1970713:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:97
+msgid "all groups"
+msgstr "crwdns1971053:0crwdne1971053:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:102
+msgid "no groups"
+msgstr "crwdns1971054:0crwdne1971054:0"
+
+#. Translators: this is used to share a URL (with other teachers)
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base.html.py:121
+msgid "share"
+msgstr "crwdns1971055:0crwdne1971055:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base_d3_visualization.html.py:89
+msgid "Topics Selected"
+msgstr "crwdns1971057:0crwdne1971057:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base_d3_visualization.html.py:102
+msgid "View Report"
+msgstr "crwdns1971058:0crwdne1971058:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/base_d3_visualization.html.py:106
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:93
+msgid "Loading topic tree... Please wait!"
+msgstr "crwdns1971059:0crwdne1971059:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/landing_page.html.py:23
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:8
+msgid "Progress by topic"
+msgstr "crwdns1971060:0crwdne1971060:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/landing_page.html.py:31
+msgid "Effort versus achievement"
+msgstr "crwdns1971061:0crwdne1971061:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/landing_page.html.py:39
+msgid "Mastery over time"
+msgstr "crwdns1971062:0crwdne1971062:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/scatter_view.html.py:26
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/timeline_view.html.py:37
+msgid "X-Axis"
+msgstr "crwdns1971063:0crwdne1971063:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/scatter_view.html.py:37
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/timeline_view.html.py:45
+msgid "Y-Axis"
+msgstr "crwdns1971064:0crwdne1971064:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:9
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:10
+msgid "User report"
+msgstr "crwdns1970725:0crwdne1970725:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:61
+#, python-format
+msgid "Last login time: %(last_login_time)s"
+msgstr "crwdns1971065:0%(last_login_time)scrwdne1971065:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:65
+msgid "No data for this user."
+msgstr "crwdns1970727:0crwdne1970727:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:67
+msgid "Welcome to KA Lite!"
+msgstr "crwdns1970728:0crwdne1970728:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:68
+msgid "Please return to this page after watching videos or practicing exercises."
+msgstr "crwdns1970729:0crwdne1970729:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:71
+msgid "Progress Report"
+msgstr "crwdns1971257:0crwdne1971257:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:75
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:108
+msgid "Exercises"
+msgstr "crwdns1970697:0crwdne1970697:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:76
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:144
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:66
+msgid "Videos"
+msgstr "crwdns1970696:0crwdne1970696:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/student_view.html.py:79
+msgid "Topic"
+msgstr "crwdns1970497:0crwdne1970497:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:80
+msgid "Select Report"
+msgstr "crwdns1970731:0crwdne1970731:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:88
+msgid "No report types available."
+msgstr "crwdns1971066:0crwdne1971066:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:94
+msgid "Select Student"
+msgstr "crwdns1970733:0crwdne1970733:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:102
+msgid "Select Topic"
+msgstr "crwdns1970734:0crwdne1970734:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:115
+msgid "In Progress"
+msgstr "crwdns1970735:0crwdne1970735:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:116
+msgid "Completed"
+msgstr "crwdns1970736:0crwdne1970736:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:129
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/coachreports.py:21
+msgid "No student accounts have been created."
+msgstr "crwdns1970737:0crwdne1970737:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:134
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/coachreports.py:28
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/coachreports.py:37
+msgid "Please select a topic above."
+msgstr "crwdns1970738:0crwdne1970738:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:138
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/coachreports.py:46
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/coachreports.py:58
+msgid "No student accounts in this group have been created."
+msgstr "crwdns1970739:0crwdne1970739:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:151
+msgid "Student"
+msgstr "crwdns1970740:0crwdne1970740:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:188
+msgid "Not Attempted"
+msgstr "crwdns1970741:0crwdne1970741:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:192
+msgid "Complete"
+msgstr "crwdns1970742:0crwdne1970742:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:194
+msgid "Attempted"
+msgstr "crwdns1970743:0crwdne1970743:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:221
+msgid "Not Viewed"
+msgstr "crwdns1970744:0crwdne1970744:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:224
+msgid "Viewing"
+msgstr "crwdns1970745:0crwdne1970745:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:225
+#, python-format
+msgid "%(total_seconds_watched)s secs"
+msgstr "crwdns1971067:0%(total_seconds_watched)scrwdne1971067:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:227
+msgid "Viewed"
+msgstr "crwdns1970747:0crwdne1970747:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/templates/coachreports/tabular_view.html.py:231
+#, python-format
+msgid "%(points)s points"
+msgstr "crwdns1971068:0%(points)scrwdne1971068:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/views.py:66
+msgid "Failed to save the sharing network; please review errors below."
+msgstr "crwdns1971258:0crwdne1971258:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/views.py:193
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:53
+msgid "Failed to save the facility; please review errors below."
+msgstr "crwdns1971259:0crwdne1971259:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/views.py:228
+#, python-format
+msgid "Error parsing date range: %(error_msg)s.  Please review and re-submit."
+msgstr "crwdns1971260:0%(error_msg)scrwdne1971260:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/views.py:423
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/views.py:425
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:94
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/__init__.py:11
+msgid "Ungrouped"
+msgstr "crwdns1970977:0crwdne1970977:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/account_management.html.py:10
+msgid "User Management"
+msgstr "crwdns1971070:0crwdne1971070:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/account_management.html.py:20
+#, python-format
+msgid "Account management page for %(student_name)s"
+msgstr "crwdns1971071:0%(student_name)scrwdne1971071:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/account_management.html.py:28
+msgid "Edit account preferences"
+msgstr "crwdns1971261:0crwdne1971261:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/account_management.html.py:32
+msgid "Download data from Khan Academy"
+msgstr "crwdns1970748:0crwdne1970748:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/base.html.py:25
+msgid "Local KA Lite Installation"
+msgstr "crwdns1971262:0crwdne1971262:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/base.html.py:30
+msgid "New Sharing Network"
+msgstr "crwdns1971263:0crwdne1971263:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/base.html.py:36
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/base.html.py:50
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:166
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:252
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:371
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:100
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:106
+msgid "(edit)"
+msgstr "crwdns1971264:0crwdne1971264:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/base_printable.html.py:6
+msgid "Print Report"
+msgstr "crwdns1971073:0crwdne1971073:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:6
+#, python-format
+msgid "%(device_name)s Device Syncing History"
+msgstr "crwdns1971265:0%(device_name)scrwdne1971265:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:14
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:190
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/snippets/sync_now.html.py:4
+msgid "Sync Now!"
+msgstr "crwdns1970598:0crwdne1970598:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:15
+msgid "Register"
+msgstr "crwdns1971266:0crwdne1971266:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:24
+msgid "Device Metadata"
+msgstr "crwdns1970752:0crwdne1970752:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:29
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:78
+msgid "Device ID"
+msgstr "crwdns1971074:0crwdne1971074:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:31
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:67
+msgid "Current Version"
+msgstr "crwdns1971075:0crwdne1971075:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:33
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:92
+msgid "Released Date"
+msgstr "crwdns1971076:0crwdne1971076:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:35
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:76
+msgid "Database Size"
+msgstr "crwdns1971077:0crwdne1971077:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:37
+msgid "Database last update"
+msgstr "crwdns1971078:0crwdne1971078:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:39
+msgid "Install Directory"
+msgstr "crwdns1971079:0crwdne1971079:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:46
+msgid "Version"
+msgstr "crwdns1971080:0crwdne1971080:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:48
+msgid "Operating System"
+msgstr "crwdns1971081:0crwdne1971081:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:56
+msgid "Sync Sessions"
+msgstr "crwdns1970755:0crwdne1970755:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:60
+msgid "This device has never synced with the central server."
+msgstr "crwdns1971082:0crwdne1971082:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:61
+msgid "This device is not registered, and so cannot sync data with the central server."
+msgstr "crwdns1971267:0crwdne1971267:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:65
+msgid "Browse to the previous page of sync sessions."
+msgstr "crwdns1971268:0crwdne1971268:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:74
+#, python-format
+msgid "Browse to page # %(listed_page)s of sessions."
+msgstr "crwdns1971269:0%(listed_page)scrwdne1971269:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:77
+msgid "Browse to the next page of sessions."
+msgstr "crwdns1971270:0crwdne1971270:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:84
+msgid "Sync Date"
+msgstr "crwdns1971084:0crwdne1971084:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:85
+msgid "Device IP Address"
+msgstr "crwdns1971085:0crwdne1971085:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:86
+msgid "# Models Uploaded"
+msgstr "crwdns1971086:0crwdne1971086:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:87
+msgid "# Models Downloaded"
+msgstr "crwdns1971087:0crwdne1971087:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/device_management.html.py:88
+msgid "# Errors"
+msgstr "crwdns1971088:0crwdne1971088:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:9
+msgid "Facility Management"
+msgstr "crwdns1971271:0crwdne1971271:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:47
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:79
+msgid "Export data"
+msgstr "crwdns1971272:0crwdne1971272:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:52
+msgid "Cancel"
+msgstr "crwdns1971273:0crwdne1971273:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:85
+msgid "Start Date"
+msgstr "crwdns1971091:0crwdne1971091:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:86
+msgid "End Date"
+msgstr "crwdns1971092:0crwdne1971092:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:87
+msgid "User report for the previous month"
+msgstr "crwdns1971274:0crwdne1971274:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:87
+msgid "Export to CSV"
+msgstr "crwdns1970771:0crwdne1970771:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:99
+msgid "Coaches"
+msgstr "crwdns1971275:0crwdne1971275:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:100
+msgid "Add a new coach."
+msgstr "crwdns1971276:0crwdne1971276:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:101
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:208
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:289
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:63
+msgid "(add)"
+msgstr "crwdns1971277:0crwdne1971277:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:106
+msgid "Coaches assist students to learn, and can be teachers, parents, or fellow students."
+msgstr "crwdns1971278:0crwdne1971278:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:112
+msgid "You currently have no coaches for this facility."
+msgstr "crwdns1971279:0crwdne1971279:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:118
+msgid "Browse to the previous page of coaches."
+msgstr "crwdns1971280:0crwdne1971280:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:127
+#, python-format
+msgid "Browse to page # %(listed_page)s of coaches."
+msgstr "crwdns1971281:0%(listed_page)scrwdne1971281:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:130
+msgid "Browse to the next page of coaches."
+msgstr "crwdns1971282:0crwdne1971282:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:138
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:324
+msgid "Select"
+msgstr "crwdns1970650:0crwdne1970650:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:139
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:325
+msgid "All"
+msgstr "crwdns1970651:0crwdne1970651:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:140
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:326
+msgid "None"
+msgstr "crwdns1970652:0crwdne1970652:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:144
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:331
+msgid "Action"
+msgstr "crwdns1971283:0crwdne1971283:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:146
+msgid "Delete Coaches"
+msgstr "crwdns1971284:0crwdne1971284:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:154
+msgid "Coach Name"
+msgstr "crwdns1971285:0crwdne1971285:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:155
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:190
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:229
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:358
+msgid "Logins"
+msgstr "crwdns1970785:0crwdne1970785:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:156
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:192
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:230
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:359
+msgid "Login Time"
+msgstr "crwdns1970777:0crwdne1970777:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:157
+msgid "Coach Report Views"
+msgstr "crwdns1971286:0crwdne1971286:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:165
+#, python-format
+msgid "Edit user info for coach %(coachname)s"
+msgstr "crwdns1971287:0%(coachname)scrwdne1971287:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:188
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:228
+msgid "# Students"
+msgstr "crwdns1971288:0crwdne1971288:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:194
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:231
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:360
+msgid "Videos Viewed"
+msgstr "crwdns1970778:0crwdne1970778:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:196
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:232
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:361
+msgid "Exercises Completed"
+msgstr "crwdns1970779:0crwdne1970779:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:198
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:233
+msgid "Mastery "
+msgstr "crwdns1970780:0crwdne1970780:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:206
+msgid "Student Groups"
+msgstr "crwdns1971289:0crwdne1971289:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:207
+msgid "Add a new group."
+msgstr "crwdns1971290:0crwdne1971290:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:215
+msgid "A 'group' is set of students, such as a classroom of students or all students in one grade."
+msgstr "crwdns1971291:0crwdne1971291:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:216
+msgid "Add students by selecting a group."
+msgstr "crwdns1971292:0crwdne1971292:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:220
+msgid "You currently have no group data available."
+msgstr "crwdns1971293:0crwdne1971293:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:226
+msgid "Group Name"
+msgstr "crwdns1971094:0crwdne1971094:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:227
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:356
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:138
+msgid "Coach"
+msgstr "crwdns1970622:0crwdne1970622:0"
+
+#. Translators: this is a verb; by clicking this link, the user will be able
+#. to coach students.
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:242
+#, python-format
+msgid "Manage group %(groupname)s."
+msgstr "crwdns1971294:0%(groupname)scrwdne1971294:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:251
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:192
+msgid "Edit group"
+msgstr "crwdns1971295:0crwdne1971295:0"
+
+#. Translators: this is a verb; by clicking this link, the user will be able
+#. to coach students.
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:259
+#, python-format
+msgid "Coach group %(groupname)s."
+msgstr "crwdns1971296:0%(groupname)scrwdne1971296:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:287
+msgid "Students"
+msgstr "crwdns1971297:0crwdne1971297:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:288
+msgid "Add a new student."
+msgstr "crwdns1971298:0crwdne1971298:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:295
+msgid "This report contains information about recent student activity."
+msgstr "crwdns1971299:0crwdne1971299:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:300
+msgid "You currently have no student data available."
+msgstr "crwdns1971300:0crwdne1971300:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:305
+msgid "Browse to the previous page of students."
+msgstr "crwdns1971301:0crwdne1971301:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:314
+#, python-format
+msgid "Browse to page # %(listed_page)s of students."
+msgstr "crwdns1971302:0%(listed_page)scrwdne1971302:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:317
+msgid "Browse to the next page of students."
+msgstr "crwdns1971303:0crwdne1971303:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:334
+msgid "Change Student Groups"
+msgstr "crwdns1971304:0crwdne1971304:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:348
+msgid "Delete Students"
+msgstr "crwdns1971305:0crwdne1971305:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:355
+msgid "Student Name"
+msgstr "crwdns1971095:0crwdne1971095:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:357
+msgid "Group"
+msgstr "crwdns1970653:0crwdne1970653:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:369
+#, python-format
+msgid "Edit student %(studentname)s"
+msgstr "crwdns1971306:0%(studentname)scrwdne1971306:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:376
+#, python-format
+msgid "Coach student %(studentname)s"
+msgstr "crwdns1971307:0%(studentname)scrwdne1971307:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:388
+#, python-format
+msgid "Manage group %(groupname)s"
+msgstr "crwdns1971308:0%(groupname)scrwdne1971308:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/facility_management.html.py:390
+#, python-format
+msgid "Coach group %(groupname)s"
+msgstr "crwdns1971309:0%(groupname)scrwdne1971309:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/group_report.html.py:6
+msgid "Group Report"
+msgstr "crwdns1971096:0crwdne1971096:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:4
+msgid "Sharing Network Add / Edit"
+msgstr "crwdns1971097:0crwdne1971097:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:13
+msgid "Update Your Sharing Network"
+msgstr "crwdns1971098:0crwdne1971098:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:13
+msgid "Create A Sharing Network"
+msgstr "crwdns1971099:0crwdne1971099:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:14
+msgid "A 'Sharing Network' is a set of KA Lite installations that share logins and student progress with each other through the internet (when available)."
+msgstr "crwdns1971100:0crwdne1971100:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:20
+msgid "Update Sharing Network"
+msgstr "crwdns1971101:0crwdne1971101:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_form.html.py:22
+msgid "Create Sharing Network"
+msgstr "crwdns1971102:0crwdne1971102:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:6
+msgid "Sharing Network Management Console"
+msgstr "crwdns1971103:0crwdne1971103:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:52
+msgid "Sync via USB"
+msgstr "crwdns1970788:0crwdne1970788:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:61
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:41
+msgid "Facilities"
+msgstr "crwdns1970789:0crwdne1970789:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:62
+msgid "Add a new facility"
+msgstr "crwdns1971310:0crwdne1971310:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:70
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:25
+msgid "A facility is a physical location where students learn."
+msgstr "crwdns1971311:0crwdne1971311:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:75
+msgid "You currently have no facilities that sync data with the central server."
+msgstr "crwdns1971105:0crwdne1971105:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:81
+msgid "Facility Name"
+msgstr "crwdns1970790:0crwdne1970790:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:82
+msgid "# Users"
+msgstr "crwdns1971106:0crwdne1971106:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:83
+msgid "# Groups"
+msgstr "crwdns1971107:0crwdne1971107:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:84
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:148
+msgid "Last Usage"
+msgstr "crwdns1970793:0crwdne1970793:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:94
+msgid "Delete facility"
+msgstr "crwdns1971312:0crwdne1971312:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:94
+msgid "(delete)"
+msgstr "crwdns1971313:0crwdne1971313:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:105
+msgid "Edit Groups"
+msgstr "crwdns1971314:0crwdne1971314:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:112
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:179
+msgid "Never"
+msgstr "crwdns1970795:0crwdne1970795:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:128
+msgid "Devices"
+msgstr "crwdns1970797:0crwdne1970797:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:134
+msgid "A device is a KA Lite installation."
+msgstr "crwdns1971315:0crwdne1971315:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:135
+msgid "Devices in the same 'sharing network' sync user data with each other."
+msgstr "crwdns1971316:0crwdne1971316:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:140
+msgid "You currently have no devices that sync data with the central server"
+msgstr "crwdns1971108:0crwdne1971108:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:145
+msgid "Device name"
+msgstr "crwdns1970799:0crwdne1970799:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:146
+msgid "# Times Synced"
+msgstr "crwdns1970800:0crwdne1970800:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:147
+msgid "Last Sync"
+msgstr "crwdns1970801:0crwdne1970801:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:149
+msgid "Available Actions"
+msgstr "crwdns1971317:0crwdne1971317:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:151
+msgid "Counter"
+msgstr "crwdns1970802:0crwdne1970802:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:152
+msgid "The counter is an integer &#39;timestamp&#39; for each update, and tells the last data update synced for a given device."
+msgstr "crwdns1971109:0crwdne1971109:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/zone_management.html.py:191
+msgid "Register device"
+msgstr "crwdns1970619:0crwdne1970619:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/snippets/clock_set.html.py:22
+msgid "Raspberry Pi Clock Reset"
+msgstr "crwdns1971009:0crwdne1971009:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/snippets/clock_set.html.py:27
+#, python-format
+msgid "Input current time (%(time_format)s - 24 Hour)"
+msgstr "crwdns1971010:0%(time_format)scrwdne1971010:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/snippets/clock_set.html.py:31
+#, python-format
+msgid "Input current date (%(date_format)s)"
+msgstr "crwdns1971011:0%(date_format)scrwdne1971011:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/templates/control_panel/snippets/clock_set.html.py:35
+msgid "Update Server Date & Time"
+msgstr "crwdns1971012:0crwdne1971012:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/api_views.py:55
+msgid "Time reset can only be done on Raspberry Pi systems."
+msgstr "crwdns1971318:0crwdne1971318:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/api_views.py:61
+msgid "Could not read date and time: Unrecognized input data format."
+msgstr "crwdns1970981:0crwdne1970981:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/api_views.py:69
+msgid "System permissions prevented time setting, please run with root permissions."
+msgstr "crwdns1971319:0crwdne1971319:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/api_views.py:73
+msgid "System time was reset successfully."
+msgstr "crwdns1971320:0crwdne1971320:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/demo_middleware.py:25
+#, python-format
+msgid "Welcome to our demo server!  Please visit our <a href='%(um_url)s'>user's manual</a> or <a href='%(home_url)s'>homepage</a> for more information."
+msgstr "crwdns1971321:0%(um_url)scrwdnd1971321:0%(home_url)scrwdne1971321:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/demo_middleware.py:37
+#, python-format
+msgid "<a href='%(sign_up_url)s'>Sign up as a student</a>, or <a href='%(log_in_url)s'>log in</a> as the site-wide admin (username=%(user_name)s, password=%(passwd)s)"
+msgstr "crwdns1971322:0%(sign_up_url)scrwdnd1971322:0%(log_in_url)scrwdnd1971322:0%(user_name)scrwdnd1971322:0%(passwd)scrwdne1971322:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/demo_middleware.py:48
+msgid "The admin interface is disabled in the demo server."
+msgstr "crwdns1971323:0crwdne1971323:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:237
+msgid "This video was not found! You can download it by going to the Update page."
+msgstr "crwdns1970527:0crwdne1970527:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:239
+msgid "This video was not found! Please contact your teacher or an admin to have it downloaded."
+msgstr "crwdns1970528:0crwdne1970528:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:241
+msgid "This video was not found! You must login as an admin/teacher to download the video."
+msgstr "crwdns1970529:0crwdne1970529:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:308
+msgid "Your Knowledge Map"
+msgstr "crwdns1970530:0crwdne1970530:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:401
+msgid "Error: query not specified."
+msgstr "crwdns1970985:0crwdne1970985:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:430
+#, python-format
+msgid "Search results for '%(query)s'"
+msgstr "crwdns1971324:0%(query)scrwdne1971324:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:469
+msgid "You must be logged in with an account authorized to view this page (API)."
+msgstr "crwdns1971325:0crwdne1971325:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/views.py:471
+msgid "You must be logged in with an account authorized to view this page."
+msgstr "crwdns1970461:0crwdne1970461:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/404.html.py:4
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/404.html.py:7
+msgid "Page not found"
+msgstr "crwdns1970592:0crwdne1970592:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/404.html.py:9
+msgid "Sorry, but the requested page could not be found."
+msgstr "crwdns1970593:0crwdne1970593:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/500.html.py:4
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/500.html.py:7
+msgid "Error"
+msgstr "crwdns1970594:0crwdne1970594:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/500.html.py:9
+msgid "Sorry, but there was an error while trying to load the page."
+msgstr "crwdns1970595:0crwdne1970595:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:121
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/base.py:161
+msgid "Logout"
+msgstr "crwdns1970618:0crwdne1970618:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:124
+msgid "My Progress"
+msgstr "crwdns1971326:0crwdne1971326:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:127
+msgid "Help"
+msgstr "crwdns1971327:0crwdne1971327:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:130
+msgid "Login"
+msgstr "crwdns1970620:0crwdne1970620:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:134
+msgid "Register to start tracking your progress"
+msgstr "crwdns1971025:0crwdne1971025:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:134
+msgid "Sign Up"
+msgstr "crwdns1970621:0crwdne1970621:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:138
+msgid "Track the progress of your students"
+msgstr "crwdns1971026:0crwdne1971026:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:141
+msgid "Update this server with new languages"
+msgstr "crwdns1971328:0crwdne1971328:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:141
+msgid "Languages"
+msgstr "crwdns1971329:0crwdne1971329:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:144
+msgid "Update this server with new videos and languages"
+msgstr "crwdns1971330:0crwdne1971330:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:147
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:150
+msgid "Manage KA Lite"
+msgstr "crwdns1971331:0crwdne1971331:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:147
+msgid "Users"
+msgstr "crwdns1971332:0crwdne1971332:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:150
+msgid "Overview"
+msgstr "crwdns1971333:0crwdne1971333:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:153
+msgid "Practice Lessons"
+msgstr "crwdns1971031:0crwdne1971031:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:153
+msgid "Practice"
+msgstr "crwdns1970627:0crwdne1970627:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:156
+msgid "Watch Videos"
+msgstr "crwdns1971032:0crwdne1971032:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:156
+msgid "Watch"
+msgstr "crwdns1970628:0crwdne1970628:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:159
+msgid "KA Lite Homepage"
+msgstr "crwdns1971334:0crwdne1971334:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:159
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/base.html.py:64
+msgid "Home"
+msgstr "crwdns1970701:0crwdne1970701:0"
+
+#. Translators: this will appear in the navigation bar. Please try to keep it
+#. as short as possible.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:163
+msgid "Search"
+msgstr "crwdns1971335:0crwdne1971335:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:164
+msgid "video, topic, or exercise..."
+msgstr "crwdns1971034:0crwdne1971034:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:172
+msgid "KA Lite Home"
+msgstr "crwdns1971035:0crwdne1971035:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/base.html.py:207
+msgid "Videos and Exercises"
+msgstr "crwdns1970617:0crwdne1970617:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:88
+msgid "Practicing"
+msgstr "crwdns1970655:0crwdne1970655:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:105
+msgid "Your progress streak bar for this exercise"
+msgstr "crwdns1970656:0crwdne1970656:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:113
+msgid "Acceptable formats"
+msgstr "crwdns1971336:0crwdne1971336:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:114
+msgid "Answer"
+msgstr "crwdns1970657:0crwdne1970657:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:119
+msgid "Check Answer"
+msgstr "crwdns1970658:0crwdne1970658:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:121
+msgid "Correct! Next Question..."
+msgstr "crwdns1970659:0crwdne1970659:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:127
+msgid "Need help?"
+msgstr "crwdns1970660:0crwdne1970660:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:129
+msgid "I'd like a hint"
+msgstr "crwdns1970661:0crwdne1970661:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:132
+msgid "Note: this will reset your streak and points for this exercise!"
+msgstr "crwdns1970662:0crwdne1970662:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:138
+msgid "Stuck? Watch a video."
+msgstr "crwdns1970663:0crwdne1970663:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:188
+msgid "Show scratchpad"
+msgstr "crwdns1970664:0crwdne1970664:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/exercise.html.py:189
+msgid "Scratchpad not available"
+msgstr "crwdns1970665:0crwdne1970665:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:6
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_student.html.py:6
+msgid "Administration Panel"
+msgstr "crwdns1970596:0crwdne1970596:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:13
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_student.html.py:13
+msgid "This page can help you administer your installation of KA Lite."
+msgstr "crwdns1970597:0crwdne1970597:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:18
+msgid "(Offline) Management and Reporting Tools"
+msgstr "crwdns1971013:0crwdne1971013:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:22
+msgid "Device information"
+msgstr "crwdns1971014:0crwdne1971014:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:23
+msgid "Information about your KA Lite install, as well as device synchronization."
+msgstr "crwdns1971015:0crwdne1971015:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:26
+msgid "Network management"
+msgstr "crwdns1970600:0crwdne1970600:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:27
+msgid "Access to summary data over all facilities and devices."
+msgstr "crwdns1971016:0crwdne1971016:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:32
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_student.html.py:18
+msgid "(Online) Help Documents"
+msgstr "crwdns1971018:0crwdne1971018:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:36
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_student.html.py:22
+msgid "KA Lite Wiki"
+msgstr "crwdns1970609:0crwdne1970609:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:37
+msgid "Contains the latest information about setting up and using KA Lite."
+msgstr "crwdns1971019:0crwdne1971019:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:40
+msgid "FAQ"
+msgstr "crwdns1970611:0crwdne1970611:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:41
+msgid "Contains the latest FAQ for troubleshooting."
+msgstr "crwdns1971020:0crwdne1971020:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:46
+msgid "Advanced User Tools"
+msgstr "crwdns1970613:0crwdne1970613:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:50
+msgid "Django admin"
+msgstr "crwdns1970614:0crwdne1970614:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:51
+msgid "Database of information stored in your KA Lite installation."
+msgstr "crwdns1971021:0crwdne1971021:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:56
+msgid "Warning: changing database values can break your KA Lite installation!"
+msgstr "crwdns1970616:0crwdne1970616:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:63
+msgid "Connection Information"
+msgstr "crwdns1971022:0crwdne1971022:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_admin.html.py:68
+msgid "To connect to this installation of KA Lite from another computer over the network, try these addresses:"
+msgstr "crwdns1971023:0crwdne1971023:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/help_student.html.py:23
+msgid "Contains the latest information about using KA Lite."
+msgstr "crwdns1971337:0crwdne1971337:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:108
+msgid "A free world-class education for anyone anywhere."
+msgstr "crwdns1970666:0crwdne1970666:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:111
+msgid "Learn by watching videos!"
+msgstr "crwdns1970667:0crwdne1970667:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:115
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:55
+#, python-format
+msgid "%(avail)s / %(known)s video(s) are available (%(local)s locally)."
+msgstr "crwdns1971338:0%(avail)scrwdnd1971338:0%(known)scrwdnd1971338:0%(local)scrwdne1971338:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:126
+msgid "Learn by doing exercises!"
+msgstr "crwdns1970670:0crwdne1970670:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:127
+msgid "Practice your math skills from addition to calculus and everything in between."
+msgstr "crwdns1970671:0crwdne1970671:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/homepage.html.py:135
+msgid "KA Lite is a light-weight web server for viewing and interacting with core Khan Academy content (videos and exercises) without needing an Internet connection."
+msgstr "crwdns1970672:0crwdne1970672:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/knowledgemap.html.py:20
+msgid "Back to topics"
+msgstr "crwdns1970673:0crwdne1970673:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/search_page.html.py:21
+#, python-format
+msgid "showing first %(max_results)s results"
+msgstr "crwdns1971040:0%(max_results)scrwdne1971040:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:38
+msgid "This video is not downloaded."
+msgstr "crwdns1970693:0crwdne1970693:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:50
+msgid "Subtopics"
+msgstr "crwdns1970694:0crwdne1970694:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:89
+#, python-format
+msgid "Dubbed video available in %(lang_name)s"
+msgstr "crwdns1971339:0%(lang_name)scrwdne1971339:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/topic.html.py:97
+#, python-format
+msgid "Subtitle available in %(lang_name)s"
+msgstr "crwdns1971340:0%(lang_name)scrwdne1971340:0"
+
+#. Translators: Example usage=> Exercise: Name of Exercise
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/video.html.py:102
+msgid "Exercise"
+msgstr "crwdns1970698:0crwdne1970698:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/video.html.py:103
+msgid "Practice this concept"
+msgstr "crwdns1970699:0crwdne1970699:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/video.html.py:108
+msgid "Points"
+msgstr "crwdns1970700:0crwdne1970700:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/login.html.py:18
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "crwdns1970702:0crwdne1970702:0"
+msgstr[1] "crwdns1970702:1crwdne1970702:1"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/login.html.py:34
+msgid "Username:"
+msgstr "crwdns1970703:0crwdne1970703:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/login.html.py:38
+msgid "Password:"
+msgstr "crwdns1970704:0crwdne1970704:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/login.html.py:45
+msgid "Forgotten your password or username?"
+msgstr "crwdns1970705:0crwdne1970705:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/templates/distributed/admin/login.html.py:49
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/login.html.py:6
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/login.html.py:23
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/login.html.py:27
+msgid "Log in"
+msgstr "crwdns1970706:0crwdne1970706:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/tests/browser_tests/distributed.py:113
+msgid "A user with this username already exists."
+msgstr "crwdns1970987:0crwdne1970987:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/api_views.py:30
+#, python-format
+msgid "Moved %(num_users)d users to group %(group_name)s successfully."
+msgstr "crwdns1971341:0%(num_users)dcrwdnd1971341:0%(group_name)scrwdne1971341:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/api_views.py:42
+#, python-format
+msgid "Deleted %(num_users)d users successfully."
+msgstr "crwdns1971342:0%(num_users)dcrwdne1971342:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/api_views.py:55
+#, python-format
+msgid "Deleted facility %(facility_name)s successfully."
+msgstr "crwdns1971343:0%(facility_name)scrwdne1971343:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/decorators.py:101
+msgid "To continue, you must first add a facility (e.g. for your school). "
+msgstr "crwdns1970577:0crwdne1970577:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/decorators.py:102
+msgid "Please use the form below to add a facility."
+msgstr "crwdns1970578:0crwdne1970578:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/decorators.py:105
+msgid "You must first have the administrator of this server log in below to add a facility."
+msgstr "crwdns1970579:0crwdne1970579:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:25
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:175
+msgid "Password"
+msgstr "crwdns1970536:0crwdne1970536:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:26
+msgid "Confirm password"
+msgstr "crwdns1970549:0crwdne1970549:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:27
+msgid "Default Language"
+msgstr "crwdns1971344:0crwdne1971344:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:88
+msgid "A user with this username already exists. Please choose a new username and try again."
+msgstr "crwdns1970991:0crwdne1970991:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:93
+msgid "The specified username is unavailable. Please choose a new username and try again."
+msgstr "crwdns1970551:0crwdne1970551:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:107
+msgid "The passwords didn't match. Please re-enter the passwords."
+msgstr "crwdns1970552:0crwdne1970552:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:117
+#, python-format
+msgid "%(num_users)d user(s) with this name already exist(s)%(username_list)s."
+msgstr "crwdns1971345:0%(num_users)dcrwdnd1971345:0%(username_list)scrwdne1971345:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:120
+msgid "Please consider choosing another name, or re-submit to complete."
+msgstr "crwdns1971346:0crwdne1971346:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:142
+msgid "User count should should be at least one."
+msgstr "crwdns1970992:0crwdne1970992:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:169
+msgid "This group name is reserved. Please choose one without 'ungrouped' in the name."
+msgstr "crwdns1971347:0crwdne1971347:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:206
+msgid "Username was not found for this facility. Did you type your username correctly, and choose the right facility?"
+msgstr "crwdns1970554:0crwdne1970554:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:208
+msgid "Username was not found. Did you type your username correctly?"
+msgstr "crwdns1970993:0crwdne1970993:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/forms.py:214
+msgid "The passwords do not match. Please try again."
+msgstr "crwdns1970994:0crwdne1970994:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:26
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:100
+msgid "Name"
+msgstr "crwdns1970556:0crwdne1970556:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:26
+msgid "(This is the name that students/teachers will see when choosing their facility; it can be in the local language.)"
+msgstr "crwdns1970557:0crwdne1970557:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:27
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:94
+msgid "Description"
+msgstr "crwdns1970558:0crwdne1970558:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:28
+msgid "Address"
+msgstr "crwdns1970559:0crwdne1970559:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:28
+msgid "(Please provide as detailed an address as possible.)"
+msgstr "crwdns1970560:0crwdne1970560:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:30
+msgid "Latitude"
+msgstr "crwdns1970561:0crwdne1970561:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:31
+msgid "Longitude"
+msgstr "crwdns1970562:0crwdne1970562:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:32
+msgid "Zoom"
+msgstr "crwdns1970563:0crwdne1970563:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:33
+msgid "Contact Name"
+msgstr "crwdns1970564:0crwdne1970564:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:33
+msgid "(Who should we contact with any questions about this facility?)"
+msgstr "crwdns1970565:0crwdne1970565:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:34
+msgid "Contact Phone"
+msgstr "crwdns1970566:0crwdne1970566:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:35
+msgid "Contact Email"
+msgstr "crwdns1970567:0crwdne1970567:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:36
+msgid "User Count"
+msgstr "crwdns1970568:0crwdne1970568:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:36
+msgid "(How many potential users do you estimate there are at this facility?)"
+msgstr "crwdns1970569:0crwdne1970569:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:65
+msgid "There is already a facility with this name."
+msgstr "crwdns1971348:0crwdne1971348:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:83
+msgid "Default Facility"
+msgstr "crwdns1971349:0crwdne1971349:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:99
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:128
+msgid "Facility"
+msgstr "crwdns1970570:0crwdne1970570:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:122
+msgid "There is already a group with this name."
+msgstr "crwdns1971350:0crwdne1971350:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:130
+msgid "(Group/class)"
+msgstr "crwdns1970571:0crwdne1970571:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:130
+msgid "(optional)"
+msgstr "crwdns1970572:0crwdne1970572:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:132
+msgid "Username"
+msgstr "crwdns1970573:0crwdne1970573:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:134
+msgid "First Name"
+msgstr "crwdns1970574:0crwdne1970574:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:136
+msgid "Last Name"
+msgstr "crwdns1970575:0crwdne1970575:0"
+
+#. Translators: This is a label in a form.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:138
+msgid "(whether this user should have teacher permissions)"
+msgstr "crwdns1970576:0crwdne1970576:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:163
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:188
+msgid "Unknown password format."
+msgstr "crwdns1970995:0crwdne1970995:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:165
+msgid "Call set_password before saving the user."
+msgstr "crwdns1971351:0crwdne1971351:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/models.py:169
+msgid "Facility group must be in the same facility as the user."
+msgstr "crwdns1971352:0crwdne1971352:0"
+
+#. Translators: Do not change the text of '%(facility_name)s' because it is a
+#. variable, but you can change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:58
+#, python-format
+msgid "The facility '%(facility_name)s' has been successfully saved!"
+msgstr "crwdns1970580:0%(facility_name)scrwdne1970580:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:97
+msgid "Please contact a teacher or administrator to receive login information to this installation."
+msgstr "crwdns1970996:0crwdne1970996:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:104
+msgid "There was a problem saving the information provided; please review errors below."
+msgstr "crwdns1971353:0crwdne1971353:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:114
+msgid "You successfully updated your user settings."
+msgstr "crwdns1970997:0crwdne1970997:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:119
+#, python-format
+msgid "Changes saved for user '%(username)s'"
+msgstr "crwdns1971354:0%(username)scrwdne1971354:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:125
+#, python-format
+msgid "You successfully created user '%(username)s'"
+msgstr "crwdns1971355:0%(username)scrwdne1971355:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:130
+msgid "You successfully registered."
+msgstr "crwdns1970582:0crwdne1970582:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:146
+#, python-format
+msgid "Edit user %(username)s"
+msgstr "crwdns1971356:0%(username)scrwdne1971356:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:148
+msgid "Sign up for an account"
+msgstr "crwdns1970836:0crwdne1970836:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:150
+msgid "Add a new teacher"
+msgstr "crwdns1971001:0crwdne1971001:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:152
+msgid "Add a new student"
+msgstr "crwdns1971002:0crwdne1971002:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:179
+msgid "Failed to save the group; please review errors below."
+msgstr "crwdns1971357:0crwdne1971357:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:192
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_user.html.py:26
+msgid "Add a new group"
+msgstr "crwdns1970840:0crwdne1970840:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:231
+msgid "There was an error logging you in. Please correct any errors listed below, and try again."
+msgstr "crwdns1970586:0crwdne1970586:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:243
+msgid "You've been logged in! We hope you enjoy your time with KA Lite "
+msgstr "crwdns1970584:0crwdne1970584:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/views.py:244
+msgid "-- be sure to log out when you finish."
+msgstr "crwdns1970585:0crwdne1970585:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:5
+msgid "Edit Facility"
+msgstr "crwdns1971128:0crwdne1971128:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:161
+msgid "Edit a facility"
+msgstr "crwdns1970763:0crwdne1970763:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:161
+msgid "Add a new Facility"
+msgstr "crwdns1970764:0crwdne1970764:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:162
+msgid "Please enter the following information about your facility. Please enter a detailed address, because knowing where you are in the world allows us to better plan for future deployments and partnerships."
+msgstr "crwdns1970765:0crwdne1970765:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:164
+msgid "Please use this search box to locate your facility (and/or click on the map to select a spot), and then enter the additional information in the form below."
+msgstr "crwdns1970766:0crwdne1970766:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:165
+msgid "(Knowing, as closely as possible, where you are in the world allows us to better plan for future deployments and partnerships)"
+msgstr "crwdns1970767:0crwdne1970767:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:168
+msgid "Search for your facility's address or name to find its location on the map (enter to search)"
+msgstr "crwdns1970768:0crwdne1970768:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility.html.py:175
+msgid "Save facility"
+msgstr "crwdns1970769:0crwdne1970769:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_group.html.py:39
+msgid "Create group"
+msgstr "crwdns1970843:0crwdne1970843:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_group.html.py:39
+msgid "Update group"
+msgstr "crwdns1971358:0crwdne1971358:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:5
+msgid "Select facility"
+msgstr "crwdns1970851:0crwdne1970851:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:23
+msgid "Please select a facility"
+msgstr "crwdns1970852:0crwdne1970852:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:37
+msgid "(this is the default)"
+msgstr "crwdns1970853:0crwdne1970853:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:40
+msgid "(set as the default facility)"
+msgstr "crwdns1970854:0crwdne1970854:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:49
+msgid "You currently have no facilities. Would you like to create a facility?"
+msgstr "crwdns1970855:0crwdne1970855:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_selection.html.py:51
+msgid "There are currently no facilities available, please ask an administrator or teacher to set one up."
+msgstr "crwdns1970856:0crwdne1970856:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_user.html.py:58
+msgid "Create user"
+msgstr "crwdns1970839:0crwdne1970839:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/facility_user.html.py:58
+msgid "Update user"
+msgstr "crwdns1971129:0crwdne1971129:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/login.html.py:31
+#, python-format
+msgid "If you don't have a login, please <a href=\"%(sign_up_url)s\">sign up</a>."
+msgstr "crwdns1971359:0%(sign_up_url)scrwdne1971359:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/facility/templates/facility/login.html.py:33
+msgid "If you don't have a login, please contact your administrator."
+msgstr "crwdns1971360:0crwdne1971360:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/i18n/middleware.py:80
+msgid "You don't have permissions to set the server's default language."
+msgstr "crwdns1970978:0crwdne1970978:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/khanload/api_views.py:94
+#, python-format
+msgid "Unexpected error importing videos: %(err_msg)s"
+msgstr "crwdns1971361:0%(err_msg)scrwdne1971361:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/khanload/api_views.py:115
+#, python-format
+msgid "Unexpected error importing exercises: %(err_msg)s"
+msgstr "crwdns1971362:0%(err_msg)scrwdne1971362:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/khanload/api_views.py:118
+#, python-format
+msgid "Uploaded %(num_exercises)d exercises and %(num_videos)d videos"
+msgstr "crwdns1971363:0%(num_exercises)dcrwdnd1971363:0%(num_videos)dcrwdne1971363:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_forms.py:22
+msgid "Exercise ID not recognized"
+msgstr "crwdns1970519:0crwdne1970519:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_forms.py:39
+msgid "Video ID not recognized."
+msgstr "crwdns1970979:0crwdne1970979:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:50
+msgid "You must be logged in as a student or teacher to view/save progress."
+msgstr "crwdns1970521:0crwdne1970521:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:56
+msgid "Video progress not saved."
+msgstr "crwdns1970522:0crwdne1970522:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:80
+#, python-format
+msgid "Could not save VideoLog: %(err)s"
+msgstr "crwdns1971364:0%(err)scrwdne1971364:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:91
+msgid "Exercise progress not saved."
+msgstr "crwdns1970523:0crwdne1970523:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:118
+msgid "Could not save ExerciseLog"
+msgstr "crwdns1970524:0crwdne1970524:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:129
+msgid "You have mastered this exercise and this topic!"
+msgstr "crwdns1971365:0crwdne1971365:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:131
+#, python-format
+msgid "You have mastered this exercise!  Please continue on to <a href='%(href)s'>%(title)s</a>"
+msgstr "crwdns1971366:0%(href)scrwdnd1971366:0%(title)scrwdne1971366:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:141
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:159
+msgid "Progress not loaded."
+msgstr "crwdns1970526:0crwdne1970526:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:148
+msgid "Could not load VideoLog objects: Unrecognized input data format."
+msgstr "crwdns1971367:0crwdne1971367:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/main/api_views.py:166
+msgid "Could not load ExerciseLog objects: Unrecognized input data format."
+msgstr "crwdns1971368:0crwdne1971368:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/remoteadmin/management/commands/createtunnel.py:44
+#, python-format
+msgid "Can't connect to %(server)s at port %(port)s."
+msgstr "crwdns1971369:0%(server)scrwdnd1971369:0%(port)scrwdne1971369:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/remoteadmin/management/commands/createtunnel.py:52
+msgid "Another createtunnel command is still running!"
+msgstr "crwdns1971370:0crwdne1971370:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/remoteadmin/management/commands/createtunnel.py:106
+#, python-format
+msgid "Connection refused by %(server)s. Stdout: %(stdout)s"
+msgstr "crwdns1971371:0%(server)scrwdnd1971371:0%(stdout)scrwdne1971371:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:45
+msgid "You must be logged in to access this page."
+msgstr "crwdns1970587:0crwdne1970587:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:64
+msgid "You must be logged in as an admin to access this page."
+msgstr "crwdns1970588:0crwdne1970588:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:98
+msgid "You requested information for a user that you are not authorized to view."
+msgstr "crwdns1970589:0crwdne1970589:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:151
+msgid "You requested device information for a device without a sharing network.  Only super users can do this!"
+msgstr "crwdns1971372:0crwdne1971372:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:159
+msgid "You requested facility information for a facility with no sharing network.  Only super users can do this!"
+msgstr "crwdns1971373:0crwdne1971373:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:170
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:175
+msgid "You requested information from an organization that you're not authorized on."
+msgstr "crwdns1971005:0crwdne1971005:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:177
+msgid "This organization is not linked to the requested sharing network."
+msgstr "crwdns1971374:0crwdne1971374:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/shared/decorators/auth.py:199
+msgid "You must be logged in as a superuser to access this endpoint."
+msgstr "crwdns1971007:0crwdne1971007:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/testing/asserts.py:13
+msgid "This path is only available on the central server."
+msgstr "crwdns1971008:0crwdne1971008:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/testing/asserts.py:24
+msgid "This path is only available on distributed servers."
+msgstr "crwdns1970591:0crwdne1970591:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:51
+msgid "process_id is not numeric."
+msgstr "crwdns1971167:0crwdne1971167:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:78
+msgid "Must specify process_id or process_name"
+msgstr "crwdns1971168:0crwdne1971168:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:125
+msgid "Cancelled update progress successfully."
+msgstr "crwdns1971375:0crwdne1971375:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:149
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:161
+msgid "Download Videos"
+msgstr "crwdns1971140:0crwdne1971140:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:151
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:163
+msgid "Launched video download process successfully."
+msgstr "crwdns1971376:0crwdne1971376:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:184
+#, python-format
+msgid "Deleted %(num_videos)s video(s) successfully."
+msgstr "crwdns1971377:0%(num_videos)scrwdne1971377:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:199
+msgid "Cancelled video download process successfully."
+msgstr "crwdns1971378:0crwdne1971378:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:210
+msgid "Must call API endpoint with POST verb."
+msgstr "crwdns1971379:0crwdne1971379:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:215
+msgid "Language pack download"
+msgstr "crwdns1971380:0crwdne1971380:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:217
+#, python-format
+msgid "Started language pack download for language %(lang_code)s successfully."
+msgstr "crwdns1971381:0%(lang_code)scrwdne1971381:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:230
+#, python-format
+msgid "Deleted language pack for language %(lang_code)s successfully."
+msgstr "crwdns1971382:0%(lang_code)scrwdne1971382:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:335
+msgid "You did not select a valid choice for an update mechanism."
+msgstr "crwdns1971383:0crwdne1971383:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/api_views.py:339
+msgid "Launched software update process successfully."
+msgstr "crwdns1971384:0crwdne1971384:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/models.py:17
+msgid "process name"
+msgstr "crwdns1971169:0crwdne1971169:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/models.py:19
+msgid "stage name"
+msgstr "crwdns1971170:0crwdne1971170:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/views.py:56
+msgid "video downloads"
+msgstr "crwdns1971385:0crwdne1971385:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/views.py:67
+msgid "language packs"
+msgstr "crwdns1971386:0crwdne1971386:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/classes.py:20
+msgid "Starting fresh."
+msgstr "crwdns1971387:0crwdne1971387:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:81
+#, python-format
+msgid "Using local language pack '%(filepath)s'"
+msgstr "crwdns1971388:0%(filepath)scrwdne1971388:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:84
+#, python-format
+msgid "Downloading language pack '%(lang_code)s'"
+msgstr "crwdns1971389:0%(lang_code)scrwdne1971389:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:88
+#, python-format
+msgid "Unpacking language pack '%(lang_code)s'"
+msgstr "crwdns1971390:0%(lang_code)scrwdne1971390:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:92
+#, python-format
+msgid "Creating static files for language pack '%(lang_code)s'"
+msgstr "crwdns1971391:0%(lang_code)scrwdne1971391:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:96
+msgid "Moving files to their appropriate local disk locations."
+msgstr "crwdns1971392:0crwdne1971392:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:102
+msgid "Invalidate caches"
+msgstr "crwdns1971393:0crwdne1971393:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:105
+#, python-format
+msgid "Finished processing language pack %(lang_code)s"
+msgstr "crwdns1971394:0%(lang_code)scrwdne1971394:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/languagepackdownload.py:107
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:229
+#, python-format
+msgid "Error: %(error_msg)s"
+msgstr "crwdns1971395:0%(error_msg)scrwdne1971395:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/update.py:130
+msgid "You have not installed KA Lite through Git. Please use the other update methods instead, e.g. 'internet' or 'localzip'"
+msgstr "crwdns1971396:0crwdne1971396:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:49
+msgid "Download all videos marked to be downloaded"
+msgstr "crwdns1971397:0crwdne1971397:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:56
+msgid "Create cached files"
+msgstr "crwdns1971398:0crwdne1971398:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:101
+#, python-format
+msgid "Downloading '%(video_title)s'"
+msgstr "crwdns1971399:0%(video_title)scrwdne1971399:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:108
+msgid "Download cancelled!"
+msgstr "crwdns1971400:0crwdne1971400:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:137
+msgid "Nothing to download; exiting."
+msgstr "crwdns1971401:0crwdne1971401:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:146
+#, python-format
+msgid "Downloading video '%(youtube_id)s'..."
+msgstr "crwdns1971402:0%(youtube_id)scrwdne1971402:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:168
+#, python-format
+msgid "Retrieving youtube video %(youtube_id)s via youtube-dl"
+msgstr "crwdns1971403:0%(youtube_id)scrwdne1971403:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:182
+msgid "Download is complete!"
+msgstr "crwdns1971404:0crwdne1971404:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:197
+#, python-format
+msgid "Error in downloading %(youtube_id)s: %(error_msg)s"
+msgstr "crwdns1971405:0%(youtube_id)scrwdnd1971405:0%(error_msg)scrwdne1971405:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:213
+#, python-format
+msgid "%(error_msg)s; continuing to next video."
+msgstr "crwdns1971406:0%(error_msg)scrwdne1971406:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:219
+msgid "Generating all pages related to videos."
+msgstr "crwdns1971172:0crwdne1971172:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/management/commands/videodownload.py:223
+#, python-format
+msgid "Downloaded %(num_handled_videos)s of %(num_total_videos)s videos successfully."
+msgstr "crwdns1971173:0%(num_handled_videos)scrwdnd1971173:0%(num_total_videos)scrwdne1971173:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:7
+msgid "Update Languages"
+msgstr "crwdns1971141:0crwdne1971141:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:26
+msgid "Download or Update Language Packs"
+msgstr "crwdns1971142:0crwdne1971142:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:29
+msgid "Language packs contain all available translations for the interface and video subtitles."
+msgstr "crwdns1971143:0crwdne1971143:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:42
+msgid "Get Language Pack"
+msgstr "crwdns1971144:0crwdne1971144:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:45
+msgid "subtitle(s)"
+msgstr "crwdns1971145:0crwdne1971145:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:46
+msgid "translated"
+msgstr "crwdns1971146:0crwdne1971146:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:47
+msgid "to download"
+msgstr "crwdns1971147:0crwdne1971147:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:48
+msgid "on disk"
+msgstr "crwdns1971148:0crwdne1971148:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:49
+msgid "exercise(s)"
+msgstr "crwdns1971149:0crwdne1971149:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_languages.html.py:60
+msgid "Installed Languages"
+msgstr "crwdns1971150:0crwdne1971150:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:6
+msgid "Update Software"
+msgstr "crwdns1970883:0crwdne1970883:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:64
+msgid "Current Installation"
+msgstr "crwdns1971152:0crwdne1971152:0"
+
+#. Translators: this specifies the software release date
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:74
+msgid "Release Date"
+msgstr "crwdns1971153:0crwdne1971153:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:80
+msgid "Last recorded usage"
+msgstr "crwdns1971154:0crwdne1971154:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:82
+msgid "Installation Location"
+msgstr "crwdns1971155:0crwdne1971155:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:88
+msgid "Available Update"
+msgstr "crwdns1971156:0crwdne1971156:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:90
+msgid "Latest Version"
+msgstr "crwdns1971157:0crwdne1971157:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:95
+msgid "New Features"
+msgstr "crwdns1971158:0crwdne1971158:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:97
+msgid "Bugs fixed"
+msgstr "crwdns1971159:0crwdne1971159:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:107
+msgid "Through Git"
+msgstr "crwdns1971407:0crwdne1971407:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:108
+msgid "Fetch through Git"
+msgstr "crwdns1971408:0crwdne1971408:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:110
+msgid "From the internet"
+msgstr "crwdns1971409:0crwdne1971409:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:111
+msgid "Download and update"
+msgstr "crwdns1971160:0crwdne1971160:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:117
+msgid "Use local file"
+msgstr "crwdns1971161:0crwdne1971161:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_software.html.py:119
+msgid "Select file"
+msgstr "crwdns1971162:0crwdne1971162:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:8
+msgid "Update Videos"
+msgstr "crwdns1970887:0crwdne1970887:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:37
+#, python-format
+msgid "Videos for language %(lang_name)s"
+msgstr "crwdns1971410:0%(lang_name)scrwdne1971410:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:39
+#, python-format
+msgid "Videos for language <a href=\"#\">%(lang_name)s</a>"
+msgstr "crwdns1971411:0%(lang_name)scrwdne1971411:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:52
+msgid "Please select videos to download (below)"
+msgstr "crwdns1970888:0crwdne1970888:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:69
+msgid "Help for downloading videos"
+msgstr "crwdns1971412:0crwdne1971412:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:73
+msgid "Q: How do I bulk-download videos?"
+msgstr "crwdns1970889:0crwdne1970889:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:84
+msgid "Video download error... click to retry"
+msgstr "crwdns1970894:0crwdne1970894:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/templates/updates/update_videos.html.py:88
+msgid "Cancel Video Downloads"
+msgstr "crwdns1970895:0crwdne1970895:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/fle_utils/feeds/views.py:16
+#, python-format
+msgid "A subscription for '%s' was added."
+msgstr "crwdns1970913:0%scrwdne1970913:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/fle_utils/internet/decorators.py:28
+#, python-format
+msgid "Unexpected error: %(err)s"
+msgstr "crwdns1971413:0%(err)scrwdne1971413:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/__init__.py:25
+#, python-format
+msgid "In order to access %(resource_name)s, you must register your device first."
+msgstr "crwdns1971414:0%(resource_name)scrwdne1971414:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/forms.py:44
+msgid "You must select a sharing network from the given choices."
+msgstr "crwdns1971415:0crwdne1971415:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/forms.py:48
+msgid "You must select a valid sharing network."
+msgstr "crwdns1971416:0crwdne1971416:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/forms.py:54
+msgid "This public key has already been registered!"
+msgstr "crwdns1970990:0crwdne1970990:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/views.py:89
+msgid "Registration status: "
+msgstr "crwdns1970547:0crwdne1970547:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/devices/views.py:109
+msgid "The device's public key has been successfully registered. You may now close this window."
+msgstr "crwdns1970548:0crwdne1970548:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:6
+msgid "Register a Device"
+msgstr "crwdns1970860:0crwdne1970860:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:63
+msgid "Contacting central server to register; page will reload upon success."
+msgstr "crwdns1971417:0crwdne1971417:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:80
+msgid "Device registration"
+msgstr "crwdns1970861:0crwdne1970861:0"
+
+#. Translators: Please do not edit the variable text: %(command)s
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:84
+#, python-format
+msgid "Sorry, there was an error during registration. Please make sure your device is fully up to date (run %(command)s and then stop/start the server)."
+msgstr "crwdns1971418:0%(command)scrwdne1971418:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:85
+msgid "The error message was:"
+msgstr "crwdns1970863:0crwdne1970863:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:89
+msgid "Congratulations, this device has now been registered."
+msgstr "crwdns1970864:0crwdne1970864:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:93
+msgid "This device has already been registered."
+msgstr "crwdns1970865:0crwdne1970865:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:97
+msgid "The device needs to have internet access when first being registered. Please ensure it is connected to the internet, and then"
+msgstr "crwdns1970866:0crwdne1970866:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:97
+msgid "refresh this page"
+msgstr "crwdns1970867:0crwdne1970867:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:103
+msgid "What is device registration?"
+msgstr "crwdns1971419:0crwdne1971419:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:105
+msgid "Once you register your installation with us, your data can be synced to our online repository when KA Lite has access to the Internet. This is a good thing! Here's why:"
+msgstr "crwdns1971420:0crwdne1971420:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:108
+msgid "Your data will be backed up online"
+msgstr "crwdns1971421:0crwdne1971421:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:109
+msgid "You can login online and review your usage data"
+msgstr "crwdns1971422:0crwdne1971422:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:110
+msgid "Our team can use this data to objectively assess the impact our work is having around the world!"
+msgstr "crwdns1971423:0crwdne1971423:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:115
+msgid "Ready to register? You have two options:"
+msgstr "crwdns1971424:0crwdne1971424:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:119
+msgid "One-click registration (no online access to data)"
+msgstr "crwdns1971425:0crwdne1971425:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:120
+msgid "Register with online access to data!"
+msgstr "crwdns1971426:0crwdne1971426:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:125
+msgid "The perfect option for individual users who just want to get KA Lite up and running fast and don't need online access to data."
+msgstr "crwdns1971427:0crwdne1971427:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:128
+msgid "This allows you to get the registration process over in one-click without worrying about creating a login that you're never going to use."
+msgstr "crwdns1971428:0crwdne1971428:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:133
+msgid "The perfect option for adminstrators of larger projects!"
+msgstr "crwdns1971429:0crwdne1971429:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:136
+msgid "This option will walk you through the process of creating a login to our website that will allow you access your uploaded data and connect multiple installations to the same account."
+msgstr "crwdns1971430:0crwdne1971430:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:142
+msgid "One-click registration now!"
+msgstr "crwdns1971431:0crwdne1971431:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_client.html.py:145
+msgid "Register with an online account now!"
+msgstr "crwdns1971432:0crwdne1971432:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_server.html.py:5
+msgid "Register device to a sharing network"
+msgstr "crwdns1971433:0crwdne1971433:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/python-packages/securesync/templates/securesync/register_public_key_server.html.py:31
+msgid "Register a device"
+msgstr "crwdns1971131:0crwdne1971131:0"
+

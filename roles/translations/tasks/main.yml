@@ -1,0 +1,50 @@
+---
+- name: install GNU gettext
+  apt: name=gettext state=present
+  sudo: yes
+  tags:
+    - translations
+
+- name: insert the translations setting in local_settings.py
+  lineinfile: dest=/var/www/{{ ka_lite_distributed_prefix}}/kalite/local_settings.py line="IN_CONTEXT_LOCALIZED = True" state=present
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+
+- name: make sure the locale directories exist
+  file: dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/ state=directory
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+
+- name: add in the english in-context-localizable po file from crowdin
+  copy: src=kalite-en.po dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/django.po
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+
+- name: add in the english in-context-localizable JS po file from crowdin
+  copy: src=kalitejs-en.po dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/djangojs.po
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+
+- name: compile the po files
+  shell: python manage.py compilemessages
+  args:
+    chdir: /var/www/{{ ka_lite_distributed_prefix }}/kalite/
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+
+- name: restart the distributed server.
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/start.sh"
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations

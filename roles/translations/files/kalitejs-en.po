@@ -1,0 +1,324 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: ka-lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-29 17:21-0700\n"
+"PO-Revision-Date: 2014-09-23 19:28-0400\n"
+"Last-Translator: dylanjbarth <dylan@learningequality.org>\n"
+"Language-Team: English, United States\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base.js.c:26
+msgid "share"
+msgstr "crwdns1971230:0crwdne1971230:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base.js.c:31
+msgid "hide"
+msgstr "crwdns1971231:0crwdne1971231:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:37
+msgid "Drawing %(xaxis_name)s versus %(yaxis_name)s"
+msgstr "crwdns1971232:0%(xaxis_name)scrwdnd1971232:0%(yaxis_name)scrwdne1971232:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:44
+msgid "No student accounts in this group have been created."
+msgstr "crwdns1971233:0crwdne1971233:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:51
+msgid "Loading '%(xaxis)s' vs. '%(yaxis)s' ..."
+msgstr "crwdns1971234:0%(xaxis)scrwdnd1971234:0%(yaxis)scrwdne1971234:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:84
+msgid "Struggling"
+msgstr "crwdns1971207:0crwdne1971207:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:98
+msgid "Bored"
+msgstr "crwdns1971208:0crwdne1971208:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:112
+msgid "Disengaged"
+msgstr "crwdns1971209:0crwdne1971209:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:126
+msgid "On Target"
+msgstr "crwdns1971210:0crwdne1971210:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:46
+msgid "Please choose a group to move users to."
+msgstr "crwdns1971211:0crwdne1971211:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:48
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:65
+msgid "Please select users first."
+msgstr "crwdns1971212:0crwdne1971212:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:49
+msgid "You are about to move selected users to another group."
+msgstr "crwdns1971213:0crwdne1971213:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:66
+msgid "You are about to delete selected users, they will be permanently deleted."
+msgstr "crwdns1971215:0crwdne1971215:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/zone_management.js.c:7
+msgid "Are you sure you want to delete this facility?"
+msgstr "crwdns1971244:0crwdne1971244:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:42
+msgid "Successfully launched data syncing job."
+msgstr "crwdns1971245:0crwdne1971245:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:43
+msgid "After syncing completes, visit the <a href='%(devman_url)s'>device management page</a> to view results."
+msgstr "crwdns1971246:0%(devman_url)scrwdne1971246:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:85
+msgid "Total Points : %(points)d "
+msgstr "crwdns1971178:0%(points)dcrwdne1971178:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:87
+msgid "Welcome, %(username)s!"
+msgstr "crwdns1971247:0%(username)scrwdne1971247:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/exercises.js.c:13
+msgid "%(points)d points!"
+msgstr "crwdns1971180:0%(points)dcrwdne1971180:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/search_autocomplete.js.c:125
+msgid "Unexpected error: no search data found for selected item. Please select another item."
+msgstr "crwdns1971183:0crwdne1971183:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:139
+msgid "Completed update successfully."
+msgstr "crwdns1971200:0crwdne1971200:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:143
+msgid "Update cancelled successfully."
+msgstr "crwdns1971201:0crwdne1971201:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:146
+msgid "Error during update: %(progress_log_notes)s"
+msgstr "crwdns1971202:0%(progress_log_notes)scrwdne1971202:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:152
+msgid "problem on server."
+msgstr "crwdns1971203:0crwdne1971203:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:155
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:117
+msgid "Could not connect to the server."
+msgstr "crwdns1971204:0crwdne1971204:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:158
+msgid "Error while checking update status: %(message)s"
+msgstr "crwdns1971205:0%(message)scrwdne1971205:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:187
+msgid "Overall progress: %(percent_complete)5.1f%% complete (%(cur_stage)d of %(num_stages)d)"
+msgstr "crwdns1971217:0%(percent_complete)crwdnd1971217:0%%crwdnd1971217:0%(cur_stage)dcrwdnd1971217:0%(num_stages)dcrwdne1971217:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:193
+msgid "Loading"
+msgstr "crwdns1971218:0crwdne1971218:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:48
+msgid "Set as default"
+msgstr "crwdns1971184:0crwdne1971184:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:55
+msgid "%(subtitle_count)d Subtitles / %(percent_translated)d%% Translated"
+msgstr "crwdns1971185:0%(subtitle_count)dcrwdnd1971185:0%(percent_translated)dcrwdnd1971185:0%%crwdne1971185:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:59
+msgid "Delete %(name)s"
+msgstr "crwdns1971219:0%(name)scrwdne1971219:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:62
+msgid "Delete %(name)s Subtitles"
+msgstr "crwdns1971220:0%(name)scrwdne1971220:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:80
+msgid "Upgrade"
+msgstr "crwdns1971186:0crwdne1971186:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:82
+msgid "Translated"
+msgstr "crwdns1971187:0crwdne1971187:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:84
+msgid "Subtitles"
+msgstr "crwdns1971188:0crwdne1971188:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:107
+msgid "Are you sure you want to delete language pack '%(lang_code)s'"
+msgstr "crwdns1971236:0%(lang_code)scrwdne1971236:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:113
+msgid "Confirm Delete"
+msgstr "crwdns1971222:0crwdne1971222:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:233
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:244
+msgid "The server does not have internet access; language packs cannot be downloaded at this time."
+msgstr "crwdns1971248:0crwdne1971248:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:23
+msgid "Installation finished."
+msgstr "crwdns1971237:0crwdne1971237:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:30
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:35
+msgid "Installation finished! Refreshing the page in %(sec)s seconds"
+msgstr "crwdns1971249:0%(sec)scrwdne1971249:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:51
+msgid "Remote version information unavailable."
+msgstr "crwdns1971238:0crwdne1971238:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:68
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:75
+#, c-format
+msgid "None"
+msgstr "crwdns1971250:0crwdne1971250:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:75
+#, c-format
+msgid "<li>(%s)</li>"
+msgstr "crwdns1971251:0%scrwdne1971251:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:99
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:200
+msgid "Yes"
+msgstr "crwdns1971225:0crwdne1971225:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:108
+msgid "Error starting update process %(status)s: %(responseText)s"
+msgstr "crwdns1971240:0%(status)scrwdnd1971240:0%(responseText)scrwdne1971240:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:113
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:229
+msgid "No"
+msgstr "crwdns1971226:0crwdne1971226:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:118
+msgid "Are you sure you want to update your installation of KA Lite? This process is irreversible!"
+msgstr "crwdns1971241:0crwdne1971241:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:121
+msgid "Confirm update"
+msgstr "crwdns1971242:0crwdne1971242:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:141
+msgid "Your installation is offline, and therefore cannot access updates."
+msgstr "crwdns1971239:0crwdne1971239:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:166
+msgid "The server does not have internet access; software cannot be updated at this time."
+msgstr "crwdns1971252:0crwdne1971252:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:92
+msgid "Apologies, but there are no videos available for this language."
+msgstr "crwdns1971223:0crwdne1971223:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:120
+msgid "Download %(vid_count)d new selected video(s)"
+msgstr "crwdns1971192:0%(vid_count)dcrwdne1971192:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:130
+msgid "Delete %(vid_count)d selected video(s)"
+msgstr "crwdns1971193:0%(vid_count)dcrwdne1971193:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:155
+msgid "The server does not have internet access; videos cannot be downloaded at this time."
+msgstr "crwdns1971253:0crwdne1971253:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:193
+msgid "Are you sure you want to delete?"
+msgstr "crwdns1971224:0crwdne1971224:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:237
+msgid "Deleting the downloaded video(s) will lead to permanent loss of data"
+msgstr "crwdns1971227:0crwdne1971227:0"
+
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:117
+msgid "Please try again later."
+msgstr "crwdns1971228:0crwdne1971228:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:126
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:140
+msgid "Unexpected error; contact the FLE with the following information: %(error_msg)s"
+msgstr "crwdns1971243:0%(error_msg)scrwdne1971243:0"
+
+#. 
+#. Translators: please do not change variable names (anything with the format
+#. %(xxxx)s), but it is OK to change its position.
+#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:132
+msgid "You are not authorized to complete the request.  Please <a href='%(login_url)'>login</a> as an authorized user, then retry the request."
+msgstr "crwdns1971254:0%(login_url)crwdne1971254:0"
+
