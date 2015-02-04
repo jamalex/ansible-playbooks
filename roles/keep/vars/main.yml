@@ -2,16 +2,18 @@
 
 system_packages:
   - openssl
-  - python-m2crypto
   - python-mysqldb
   - apache2
   - libapache2-mod-wsgi
   - mysql-client
+  - swig
+  - libssl-dev
 
 python_packages:
   - MySQL-python
   - pygeoip
   - requests
+  - m2crypto
 
 apache_request_timeout: 300
 
