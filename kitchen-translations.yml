@@ -1,5 +1,7 @@
 ---
 - hosts: kitchen
+  vars_files:
+    - [roles/keep/vars/secrets.yml] # reuse this since it might be defined already
   vars:
     - ka_lite_distributed_port: 1187
     - ka_lite_distributed_git_branch: develop
