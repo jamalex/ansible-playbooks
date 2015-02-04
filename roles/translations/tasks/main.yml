@@ -19,19 +19,33 @@
   tags:
     - translations
 
-- name: add in the english in-context-localizable po file from crowdin
-  copy: src=kalite-en.po dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/django.po
-  sudo: yes
-  sudo_user: www-data
+- name: download the en-US language pack from crowdin, the pseudolanguage for in-context localization
+  get_url: url=https://api.crowdin.com/api/project/{{ crowdin_project_id }}/download/en-US.zip?key={{ crowdin_project_key }} force=yes dest=/tmp/en-US.zip
   tags:
     - translations
+    - update_po_file
 
-- name: add in the english in-context-localizable JS po file from crowdin
-  copy: src=kalitejs-en.po dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/djangojs.po
+- name: extract en-US.zip
+  shell: "unzip -o /tmp/en-US.zip"
+  tags:
+    - translations
+    - update_po_file
+
+- name: Insert 0.13 po file into the right folder
+  shell: "cp /tmp/versioned/0.13-django.po /var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/django.po"
   sudo: yes
   sudo_user: www-data
   tags:
     - translations
+    - update_po_file
+
+- name: Insert 0.13 JS po file into the right folder
+  shell: "cp /tmp/versioned/0.13-djangojs.po /var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/djangojs.po"
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - translations
+    - update_po_file
 
 - name: compile the po files
   shell: python manage.py compilemessages
@@ -43,7 +57,7 @@
     - translations
 
 - name: restart the distributed server.
-  shell: "/var/www/{{ ka_lite_distributed_prefix }}/start.sh"
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart"
   sudo: yes
   sudo_user: www-data
   tags:
