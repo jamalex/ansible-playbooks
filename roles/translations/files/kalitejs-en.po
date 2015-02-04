@@ -7,318 +7,1916 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ka-lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-29 17:21-0700\n"
-"PO-Revision-Date: 2014-09-23 19:28-0400\n"
+"POT-Creation-Date: 2015-02-03 15:36-0800\n"
+"PO-Revision-Date: 2015-02-03 19:18-0500\n"
 "Last-Translator: dylanjbarth <dylan@learningequality.org>\n"
 "Language-Team: English, United States\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
-"\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
+"X-Crowdin-Project: ka-lite\n"
+"X-Crowdin-File: /versioned/0.13-djangojs.po\n"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base.js.c:26
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/centralserver/central/static/js/central/org_management.js.c:35
+msgid "Are you sure you want to delete this sharing network?"
+msgstr "crwdns1981349:0crwdne1981349:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/centralserver/central/static/js/central/org_management.js.c:45
+msgid "Are you sure you want to delete this organization?"
+msgstr "crwdns1981350:0crwdne1981350:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/facility-select.handlebars.py:1
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/facility-select.handlebars.py:2
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-container.handlebars.py:7
+msgid "Facility"
+msgstr "crwdns1981351:0crwdne1981351:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/facility-select.handlebars.py:4
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/facility-select.handlebars.py:8
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/group-select.handlebars.py:9
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/group-select.handlebars.py:14
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/zone-select.handlebars.py:5
+msgid "All"
+msgstr "crwdns1981352:0crwdne1981352:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/facility-select.handlebars.py:9
+msgid "this device"
+msgstr "crwdns1981353:0crwdne1981353:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/group-select.handlebars.py:1
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/group-select.handlebars.py:2
+msgid "Group"
+msgstr "crwdns1981354:0crwdne1981354:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/group-select.handlebars.py:8
+msgid "No groups"
+msgstr "crwdns1981355:0crwdne1981355:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:3
+msgid "Report Type"
+msgstr "crwdns1981356:0crwdne1981356:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:7
+msgid "Tabular Report"
+msgstr "crwdns1981357:0crwdne1981357:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:11
+msgid "Scatter Report"
+msgstr "crwdns1981358:0crwdne1981358:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:15
+msgid "Timeline Report"
+msgstr "crwdns1981359:0crwdne1981359:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:20
+msgid "Test Report"
+msgstr "crwdns1981360:0crwdne1981360:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/coach_nav/reports-nav.handlebars.py:31
+msgid "Go"
+msgstr "crwdns1981361:0crwdne1981361:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/hbtemplates/student_progress/student-progress-container.handlebars.py:1
+msgid "Playlist progress report"
+msgstr "crwdns1981362:0crwdne1981362:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/base.js.c:177
 msgid "share"
-msgstr "crwdns1971230:0crwdne1971230:0"
+msgstr "crwdns1981363:0crwdne1981363:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base.js.c:31
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/base.js.c:182
 msgid "hide"
-msgstr "crwdns1971231:0crwdne1971231:0"
+msgstr "crwdns1981364:0crwdne1981364:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:37
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:37
 msgid "Drawing %(xaxis_name)s versus %(yaxis_name)s"
-msgstr "crwdns1971232:0%(xaxis_name)scrwdnd1971232:0%(yaxis_name)scrwdne1971232:0"
+msgstr "crwdns1981365:0%(xaxis_name)scrwdnd1981365:0%(yaxis_name)scrwdne1981365:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:44
-msgid "No student accounts in this group have been created."
-msgstr "crwdns1971233:0crwdne1971233:0"
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:44
+msgid "No learner accounts in this group have been created."
+msgstr "crwdns1981366:0crwdne1981366:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:51
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/base_d3_visualization.js.c:51
 msgid "Loading '%(xaxis)s' vs. '%(yaxis)s' ..."
-msgstr "crwdns1971234:0%(xaxis)scrwdnd1971234:0%(yaxis)scrwdne1971234:0"
+msgstr "crwdns1981367:0%(xaxis)scrwdnd1981367:0%(yaxis)scrwdne1981367:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:84
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:86
 msgid "Struggling"
-msgstr "crwdns1971207:0crwdne1971207:0"
+msgstr "crwdns1981368:0crwdne1981368:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:98
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:100
 msgid "Bored"
-msgstr "crwdns1971208:0crwdne1971208:0"
+msgstr "crwdns1981369:0crwdne1981369:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:112
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:114
 msgid "Disengaged"
-msgstr "crwdns1971209:0crwdne1971209:0"
+msgstr "crwdns1981370:0crwdne1981370:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:126
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/d3.scatter.js.c:128
 msgid "On Target"
-msgstr "crwdns1971210:0crwdne1971210:0"
+msgstr "crwdns1981371:0crwdne1981371:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:46
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/coachreports/static/js/coachreports/timeline_view.js.c:48
+msgid "Not enough data to show timeline."
+msgstr "crwdns1981372:0crwdne1981372:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:4
+msgid "Resource"
+msgstr "crwdns1981373:0crwdne1981373:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:7
+msgid "Facility User Logs"
+msgstr "crwdns1981374:0crwdne1981374:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:8
+msgid "Test Logs"
+msgstr "crwdns1981375:0crwdne1981375:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:9
+msgid "Attempt Logs"
+msgstr "crwdns1981376:0crwdne1981376:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:10
+msgid "Exercise Logs"
+msgstr "crwdns1981377:0crwdne1981377:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:11
+msgid "Store Transaction Logs"
+msgstr "crwdns1981378:0crwdne1981378:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:13
+msgid "Device Logs"
+msgstr "crwdns1981379:0crwdne1981379:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:19
+msgid "Data Type"
+msgstr "crwdns1981380:0crwdne1981380:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:22
+msgid "CSV"
+msgstr "crwdns1981381:0crwdne1981381:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/data-export-container.handlebars.py:30
+msgid "Export"
+msgstr "crwdns1981382:0crwdne1981382:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/group-select.handlebars.py:10
+msgid "s"
+msgstr "crwdns1981383:0crwdne1981383:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/hbtemplates/data_export/zone-select.handlebars.py:2
+msgid "Zone"
+msgstr "crwdns1981384:0crwdne1981384:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:66
 msgid "Please choose a group to move users to."
-msgstr "crwdns1971211:0crwdne1971211:0"
+msgstr "crwdns1981385:0crwdne1981385:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:48
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:65
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:68
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:107
 msgid "Please select users first."
-msgstr "crwdns1971212:0crwdne1971212:0"
+msgstr "crwdns1981386:0crwdne1981386:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:49
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:69
 msgid "You are about to move selected users to another group."
-msgstr "crwdns1971213:0crwdne1971213:0"
+msgstr "crwdns1981387:0crwdne1981387:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/facility_management.js.c:66
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:108
 msgid "You are about to delete selected users, they will be permanently deleted."
-msgstr "crwdns1971215:0crwdne1971215:0"
+msgstr "crwdns1981388:0crwdne1981388:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/control_panel/static/js/control_panel/zone_management.js.c:7
-msgid "Are you sure you want to delete this facility?"
-msgstr "crwdns1971244:0crwdne1971244:0"
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:123
+msgid "Please select groups first."
+msgstr "crwdns1981389:0crwdne1981389:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:42
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/facility_management.js.c:124
+msgid "You are about to permanently delete the selected group(s). Note that any learners currently in this group will now be characterized as 'Ungrouped' but their profiles will not be deleted."
+msgstr "crwdns1981390:0crwdne1981390:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/zone_management.js.c:9
+#, c-format
+msgid "Are you sure you want to delete '%s'? You will lose all associated learner, group, and coach accounts. If you are sure, type the name of the facility into the box below and press OK."
+msgstr "crwdns1981391:0%scrwdne1981391:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/control_panel/static/js/control_panel/zone_management.js.c:23
+msgid "The facility has not been deleted. Did you spell the facility name correctly?"
+msgstr "crwdns1981392:0crwdne1981392:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/audio/audio-player.handlebars.py:10
+msgid "Play / pause"
+msgstr "crwdns1981393:0crwdne1981393:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/audio/audio-player.handlebars.py:25
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/audio/audio-player.handlebars.py:32
+msgid "0:00"
+msgstr "crwdns1981394:0crwdne1981394:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/content/content-points.handlebars.py:2
+msgid "Points"
+msgstr "crwdns1981395:0crwdne1981395:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/content/content-wrapper.handlebars.py:10
+msgid "Open PDF Reader"
+msgstr "crwdns1981396:0crwdne1981396:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/content/content-wrapper.handlebars.py:28
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/topics/sidebar-entry.handlebars.py:14
+msgid "by:"
+msgstr "crwdns1981397:0crwdne1981397:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/content/content-wrapper.handlebars.py:43
+msgid "Related content:"
+msgstr "crwdns1981398:0crwdne1981398:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/content/content-wrapper.handlebars.py:67
+msgid "Tags:"
+msgstr "crwdns1981399:0crwdne1981399:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise-hint.handlebars.py:2
+msgid "Need help?"
+msgstr "crwdns1981400:0crwdne1981400:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise-hint.handlebars.py:4
+msgid "I'd like a hint"
+msgstr "crwdns1981401:0crwdne1981401:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise-hint.handlebars.py:6
+msgid "(will mark current answer as incorrect)"
+msgstr "crwdns1981402:0crwdne1981402:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise-progress.handlebars.py:1
+msgid "Your progress streak bar for this exercise"
+msgstr "crwdns1981403:0crwdne1981403:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise-related-videos.handlebars.py:4
+msgid "Stuck? Watch a video."
+msgstr "crwdns1981404:0crwdne1981404:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:3
+msgid "Test"
+msgstr "crwdns1981405:0crwdne1981405:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:3
+msgid "Practicing"
+msgstr "crwdns1981406:0crwdne1981406:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:26
+msgid "Acceptable formats"
+msgstr "crwdns1981407:0crwdne1981407:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:27
+msgid "Answer"
+msgstr "crwdns1981408:0crwdne1981408:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:34
+msgid "Check Answer"
+msgstr "crwdns1981409:0crwdne1981409:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:35
+msgid "Correct! Next Question..."
+msgstr "crwdns1981410:0crwdne1981410:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:39
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:240
+msgid "Loading..."
+msgstr "crwdns1981411:0crwdne1981411:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:55
+msgid "Show scratchpad"
+msgstr "crwdns1981412:0crwdne1981412:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/exercise.handlebars.py:56
+msgid "Scratchpad not available"
+msgstr "crwdns1981413:0crwdne1981413:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/quiz-stop.handlebars.py:2
+msgid "Well done - you have finished the quiz!"
+msgstr "crwdns1981414:0crwdne1981414:0"
+
+#. 
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/quiz-stop.handlebars.py:5
+#, python-format
+msgid "You got %(correct)d out of %(total_number)d questions correct."
+msgstr "crwdns1981415:0%(correct)dcrwdnd1981415:0%(total_number)dcrwdne1981415:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/test-start.handlebars.py:4
+msgid "Please click the button below when you are ready to begin the test."
+msgstr "crwdns1981416:0crwdne1981416:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/test-start.handlebars.py:6
+msgid "Begin test"
+msgstr "crwdns1981417:0crwdne1981417:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/test-stop.handlebars.py:4
+msgid "You have finished the test!"
+msgstr "crwdns1981418:0crwdne1981418:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/exercise/test-stop.handlebars.py:6
+msgid "Click here to carry on learning!"
+msgstr "crwdns1981419:0crwdne1981419:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/map/map.handlebars.py:2
+msgid "Back to topics"
+msgstr "crwdns1981420:0crwdne1981420:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:6
+msgid "Show Thumbnails"
+msgstr "crwdns1981421:0crwdne1981421:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:7
+msgid "Thumbnails"
+msgstr "crwdns1981422:0crwdne1981422:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:9
+msgid "Show Document Outline"
+msgstr "crwdns1981423:0crwdne1981423:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:10
+msgid "Document Outline"
+msgstr "crwdns1981424:0crwdne1981424:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:12
+msgid "Show Attachments"
+msgstr "crwdns1981425:0crwdne1981425:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:13
+msgid "Attachments"
+msgstr "crwdns1981426:0crwdne1981426:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:29
+msgid "Find:"
+msgstr "crwdns1981427:0crwdne1981427:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:33
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:114
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-row.handlebars.py:8
+msgid "Previous"
+msgstr "crwdns1981428:0crwdne1981428:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:37
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:118
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-row.handlebars.py:23
+msgid "Next"
+msgstr "crwdns1981429:0crwdne1981429:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:41
+msgid "Highlight all"
+msgstr "crwdns1981430:0crwdne1981430:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:43
+msgid "Match case"
+msgstr "crwdns1981431:0crwdne1981431:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:49
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:156
+msgid "Switch to Presentation Mode"
+msgstr "crwdns1981432:0crwdne1981432:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:50
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:157
+msgid "Presentation Mode"
+msgstr "crwdns1981433:0crwdne1981433:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:53
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:160
+msgid "Open File"
+msgstr "crwdns1981434:0crwdne1981434:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:54
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:161
+msgid "Open"
+msgstr "crwdns1981435:0crwdne1981435:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:57
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:58
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:164
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:165
+msgid "Print"
+msgstr "crwdns1981436:0crwdne1981436:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:61
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:62
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:168
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:169
+msgid "Download"
+msgstr "crwdns1981437:0crwdne1981437:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:65
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:172
+msgid "Current view (copy or open in new window)"
+msgstr "crwdns1981438:0crwdne1981438:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:66
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:173
+msgid "Current View"
+msgstr "crwdns1981439:0crwdne1981439:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:71
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:72
+msgid "Go to First Page"
+msgstr "crwdns1981440:0crwdne1981440:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:74
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:75
+msgid "Go to Last Page"
+msgstr "crwdns1981441:0crwdne1981441:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:80
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:81
+msgid "Rotate Clockwise"
+msgstr "crwdns1981442:0crwdne1981442:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:83
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:84
+msgid "Rotate Counterclockwise"
+msgstr "crwdns1981443:0crwdne1981443:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:89
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:90
+msgid "Enable hand tool"
+msgstr "crwdns1981444:0crwdne1981444:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:95
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:96
+msgid "Document Properties…"
+msgstr "crwdns1981445:0crwdne1981445:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:105
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:106
+msgid "Toggle Sidebar"
+msgstr "crwdns1981446:0crwdne1981446:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:109
+msgid "Find in Document"
+msgstr "crwdns1981447:0crwdne1981447:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:110
+msgid "Find"
+msgstr "crwdns1981448:0crwdne1981448:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:113
+msgid "Previous Page"
+msgstr "crwdns1981449:0crwdne1981449:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:117
+msgid "Next Page"
+msgstr "crwdns1981450:0crwdne1981450:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:121
+msgid "Page:"
+msgstr "crwdns1981451:0crwdne1981451:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:128
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:129
+msgid "Zoom Out"
+msgstr "crwdns1981452:0crwdne1981452:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:132
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:133
+msgid "Zoom In"
+msgstr "crwdns1981453:0crwdne1981453:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:137
+msgid "Zoom"
+msgstr "crwdns1981454:0crwdne1981454:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:138
+msgid "Automatic Zoom"
+msgstr "crwdns1981455:0crwdne1981455:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:139
+msgid "Actual Size"
+msgstr "crwdns1981456:0crwdne1981456:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:140
+msgid "Fit Page"
+msgstr "crwdns1981457:0crwdne1981457:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:141
+msgid "Full Width"
+msgstr "crwdns1981458:0crwdne1981458:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:143
+msgid "50%"
+msgstr "crwdns1981459:0crwdne1981459:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:144
+msgid "75%"
+msgstr "crwdns1981460:0crwdne1981460:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:145
+msgid "100%"
+msgstr "crwdns1981461:0crwdne1981461:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:146
+msgid "125%"
+msgstr "crwdns1981462:0crwdne1981462:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:147
+msgid "150%"
+msgstr "crwdns1981463:0crwdne1981463:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:148
+msgid "200%"
+msgstr "crwdns1981464:0crwdne1981464:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:149
+msgid "300%"
+msgstr "crwdns1981465:0crwdne1981465:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:150
+msgid "400%"
+msgstr "crwdns1981466:0crwdne1981466:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:178
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:179
+msgid "Tools"
+msgstr "crwdns1981467:0crwdne1981467:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:211
+msgid "More Information"
+msgstr "crwdns1981468:0crwdne1981468:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:214
+msgid "Less Information"
+msgstr "crwdns1981469:0crwdne1981469:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:219
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:283
+msgid "Close"
+msgstr "crwdns1981470:0crwdne1981470:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:231
+msgid "Enter the password to open this PDF file:"
+msgstr "crwdns1981471:0crwdne1981471:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:237
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:358
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:92
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:204
+msgid "Cancel"
+msgstr "crwdns1981472:0crwdne1981472:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:238
+msgid "OK"
+msgstr "crwdns1981473:0crwdne1981473:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:245
+msgid "File name:"
+msgstr "crwdns1981474:0crwdne1981474:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:248
+msgid "File size:"
+msgstr "crwdns1981475:0crwdne1981475:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:252
+msgid "Title:"
+msgstr "crwdns1981476:0crwdne1981476:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:255
+msgid "Author:"
+msgstr "crwdns1981477:0crwdne1981477:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:258
+msgid "Subject:"
+msgstr "crwdns1981478:0crwdne1981478:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:261
+msgid "Keywords:"
+msgstr "crwdns1981479:0crwdne1981479:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:264
+msgid "Creation Date:"
+msgstr "crwdns1981480:0crwdne1981480:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:267
+msgid "Modification Date:"
+msgstr "crwdns1981481:0crwdne1981481:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:270
+msgid "Creator:"
+msgstr "crwdns1981482:0crwdne1981482:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:274
+msgid "PDF Producer:"
+msgstr "crwdns1981483:0crwdne1981483:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:277
+msgid "PDF Version:"
+msgstr "crwdns1981484:0crwdne1981484:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:280
+msgid "Page Count:"
+msgstr "crwdns1981485:0crwdne1981485:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:352
+msgid "Preparing document for printing..."
+msgstr "crwdns1981486:0crwdne1981486:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/pdf/pdf-viewer.handlebars.py:355
+msgid "0%"
+msgstr "crwdns1981487:0crwdne1981487:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/hbtemplates/video/video-player.handlebars.py:11
+msgid "Sorry, this video has not been downloaded."
+msgstr "crwdns1981488:0crwdne1981488:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/distributed-server.js.c:60
 msgid "Successfully launched data syncing job."
-msgstr "crwdns1971245:0crwdne1971245:0"
+msgstr "crwdns1981489:0crwdne1981489:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:43
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/distributed-server.js.c:61
 msgid "After syncing completes, visit the <a href='%(devman_url)s'>device management page</a> to view results."
-msgstr "crwdns1971246:0%(devman_url)scrwdne1971246:0"
+msgstr "crwdns1981490:0%(devman_url)scrwdne1981490:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:85
-msgid "Total Points : %(points)d "
-msgstr "crwdns1971178:0%(points)dcrwdne1971178:0"
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/distributed-server.js.c:157
+msgid "Points: %(points)d "
+msgstr "crwdns1981491:0%(points)dcrwdne1981491:0"
 
-#. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/distributed-server.js.c:87
-msgid "Welcome, %(username)s!"
-msgstr "crwdns1971247:0%(username)scrwdne1971247:0"
-
-#. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/exercises.js.c:13
-msgid "%(points)d points!"
-msgstr "crwdns1971180:0%(points)dcrwdne1971180:0"
-
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/distributed/static/js/distributed/search_autocomplete.js.c:125
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/search_autocomplete.js.c:123
 msgid "Unexpected error: no search data found for selected item. Please select another item."
-msgstr "crwdns1971183:0crwdne1971183:0"
+msgstr "crwdns1981492:0crwdne1981492:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:139
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/software-keyboard.js.c:36
+msgid "Show Keypad"
+msgstr "crwdns1981493:0crwdne1981493:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/software-keyboard.js.c:36
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/software-keyboard.js.c:94
+msgid "Hide Keypad"
+msgstr "crwdns1981494:0crwdne1981494:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:48
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:1113
+msgid "points"
+msgstr "crwdns1981495:0crwdne1981495:0"
+
+#. 
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:441
+msgid "Answer %(numerator)d out of the last %(denominator)d questions correctly to complete your streak."
+msgstr "crwdns1981496:0%(numerator)dcrwdnd1981496:0%(denominator)dcrwdne1981496:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:449
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:454
+msgid "You have completed your streak."
+msgstr "crwdns1981497:0crwdne1981497:0"
+
+#. 
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:449
+msgid "Answer %(remaining)d additional questions to finish this exercise."
+msgstr "crwdns1981498:0%(remaining)dcrwdne1981498:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:454
+msgid "Answer 1 additional question to finish this exercise."
+msgstr "crwdns1981499:0crwdne1981499:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:459
+msgid "You have finished this exercise!"
+msgstr "crwdns1981500:0crwdne1981500:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:761
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:954
+msgid "Submit Answer"
+msgstr "crwdns1981501:0crwdne1981501:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/js/distributed/exercises/views.js.c:906
+msgid "Sorry, you must be logged in to do a quiz."
+msgstr "crwdns1981502:0crwdne1981502:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/interface.js.c:629
+msgid "I'd like another hint (1 hint left)"
+msgid_plural "I'd like another hint (%(num)s hints left)"
+msgstr[0] "crwdns1981503:0crwdne1981503:0"
+msgstr[1] "crwdns1981503:1%(num)scrwdne1981503:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/graphie-helpers-arithmetic.js.c:626
+msgid "\\text{The top number has 1 digit to the right of the decimal.}"
+msgid_plural "\\text{The top number has %(num)s digits to the right of the decimal.}"
+msgstr[0] "crwdns1981504:0{The top number has 1 digit to the right of the decimal.}crwdne1981504:0"
+msgstr[1] "crwdns1981504:1%(num)scrwdne1981504:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/graphie-helpers-arithmetic.js.c:628
+msgid "\\text{The bottom number has 1 digit to the right of the decimal.}"
+msgid_plural "\\text{The bottom number has %(num)s digits to the right of the decimal.}"
+msgstr[0] "crwdns1981505:0{The bottom number has 1 digit to the right of the decimal.}crwdne1981505:0"
+msgstr[1] "crwdns1981505:1%(num)scrwdne1981505:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/graphie-helpers-arithmetic.js.c:753
+msgid "\\text{Shift the decimal 1 to the right.}"
+msgid_plural "\\text{Shift the decimal %(num)s to the right.}"
+msgstr[0] "crwdns1981506:0{Shift the decimal 1 to the right.}crwdne1981506:0"
+msgstr[1] "crwdns1981506:1%(num)scrwdne1981506:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:228
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:246
+msgid "one"
+msgid_plural "ones"
+msgstr[0] "crwdns1981507:0crwdne1981507:0"
+msgstr[1] "crwdns1981507:1crwdne1981507:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:231
+msgid "ten"
+msgid_plural "tens"
+msgstr[0] "crwdns1981508:0crwdne1981508:0"
+msgstr[1] "crwdns1981508:1crwdne1981508:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:234
+msgid "hundred"
+msgid_plural "hundreds"
+msgstr[0] "crwdns1981509:0crwdne1981509:0"
+msgstr[1] "crwdns1981509:1crwdne1981509:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:237
+msgid "thousand"
+msgid_plural "thousands"
+msgstr[0] "crwdns1981510:0crwdne1981510:0"
+msgstr[1] "crwdns1981510:1crwdne1981510:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:240
+msgid "ten thousand"
+msgid_plural "ten thousands"
+msgstr[0] "crwdns1981511:0crwdne1981511:0"
+msgstr[1] "crwdns1981511:1crwdne1981511:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:249
+msgid "tenth"
+msgid_plural "tenths"
+msgstr[0] "crwdns1981512:0crwdne1981512:0"
+msgstr[1] "crwdns1981512:1crwdne1981512:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:252
+msgid "hundredth"
+msgid_plural "hundredths"
+msgstr[0] "crwdns1981513:0crwdne1981513:0"
+msgstr[1] "crwdns1981513:1crwdne1981513:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:255
+msgid "thousandth"
+msgid_plural "thousandths"
+msgstr[0] "crwdns1981514:0crwdne1981514:0"
+msgstr[1] "crwdns1981514:1crwdne1981514:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:258
+msgid "ten thousandth"
+msgid_plural "ten thousandths"
+msgstr[0] "crwdns1981515:0crwdne1981515:0"
+msgstr[1] "crwdns1981515:1crwdne1981515:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:264
+msgid "meter"
+msgid_plural "meters"
+msgstr[0] "crwdns1981516:0crwdne1981516:0"
+msgstr[1] "crwdns1981516:1crwdne1981516:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:267
+msgid "centimeter"
+msgid_plural "centimeters"
+msgstr[0] "crwdns1981517:0crwdne1981517:0"
+msgstr[1] "crwdns1981517:1crwdne1981517:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:273
+msgid "inch"
+msgid_plural "inches"
+msgstr[0] "crwdns1981518:0crwdne1981518:0"
+msgstr[1] "crwdns1981518:1crwdne1981518:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:276
+msgid "foot"
+msgid_plural "feet"
+msgstr[0] "crwdns1981519:0crwdne1981519:0"
+msgstr[1] "crwdns1981519:1crwdne1981519:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:281
+msgid "unit"
+msgid_plural "units"
+msgstr[0] "crwdns1981520:0crwdne1981520:0"
+msgstr[1] "crwdns1981520:1crwdne1981520:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:372
+msgid "bike"
+msgid_plural "bikes"
+msgstr[0] "crwdns1981521:0crwdne1981521:0"
+msgstr[1] "crwdns1981521:1crwdne1981521:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:375
+msgid "car"
+msgid_plural "cars"
+msgstr[0] "crwdns1981522:0crwdne1981522:0"
+msgstr[1] "crwdns1981522:1crwdne1981522:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:378
+msgid "horse"
+msgid_plural "horses"
+msgstr[0] "crwdns1981523:0crwdne1981523:0"
+msgstr[1] "crwdns1981523:1crwdne1981523:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:381
+msgid "motorcycle"
+msgid_plural "motorcycles"
+msgstr[0] "crwdns1981524:0crwdne1981524:0"
+msgstr[1] "crwdns1981524:1crwdne1981524:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:384
+msgid "scooter"
+msgid_plural "scooters"
+msgstr[0] "crwdns1981525:0crwdne1981525:0"
+msgstr[1] "crwdns1981525:1crwdne1981525:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:387
+msgid "train"
+msgid_plural "trains"
+msgstr[0] "crwdns1981526:0crwdne1981526:0"
+msgstr[1] "crwdns1981526:1crwdne1981526:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:404
+msgid "exam"
+msgid_plural "exams"
+msgstr[0] "crwdns1981527:0crwdne1981527:0"
+msgstr[1] "crwdns1981527:1crwdne1981527:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:407
+msgid "test"
+msgid_plural "tests"
+msgstr[0] "crwdns1981528:0crwdne1981528:0"
+msgstr[1] "crwdns1981528:1crwdne1981528:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:410
+msgid "quiz"
+msgid_plural "quizzes"
+msgstr[0] "crwdns1981529:0crwdne1981529:0"
+msgstr[1] "crwdns1981529:1crwdne1981529:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:434
+msgid "party favor"
+msgid_plural "party favors"
+msgstr[0] "crwdns1981530:0crwdne1981530:0"
+msgstr[1] "crwdns1981530:1crwdne1981530:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:436
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:441
+msgid "bag"
+msgid_plural "bags"
+msgstr[0] "crwdns1981531:0crwdne1981531:0"
+msgstr[1] "crwdns1981531:1crwdne1981531:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:439
+msgid "jelly bean"
+msgid_plural "jelly beans"
+msgstr[0] "crwdns1981532:0crwdne1981532:0"
+msgstr[1] "crwdns1981532:1crwdne1981532:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:444
+msgid "book"
+msgid_plural "books"
+msgstr[0] "crwdns1981533:0crwdne1981533:0"
+msgstr[1] "crwdns1981533:1crwdne1981533:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:446
+msgid "shelf"
+msgid_plural "shelves"
+msgstr[0] "crwdns1981534:0crwdne1981534:0"
+msgstr[1] "crwdns1981534:1crwdne1981534:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:449
+msgid "can of food"
+msgid_plural "cans of food"
+msgstr[0] "crwdns1981535:0crwdne1981535:0"
+msgstr[1] "crwdns1981535:1crwdne1981535:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:451
+msgid "box"
+msgid_plural "boxes"
+msgstr[0] "crwdns1981536:0crwdne1981536:0"
+msgstr[1] "crwdns1981536:1crwdne1981536:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:460
+msgid "hardware"
+msgid_plural "hardwares"
+msgstr[0] "crwdns1981537:0crwdne1981537:0"
+msgstr[1] "crwdns1981537:1crwdne1981537:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:464
+msgid "hammer"
+msgid_plural "hammers"
+msgstr[0] "crwdns1981538:0crwdne1981538:0"
+msgstr[1] "crwdns1981538:1crwdne1981538:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:467
+msgid "nail"
+msgid_plural "nails"
+msgstr[0] "crwdns1981539:0crwdne1981539:0"
+msgstr[1] "crwdns1981539:1crwdne1981539:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:470
+msgid "saw"
+msgid_plural "saws"
+msgstr[0] "crwdns1981540:0crwdne1981540:0"
+msgstr[1] "crwdns1981540:1crwdne1981540:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:476
+msgid "grocery"
+msgid_plural "groceries"
+msgstr[0] "crwdns1981541:0crwdne1981541:0"
+msgstr[1] "crwdns1981541:1crwdne1981541:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:480
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:585
+msgid "banana"
+msgid_plural "bananas"
+msgstr[0] "crwdns1981542:0crwdne1981542:0"
+msgstr[1] "crwdns1981542:1crwdne1981542:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:483
+msgid "loaf of bread"
+msgid_plural "loaves of bread"
+msgstr[0] "crwdns1981543:0crwdne1981543:0"
+msgstr[1] "crwdns1981543:1crwdne1981543:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:486
+msgid "liter of milk"
+msgid_plural "liters of milk"
+msgstr[0] "crwdns1981544:0crwdne1981544:0"
+msgstr[1] "crwdns1981544:1crwdne1981544:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:489
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:852
+msgid "potato"
+msgid_plural "potatoes"
+msgstr[0] "crwdns1981545:0crwdne1981545:0"
+msgstr[1] "crwdns1981545:1crwdne1981545:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:495
+msgid "gift"
+msgid_plural "gifts"
+msgstr[0] "crwdns1981546:0crwdne1981546:0"
+msgstr[1] "crwdns1981546:1crwdne1981546:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:499
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:527
+msgid "toy"
+msgid_plural "toys"
+msgstr[0] "crwdns1981547:0crwdne1981547:0"
+msgstr[1] "crwdns1981547:1crwdne1981547:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:502
+msgid "game"
+msgid_plural "games"
+msgstr[0] "crwdns1981548:0crwdne1981548:0"
+msgstr[1] "crwdns1981548:1crwdne1981548:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:505
+msgid "souvenir"
+msgid_plural "souvenirs"
+msgstr[0] "crwdns1981549:0crwdne1981549:0"
+msgstr[1] "crwdns1981549:1crwdne1981549:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:511
+msgid "school supply"
+msgid_plural "school supplies"
+msgstr[0] "crwdns1981550:0crwdne1981550:0"
+msgstr[1] "crwdns1981550:1crwdne1981550:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:515
+msgid "pen"
+msgid_plural "pens"
+msgstr[0] "crwdns1981551:0crwdne1981551:0"
+msgstr[1] "crwdns1981551:1crwdne1981551:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:518
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:639
+msgid "pencil"
+msgid_plural "pencils"
+msgstr[0] "crwdns1981552:0crwdne1981552:0"
+msgstr[1] "crwdns1981552:1crwdne1981552:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:521
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:636
+msgid "notebook"
+msgid_plural "notebooks"
+msgstr[0] "crwdns1981553:0crwdne1981553:0"
+msgstr[1] "crwdns1981553:1crwdne1981553:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:531
+msgid "stuffed animal"
+msgid_plural "stuffed animals"
+msgstr[0] "crwdns1981554:0crwdne1981554:0"
+msgstr[1] "crwdns1981554:1crwdne1981554:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:534
+msgid "video game"
+msgid_plural "video games"
+msgstr[0] "crwdns1981555:0crwdne1981555:0"
+msgstr[1] "crwdns1981555:1crwdne1981555:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:537
+msgid "race car"
+msgid_plural "race cars"
+msgstr[0] "crwdns1981556:0crwdne1981556:0"
+msgstr[1] "crwdns1981556:1crwdne1981556:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:540
+msgid "doll"
+msgid_plural "dolls"
+msgstr[0] "crwdns1981557:0crwdne1981557:0"
+msgstr[1] "crwdns1981557:1crwdne1981557:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:548
+msgid "pizza"
+msgid_plural "pizzas"
+msgstr[0] "crwdns1981558:0crwdne1981558:0"
+msgstr[1] "crwdns1981558:1crwdne1981558:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:551
+msgid "pie"
+msgid_plural "pies"
+msgstr[0] "crwdns1981559:0crwdne1981559:0"
+msgstr[1] "crwdns1981559:1crwdne1981559:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:554
+msgid "cake"
+msgid_plural "cakes"
+msgstr[0] "crwdns1981560:0crwdne1981560:0"
+msgstr[1] "crwdns1981560:1crwdne1981560:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:567
+msgid "push-up"
+msgid_plural "push-ups"
+msgstr[0] "crwdns1981561:0crwdne1981561:0"
+msgstr[1] "crwdns1981561:1crwdne1981561:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:570
+msgid "sit-up"
+msgid_plural "sit-ups"
+msgstr[0] "crwdns1981562:0crwdne1981562:0"
+msgstr[1] "crwdns1981562:1crwdne1981562:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:573
+msgid "squat"
+msgid_plural "squats"
+msgstr[0] "crwdns1981563:0crwdne1981563:0"
+msgstr[1] "crwdns1981563:1crwdne1981563:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:576
+msgid "jumping jack"
+msgid_plural "jumping jacks"
+msgstr[0] "crwdns1981564:0crwdne1981564:0"
+msgstr[1] "crwdns1981564:1crwdne1981564:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:582
+msgid "apple"
+msgid_plural "apples"
+msgstr[0] "crwdns1981565:0crwdne1981565:0"
+msgstr[1] "crwdns1981565:1crwdne1981565:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:588
+msgid "coconut"
+msgid_plural "coconuts"
+msgstr[0] "crwdns1981566:0crwdne1981566:0"
+msgstr[1] "crwdns1981566:1crwdne1981566:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:591
+msgid "eggplant"
+msgid_plural "eggplants"
+msgstr[0] "crwdns1981567:0crwdne1981567:0"
+msgstr[1] "crwdns1981567:1crwdne1981567:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:594
+msgid "kiwi fruit"
+msgid_plural "kiwi fruit"
+msgstr[0] "crwdns1981568:0crwdne1981568:0"
+msgstr[1] "crwdns1981568:1crwdne1981568:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:597
+msgid "lemon"
+msgid_plural "lemons"
+msgstr[0] "crwdns1981569:0crwdne1981569:0"
+msgstr[1] "crwdns1981569:1crwdne1981569:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:600
+msgid "mango"
+msgid_plural "mangos"
+msgstr[0] "crwdns1981570:0crwdne1981570:0"
+msgstr[1] "crwdns1981570:1crwdne1981570:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:603
+msgid "nectarine"
+msgid_plural "nectarines"
+msgstr[0] "crwdns1981571:0crwdne1981571:0"
+msgstr[1] "crwdns1981571:1crwdne1981571:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:606
+msgid "orange"
+msgid_plural "oranges"
+msgstr[0] "crwdns1981572:0crwdne1981572:0"
+msgstr[1] "crwdns1981572:1crwdne1981572:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:609
+msgid "pomegranate"
+msgid_plural "pomegranates"
+msgstr[0] "crwdns1981573:0crwdne1981573:0"
+msgstr[1] "crwdns1981573:1crwdne1981573:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:612
+msgid "watermelon"
+msgid_plural "watermelons"
+msgstr[0] "crwdns1981574:0crwdne1981574:0"
+msgstr[1] "crwdns1981574:1crwdne1981574:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:618
+msgid "binder"
+msgid_plural "binders"
+msgstr[0] "crwdns1981575:0crwdne1981575:0"
+msgstr[1] "crwdns1981575:1crwdne1981575:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:621
+msgid "crayon"
+msgid_plural "crayons"
+msgstr[0] "crwdns1981576:0crwdne1981576:0"
+msgstr[1] "crwdns1981576:1crwdne1981576:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:624
+msgid "eraser"
+msgid_plural "erasers"
+msgstr[0] "crwdns1981577:0crwdne1981577:0"
+msgstr[1] "crwdns1981577:1crwdne1981577:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:627
+msgid "folder"
+msgid_plural "folders"
+msgstr[0] "crwdns1981578:0crwdne1981578:0"
+msgstr[1] "crwdns1981578:1crwdne1981578:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:630
+msgid "glue stick"
+msgid_plural "glue sticks"
+msgstr[0] "crwdns1981579:0crwdne1981579:0"
+msgstr[1] "crwdns1981579:1crwdne1981579:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:633
+msgid "marker"
+msgid_plural "markers"
+msgstr[0] "crwdns1981580:0crwdne1981580:0"
+msgstr[1] "crwdns1981580:1crwdne1981580:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:642
+msgid "rubber stamp"
+msgid_plural "rubber stamps"
+msgstr[0] "crwdns1981581:0crwdne1981581:0"
+msgstr[1] "crwdns1981581:1crwdne1981581:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:684
+msgid "chair"
+msgid_plural "chairs"
+msgstr[0] "crwdns1981582:0crwdne1981582:0"
+msgstr[1] "crwdns1981582:1crwdne1981582:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:687
+msgid "table"
+msgid_plural "tables"
+msgstr[0] "crwdns1981583:0crwdne1981583:0"
+msgstr[1] "crwdns1981583:1crwdne1981583:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:690
+msgid "bed frame"
+msgid_plural "bed frames"
+msgstr[0] "crwdns1981584:0crwdne1981584:0"
+msgstr[1] "crwdns1981584:1crwdne1981584:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:693
+msgid "sofa"
+msgid_plural "sofas"
+msgstr[0] "crwdns1981585:0crwdne1981585:0"
+msgstr[1] "crwdns1981585:1crwdne1981585:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:696
+msgid "couch"
+msgid_plural "couches"
+msgstr[0] "crwdns1981586:0crwdne1981586:0"
+msgstr[1] "crwdns1981586:1crwdne1981586:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:699
+msgid "desk"
+msgid_plural "desks"
+msgstr[0] "crwdns1981587:0crwdne1981587:0"
+msgstr[1] "crwdns1981587:1crwdne1981587:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:702
+msgid "book shelf"
+msgid_plural "book shelves"
+msgstr[0] "crwdns1981588:0crwdne1981588:0"
+msgstr[1] "crwdns1981588:1crwdne1981588:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:708
+msgid "television"
+msgid_plural "televisions"
+msgstr[0] "crwdns1981589:0crwdne1981589:0"
+msgstr[1] "crwdns1981589:1crwdne1981589:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:711
+msgid "computer"
+msgid_plural "computers"
+msgstr[0] "crwdns1981590:0crwdne1981590:0"
+msgstr[1] "crwdns1981590:1crwdne1981590:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:714
+msgid "laptop"
+msgid_plural "laptops"
+msgstr[0] "crwdns1981591:0crwdne1981591:0"
+msgstr[1] "crwdns1981591:1crwdne1981591:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:717
+msgid "camera"
+msgid_plural "cameras"
+msgstr[0] "crwdns1981592:0crwdne1981592:0"
+msgstr[1] "crwdns1981592:1crwdne1981592:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:723
+msgid "hat"
+msgid_plural "hats"
+msgstr[0] "crwdns1981593:0crwdne1981593:0"
+msgstr[1] "crwdns1981593:1crwdne1981593:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:726
+msgid "belt"
+msgid_plural "belts"
+msgstr[0] "crwdns1981594:0crwdne1981594:0"
+msgstr[1] "crwdns1981594:1crwdne1981594:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:729
+msgid "necklace"
+msgid_plural "necklaces"
+msgstr[0] "crwdns1981595:0crwdne1981595:0"
+msgstr[1] "crwdns1981595:1crwdne1981595:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:732
+msgid "pair of shoes"
+msgid_plural "pairs of shoes"
+msgstr[0] "crwdns1981596:0crwdne1981596:0"
+msgstr[1] "crwdns1981596:1crwdne1981596:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:735
+msgid "watch"
+msgid_plural "watches"
+msgstr[0] "crwdns1981597:0crwdne1981597:0"
+msgstr[1] "crwdns1981597:1crwdne1981597:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:738
+msgid "pair of socks"
+msgid_plural "pairs of socks"
+msgstr[0] "crwdns1981598:0crwdne1981598:0"
+msgstr[1] "crwdns1981598:1crwdne1981598:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:741
+msgid "sweatshirt"
+msgid_plural "sweatshirts"
+msgstr[0] "crwdns1981599:0crwdne1981599:0"
+msgstr[1] "crwdns1981599:1crwdne1981599:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:744
+msgid "sweater"
+msgid_plural "sweaters"
+msgstr[0] "crwdns1981600:0crwdne1981600:0"
+msgstr[1] "crwdns1981600:1crwdne1981600:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:747
+msgid "tie"
+msgid_plural "ties"
+msgstr[0] "crwdns1981601:0crwdne1981601:0"
+msgstr[1] "crwdns1981601:1crwdne1981601:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:750
+msgid "scarf"
+msgid_plural "scarves"
+msgstr[0] "crwdns1981602:0crwdne1981602:0"
+msgstr[1] "crwdns1981602:1crwdne1981602:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:753
+msgid "pair of shorts"
+msgid_plural "pairs of shorts"
+msgstr[0] "crwdns1981603:0crwdne1981603:0"
+msgstr[1] "crwdns1981603:1crwdne1981603:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:756
+msgid "pair of jeans"
+msgid_plural "pairs of jeans"
+msgstr[0] "crwdns1981604:0crwdne1981604:0"
+msgstr[1] "crwdns1981604:1crwdne1981604:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:759
+msgid "pair of gloves"
+msgid_plural "pairs of gloves"
+msgstr[0] "crwdns1981605:0crwdne1981605:0"
+msgstr[1] "crwdns1981605:1crwdne1981605:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:762
+msgid "shirt"
+msgid_plural "shirts"
+msgstr[0] "crwdns1981606:0crwdne1981606:0"
+msgstr[1] "crwdns1981606:1crwdne1981606:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:765
+msgid "pair of suspenders"
+msgid_plural "pairs of suspenders"
+msgstr[0] "crwdns1981607:0crwdne1981607:0"
+msgstr[1] "crwdns1981607:1crwdne1981607:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:768
+msgid "jacket"
+msgid_plural "jackets"
+msgstr[0] "crwdns1981608:0crwdne1981608:0"
+msgstr[1] "crwdns1981608:1crwdne1981608:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:771
+msgid "pair of glasses"
+msgid_plural "pairs of glasses"
+msgstr[0] "crwdns1981609:0crwdne1981609:0"
+msgstr[1] "crwdns1981609:1crwdne1981609:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:774
+msgid "pair of boots"
+msgid_plural "pairs of boots"
+msgstr[0] "crwdns1981610:0crwdne1981610:0"
+msgstr[1] "crwdns1981610:1crwdne1981610:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:777
+msgid "backpack"
+msgid_plural "backpacks"
+msgstr[0] "crwdns1981611:0crwdne1981611:0"
+msgstr[1] "crwdns1981611:1crwdne1981611:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:801
+msgid "bear"
+msgid_plural "bears"
+msgstr[0] "crwdns1981612:0crwdne1981612:0"
+msgstr[1] "crwdns1981612:1crwdne1981612:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:805
+msgid "gorilla"
+msgid_plural "gorillas"
+msgstr[0] "crwdns1981613:0crwdne1981613:0"
+msgstr[1] "crwdns1981613:1crwdne1981613:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:808
+msgid "lion"
+msgid_plural "lions"
+msgstr[0] "crwdns1981614:0crwdne1981614:0"
+msgstr[1] "crwdns1981614:1crwdne1981614:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:811
+msgid "lizard"
+msgid_plural "lizards"
+msgstr[0] "crwdns1981615:0crwdne1981615:0"
+msgstr[1] "crwdns1981615:1crwdne1981615:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:814
+msgid "meerkat"
+msgid_plural "meerkats"
+msgstr[0] "crwdns1981616:0crwdne1981616:0"
+msgstr[1] "crwdns1981616:1crwdne1981616:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:817
+msgid "porcupine"
+msgid_plural "porcupines"
+msgstr[0] "crwdns1981617:0crwdne1981617:0"
+msgstr[1] "crwdns1981617:1crwdne1981617:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:820
+msgid "seal"
+msgid_plural "seals"
+msgstr[0] "crwdns1981618:0crwdne1981618:0"
+msgstr[1] "crwdns1981618:1crwdne1981618:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:823
+msgid "sloth"
+msgid_plural "sloths"
+msgstr[0] "crwdns1981619:0crwdne1981619:0"
+msgstr[1] "crwdns1981619:1crwdne1981619:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:826
+msgid "snake"
+msgid_plural "snakes"
+msgstr[0] "crwdns1981620:0crwdne1981620:0"
+msgstr[1] "crwdns1981620:1crwdne1981620:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:829
+msgid "tiger"
+msgid_plural "tigers"
+msgstr[0] "crwdns1981621:0crwdne1981621:0"
+msgstr[1] "crwdns1981621:1crwdne1981621:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:832
+msgid "turtle"
+msgid_plural "turtles"
+msgstr[0] "crwdns1981622:0crwdne1981622:0"
+msgstr[1] "crwdns1981622:1crwdne1981622:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:835
+msgid "zebra"
+msgid_plural "zebras"
+msgstr[0] "crwdns1981623:0crwdne1981623:0"
+msgstr[1] "crwdns1981623:1crwdne1981623:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:845
+msgid "farmer"
+msgid_plural "farmers"
+msgstr[0] "crwdns1981624:0crwdne1981624:0"
+msgstr[1] "crwdns1981624:1crwdne1981624:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:849
+msgid "tomato"
+msgid_plural "tomatoes"
+msgstr[0] "crwdns1981625:0crwdne1981625:0"
+msgstr[1] "crwdns1981625:1crwdne1981625:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:855
+msgid "carrot"
+msgid_plural "carrots"
+msgstr[0] "crwdns1981626:0crwdne1981626:0"
+msgstr[1] "crwdns1981626:1crwdne1981626:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:858
+msgid "bean"
+msgid_plural "beans"
+msgstr[0] "crwdns1981627:0crwdne1981627:0"
+msgstr[1] "crwdns1981627:1crwdne1981627:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:861
+msgid "corn stalk"
+msgid_plural "corn stalks"
+msgstr[0] "crwdns1981628:0crwdne1981628:0"
+msgstr[1] "crwdns1981628:1crwdne1981628:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:865
+msgid "field"
+msgid_plural "fields"
+msgstr[0] "crwdns1981629:0crwdne1981629:0"
+msgstr[1] "crwdns1981629:1crwdne1981629:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:870
+msgid "gardener"
+msgid_plural "gardeners"
+msgstr[0] "crwdns1981630:0crwdne1981630:0"
+msgstr[1] "crwdns1981630:1crwdne1981630:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:874
+msgid "rose"
+msgid_plural "roses"
+msgstr[0] "crwdns1981631:0crwdne1981631:0"
+msgstr[1] "crwdns1981631:1crwdne1981631:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:877
+msgid "tulip"
+msgid_plural "tulips"
+msgstr[0] "crwdns1981632:0crwdne1981632:0"
+msgstr[1] "crwdns1981632:1crwdne1981632:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:880
+msgid "daisy"
+msgid_plural "daisies"
+msgstr[0] "crwdns1981633:0crwdne1981633:0"
+msgstr[1] "crwdns1981633:1crwdne1981633:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:883
+msgid "iris"
+msgid_plural "irises"
+msgstr[0] "crwdns1981634:0crwdne1981634:0"
+msgstr[1] "crwdns1981634:1crwdne1981634:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:886
+msgid "lily"
+msgid_plural "lilies"
+msgstr[0] "crwdns1981635:0crwdne1981635:0"
+msgstr[1] "crwdns1981635:1crwdne1981635:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:890
+msgid "garden"
+msgid_plural "gardens"
+msgstr[0] "crwdns1981636:0crwdne1981636:0"
+msgstr[1] "crwdns1981636:1crwdne1981636:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:897
+msgid "mile"
+msgid_plural "miles"
+msgstr[0] "crwdns1981637:0crwdne1981637:0"
+msgstr[1] "crwdns1981637:1crwdne1981637:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/distributed/static/perseus/ke/utils/word-problems.js.c:900
+msgid "kilometer"
+msgid_plural "kilometers"
+msgstr[0] "crwdns1981638:0crwdne1981638:0"
+msgstr[1] "crwdns1981638:1crwdne1981638:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/store/hbtemplates/store/store-wrapper.handlebars.py:1
+msgid "Items Available for Purchase"
+msgstr "crwdns1981639:0crwdne1981639:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/store/hbtemplates/store/store-wrapper.handlebars.py:5
+msgid "Your Purchased Items"
+msgstr "crwdns1981640:0crwdne1981640:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/store/static/js/store/views.js.c:59
+#, c-format
+msgid "Are you sure you want to purchase %s for %s points?"
+msgstr "crwdns1981641:0%scrwdnd1981641:0%scrwdne1981641:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-container.handlebars.py:8
+msgid "Current Unit"
+msgstr "crwdns1981642:0crwdne1981642:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-container.handlebars.py:16
+msgid "Unit is being switched: please do not leave this page until it has completed!"
+msgstr "crwdns1981643:0crwdne1981643:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/current-unit-row.handlebars.py:12
+msgid "Unit"
+msgstr "crwdns1981644:0crwdne1981644:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-list-row.handlebars.py:5
+msgid "Disable Exam Mode"
+msgstr "crwdns1981645:0crwdne1981645:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-list-row.handlebars.py:9
+msgid "Enable Exam Mode"
+msgstr "crwdns1981646:0crwdne1981646:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:2
+msgid "Tests"
+msgstr "crwdns1981647:0crwdne1981647:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:4
+msgid "Click on the \"Enable Exam Mode\" button to enable exam-mode for that test and redirect students to the exam page."
+msgstr "crwdns1981648:0crwdne1981648:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:5
+msgid "Click on the \"Disable Exam Mode\" button to disable the exam-mode setting for the test."
+msgstr "crwdns1981649:0crwdne1981649:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:11
+msgid "Test Title"
+msgstr "crwdns1981650:0crwdne1981650:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:12
+msgid "Exam Mode Setting"
+msgstr "crwdns1981651:0crwdne1981651:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/hbtemplates/student_testing/test-setting-container.handlebars.py:18
+msgid "Exam mode is being changed: please do not leave this page until it has completed!"
+msgstr "crwdns1981652:0crwdne1981652:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/student_testing/static/js/student_testing/current_unit.js.c:72
+msgid "Before changing units, make sure all students have finished purchasing items in the store, etc. Are you sure you want to change the current unit?"
+msgstr "crwdns1981653:0crwdne1981653:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:139
 msgid "Completed update successfully."
-msgstr "crwdns1971200:0crwdne1971200:0"
+msgstr "crwdns1981654:0crwdne1981654:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:143
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:144
 msgid "Update cancelled successfully."
-msgstr "crwdns1971201:0crwdne1971201:0"
+msgstr "crwdns1981655:0crwdne1981655:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:146
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:147
 msgid "Error during update: %(progress_log_notes)s"
-msgstr "crwdns1971202:0%(progress_log_notes)scrwdne1971202:0"
+msgstr "crwdns1981656:0%(progress_log_notes)scrwdne1981656:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:152
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:153
 msgid "problem on server."
-msgstr "crwdns1971203:0crwdne1971203:0"
+msgstr "crwdns1981657:0crwdne1981657:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:155
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:117
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:156
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/khan-lite.js.c:138
 msgid "Could not connect to the server."
-msgstr "crwdns1971204:0crwdne1971204:0"
+msgstr "crwdns1981658:0crwdne1981658:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:158
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:159
 msgid "Error while checking update status: %(message)s"
-msgstr "crwdns1971205:0%(message)scrwdne1971205:0"
+msgstr "crwdns1981659:0%(message)scrwdne1981659:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:187
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:188
 msgid "Overall progress: %(percent_complete)5.1f%% complete (%(cur_stage)d of %(num_stages)d)"
-msgstr "crwdns1971217:0%(percent_complete)crwdnd1971217:0%%crwdnd1971217:0%(cur_stage)dcrwdnd1971217:0%(num_stages)dcrwdne1971217:0"
+msgstr "crwdns1981660:0%(percent_complete)crwdnd1981660:0%%crwdnd1981660:0%(cur_stage)dcrwdnd1981660:0%(num_stages)dcrwdne1981660:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/base.js.c:193
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/base.js.c:194
 msgid "Loading"
-msgstr "crwdns1971218:0crwdne1971218:0"
+msgstr "crwdns1981661:0crwdne1981661:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:48
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:48
 msgid "Set as default"
-msgstr "crwdns1971184:0crwdne1971184:0"
+msgstr "crwdns1981662:0crwdne1981662:0"
 
-#. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:55
-msgid "%(subtitle_count)d Subtitles / %(percent_translated)d%% Translated"
-msgstr "crwdns1971185:0%(subtitle_count)dcrwdnd1971185:0%(percent_translated)dcrwdnd1971185:0%%crwdne1971185:0"
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:51
+msgid "Default"
+msgstr "crwdns1981663:0crwdne1981663:0"
 
-#. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:59
-msgid "Delete %(name)s"
-msgstr "crwdns1971219:0%(name)scrwdne1971219:0"
-
-#. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:62
-msgid "Delete %(name)s Subtitles"
-msgstr "crwdns1971220:0%(name)scrwdne1971220:0"
-
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:80
-msgid "Upgrade"
-msgstr "crwdns1971186:0crwdne1971186:0"
-
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:82
-msgid "Translated"
-msgstr "crwdns1971187:0crwdne1971187:0"
-
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:84
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:53
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:81
 msgid "Subtitles"
-msgstr "crwdns1971188:0crwdne1971188:0"
+msgstr "crwdns1981664:0crwdne1981664:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:54
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:79
+msgid "Translated"
+msgstr "crwdns1981665:0crwdne1981665:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:77
+msgid "<button type='button' class='btn btn-info'>Upgrade</button>"
+msgstr "crwdns1981666:0crwdne1981666:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:87
+#, c-format
+msgid "Up to Date"
+msgstr "crwdns1981667:0crwdne1981667:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:94
+msgid "Delete"
+msgstr "crwdns1981668:0crwdne1981668:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:97
+msgid "Delete Subtitles"
+msgstr "crwdns1981669:0crwdne1981669:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:107
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:117
 msgid "Are you sure you want to delete language pack '%(lang_code)s'"
-msgstr "crwdns1971236:0%(lang_code)scrwdne1971236:0"
+msgstr "crwdns1981670:0%(lang_code)scrwdne1981670:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:113
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:123
 msgid "Confirm Delete"
-msgstr "crwdns1971222:0crwdne1971222:0"
+msgstr "crwdns1981671:0crwdne1981671:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:233
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_languages.js.c:244
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:168
+msgid "beta"
+msgstr "crwdns1981672:0crwdne1981672:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_languages.js.c:272
 msgid "The server does not have internet access; language packs cannot be downloaded at this time."
-msgstr "crwdns1971248:0crwdne1971248:0"
+msgstr "crwdns1981673:0crwdne1981673:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:23
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:24
 msgid "Installation finished."
-msgstr "crwdns1971237:0crwdne1971237:0"
+msgstr "crwdns1981674:0crwdne1981674:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:30
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:35
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:31
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:36
 msgid "Installation finished! Refreshing the page in %(sec)s seconds"
-msgstr "crwdns1971249:0%(sec)scrwdne1971249:0"
+msgstr "crwdns1981675:0%(sec)scrwdne1981675:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:51
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:52
 msgid "Remote version information unavailable."
-msgstr "crwdns1971238:0crwdne1971238:0"
+msgstr "crwdns1981676:0crwdne1981676:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:68
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:75
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:69
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:76
 #, c-format
 msgid "None"
-msgstr "crwdns1971250:0crwdne1971250:0"
+msgstr "crwdns1981677:0crwdne1981677:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:75
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:76
 #, c-format
 msgid "<li>(%s)</li>"
-msgstr "crwdns1971251:0%scrwdne1971251:0"
+msgstr "crwdns1981678:0%scrwdne1981678:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:99
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:200
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:100
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:199
 msgid "Yes"
-msgstr "crwdns1971225:0crwdne1971225:0"
+msgstr "crwdns1981679:0crwdne1981679:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:108
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:109
 msgid "Error starting update process %(status)s: %(responseText)s"
-msgstr "crwdns1971240:0%(status)scrwdnd1971240:0%(responseText)scrwdne1971240:0"
+msgstr "crwdns1981680:0%(status)scrwdnd1981680:0%(responseText)scrwdne1981680:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:113
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:229
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:114
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:228
 msgid "No"
-msgstr "crwdns1971226:0crwdne1971226:0"
+msgstr "crwdns1981681:0crwdne1981681:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:118
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:119
 msgid "Are you sure you want to update your installation of KA Lite? This process is irreversible!"
-msgstr "crwdns1971241:0crwdne1971241:0"
+msgstr "crwdns1981682:0crwdne1981682:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:121
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:122
 msgid "Confirm update"
-msgstr "crwdns1971242:0crwdne1971242:0"
+msgstr "crwdns1981683:0crwdne1981683:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:141
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:142
 msgid "Your installation is offline, and therefore cannot access updates."
-msgstr "crwdns1971239:0crwdne1971239:0"
+msgstr "crwdns1981684:0crwdne1981684:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_software.js.c:166
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_software.js.c:167
 msgid "The server does not have internet access; software cannot be updated at this time."
-msgstr "crwdns1971252:0crwdne1971252:0"
+msgstr "crwdns1981685:0crwdne1981685:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:92
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:91
 msgid "Apologies, but there are no videos available for this language."
-msgstr "crwdns1971223:0crwdne1971223:0"
+msgstr "crwdns1981686:0crwdne1981686:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:120
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:119
 msgid "Download %(vid_count)d new selected video(s)"
-msgstr "crwdns1971192:0%(vid_count)dcrwdne1971192:0"
+msgstr "crwdns1981687:0%(vid_count)dcrwdne1981687:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:130
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:129
 msgid "Delete %(vid_count)d selected video(s)"
-msgstr "crwdns1971193:0%(vid_count)dcrwdne1971193:0"
+msgstr "crwdns1981688:0%(vid_count)dcrwdne1981688:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:155
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:154
 msgid "The server does not have internet access; videos cannot be downloaded at this time."
-msgstr "crwdns1971253:0crwdne1971253:0"
+msgstr "crwdns1981689:0crwdne1981689:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:193
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:192
 msgid "Are you sure you want to delete?"
-msgstr "crwdns1971224:0crwdne1971224:0"
+msgstr "crwdns1981690:0crwdne1981690:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/kalite/updates/static/js/updates/update_videos.js.c:237
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/kalite/updates/static/js/updates/update_videos.js.c:236
 msgid "Deleting the downloaded video(s) will lead to permanent loss of data"
-msgstr "crwdns1971227:0crwdne1971227:0"
+msgstr "crwdns1981691:0crwdne1981691:0"
 
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:117
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:45
+#, c-format
+msgid "Available %s"
+msgstr "crwdns1981692:0%scrwdne1981692:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:46
+#, c-format
+msgid "This is the list of available %s. You may choose some by selecting them in the box below and then clicking the \"Choose\" arrow between the two boxes."
+msgstr "crwdns1981693:0%scrwdne1981693:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:53
+#, c-format
+msgid "Type into this box to filter down the list of available %s."
+msgstr "crwdns1981694:0%scrwdne1981694:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:57
+msgid "Filter"
+msgstr "crwdns1981695:0crwdne1981695:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:61
+msgid "Choose all"
+msgstr "crwdns1981696:0crwdne1981696:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:61
+#, c-format
+msgid "Click to choose all %s at once."
+msgstr "crwdns1981697:0%scrwdne1981697:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:67
+msgid "Choose"
+msgstr "crwdns1981698:0crwdne1981698:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:69
+msgid "Remove"
+msgstr "crwdns1981699:0crwdne1981699:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:75
+#, c-format
+msgid "Chosen %s"
+msgstr "crwdns1981700:0%scrwdne1981700:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:76
+#, c-format
+msgid "This is the list of chosen %s. You may remove some by selecting them in the box below and then clicking the \"Remove\" arrow between the two boxes."
+msgstr "crwdns1981701:0%scrwdne1981701:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:80
+msgid "Remove all"
+msgstr "crwdns1981702:0crwdne1981702:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/SelectFilter2.js.c:80
+#, c-format
+msgid "Click to remove all chosen %s at once."
+msgstr "crwdns1981703:0%scrwdne1981703:0"
+
+#. 
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.js.c:18
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.min.js.c:1
+msgid "%(sel)s of %(cnt)s selected"
+msgid_plural "%(sel)s of %(cnt)s selected"
+msgstr[0] "crwdns1981704:0%(sel)scrwdnd1981704:0%(cnt)scrwdne1981704:0"
+msgstr[1] "crwdns1981704:1%(sel)scrwdnd1981704:1%(cnt)scrwdne1981704:1"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.js.c:109
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.min.js.c:5
+msgid "You have unsaved changes on individual editable fields. If you run an action, your unsaved changes will be lost."
+msgstr "crwdns1981705:0crwdne1981705:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.js.c:121
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.min.js.c:6
+msgid "You have selected an action, but you haven't saved your changes to individual fields yet. Please click OK to save. You'll need to re-run the action."
+msgstr "crwdns1981706:0crwdne1981706:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.js.c:123
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/actions.min.js.c:6
+msgid "You have selected an action, and you haven't made any changes on individual fields. You're probably looking for the Go button rather than the Save button."
+msgstr "crwdns1981707:0crwdne1981707:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/calendar.js.c:26
+msgid "January February March April May June July August September October November December"
+msgstr "crwdns1981708:0crwdne1981708:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/calendar.js.c:27
+msgid "S M T W T F S"
+msgstr "crwdns1981709:0crwdne1981709:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/collapse.js.c:8
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/collapse.js.c:19
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/collapse.min.js.c:1
+msgid "Show"
+msgstr "crwdns1981710:0crwdne1981710:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/collapse.js.c:15
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/collapse.min.js.c:1
+msgid "Hide"
+msgstr "crwdns1981711:0crwdne1981711:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:49
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:85
+msgid "Now"
+msgstr "crwdns1981712:0crwdne1981712:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:53
+msgid "Clock"
+msgstr "crwdns1981713:0crwdne1981713:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:81
+msgid "Choose a time"
+msgstr "crwdns1981714:0crwdne1981714:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:86
+msgid "Midnight"
+msgstr "crwdns1981715:0crwdne1981715:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:87
+msgid "6 a.m."
+msgstr "crwdns1981716:0crwdne1981716:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:88
+msgid "Noon"
+msgstr "crwdns1981717:0crwdne1981717:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:144
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:197
+msgid "Today"
+msgstr "crwdns1981718:0crwdne1981718:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:148
+msgid "Calendar"
+msgstr "crwdns1981719:0crwdne1981719:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:195
+msgid "Yesterday"
+msgstr "crwdns1981720:0crwdne1981720:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/admin/js/admin/DateTimeShortcuts.js.c:199
+msgid "Tomorrow"
+msgstr "crwdns1981721:0crwdne1981721:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/jquery.dynatree.extensions.js.c:58
+msgid "None; Please select now"
+msgstr "crwdns1981722:0crwdne1981722:0"
+
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/khan-lite.js.c:138
 msgid "Please try again later."
-msgstr "crwdns1971228:0crwdne1971228:0"
+msgstr "crwdns1981723:0crwdne1981723:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:126
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:140
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/khan-lite.js.c:154
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/khan-lite.js.c:168
 msgid "Unexpected error; contact the FLE with the following information: %(error_msg)s"
-msgstr "crwdns1971243:0%(error_msg)scrwdne1971243:0"
+msgstr "crwdns1981724:0%(error_msg)scrwdne1981724:0"
 
 #. 
-#. Translators: please do not change variable names (anything with the format
-#. %(xxxx)s), but it is OK to change its position.
-#: /Users/bcipolli/FLE/ka-lite-central/ka-lite/static-libraries/js/khan-lite.js.c:132
-msgid "You are not authorized to complete the request.  Please <a href='%(login_url)'>login</a> as an authorized user, then retry the request."
-msgstr "crwdns1971254:0%(login_url)crwdne1971254:0"
+#. Translators: do not change variable names (anything with format %(xxxx)s).
+#: /home/aron/src/github.com/aronasorman/ka-lite-central/ka-lite-submodule/static-libraries/js/khan-lite.js.c:160
+msgid "You are not authorized to complete the request.  Please <a href='%(login_url)s'>login</a> as an authorized user, then retry the request."
+msgstr "crwdns1981725:0%(login_url)scrwdne1981725:0"
 
