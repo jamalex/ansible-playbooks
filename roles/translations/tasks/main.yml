@@ -57,7 +57,7 @@
     - translations
 
 - name: restart the distributed server.
-  shell: "/var/www/{{ ka_lite_distributed_prefix }}/start.sh &"
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart"
   sudo: yes
   sudo_user: www-data
   tags:
