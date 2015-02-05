@@ -11,5 +11,6 @@
     - ka_lite_distributed_port: 50130
     - ka_lite_distributed_git_branch: develop
     - ka_lite_distributed_prefix: ka-lite-develop
+    - ka_lite_distributed_channel: connectteaching
   roles:
     - distributed
