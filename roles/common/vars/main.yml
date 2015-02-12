@@ -69,3 +69,8 @@ permissions:
     - jamalex
     - aron
     - richard
+  banner:
+    - jamalex
+    - aron
+    - richard
+    # - antriksh
