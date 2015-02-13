@@ -55,10 +55,6 @@ permissions:
     - richard
     - mike
     - chandan
-  hall:
-    - jamalex
-    - aron
-    - richard
   citadel:
     - jamalex
     - aron

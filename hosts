@@ -5,7 +5,6 @@ gatehouse       ansible_ssh_host=gatehouse.learningequality.org
 keep            ansible_ssh_host=keep.learningequality.org
 scriptorium     ansible_ssh_host=scriptorium.learningequality.org
 field           ansible_ssh_host=field.learningequality.org         ufw_enabled=no
-hall            ansible_ssh_host=hall.learningequality.org
 citadel         ansible_ssh_host=citadel.learningequality.org
 dungeon         ansible_ssh_host=dungeon.learningequality.org       ufw_enabled=no
 kitchen         ansible_ssh_host=kitchen.learningequality.org       ufw_enabled=no
