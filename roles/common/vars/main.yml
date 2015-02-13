@@ -37,7 +37,9 @@ admins:
   chandan:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHd4vpJty3bLFeJaUVnIZlBGMsPlDI3eKFnJ27T+foGgnQDm0MiTldPvy/tBCHwNxXAERU3EOzaYtkEqeoiA/bzDP2k3kjMlzjovv4+D0c4kmKmLSnDgIlK4B5PFWuYWrGQxkZwBgUSAOfkiXoZgVqrBcqdQcayjEVb5hhINmOyuSeXqMkvyaeXU+r2Ks9z7kdWj4od5CQ037tsMaZ/gm1OHJzenZxd2RcTt5iuKZA+Eg32JLyeLP9UiTP7uYPihaouhu8l+Z1e0c2G5az/UcOrMMTM/VEB/ChMr2MubMQvdEIBpLXnQDdJEbr2NyuQGnKzEjV1McgTavakeDlWxtr chandan@enigma
-
+  antriksh:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6MHlMn5ThW3w7E+iivq4LNi7vv38P/xd+apNly2uZBq3t5Kz5b8QxHvg0YtqeZCSFHxYAsa56QMighZ6WhcasMo3qZQc4u/9eaUCZJ1xcAG1K8uJM1UfYkYkK4tZj32wPEsVCEmGNx5c1vqE5rnAonG9EgyNiyvuJFJkyI3OoVlSHO8PGzr/4Mu6ojX1seS6wZIytkMtLupIcW+0eOzy5cFseqUUjD6+wR2oVhDMC9WpG2gitC4Q9YfFr5QCTpHbm6JSIRVLfrtEEaLctcHXXzg2fTXob75q8taGbiG08anq3ax4tfgm9SPoGW98Eov4kUrQqZf0jJHNzy8a8oEn Antriksh@Antrikshs-MacBook-Pro
 
 permissions:
   gatehouse:
@@ -78,4 +80,4 @@ permissions:
     - jamalex
     - aron
     - richard
-    # - antriksh
+    - antriksh

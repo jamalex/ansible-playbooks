@@ -1,0 +1,44 @@
+---
+
+- name: Create the /var/www directory and set it as belonging to the www-data user.
+  file: dest=/var/www owner=www-data state=directory
+  sudo: yes
+
+- name: Clone dashboard from fle-internal's master
+  git: repo=https://github.com/fle-internal/fledashing.git version=master dest={{ fledashing_path }} update=true
+  sudo: yes
+  sudo_user: www-data
+  notify: restart dashing
+
+- name: Set up config file for dashboard
+  template: src=config.yml.j2 dest={{ fledashing_path }}/config.yml
+  sudo: yes
+  sudo_user: www-data
+  notify: restart dashing
+
+- name: Create secret config file for dashboard
+  sudo: yes
+  sudo_user: www-data
+  command: touch {{ fledashing_path }}/secrets.yml
+  notify: restart dashing
+
+- name: Update keys in secrets file created above
+  lineinfile: "dest={{ fledashing_path }}/secrets.yml regexp='^github_all_access_key:' line='github_all_access_key: {{ github_all_access_key }}'"
+  sudo: yes
+  sudo_user: www-data
+  when: github_all_access_key is defined
+  notify: restart dashing
+
+- name: Install Dashing gem
+  gem: name=dashing state=present
+  sudo: yes
+  notify: restart dashing
+
+- name: Install Bundle gem
+  gem: name=bundle state=present
+  sudo: yes
+
+- name: Run bundle install
+  command: bundle install chdir={{ fledashing_path }}
+  sudo: yes
+  notify: restart dashing

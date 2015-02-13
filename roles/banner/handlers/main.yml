@@ -1,0 +1,6 @@
+---
+
+- name: restart dashing
+  command: dashing start chdir={{ fledashing_path }}
+  sudo: yes
+  sudo_user: www-data
