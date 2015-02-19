@@ -22,6 +22,14 @@
   command: touch {{ fledashing_path }}/secrets.yml
   notify: restart dashing
 
+- name: Ready Dashing Ubuntu service
+  template: src=dashing_service.j2 dest=/etc/init.d/dashing
+  sudo: yes
+
+- name: Make Ubuntu service script executable
+  action: file path=/etc/init.d/dashing mode=0775 owner=www-data group=www-data
+  sudo: yes
+
 - name: Update keys in secrets file created above
   lineinfile: "dest={{ fledashing_path }}/secrets.yml regexp='^github_all_access_key:' line='github_all_access_key: {{ github_all_access_key }}'"
   sudo: yes
@@ -29,14 +37,24 @@
   when: github_all_access_key is defined
   notify: restart dashing
 
-- name: Install Dashing gem
-  gem: name=dashing state=present
+- name: Install Dashing gem manually
+  command: gem install dashing
   sudo: yes
   notify: restart dashing
 
-- name: Install Bundle gem
-  gem: name=bundle state=present
+# - name: Install Dashing gem
+#   gem: name=dashing state=latest user_install=no
+#   sudo: yes
+#   notify: restart dashing
+
+- name: Install Bundler from apt
+  apt: pkg=bundler state=installed
   sudo: yes
+  notify: restart dashing
+
+# - name: Install Bundler gem
+#   gem: name=bundler state=present user_install=no
+#   sudo: yes
 
 - name: Run bundle install
   command: bundle install chdir={{ fledashing_path }}
