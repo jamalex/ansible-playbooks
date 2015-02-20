@@ -73,6 +73,10 @@ proxy_backends:
     host: 162.242.161.163
     port: 8008
 
+  - name: banner_fle_dashing
+    host: banner
+    port: 3030
+
 # this location will be added to any vhost in virtual_hosts that doesn't define a "locations" list
 default_location:
   - path: /
@@ -152,6 +156,10 @@ virtual_hosts:
       - demo.learningequality.org
     backend: field_kalite_demo
 
+
+  - hosts:
+      - dashboard.learningequality.org
+    backend: banner_fle_dashing
   - ports:
       - "80 default"
     locations:
