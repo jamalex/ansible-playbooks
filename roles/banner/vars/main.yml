@@ -3,5 +3,6 @@
 fledashing_path: /var/www/fledashing
 system_packages: 
     - ruby-full
+    - nodejs
 git_owner: learningequality
 git_project: ka-lite
