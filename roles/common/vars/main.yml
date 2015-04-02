@@ -56,7 +56,6 @@ permissions:
     - aron
     - richard
     - mike
-    - chandan
   citadel:
     - jamalex
     - aron
@@ -72,6 +71,7 @@ permissions:
     - jamalex
     - aron
     - richard
+    - mike
   troy:
     - jamalex
     - aron
