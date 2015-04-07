@@ -48,7 +48,7 @@
   sudo: yes
 
 - name: Clone the ka-lite-central git repository and checkout the desired branch.
-  git: repo=https://github.com/fle-internal/ka-lite-central.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }} update=true
+  git: repo=https://github.com/fle-internal/ka-lite-central.git version={{ ka_lite_central_git_branch }} dest={{ ka_lite_central_path }} update=true force=yes recursive=no
   sudo: yes
   sudo_user: www-data
   register: ka_lite_central_clone
@@ -64,7 +64,7 @@
   sudo: yes
 
 - name: Update ka-lite-central git submodules.
-  shell: git submodule update --init --recursive chdir={{ ka_lite_central_path }}
+  shell: git submodule update --init chdir={{ ka_lite_central_path }}
   sudo: yes
   sudo_user: www-data
   register: ka_lite_central_submodule_update
@@ -209,33 +209,6 @@
 - name: Create the language_pack directory and set it as belonging to the www-data user.
   file: dest={{ ka_lite_central_path }}/centralserver/media/language_packs owner=www-data state=directory
   sudo: yes
-  tags:
-    - language_packs
-
-- name: Copy language packs from old ka-lite location.
-  shell: rsync -i --recursive --update /var/www/ka-lite/kalite/media/language_packs {{ ka_lite_central_path }}/centralserver/media/
-  register: rsync
-  sudo: yes
-  sudo_user: www-data
-  changed_when: "rsync.stdout"
-  tags:
-    - language_packs
-
-- name: Copy subtitles from old ka-lite location.
-  shell: rsync -i --recursive --update /var/www/ka-lite/kalite/static/srt {{ ka_lite_central_path }}/centralserver/static/
-  register: rsync
-  sudo: yes
-  sudo_user: www-data
-  changed_when: "rsync.stdout"
-  tags:
-    - language_packs
-
-- name: Copy data directory from old ka-lite location.
-  shell: rsync -i --recursive --update /var/www/ka-lite/data {{ ka_lite_central_path }}/
-  register: rsync
-  sudo: yes
-  sudo_user: www-data
-  changed_when: "rsync.stdout"
   tags:
     - language_packs
 
