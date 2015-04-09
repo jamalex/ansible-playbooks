@@ -47,10 +47,13 @@
   when: ufw_enabled is defined and ufw_enabled|bool
   sudo: yes
 
-- name: Limit SSH login attempts.
-  ufw: policy=limit to_port={{ alternate_sshd_port }}
-  when: ufw_enabled is defined and ufw_enabled|bool
-  sudo: yes
+# TODO(jamalex): fix this to re-enable SSH login limits; right now, it throws error:
+#   "value of default must be one of: allow,deny,reject, got: limit"
+
+# - name: Limit SSH login attempts.
+#   ufw: policy=limit to_port={{ alternate_sshd_port }}
+#   when: ufw_enabled is defined and ufw_enabled|bool
+#   sudo: yes
 
 - name: Add role-specific ports to ufw rules.
   ufw: policy=allow to_port={{ item }}
