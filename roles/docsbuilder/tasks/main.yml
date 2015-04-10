@@ -1,0 +1,26 @@
+---
+
+- name: Clone the ka-lite git repository and checkout the desired branch.
+  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest={{ kalite_source_dest }} update=true
+  sudo: yes
+
+- name: Grab translated pofiles for the docs and put them in the proper directory
+  shell: echo "Please implement me :( :( :("
+
+- name: Build the html docs in each available language
+  shell: sphinx-build -b html -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/html/{{ item }}
+  sudo: yes
+  with_items: available_languages
+
+- name: Build the latex docs in each available language (so we can make pdfs)
+  shell: sphinx-build -b latex -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/latex/{{ item }}
+  sudo: yes
+  with_items: available_languages
+
+- name: Build the pdfs from the latex
+  shell: $(MAKE) -C {{ docs_output_dir }}/latex/{{ item }} all-pdf
+  sudo: yes
+  with_items: available_languages
+
+- name: Push the built docs to the server (a no-op right now)
+  shell: echo "Make me :( :( :("

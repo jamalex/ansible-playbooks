@@ -1,0 +1,16 @@
+---
+
+system_packages:
+  - xvfb
+  - texlive-latex-recommended
+  - texlive-latex-extra
+  - texlive-fonts-recommended
+
+python_packages:
+  - sphinx
+  - sphinx-intl
+  - pyvirtualdisplay
+
+available_languages:
+  - en
+  - eo
