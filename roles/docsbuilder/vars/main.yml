@@ -5,6 +5,7 @@ system_packages:
   - texlive-latex-recommended
   - texlive-latex-extra
   - texlive-fonts-recommended
+  - python
 
 python_packages:
   - sphinx
