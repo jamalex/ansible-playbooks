@@ -6,12 +6,14 @@ system_packages:
   - texlive-latex-extra
   - texlive-fonts-recommended
   - python
+  - firefox
 
 python_packages:
   - sphinx
   - sphinx-intl
   - pyvirtualdisplay
+  - behave==1.2.4
+  - django-compressor
 
 available_languages:
   - en
-  - eo
