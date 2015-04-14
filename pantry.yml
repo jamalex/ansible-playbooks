@@ -1,0 +1,9 @@
+---
+# - hosts: rackspace
+#   tasks:
+#     ping: True
+- hosts: pantry
+  roles:
+    - common
+    - server
+    - pantry

@@ -1,0 +1,14 @@
+server {
+
+    listen {{ nginx_listen_port }};
+
+    location /downloads {
+        alias {{ download_folder_location }};
+        autoindex on;
+    }
+
+    location /favicon.ico {
+        empty_gif;
+    }
+
+}

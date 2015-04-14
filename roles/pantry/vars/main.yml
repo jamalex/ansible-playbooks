@@ -1,0 +1,22 @@
+---
+
+system_packages:
+  - nginx
+
+# recommended to be same (or double) the number of processors
+nginx_worker_processes: 4
+
+# default is 1024
+nginx_worker_connections: 2048
+
+# default is 65
+nginx_keepalive_timeout: 65
+
+nginx_listen_port: 80
+
+ufw_enabled: yes
+
+ufw_allowed_ports:
+  - "{{ nginx_listen_port }}"
+
+download_folder_location: /var/www/downloads

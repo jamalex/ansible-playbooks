@@ -77,6 +77,10 @@ proxy_backends:
     host: 162.242.161.163
     port: 80
 
+  - name: pantry_downloads
+    host: pantry
+    port: 80
+
   - name: banner_fle_dashing
     host: banner
     port: 3030
@@ -95,7 +99,7 @@ virtual_hosts:
       - path: /
         varnish: yes
       - path: /downloads
-        backend: kitchen_downloads
+        backend: pantry_downloads
       - path: /docs
         backend: field_docs
     allow_https: yes
