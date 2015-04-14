@@ -59,10 +59,6 @@ permissions:
   citadel:
     - jamalex
     - aron
-  dungeon:
-    - jamalex
-    - aron
-    - richard
   kitchen:
     - jamalex
     - aron
