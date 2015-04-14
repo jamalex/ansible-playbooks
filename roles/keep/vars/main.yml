@@ -8,6 +8,7 @@ system_packages:
   - mysql-client
   - swig
   - libssl-dev
+  - libmysqlclient-dev
 
 python_packages:
   - MySQL-python
