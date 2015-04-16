@@ -8,12 +8,5 @@ system_packages:
   - python
   - firefox
 
-python_packages:
-  - sphinx
-  - sphinx-intl
-  - pyvirtualdisplay
-  - behave==1.2.4
-  - django-compressor
-
 available_languages:
   - en
