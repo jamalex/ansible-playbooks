@@ -20,3 +20,10 @@ ufw_allowed_ports:
   - "{{ nginx_listen_port }}"
 
 download_folder_location: /var/www/downloads
+
+# Folder structure:
+# app - ka-lite
+# version - 0.13
+# type - installers, language-packs, content
+# platform - windows, debian, osx, android
+
