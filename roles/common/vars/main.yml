@@ -37,6 +37,9 @@ admins:
   antriksh:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6MHlMn5ThW3w7E+iivq4LNi7vv38P/xd+apNly2uZBq3t5Kz5b8QxHvg0YtqeZCSFHxYAsa56QMighZ6WhcasMo3qZQc4u/9eaUCZJ1xcAG1K8uJM1UfYkYkK4tZj32wPEsVCEmGNx5c1vqE5rnAonG9EgyNiyvuJFJkyI3OoVlSHO8PGzr/4Mu6ojX1seS6wZIytkMtLupIcW+0eOzy5cFseqUUjD6+wR2oVhDMC9WpG2gitC4Q9YfFr5QCTpHbm6JSIRVLfrtEEaLctcHXXzg2fTXob75q8taGbiG08anq3ax4tfgm9SPoGW98Eov4kUrQqZf0jJHNzy8a8oEn Antriksh@Antrikshs-MacBook-Pro
+  flebuildbox:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6XyMVyVEQZCILul8pXb8UvQsDbbUGzMbX30MRrN0Xn09cbm40bKGxrAoW/OuyuWMUCJXiHOMD/24XhG+o4shN5pyxiOTIRGVWqOleKTS8+yf1OSYM6fBdla6B4gMzh6rJVAUdW3fnRaosRWX7gnH0OUpd5laHeKEE5ZHlnjwDDGFwMUb62tHv/x1NmlVytfCHlxN+OL80gFkKZDMgkQg85R0xlzXJze03JCsAFCw+lI5PJc7nANIKNq14lKl7SAXHnzLkGS9yescAzdkZGDTIg/wLBWe04CkwbWjfHOduj52WdAc9QAooMRPIeohFoTQKsTqk2PYS9CqidTmPJYE5 flebuildbox@flemacmini.local
 
 former_admins:
   - chandan
@@ -81,3 +84,4 @@ permissions:
     - jamalex
     - aron
     - mike
+    - flebuildbox
