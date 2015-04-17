@@ -81,5 +81,3 @@ permissions:
     - aron
     - richard
     - antriksh
-  testbox:
-    - mike
