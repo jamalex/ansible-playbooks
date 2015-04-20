@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  vars:
+    - ka_lite_distributed_git_branch: develop
+    - kalite_source_dest: /vagrant/source
+    - docs_output_dir: /vagrant/output
+  roles:
+    - common
+    - server
+    - docsbuilder
