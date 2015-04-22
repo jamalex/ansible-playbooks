@@ -36,10 +36,16 @@
   sudo: yes
 
 - name: Build the pdfs from the latex
-  command: make -C {{ docs_output_dir }}/latex/en all-pdf
+  command: make -C {{ docs_output_dir }}/latex/{{ item }} all-pdf
   with_items: available_languages
   sudo: yes
 
-- name: Push the built docs to the server (a no-op right now)
-  shell: echo "Make me :( :( :("
+- name: Push the built html docs to the server
+  command: cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
+  with_items: available_languages
+  sudo: yes
+
+- name: Push the built pdf docs to the server
+  command: cp {{ docs_output_dir }}/latex/en/*.pdf {{ docs_pdf_host_dir }}/.
+  with_items: available_languages
   sudo: yes
