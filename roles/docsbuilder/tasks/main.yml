@@ -2,7 +2,6 @@
 
 - name: Clone the ka-lite git repository and checkout the desired branch.
   git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest={{ kalite_source_dest }}
-  sudo: yes
 
 - name: Install base project python dependencies
   pip: state=present requirements={{ kalite_source_dest }}/requirements_dev.txt
@@ -12,33 +11,30 @@
   pip: state=present requirements={{ kalite_source_dest }}/sphinx-docs/requirements.txt
   sudo: yes
 
+- name: Set theme options for docs
+  template: src=theme.conf.j2 dest={{ kalite_source_dest }}/sphinx-docs/kalite-theme/theme.conf
+
 - name: Grab translatable messages from the docs
   command: make -C {{ kalite_source_dest }}/sphinx-docs gettext
-  sudo: yes
 
 - name: Set up po file structure for each supported language
   command: sphinx-intl update -p {{ kalite_source_dest }}/sphinx-docs/_build/locale -c {{ kalite_source_dest}}/sphinx-docs/conf.py -l {{ item }}
   with_items: available_languages
-  sudo: yes
 
 - name: Grab translated pofiles for the docs and put them in the proper directory
   command: echo "Please implement me :( :( :("
-  sudo: yes
 
 - name: Build the html docs in each available language
   command: env SPHINX_SS_USE_PVD=true sphinx-build -b html -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/html/{{ item }}
   with_items: available_languages
-  sudo: yes
 
 - name: Build the latex docs in each available language (so we can make pdfs)
   command: env SPHINX_SS_USE_PVD=true sphinx-build -b latex -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/latex/{{ item }}
   with_items: available_languages
-  sudo: yes
 
 - name: Build the pdfs from the latex
   command: make -C {{ docs_output_dir }}/latex/{{ item }} all-pdf
   with_items: available_languages
-  sudo: yes
 
 - name: Push the built html docs to the server
   command: cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
