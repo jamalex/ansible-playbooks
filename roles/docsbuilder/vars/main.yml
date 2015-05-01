@@ -6,7 +6,7 @@ system_packages:
   - texlive-latex-extra
   - texlive-fonts-recommended
   - python
-  - firefox
+  - firefox=28.0+build2-0ubuntu2
 
 available_languages:
   - en
