@@ -26,6 +26,11 @@
 #   sudo_user: www-data
 #   when: ka_lite_distributed_secret_key is defined
 
+- name: install requirements
+  pip: requirements=/var/www/{{ ka_lite_distributed_prefix }}/requirements_dev.txt
+  sudo: yes
+  ignore_errors: yes
+
 - name: Run setup command to ensure KA Lite is initialized (new install or upgrade).
   shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/bin/kalite manage setup --noinput -u {{ ka_lite_distributed_django_superuser_name }} -e {{ ka_lite_distributed_django_superuser_email }} -p {{ ka_lite_distributed_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
   register: setup
