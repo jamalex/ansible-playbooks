@@ -102,6 +102,8 @@ virtual_hosts:
         backend: pantry_downloads
       - path: /docs
         backend: field_docs
+      - path: /r
+        varnish: no
     allow_https: yes
 
   - hosts:
