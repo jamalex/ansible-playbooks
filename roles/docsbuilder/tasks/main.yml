@@ -1,7 +1,7 @@
 ---
 
 - name: Clone the ka-lite git repository and checkout the desired branch.
-  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest={{ kalite_source_dest }} update=true
+  git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest={{ kalite_source_dest }} update=true force=yes recursive=no
 
 - name: Install base project python dependencies
   pip: state=present requirements={{ kalite_source_dest }}/requirements_dev.txt
@@ -36,12 +36,17 @@
   command: make -C {{ docs_output_dir }}/latex/{{ item }} all-pdf
   with_items: available_languages
 
-- name: Push the built html docs to the server
-  command: cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
-  with_items: available_languages
+- name: Remove old docs before pushing new ones
+  file: path={{ item }} state=absent
+  with_items:
+    - "{{ docs_html_host_dir }}"
+    - "{{ docs_pdf_host_dir }}/KALite.pdf"
   sudo: yes
 
-- name: Push the built pdf docs to the server
-  command: cp {{ docs_output_dir }}/latex/en/*.pdf {{ docs_pdf_host_dir }}/.
+- name: Push the built html docs to the server
+  command: sudo cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
   with_items: available_languages
-  sudo: yes
+
+- name: Push the built pdf docs to the server
+  command: sudo cp {{ docs_output_dir }}/latex/en/KALite.pdf {{ docs_pdf_host_dir }}/KALite.pdf
+  with_items: available_languages
