@@ -11,3 +11,4 @@
     - common
     - server
     - docsbuilder
+    - { role: docsbuilder, ka_lite_distributed_git_branch: develop, docs_html_host_dir: /usr/share/nginx/html/develop/docs, docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf }
