@@ -10,51 +10,14 @@
   sudo: yes
   sudo_user: www-data
   tags:
-    - translations
+   - translations
 
-- name: make sure the locale directories exist
-  file: dest=/var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/ state=directory
+- name: pull in the required files for in-context translations
+  shell: "CROWDIN_PROJECT_ID={{ crowdin_project_id }} CROWDIN_PROJECT_KEY={{ crowdin_project_key }} /var/www/{{ ka_lite_distributed_prefix }}/bin/kalite manage setup_in_context_translations"
   sudo: yes
   sudo_user: www-data
   tags:
-    - translations
-
-- name: download the en-US language pack from crowdin, the pseudolanguage for in-context localization
-  get_url: url=https://api.crowdin.com/api/project/{{ crowdin_project_id }}/download/en-US.zip?key={{ crowdin_project_key }} force=yes dest=/tmp/en-US.zip
-  tags:
-    - translations
-    - update_po_file
-
-- name: extract en-US.zip
-  shell: "unzip -o /tmp/en-US.zip"
-  tags:
-    - translations
-    - update_po_file
-
-- name: Insert 0.13 po file into the right folder
-  shell: "cp /tmp/versioned/0.13-django.po /var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/django.po"
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - translations
-    - update_po_file
-
-- name: Insert 0.13 JS po file into the right folder
-  shell: "cp /tmp/versioned/0.13-djangojs.po /var/www/{{ ka_lite_distributed_prefix }}/locale/en/LC_MESSAGES/djangojs.po"
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - translations
-    - update_po_file
-
-- name: compile the po files
-  shell: python manage.py compilemessages
-  args:
-    chdir: /var/www/{{ ka_lite_distributed_prefix }}/kalite/
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - translations
+   - translations
 
 - name: restart the distributed server.
   shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart"

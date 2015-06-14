@@ -91,6 +91,7 @@
   sudo: yes
   sudo_user: www-data
   when: fle_home_secret_key is defined
+  notify: restart apache2
   tags:
     -- update_fle_home
 
@@ -99,6 +100,7 @@
   sudo: yes
   sudo_user: www-data
   when: fle_home_db_pass is defined
+  notify: restart apache2
   tags:
     -- update_fle_home
 
@@ -107,6 +109,25 @@
   sudo: yes
   sudo_user: www-data
   when: disqus_user_api_key is defined
+  notify: restart apache2
+  tags:
+    -- update_fle_home
+
+- name: Update the STRIPE_SECRET_API_KEY in local_settings_secret.py if variable 'stripe_secret_api_key' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^STRIPE_SECRET_API_KEY =' line='STRIPE_SECRET_API_KEY = "{{ stripe_secret_api_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: stripe_secret_api_key is defined
+  notify: restart apache2
+  tags:
+    -- update_fle_home
+
+- name: Update the STRIPE_PUBLISHABLE_API_KEY in local_settings_secret.py if variable 'stripe_publishable_api_key' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^STRIPE_PUBLISHABLE_API_KEY =' line='STRIPE_PUBLISHABLE_API_KEY = "{{ stripe_publishable_api_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: stripe_publishable_api_key is defined
+  notify: restart apache2
   tags:
     -- update_fle_home
 
