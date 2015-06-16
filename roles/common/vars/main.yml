@@ -16,6 +16,8 @@ citadel_flehome_port: 8000
 
 keep_ka_lite_central_port: 8008
 
+elk_aggregator_host: "banner"
+
 admins:
   aron:
     keys:

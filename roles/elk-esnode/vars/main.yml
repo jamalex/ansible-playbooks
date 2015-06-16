@@ -1,0 +1,30 @@
+elasticsearch:
+  version: '1.6'
+
+  # configuration options
+  config:
+
+    cluster_name: "elk"
+    # disable_scripting: true
+    limit_cache_size: true
+
+    # By default we let ES allocate half of the available
+    # memory on each host.
+    heap_size: "{{ ansible_memtotal_mb / 2 }}"
+
+    # mlockall will disable swapping for the ES process
+    mlockall: true
+
+    # index settings
+    refresh_interval: "5s"
+    number_of_shards: 10
+    number_of_replicas: "{{ 1 if 'esnodes' in groups else 0 }}"
+
+dashboards:
+    url: "https://github.com/packetbeat/dashboards/archive"
+    archive: "v0.5.0.tar.gz"
+    dir_name: "dashboards-0.5.0"
+
+# Auto-detect IP address to bind on based on the configured network interface
+bind_iface: "eth1"
+elasticsearch_bind_ip: "{{ hostvars[inventory_hostname]['ansible_' + bind_iface ].ipv4.address }}"

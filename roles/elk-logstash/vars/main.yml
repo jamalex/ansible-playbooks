@@ -1,0 +1,33 @@
+logstash:
+    version: 1.4
+
+    config:
+        heap_size: 256
+
+        file_inputs:
+            syslog:
+                enabled: true
+                path:
+                        - "/var/log/syslog"
+                        - "/var/log/auth.log"
+                        - "/var/log/messages"
+            nginx_access:
+                enabled: true
+                path:
+                        - "/var/log/nginx/access.log"
+            nginx_error:
+                enabled: true
+                path:
+                        - "/var/log/nginx/error.log"
+            apache_access:
+                enabled: true
+                path:
+                        - "/var/log/apache2/access.log"
+            apache_error:
+                enabled: true
+                path:
+                        - "/var/log/apache2/error.log"
+
+
+aggregator_redis_port: 6380
+

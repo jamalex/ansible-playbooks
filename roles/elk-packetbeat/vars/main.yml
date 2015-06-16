@@ -1,0 +1,50 @@
+packetbeat:
+    version: 1.0.0~Beta1
+
+    deb:
+        arch: "{{ 'amd64' if ansible_architecture == 'x86_64' else 'i386' }}"
+
+    rpm:
+        arch: "{{ 'x86_64' if ansible_architecture == 'x86_64' else 'i686' }}"
+
+    config:
+        interface:
+            device: "any"
+        output:
+            elasticsearch:
+                enabled: "false"
+                host: "{{ elk_aggregator_host }}"
+                port: 9200
+                save_topology: "false"
+            redis:
+                enabled: "true"
+                host: "{{ elk_aggregator_host }}"
+                port: 6380
+                save_topology: "true"
+
+        protocols:
+            mysql:
+                enabled: true
+                ports:
+                    - 3306
+            pgsql:
+                enabled: false
+                ports:
+                    - 5432
+            redis:
+                enabled: false
+                ports:
+                    - 6379
+
+        processes:
+            nginx:
+                enabled: true
+                cmdline_grep: "nginx"
+            varnish:
+                enabled: true
+                cmdline_grep: "varnishd"
+            apache:
+                enabled: true
+                cmdline_grep: "apache2"
+
+elk_aggregator_host: banner

@@ -1,0 +1,18 @@
+aggregator:
+    logstash_version: "1.5"
+
+    config:
+
+        days_of_history: 14
+
+        redis_port: 6380
+
+        redis_packetbeat_key: "packetbeat"
+
+        logstash_heap_size: 256
+        redis_maxmemory: 256
+
+aggregator_bind_iface: "eth1"
+aggregator_bind_ip: "{{ hostvars['banner']['ansible_' + aggregator_bind_iface ].ipv4.address }}"
+
+curator_bin: "python /usr/local/lib/python2.7/dist-packages/curator/curator.py"

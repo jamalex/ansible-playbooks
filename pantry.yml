@@ -1,9 +1,15 @@
 ---
-# - hosts: rackspace
-#   tasks:
-#     ping: True
+- hosts: rackspace
+  tasks:
+    ping: True
 - hosts: pantry
   roles:
     - common
     - server
     - pantry
+
+- hosts: pantry
+  sudo: yes
+  roles:
+    - elk-packetbeat
+    - elk-logstash

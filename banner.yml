@@ -1,8 +1,19 @@
 ---
+- hosts: rackspace
+  tasks:
+    ping: True
+
 - hosts: banner
   vars_files:
-    - [roles/banner/vars/secrets.yml, roles/banner/vars/main.yml]
+    - ["roles/banner/vars/secrets.yml", "roles/banner/vars/main.yml"]
   roles:
     - common
     - server
     - banner
+
+- hosts: banner
+  sudo: yes
+  roles:
+    - elk-esnode
+    - elk-aggregator
+    - elk-kibana4
