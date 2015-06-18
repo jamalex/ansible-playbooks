@@ -1,0 +1,17 @@
+---
+- hosts: locust-master
+  vars: 
+      githubId: 'foolchan2556'
+      targetSite: 'http://142.244.63.11:8008'
+      logUrl: '1.log'
+  roles:
+    - locust-master
+
+- hosts: locust-slave
+  vars: 
+      githubId: 'foolchan2556'
+      targetSite: 'http://142.244.63.11:8008'
+      masterHost: '142.244.63.11'
+      logUrl: '2.log'
+  roles:
+    - locust-slave

@@ -1,0 +1,13 @@
+# benchmarking-stop.yml
+---
+- hosts: locust-master
+  tasks:
+    - name: end locust instances
+      sudo: yes
+      shell: nohup killall locust 2>&1 &
+
+- hosts: locust-slave
+  tasks:
+    - name: end locust instances
+      sudo: yes
+      shell: nohup killall locust 2>&1 &
