@@ -1,17 +1,18 @@
+# benchmarking.yml
 ---
 - hosts: locust-master
   vars: 
-      githubId: 'foolchan2556'
+      githubId: 'fle-internal'
       targetSite: 'http://142.244.63.11:8008'
-      logUrl: '1.log'
+      logUrl: 'locust-master.log'
   roles:
     - locust-master
 
 - hosts: locust-slave
   vars: 
-      githubId: 'foolchan2556'
+      githubId: 'fle-internal'
       targetSite: 'http://142.244.63.11:8008'
       masterHost: '142.244.63.11'
-      logUrl: '2.log'
+      logUrl: 'locust-slave.log'
   roles:
     - locust-slave
