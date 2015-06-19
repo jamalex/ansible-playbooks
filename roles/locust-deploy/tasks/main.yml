@@ -14,8 +14,8 @@
 
 - name: check out locust repo
   sudo: yes
-  git: repo=https://github.com/{{ github_id }}/benchmarking.git dest=/home/{{ ansible_ssh_user }}/Projects/benchmarking update=yes force=yes
+  git: repo=https://github.com/{{ github_id }}/benchmarking.git dest=/var/www/benchmarking update=yes force=yes
 
 - name: install requirements
   sudo: yes
-  pip: requirements=/home/{{ ansible_ssh_user }}/Projects/benchmarking/requirements.txt
+  pip: requirements=/var/www/benchmarking/requirements.txt
