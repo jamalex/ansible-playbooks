@@ -2,8 +2,9 @@
 
 - name: install phantomjs
   sudo: yes
-  apt: name=phantomjs state=present
+  apt: name={{ item }} state=present
   with_items:
+    - phantomjs
     - python-dev
 
 - name: upgrade python-pip
