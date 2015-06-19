@@ -3,10 +3,8 @@
 - name: install phantomjs
   sudo: yes
   apt: name=phantomjs state=present
-
-- name: install python-dev
-  sudo: yes
-  apt: name=python-dev state=present
+  with_items:
+    - python-dev
 
 - name: upgrade python-pip
   sudo: yes
