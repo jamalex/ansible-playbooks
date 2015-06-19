@@ -1,18 +1,10 @@
 # benchmarking.yml
 ---
-- hosts: locust-master
+- hosts: benchmarking
   vars: 
       githubId: 'fle-internal'
-      targetSite: 'http://142.244.63.11:8008'
+      targetSite: 'http://demo.learningequality.org/'
       logUrl: 'locust-master.log'
   roles:
     - locust-master
-
-- hosts: locust-slave
-  vars: 
-      githubId: 'fle-internal'
-      targetSite: 'http://142.244.63.11:8008'
-      masterHost: '142.244.63.11'
-      logUrl: 'locust-slave.log'
-  roles:
     - locust-slave
