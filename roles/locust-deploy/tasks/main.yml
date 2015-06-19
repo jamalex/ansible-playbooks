@@ -10,7 +10,7 @@
 
 - name: upgrade python-pip
   sudo: yes
-  apt: upgrade=python-pip
+  shell: apt-get upgrade python-pip
 
 - name: check out locust repo
   sudo: yes
