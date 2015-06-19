@@ -1,0 +1,20 @@
+---
+
+- name: install phantomjs
+  sudo: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - phantomjs
+    - python-dev
+
+- name: upgrade python-pip
+  sudo: yes
+  shell: apt-get upgrade python-pip
+
+- name: check out locust repo
+  sudo: yes
+  git: repo=https://github.com/{{ github_id }}/benchmarking.git dest=/var/www/benchmarking update=yes force=yes
+
+- name: install requirements
+  sudo: yes
+  pip: requirements=/var/www/benchmarking/requirements.txt

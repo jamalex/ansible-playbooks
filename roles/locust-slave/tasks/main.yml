@@ -1,0 +1,4 @@
+---
+
+- name: run locust
+  shell: nohup locust -f /var/www/benchmarking/locustfiles/browser_client.py --slave --master-host={{ master_host }} --host '{{ target_site }}' > {{ log_url }} 2>&1 &

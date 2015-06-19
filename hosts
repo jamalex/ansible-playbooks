@@ -12,9 +12,9 @@ troy            ansible_ssh_host=troy.learningequality.org          ufw_enabled=
 banner          ansible_ssh_host=banner.learningequality.org        ufw_enabled=no
 pantry          ansible_ssh_host=pantry.learningequality.org
 videos          ansible_ssh_host=videos.learningequality.org
+benchmarking    ansible_ssh_host=benchmarks.learningequality.org
 
 [rackspace:vars]
 # these need to be the same (we need alternate_sshd_port for configuring SSHD)
 ansible_ssh_port=4242
 alternate_sshd_port=4242
-
