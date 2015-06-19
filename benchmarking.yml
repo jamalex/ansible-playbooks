@@ -7,5 +7,6 @@
       logUrl: 'locust-master.log'
       masterHost: '192.237.171.38'
   roles:
+    - locust-deploy
     - locust-master
     - locust-slave
