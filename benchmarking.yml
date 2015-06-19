@@ -5,6 +5,7 @@
       githubId: 'fle-internal'
       targetSite: 'http://demo.learningequality.org/'
       logUrl: 'locust-master.log'
+      masterHost: '192.237.171.38'
   roles:
     - locust-master
     - locust-slave
