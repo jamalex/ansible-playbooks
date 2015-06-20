@@ -1,5 +1,8 @@
 ---
 
+- name: Delete the source destination, if it exists
+  file: path={{ kalite_source_dest }} state=absent
+
 - name: Clone the ka-lite git repository and checkout the desired branch.
   git: repo=https://github.com/learningequality/ka-lite.git version={{ ka_lite_distributed_git_branch }} dest={{ kalite_source_dest }} update=true force=yes recursive=no
 
