@@ -12,5 +12,5 @@
   command: varnishadm 'ban req.url ~ /'
   sudo: yes
 - name: restart ssh
-  service: name=ssh state=restarted
+  command: service ssh restart
   sudo: yes
