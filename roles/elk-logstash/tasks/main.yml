@@ -1,8 +1,17 @@
-- include: debian.yml
-  when: ansible_os_family == 'Debian'
+- name: Add Logstash repository
+  apt_repository: repo="deb http://packages.elasticsearch.org/logstash/{{ logstash.version }}/debian stable main" state=present
 
-- include: redhat.yml
-  when: ansible_os_family == 'RedHat'
+- name: Add Logstash repository key
+  apt_key: url="http://packages.elasticsearch.org/GPG-KEY-elasticsearch" state=present
+
+- name: Install Logstash
+  apt: pkg={{ item }} update_cache=yes state=latest
+  with_items:
+   - logstash
+   - logstash-contrib
+
+- name: Add the logstash user to the adm group
+  user: name=logstash groups=adm append=yes
 
 - name: Logstash set heap size
   action: >
@@ -15,12 +24,32 @@
   template: src=logstash-initd dest=/etc/init.d/logstash
   notify: Restart Logstash
 
-- name: Install logstash fileinput configuration files
-  template: src=logstash_fileinput.conf dest=/etc/logstash/conf.d/00logstash_{{ item.key }}.conf
-  with_dict: logstash.config.file_inputs
+- name: Create /etc/logstash/patterns.d directory
+  file: dest=/etc/logstash/patterns.d state=directory
+
+- name: Copy in Logstash patterns file
+  copy: src=logstash-patterns dest=/etc/logstash/patterns.d/logstash-patterns
   notify: Restart Logstash
 
-- name: Install logstash output configuration file
+- name: Install logstash common input configuration file
+  template: src=logstash_input.conf dest=/etc/logstash/conf.d/09logstash_input.conf
+  notify: Restart Logstash
+
+- name: Install logstash input configuration files
+  template: src=logstash_{{ item }}_input.conf dest=/etc/logstash/conf.d/10logstash_{{ item }}_input.conf
+  with_items: logstash_types
+  notify: Restart Logstash
+
+- name: Install logstash common filter configuration file
+  template: src=logstash_filter.conf dest=/etc/logstash/conf.d/19logstash_filter.conf
+  notify: Restart Logstash
+
+- name: Install logstash filter configuration files
+  template: src=logstash_{{ item }}_filter.conf dest=/etc/logstash/conf.d/20logstash_{{ item }}_filter.conf
+  with_items: logstash_types
+  notify: Restart Logstash
+
+- name: Install logstash common output configuration file
   template: src=logstash_output.conf dest=/etc/logstash/conf.d/99logstash_output.conf
   notify: Restart Logstash
 

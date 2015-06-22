@@ -10,6 +10,9 @@
 
 - hosts: pantry
   sudo: yes
+  vars:
+    - logstash_types:
+      - nginx
   roles:
-    - elk-packetbeat
+    - common
     - elk-logstash
