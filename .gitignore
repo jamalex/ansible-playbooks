@@ -1,2 +1,4 @@
 secrets.yml
 roles/gatehouse/files/ssl/
+roles/elk-logstash/test/test.log
+roles/elk-logstash/test/test.conf

@@ -1,11 +1,11 @@
 
-# ./test.sh nginx nginx_access nginx_access.log
+# ./test.sh nginx nginx_access
 
 sudo mkdir -p /opt/logstash/patterns
 sudo chown logstash:logstash /opt/logstash/patterns
 sudo cp ../files/logstash-patterns /opt/logstash/patterns
 
-cp $3 test.log
+cp $2.log test.log
 
 cat > test.conf << EOL
 input {
