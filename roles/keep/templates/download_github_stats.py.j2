@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import re, requests, json, os
+import re, requests, json, os, datetime
 
 PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -48,4 +48,35 @@ traffic_data = get_github_graph_data("/learningequality/ka-lite/graphs/traffic-d
 update_json_file(os.path.join(PATH, "clone_data.json"), clone_data)
 
 update_json_file(os.path.join(PATH, "traffic_data.json"), traffic_data)
+
+
+# Now, update the log files to be picked up by logstash
+
+with open("clone_data.json") as f:
+    clone_json = json.load(f)
+
+with open("traffic_data.json") as f:
+    traffic_json = json.load(f)
+
+output = []
+
+with open("github.log", "w") as f:
+
+    for timestamp in sorted(set(clone_json.keys()) & set(traffic_json.keys())):
+
+        entry = {
+            "timestamp": str(datetime.datetime.fromtimestamp(int(timestamp)))
+        }
+
+        if timestamp in clone_json:
+            entry["clone_total"] = clone_json[timestamp]["total"]
+            entry["clone_unique"] = clone_json[timestamp]["unique"]
+
+        if timestamp in traffic_json:
+            entry["traffic_total"] = traffic_json[timestamp]["total"]
+            entry["traffic_unique"] = traffic_json[timestamp]["unique"]
+
+        output.append(json.dumps(entry) + "\n")
+
+    f.writelines(output)
 
