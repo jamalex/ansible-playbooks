@@ -24,6 +24,14 @@
   template: src=logstash-initd dest=/etc/init.d/logstash
   notify: Restart Logstash
 
+- name: Disable logstash-web service.
+  lineinfile: dest=/etc/init/logstash-web.conf regexp="^start on " line="start on never"
+  notify: Restart Logstash
+
+- name: Turn off logstash-web service.
+  service: name=logstash-web state=stopped
+  notify: Restart Logstash
+
 - name: Create /etc/logstash/patterns.d directory
   file: dest=/etc/logstash/patterns.d state=directory
 
