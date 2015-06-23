@@ -28,6 +28,7 @@ admins:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgcmGfhjcENw4gUUD4Dhwyl0NmoQodtWSz1NB04P9ktXgXMljr8Hn8VQtZrG2Eu8HOdQI3p5Fd9cgRuD7W+07p/9sF1HnmAf+OJ5luCzmEzZpakXqOBULzyNuR4aPgX1z7HskDCETi3X9nY88R0PWP440MCfiffkM66tqV70PEOWw+87mR10SnsUdXYzitZ0pAt1JOTsZE+tgygV1yK4CTUf7r8HT/y+GNte0ixJ5MLvh8bXyBU2j9i6AAyNqG9IZOj5lCM0NbuTdjJz6rzGOIysvPqeoiTb8NbGi4PwcnPMznVhs7zOI+B8MGP1oMQPd5YLBDSbs2wyImuQ4D5WyD jamalex@fett
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9MX6JL2X9ZI0jsIS9NfGt688Q/v1ZrDg7nQ43tAjfOL1VZ7z1njc/01p/ymKP6P3dueBrbPUkyOWpaTu8BmPFz11TLcUCUkJ4OhoGlOQ+KpWgU+cATz5386WIAdmu903p3DaeNkte7QT71nJAVfLolYTCL21hRjAjBhFsSbCeVJ5Y8ppT2LiE94waPBAIQF/crQdoVGLgnU4uP0YgtvpMWUIQWfpmUB+ck/b9vMJVE4Wtd8s0XL0z5VvLnzfwCPCJK03AZXqVpo65OIBLt3DvHqM50fPCQc7Qq5q6cFU4IZF+xgBbPf6aZr6MJZiWHskDtFazWOUS2vSgVX4YdjUb jamalex@keep
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0pX4n0PkEzySjH2FR4gQ9TJIN54JQ2Mm+zpHKatqOSl9sUXrPZKO+dCfwNVfa/jJwg0YELEs7fsq1CCoVYzZ0AbH/OC0U/iHJKumjB9d7T/zKL4FJ9dEb4w5elYoTb8NFfeOunwwU7hsLO57hr/MFZxdNsDFkodHjIBqzQqe732OEPzLssbqpWU5YpHVjXu0buT6VMPCm9BVst+UKjjQ+TXhb2m1HJS95adtsfvXT+4viMkTQ6IFF5z9FiODpo3IIoUfKC4mqjW5DbjifaH+bSnGZaOXojMs7Umy9UQ3jNOu4g5qhoSVDYOrIDZsNyDaxMfMi5XYi2BnCcPGLbaxJ jamalex@wa
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDc8b2HGx3mu3PPTtPqCkNIKmbuZ5kXYCMOhoe3VyaGnB1ZCNW3SWQsP8+dAsKW+m1Vf7Q2B4hD+6T0C24/ik3PmpOttwyZ7G/7BiMeeiQL4cm732gTZXKrAgzwTvKM8Tr0tPBd0g2Zaha5uj8JtVcfCAEZHNlcHSoSLx81EzKh9oS4/FpLvf4i81BDljwEx+W5fHynO8XodYTEd7qrYC3+GSvbJc+sohDD5w3H2Iw+7yJADpJkvvFXAQl7SwDsKd5Y3x7za/YnlLvPXkq0bnKFobT+Nib2wiHvcEk+G9iXJQQyQwyD6bi81t9o6PZWsaAVm+Cpy1NbhS5IXSn28jnF jamalex@hummingbird
   richard:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/NIw+XcTs5ooMlo+fYOIzteQFH6EmCJ+4Losdplox6I1ph/57KYcbhYE8dWyb43/UfZmLxA1NXwidXDouZTKpcnbz6wn4uWM8kAk2pQ8EFPROlSlCuU0W2azzrci82J4gVj1++vCpHodVPqQ4zIJlvclpbD4Y0cy7z9HwqtF9uFGVwXAGsxqoCvBL0rV53fj+FSTBihHV1J/swsFSWsYUZLm3eqZg3pYggPhpTN3ndHOTBCciW4z21BFFD7J//P3ORu2rBsWRgUemg4n9k74VhfKNw1NEBnppTFDOTGZRIL20dHMq+YjkT5QEdkfsvJ/RxML1mz5Tazv1QStvQBfF richard.tibbles@gmail.com
@@ -38,6 +39,10 @@ admins:
   antriksh:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6MHlMn5ThW3w7E+iivq4LNi7vv38P/xd+apNly2uZBq3t5Kz5b8QxHvg0YtqeZCSFHxYAsa56QMighZ6WhcasMo3qZQc4u/9eaUCZJ1xcAG1K8uJM1UfYkYkK4tZj32wPEsVCEmGNx5c1vqE5rnAonG9EgyNiyvuJFJkyI3OoVlSHO8PGzr/4Mu6ojX1seS6wZIytkMtLupIcW+0eOzy5cFseqUUjD6+wR2oVhDMC9WpG2gitC4Q9YfFr5QCTpHbm6JSIRVLfrtEEaLctcHXXzg2fTXob75q8taGbiG08anq3ax4tfgm9SPoGW98Eov4kUrQqZf0jJHNzy8a8oEn Antriksh@Antrikshs-MacBook-Pro
+  haolan:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCw/iNXJpkRhMiKxXcd5gHs/8ZcIYjhUycY4GtyImz95X6AAQ3zkqeBpASQZ5JzW58b6EeJNfb2Elcoe6v8STOc7Fkg5AvQhaj2b+rRGClfDTvwuT4XdM9zWKj89Wwk++1YtVBX4gQLF2WYDXc7IkJlE/vUVMavBbPy07uBomUOdYT1+Geqc3hiospdJv0E73POxyTJ3GoPdx5CspK1SPEnJ8dP6zA84fYmtSynZFdoto7RTP3dNL7S9F+TuBCqAy+kMMkXlxFzSQXX1lesR8xlgR38EIbvyB982cCU2pTNN2OpGUta0rE+MXZS27z1gmp6Mvc3/4YSm+zc0CU/nsxf rophyll@rophyll-PC
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJekSF5s4BtwK3jOQdzt/NOW3nIYy9NQxBcjngWJHheP1lyfmQxdJGeRdJaXTuwXQBJifFhf/8NOOKfc6obU7EwN8RzSm0m9zYyFaAkdklwEteeG0b8aDcsCSnHFwxeHtEcRVjybA3475VJ6W8M914aw0e29EBWKfaoehh21H6BQj1m+GAV4ihRc3VdCNVMGQjOtUwZCxxHceNsytQT7cjYaItF1UGwMNKWnFjrcV6IkMSI2x/MBQlB077fmMfNZ0GCv3D2QmBsRgB1z5V+8Q7enOsHUlhVhdye2j1dr4gNpR6VG93uFEpZWcqw2thsbnB6dnJiwiSKgdPA4+O5yyj rophyll@rophyll-HP-Compaq-Pro-6300-SFF
   flebuildbox:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6XyMVyVEQZCILul8pXb8UvQsDbbUGzMbX30MRrN0Xn09cbm40bKGxrAoW/OuyuWMUCJXiHOMD/24XhG+o4shN5pyxiOTIRGVWqOleKTS8+yf1OSYM6fBdla6B4gMzh6rJVAUdW3fnRaosRWX7gnH0OUpd5laHeKEE5ZHlnjwDDGFwMUb62tHv/x1NmlVytfCHlxN+OL80gFkKZDMgkQg85R0xlzXJze03JCsAFCw+lI5PJc7nANIKNq14lKl7SAXHnzLkGS9yescAzdkZGDTIg/wLBWe04CkwbWjfHOduj52WdAc9QAooMRPIeohFoTQKsTqk2PYS9CqidTmPJYE5 flebuildbox@flemacmini.local
@@ -67,6 +72,7 @@ permissions:
     - jamalex
     - aron
     - richard
+    - mike
   globe:
     - jamalex
     - aron
@@ -86,3 +92,7 @@ permissions:
     - aron
     - mike
     - flebuildbox
+  videos:
+    - jamalex
+    - flebuildbox
+    - aron

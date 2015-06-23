@@ -15,9 +15,15 @@ def update_json_file(filename, data):
     with open(filename, "w") as f:
         for day in data:
             bucket = str(day.pop("bucket"))
-            if bucket not in data_dict:
-                data_dict[bucket] = day
+            data_dict[bucket] = day
         json.dump(data_dict, f)
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0',
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'X-Requested-With': 'XMLHttpRequest'
+}
 
 def get_github_graph_data(path):
 
@@ -25,13 +31,13 @@ def get_github_graph_data(path):
     r = s.get("https://github.com/login")
     csrf = re.search('<input name="authenticity_token" type="hidden" value="[^"]+', r.content).group().split('"')[-1]
     r = s.post("https://github.com/session", data={
-        "utf8": "Q",
+        "utf8": u"\u2713",
         "authenticity_token": csrf,
         "login": "learneq",
         "password": "{{ learneq_github_password }}",
         "return_to": path,
         "commit": "Sign in",
-    })
+    }, headers=headers)
 
     return json.loads(r.content)["counts"]
 
