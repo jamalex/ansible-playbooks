@@ -1,4 +1,4 @@
-COMMONAPACHELOGCLEANED %{IPORHOST:clientip} (-|%{USER:ident}) (-|%{USER:auth}) \[%{HTTPDATE:timestamp}\] "(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:httpversion})?|%{DATA:rawrequest})" %{NUMBER:response} (?:%{NUMBER:bytes}|-)
+COMMONAPACHELOGCLEANED (-|%{IPORHOST:clientip}) (-|%{USER:ident}) (-|%{USER:auth}) \[%{HTTPDATE:timestamp}\] "(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:httpversion})?|%{DATA:rawrequest})" %{NUMBER:response} (?:%{NUMBER:bytes}|-)
 COMBINEDAPACHELOGCLEANED %{COMMONAPACHELOGCLEANED} \"(-|%{GREEDYDATA:referrer})\" \"(-|%{GREEDYDATA:agent})\"
 
 APACHE_ERROR_TIME %{DAY} %{MONTH} %{MONTHDAY} %{TIME}(\.%{INT})? %{YEAR}
