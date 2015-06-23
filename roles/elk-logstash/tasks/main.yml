@@ -36,7 +36,7 @@
   file: dest=/etc/logstash/patterns.d state=directory
 
 - name: Copy in Logstash patterns file
-  copy: src=logstash-patterns dest=/etc/logstash/patterns.d/logstash-patterns
+  copy: src=logstash-patterns dest=/opt/logstash/patterns/custom-logstash-patterns
   notify: Restart Logstash
 
 - name: Install logstash common input configuration file
