@@ -1,4 +1,3 @@
-[Sun Jun 14 06:51:31.801404 2015] [mpm_worker:notice] [pid 18958:tid 140000483121024] AH00292: Apache/2.4.7 (Ubuntu) mod_wsgi/3.4 Python/2.7.6 configured -- resuming normal operations
 [Sun Jun 14 06:51:31.801514 2015] [core:notice] [pid 18958:tid 140000483121024] AH00094: Command line: '/usr/sbin/apache2'
 [Sun Jun 14 07:00:20.562117 2015] [:error] [pid 25980:tid 140000381368064] INFO:kalite:Ignoring non-language pack en in /var/www/ka-lite-central/locale/
 [Sun Jun 14 07:00:20.669382 2015] [:error] [pid 25980:tid 140000381368064] WARNING:py.warnings:/var/www/ka-lite-central/centralserver/../ka-lite-submodule/python-packages/django/conf/urls/defaults.py:3: DeprecationWarning: django.conf.urls.defaults is deprecated; use django.conf.urls instead
@@ -15,3 +14,4 @@
 [Wed Jun 17 11:57:12.024107 2015] [:error] [pid 16796:tid 140320798615296] INFO:kalite.videos:vd;162.242.161.163;-qV__tYb4c4
 [Wed Jun 17 11:58:07.337977 2015] [:error] [pid 16796:tid 140320773437184] INFO:kalite.videos:vd;162.242.161.163;1KL8HAm3uSY
 [Wed Jun 17 11:59:02.361483 2015] [:error] [pid 16796:tid 140320658413312] INFO:kalite.videos:vd;162.242.161.163;1lvyCZsP_Sw
+[Sun Jun 14 06:51:31.801404 2015] [mpm_worker:notice] [pid 18958:tid 140000483121024] AH00292: Apache/2.4.7 (Ubuntu) mod_wsgi/3.4 Python/2.7.6 configured -- resuming normal operations
