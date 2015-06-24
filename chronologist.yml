@@ -1,0 +1,17 @@
+---
+- hosts: rackspace
+  tasks:
+    ping: True
+
+- hosts: chronologist
+  roles:
+    - common
+    - server
+    - chronologist
+
+- hosts: chronologist
+  sudo: yes
+  roles:
+    - elk-esnode
+    - elk-aggregator
+    - elk-kibana4
