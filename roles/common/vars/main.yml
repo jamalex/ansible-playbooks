@@ -47,6 +47,9 @@ admins:
   flebuildbox:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6XyMVyVEQZCILul8pXb8UvQsDbbUGzMbX30MRrN0Xn09cbm40bKGxrAoW/OuyuWMUCJXiHOMD/24XhG+o4shN5pyxiOTIRGVWqOleKTS8+yf1OSYM6fBdla6B4gMzh6rJVAUdW3fnRaosRWX7gnH0OUpd5laHeKEE5ZHlnjwDDGFwMUb62tHv/x1NmlVytfCHlxN+OL80gFkKZDMgkQg85R0xlzXJze03JCsAFCw+lI5PJc7nANIKNq14lKl7SAXHnzLkGS9yescAzdkZGDTIg/wLBWe04CkwbWjfHOduj52WdAc9QAooMRPIeohFoTQKsTqk2PYS9CqidTmPJYE5 flebuildbox@flemacmini.local
+  ruth:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM2xuPHzxli5CrbrwyFI/XL41QZ5CYG15ejAo5JSJfrBtOeMOKs6urhvqYvQUoijTr/HyY0F6RKsCG5HJzs5wZmiowxm+DjnhjX6BpabMkQ8rB9gR+JmorzmTbLUskBGdqw54j0QT8HGTR6FXB12ozKeHh+jxQN9/T9ASYxK89MeUnZWNHiCJMb4CJkJHto1QaZLRmnuCmsjrFCr5sUbsUX0Y6LyXz2vQuvaKyxhCy3nGCEVMF64h9Rf9pau+IjxXvJaZhOxIilQ0XbSBzk+r9MAvrRT5GapNK7fy4H6Rr9uXz2SuRXLLth5Ek1MXK0502tjhTKrSf7WfS7oXaJGVn RUTHPARK@MIT.EDU
 
 former_admins:
   - chandan
@@ -83,6 +86,7 @@ permissions:
     - jamalex
     - aron
     - richard
+    - ruth
   banner:
     - jamalex
     - aron
