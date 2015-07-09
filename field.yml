@@ -9,7 +9,7 @@
     - docs_pdf_host_dir: /usr/share/nginx/html/docspdf
     - kalite_docs_dir: sphinx-docs
     - kalite_docs_reqs: sphinx-docs/requirements.txt
-    - extra-sphinx-opts:
+    - extra_sphinx_opts:
   roles:
     - common
     - server
@@ -20,5 +20,5 @@
         docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf,
         kalite_docs_dir: docs,
         kalite_docs_reqs: requirements_sphinx.txt
-        extra-sphinx-opts:
+        extra_sphinx_opts:
       }
