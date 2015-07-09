@@ -47,9 +47,15 @@
     - "{{ docs_pdf_host_dir }}/KALite.pdf"
   sudo: yes
 
+- name: Ensure html destination directory exists
+  file: path={{ docs_html_host_dir }} state=directory mode=0755
+
 - name: Push the built html docs to the server
   command: sudo cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
   with_items: available_languages
+
+- name: Ensure pdf destination directory exists
+  file: path={{ docs_pdf_host_dir }} state=directory mode=0755
 
 - name: Push the built pdf docs to the server
   command: sudo cp {{ docs_output_dir }}/latex/en/KALite.pdf {{ docs_pdf_host_dir }}/KALite.pdf
