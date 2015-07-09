@@ -14,28 +14,28 @@
   sudo: yes
 
 - name: Install docs python dependencies
-  pip: state=present requirements={{ kalite_source_dest }}/sphinx-docs/requirements.txt
+  pip: state=present requirements={{ kalite_source_dest }}/{{ kalite_docs_dir }}/requirements.txt
   sudo: yes
 
 - name: Set theme options for docs
-  template: src=theme.conf.j2 dest={{ kalite_source_dest }}/sphinx-docs/kalite-theme/theme.conf
+  template: src=theme.conf.j2 dest={{ kalite_source_dest }}/{{ kalite_docs_dir }}/kalite-theme/theme.conf
 
 - name: Grab translatable messages from the docs
-  command: make -C {{ kalite_source_dest }}/sphinx-docs gettext
+  command: make -C {{ kalite_source_dest }}/{{ kalite_docs_dir }} gettext
 
 - name: Set up po file structure for each supported language
-  command: sphinx-intl update -p {{ kalite_source_dest }}/sphinx-docs/_build/locale -c {{ kalite_source_dest}}/sphinx-docs/conf.py -l {{ item }}
+  command: sphinx-intl update -p {{ kalite_source_dest }}/{{ kalite_docs_dir }}/_build/locale -c {{ kalite_source_dest}}/{{ kalite_docs_dir }}/conf.py -l {{ item }}
   with_items: available_languages
 
 - name: Grab translated pofiles for the docs and put them in the proper directory
   command: echo "Please implement me :( :( :("
 
 - name: Build the html docs in each available language
-  command: env SPHINX_SS_USE_PVD=true sphinx-build -b html -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/html/{{ item }}
+  command: env SPHINX_SS_USE_PVD=true sphinx-build -b html -Dlanguage={{ item }} {{ extra-sphinx-opts }} {{ kalite_source_dest }}/{{ kalite_docs_dir }} {{ docs_output_dir}}/html/{{ item }}
   with_items: available_languages
 
 - name: Build the latex docs in each available language (so we can make pdfs)
-  command: env SPHINX_SS_USE_PVD=true sphinx-build -b latex -Dlanguage={{ item }} {{ kalite_source_dest }}/sphinx-docs {{ docs_output_dir}}/latex/{{ item }}
+  command: env SPHINX_SS_USE_PVD=true sphinx-build -b latex -Dlanguage={{ item }} {{ extra-sphinx-opts }} {{ kalite_source_dest }}/{{ kalite_docs_dir }} {{ docs_output_dir}}/latex/{{ item }}
   with_items: available_languages
 
 - name: Build the pdfs from the latex

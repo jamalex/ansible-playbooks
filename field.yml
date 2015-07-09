@@ -7,8 +7,16 @@
     - docs_output_dir: ~/docs/output
     - docs_html_host_dir: /usr/share/nginx/html/docs
     - docs_pdf_host_dir: /usr/share/nginx/html/docspdf
+    - kalite_docs_dir: sphinx-docs
+    - extra-sphinx-opts:
   roles:
     - common
     - server
     - docsbuilder
-    - { role: docsbuilder, ka_lite_distributed_git_branch: develop, docs_html_host_dir: /usr/share/nginx/html/develop/docs, docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf }
+    - { role: docsbuilder,
+        ka_lite_distributed_git_branch: 0.14.x,
+        docs_html_host_dir: /usr/share/nginx/html/develop/docs,
+        docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf
+        kalite_docs_dir: docs
+        extra-sphinx-opts:
+      }
