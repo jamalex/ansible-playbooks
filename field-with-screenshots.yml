@@ -1,0 +1,24 @@
+---
+
+- hosts: field
+  vars:
+    - ka_lite_distributed_git_branch: 0.13.x
+    - kalite_source_dest: ~/docs/ka-lite-source
+    - docs_output_dir: ~/docs/output
+    - docs_html_host_dir: /usr/share/nginx/html/docs
+    - docs_pdf_host_dir: /usr/share/nginx/html/docspdf
+    - kalite_docs_dir: sphinx-docs
+    - kalite_docs_reqs: sphinx-docs/requirements.txt
+    - extra_sphinx_opts:
+  roles:
+    - common
+    - server
+    - docsbuilder
+    - { role: docsbuilder,
+        ka_lite_distributed_git_branch: 0.14.x,
+        docs_html_host_dir: /usr/share/nginx/html/develop/docs,
+        docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf,
+        kalite_docs_dir: docs,
+        kalite_docs_reqs: requirements_sphinx.txt,
+        extra_sphinx_opts: -Dscreenshots_create=1
+      }
