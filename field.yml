@@ -19,6 +19,6 @@
         docs_html_host_dir: /usr/share/nginx/html/develop/docs,
         docs_pdf_host_dir: /usr/share/nginx/html/develop/docspdf,
         kalite_docs_dir: docs,
-        kalite_docs_reqs: requirements_sphinx.txt
+        kalite_docs_reqs: requirements_sphinx.txt,
         extra_sphinx_opts:
       }
