@@ -203,6 +203,13 @@
   # failed_when: "setup.stderr"
   tags:
     - update_ka_lite_central
+
+- name: Run collectstatic_js_reverse command to build required JS files for URL reversal.
+  shell: "{{ ka_lite_central_path }}/centralserver/manage.py collectstatic_js_reverse"
+  sudo: yes
+  sudo_user: www-data
+  when: ka_lite_central_django_superuser_name is not defined or ka_lite_central_django_superuser_email is not defined or ka_lite_central_django_superuser_pass is not defined
+  changed_when: no
   tags:
     - update_ka_lite_central
 
