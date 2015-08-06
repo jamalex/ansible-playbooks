@@ -49,7 +49,7 @@
   sudo: yes
 
 - name: Push the built html docs to the server
-  command: sudo cp -r {{ docs_output_dir }}/html/en {{ docs_html_host_dir }}
+  command: sudo cp -r {{ docs_output_dir }}/html/en/ {{ docs_html_host_dir }}
   with_items: available_languages
 
 - name: Ensure pdf destination directory exists
