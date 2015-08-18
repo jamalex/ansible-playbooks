@@ -5,7 +5,8 @@
     - ka_lite_distributed_git_branch: develop
     - kalite_source_dest: ~/docs/ka-lite-source
     - docs_output_dir: ~/docs/output
-    - docs_html_host_dir: /usr/share/nginx/html/docs/develop/
+    - docs_html_host_dir: /usr/share/nginx/html
+    - host_dir_relative_path: docs/develop
     - docs_pdf_host_dir: /usr/share/nginx/html/docs/develop/pdf
     - kalite_docs_dir: docs
     - kalite_docs_reqs: requirements_sphinx.txt
@@ -16,7 +17,7 @@
     - docsbuilder
     - { role: docsbuilder,
         ka_lite_distributed_git_branch: 0.14.x,
-        docs_html_host_dir: /usr/share/nginx/html/docs/0.14/,
+        host_dir_relative_path: docs/0.14,
         docs_pdf_host_dir: /usr/share/nginx/html/docs/0.14/pdf,
         kalite_docs_dir: docs,
         kalite_docs_reqs: requirements_sphinx.txt,
@@ -24,7 +25,7 @@
       }
     - { role: docsbuilder,
         ka_lite_distributed_git_branch: 0.13.x,
-        docs_html_host_dir: /usr/share/nginx/html/docs/0.13/,
+        host_dir_relative_path: docs/0.13,
         docs_pdf_host_dir: /usr/share/nginx/html/docs/0.13/pdf,
         kalite_docs_dir: sphinx-docs,
         kalite_docs_reqs: sphinx-docs/requirements.txt,
