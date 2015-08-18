@@ -9,7 +9,7 @@
     - docs_pdf_host_dir: /usr/share/nginx/html/docs/develop/pdf
     - kalite_docs_dir: docs
     - kalite_docs_reqs: requirements_sphinx.txt
-    - extra_sphinx_opts:
+    - extra_sphinx_opts: -Dscreenshots_create=1
   roles:
     - common
     - server
@@ -20,7 +20,7 @@
         docs_pdf_host_dir: /usr/share/nginx/html/docs/0.14/pdf,
         kalite_docs_dir: docs,
         kalite_docs_reqs: requirements_sphinx.txt,
-        extra_sphinx_opts:
+        extra_sphinx_opts: -Dscreenshots_create=1
       }
     - { role: docsbuilder,
         ka_lite_distributed_git_branch: 0.13.x,
