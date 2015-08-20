@@ -100,6 +100,12 @@ virtual_hosts:
         varnish: yes
       - path: /downloads
         backend: pantry_downloads
+      - path: = /docs/
+        redirect: https://learningequality.org/r/docs-latest
+      - path: = /docs/faq.html
+        redirect: https://learningequality.org/r/docs-latest-faq
+      - path: = /docs/installguide/install_main.html
+        redirect: https://learningequality.org/r/docs-latest-install-guide
       - path: /docs
         backend: field_docs
       - path: /r
