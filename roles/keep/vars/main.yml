@@ -47,8 +47,5 @@ ka_crowdin_project_id: "khanacademy"
 crowdin_project_id: "ka-lite"
 
 lang_pack_versions:
-  - 0.10.3
-  - 0.11.1
-  - 0.12.0
-  - 0.13
   - 0.14
+  - 0.15
