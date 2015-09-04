@@ -96,21 +96,30 @@ virtual_hosts:
     backend: citadel_fle_home
     force_https: yes
     locations:
+
       - path: /
         varnish: yes
+
       - path: /downloads
         backend: pantry_downloads
         force_https: no
+
       - path: = /docs/
         redirect: https://learningequality.org/r/docs-latest
       - path: = /docs/faq.html
         redirect: https://learningequality.org/r/docs-latest-faq
       - path: = /docs/installguide/install_main.html
         redirect: https://learningequality.org/r/docs-latest-install-guide
+      - path: ~ ^/docs/0.13/en/(.*)
+        redirect: https://ka-lite.readthedocs.org/en/0.13.x/$1
+      - path: ~ ^/docs/0.14/en/(.*)
+        redirect: https://ka-lite.readthedocs.org/en/0.14.x/$1
       - path: /docs
         backend: field_docs
+
       - path: /r
         varnish: no
+
     allow_https: yes
 
   - hosts:
