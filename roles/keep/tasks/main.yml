@@ -263,7 +263,7 @@
     - language_packs
 
 - name: Create cron job to clear sessions in our DB.
-  cron: name="build language packs" minute="30" hour="22" job="python {{ ka_lite_central_path }}/centralserver/manage.py cleanup" user=www-data
+  cron: name="Clear sessions" minute="30" hour="22" job="python {{ ka_lite_central_path }}/centralserver/manage.py cleanup" user=www-data
   sudo: yes
   sudo_user: www-data
   tags:
