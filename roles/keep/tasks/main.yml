@@ -262,6 +262,13 @@
   tags:
     - language_packs
 
+- name: Create cron job to clear sessions in our DB.
+  cron: name="build language packs" minute="30" hour="22" job="python {{ ka_lite_central_path }}/centralserver/manage.py cleanup" user=www-data
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - cleanup
+
 - name: Ensure the ka-lite-central/data directory exists and set it as belonging to the www-data user.
   file: dest={{ ka_lite_central_path }}/data owner=www-data state=directory
   sudo: yes
