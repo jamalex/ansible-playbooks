@@ -86,7 +86,9 @@
   sudo_user: www-data
 
 - name: Run/restart the distributed server.
-  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart"
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart --settings={{ ka_lite_distributed_settings_module }} --port={{ ka_lite_distributed_port }}"
   sudo: yes
   sudo_user: www-data
+  tags:
+    - startkalite
   # when: ka_lite_distributed_clone.changed
