@@ -103,6 +103,7 @@ virtual_hosts:
       - path: /downloads
         backend: pantry_downloads
         force_https: no
+        varnish: no
 
       - path: = /docs/faq.html
         redirect: https://learningequality.org/r/docs-latest-faq
@@ -131,7 +132,7 @@ virtual_hosts:
         force_https: yes
       - path: ~ ^/(accounts|wiki|contact|securesync|admin)
         force_https: yes
-      - path: ~ ^/(content|static|media)
+      - path: ~ ^/(content|static)
         varnish: yes
 
   - hosts:
@@ -150,7 +151,7 @@ virtual_hosts:
       - path: ~ ^/($|faq)
         varnish: yes
       - path: ~ ^/(accounts|wiki|contact|securesync|admin)
-      - path: ~ ^/(content|static|media)
+      - path: ~ ^/(content|static)
         varnish: yes
 
   - hosts:
