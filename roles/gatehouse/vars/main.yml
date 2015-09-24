@@ -119,6 +119,7 @@ virtual_hosts:
         backend: field_docs
 
       - path: /r
+        force_https: no
         varnish: no
 
     allow_https: yes
