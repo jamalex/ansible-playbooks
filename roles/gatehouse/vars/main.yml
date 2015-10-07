@@ -115,8 +115,8 @@ virtual_hosts:
         redirect: https://ka-lite.readthedocs.org/en/0.14.x/$1
       - path: ~ ^/docs/
         redirect: https://learningequality.org/r/docs-latest
-      - path: /docs
-        backend: field_docs
+      - path: ~ ^/docs
+        redirect: https://learningequality.org/r/docs-latest
 
       - path: /r
         force_https: no
