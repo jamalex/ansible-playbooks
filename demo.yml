@@ -1,0 +1,8 @@
+- hosts: field
+  vars:
+    - ka_lite_distributed_port: 8009
+    - ka_lite_distributed_git_branch: 0.15.x
+    - ka_lite_distributed_prefix: ka-lite-develop-demo
+    - ka_lite_distributed_settings_module: kalite.project.settings.demo
+  roles:
+    - distributed
