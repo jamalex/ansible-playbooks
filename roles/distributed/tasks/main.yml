@@ -1,4 +1,15 @@
 ---
+- name: add the nodejs ppa
+  shell: curl -sL https://deb.nodesource.com/setup | sudo bash -
+  sudo: yes
+  tags:
+    - setupnodejs
+
+- name: install nodejs
+  apt: name=nodejs
+  sudo: yes
+  tags:
+    - setupnodejs
 
 - name: Create the /var/www directory and set it as belonging to the www-data user.
   file: dest=/var/www owner=www-data state=directory
@@ -40,6 +51,26 @@
   changed_when: "'Migrating forwards' in setup.stdout"
   # failed_when: "setup.stderr"
 
+- name: download nodejs deps
+  shell: npm install
+  args:
+    chdir: /var/www/{{ ka_lite_distributed_prefix }}/
+  sudo: yes
+  sudo_user: www-data
+  register: setup
+  tags:
+    - setupassets
+
+- name: Build static files
+  shell: node build.js
+  args:
+    chdir: /var/www/{{ ka_lite_distributed_prefix }}/
+  sudo: yes
+  sudo_user: www-data
+  register: setup
+  tags:
+    - setupassets
+
 - name: Run setup command to ensure KA Lite is initialized (upgrade).
   shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/bin/kalite manage setup --noinput"
   register: setup
@@ -55,7 +86,9 @@
   sudo_user: www-data
 
 - name: Run/restart the distributed server.
-  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart"
+  shell: "/var/www/{{ ka_lite_distributed_prefix }}/bin/kalite restart --settings={{ ka_lite_distributed_settings_module }} --port={{ ka_lite_distributed_port }}"
   sudo: yes
   sudo_user: www-data
+  tags:
+    - startkalite
   # when: ka_lite_distributed_clone.changed
