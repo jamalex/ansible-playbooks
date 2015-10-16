@@ -35,7 +35,7 @@
   register: flehome_clone
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 #- name: Manually switch the branch, since git submodule doesn't always do it.
 #  shell: git checkout {{ fle_home_git_branch }} chdir={{ fle_home_path }}
@@ -69,7 +69,7 @@
   changed_when: False
   when: flehome_clone.changed
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Put the local_settings.py file into the FLE Site project directory.
   template: src=local_settings.py.j2 dest={{ fle_home_path }}/fle_site/local_settings.py
@@ -77,14 +77,14 @@
   sudo_user: www-data
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Ensure a local_settings_secret.py file exists.
   sudo: yes
   sudo_user: www-data
   command: touch {{ fle_home_path }}/fle_site/local_settings_secrets.py creates={{ fle_home_path }}/fle_site/local_settings_secrets.py
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Update the SECRET_KEY in local_settings_secret.py if variable 'fle_home_secret_key' is defined.
   lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ fle_home_secret_key }}"' owner="www-data"
@@ -93,7 +93,25 @@
   when: fle_home_secret_key is defined
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
+
+- name: Update the CONSTANT_CONTACT_API_KEY in local_settings_secret.py if variable 'constant_contact_api_key' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^CONSTANT_CONTACT_API_KEY =' line='CONSTANT_CONTACT_API_KEY = "{{ constant_contact_api_key }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: constant_contact_api_key is defined
+  notify: restart apache2
+  tags:
+    - update_fle_home
+
+- name: Update the CONSTANT_CONTACT_ACCESS_TOKEN in local_settings_secret.py if variable 'constant_contact_access_token' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^CONSTANT_CONTACT_ACCESS_TOKEN =' line='CONSTANT_CONTACT_ACCESS_TOKEN = "{{ constant_contact_access_token }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: constant_contact_access_token is defined
+  notify: restart apache2
+  tags:
+    - update_fle_home
 
 - name: Update the DATABASE_PASSWORD in local_settings_secret.py if variable 'fle_home_db_pass' is defined.
   lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^DATABASE_PASSWORD =' line='DATABASE_PASSWORD = "{{ fle_home_db_pass }}"' owner="www-data"
@@ -102,7 +120,7 @@
   when: fle_home_db_pass is defined
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Update the DISQUS_USER_API_KEY in local_settings_secret.py if variable 'disqus_user_api_key' is defined.
   lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^DISQUS_USER_API_KEY =' line='DISQUS_USER_API_KEY = "{{ disqus_user_api_key }}"' owner="www-data"
@@ -111,7 +129,7 @@
   when: disqus_user_api_key is defined
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Update the STRIPE_SECRET_API_KEY in local_settings_secret.py if variable 'stripe_secret_api_key' is defined.
   lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^STRIPE_SECRET_API_KEY =' line='STRIPE_SECRET_API_KEY = "{{ stripe_secret_api_key }}"' owner="www-data"
@@ -120,7 +138,7 @@
   when: stripe_secret_api_key is defined
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Update the STRIPE_PUBLISHABLE_API_KEY in local_settings_secret.py if variable 'stripe_publishable_api_key' is defined.
   lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^STRIPE_PUBLISHABLE_API_KEY =' line='STRIPE_PUBLISHABLE_API_KEY = "{{ stripe_publishable_api_key }}"' owner="www-data"
@@ -129,7 +147,7 @@
   when: stripe_publishable_api_key is defined
   notify: restart apache2
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Create the data directory and set it as belonging to the www-data user.
   file: dest={{ fle_home_path }}/fle_site/data owner=www-data state=directory
@@ -179,28 +197,28 @@
   sudo: yes
   changed_when: False
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Run syncdb on FLE Site database to ensure it is initialized.
   shell: "{{ fle_home_path }}/manage.py syncdb --noinput"
   register: syncdb
   changed_when: "'Creating table ' in syncdb.stdout"
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Migrate FLE Site database to latest schema.
   shell: "{{ fle_home_path }}/manage.py migrate --merge"
   register: migrate
   changed_when: "'Migrating forwards' in migrate.stdout"
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Run collectstatic to consolidate static files from all apps.
   shell: "{{ fle_home_path }}/manage.py collectstatic --noinput"
   sudo: yes
   sudo_user: www-data
   tags:
-    -- update_fle_home
+    - update_fle_home
 
 - name: Create Django superuser for FLE Site if needed.
   shell: "{{ fle_home_path }}/manage.py createsuperuser --email=admin@learningequality.org --username={{ fle_home_django_superuser_name }} --noinput"
