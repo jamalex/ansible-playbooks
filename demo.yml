@@ -1,8 +1,20 @@
+# - hosts: field
+#   vars:
+#     - ka_lite_distributed_port: 8009
+#     - ka_lite_distributed_git_branch: 0.15.x
+#     - ka_lite_distributed_prefix: ka-lite-develop-demo
+#     - ka_lite_distributed_settings_module: kalite.project.settings.demo
+#   roles:
+#     - distributed
+
 - hosts: field
   vars:
-    - ka_lite_distributed_port: 8009
-    - ka_lite_distributed_git_branch: 0.15.x
-    - ka_lite_distributed_prefix: ka-lite-develop-demo
+    - ka_lite_distributed_port: 8008
+    - ka_lite_distributed_git_branch: master
+    - ka_lite_distributed_prefix: ka-lite-demo
     - ka_lite_distributed_settings_module: kalite.project.settings.demo
+    - ka_lite_distributed_django_superuser_name: admin
+    - ka_lite_distributed_django_superuser_email: aron@learningequality.org
+    - ka_lite_distributed_django_superuser_pass: pass
   roles:
     - distributed
