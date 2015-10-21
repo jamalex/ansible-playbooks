@@ -43,12 +43,14 @@
   ignore_errors: yes
 
 - name: Run setup command to ensure KA Lite is initialized (new install or upgrade).
-  shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/bin/kalite manage setup --noinput -u {{ ka_lite_distributed_django_superuser_name }} -e {{ ka_lite_distributed_django_superuser_email }} -p {{ ka_lite_distributed_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server'"
+  shell: "echo 'yes\n' | /var/www/{{ ka_lite_distributed_prefix }}/bin/kalite manage setup --noinput -u{{ ka_lite_distributed_django_superuser_name }} -e{{ ka_lite_distributed_django_superuser_email }} -p{{ ka_lite_distributed_django_superuser_pass }}"
   register: setup
   sudo: yes
   sudo_user: www-data
   when: ka_lite_distributed_django_superuser_name is defined and ka_lite_distributed_django_superuser_email is defined and ka_lite_distributed_django_superuser_pass is defined
   changed_when: "'Migrating forwards' in setup.stdout"
+  tags:
+    - setupkalite
   # failed_when: "setup.stderr"
 
 - name: download nodejs deps
