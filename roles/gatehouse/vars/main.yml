@@ -106,6 +106,7 @@ virtual_hosts:
       #   varnish: no
 
       - path: ~ ^/downloads/(.*)
+        force_https: no
         redirect: http://pantry.learningequality.org/downloads/$1
 
       - path: = /docs/faq.html
