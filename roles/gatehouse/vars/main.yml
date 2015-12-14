@@ -70,7 +70,7 @@ proxy_backends:
     port: 7007
 
   - name: field_kalite_demo
-    host: 162.242.161.163
+    host: 192.237.170.139
     port: 8008
 
   - name: field_docs
