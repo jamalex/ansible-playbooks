@@ -1,4 +1,11 @@
 ---
+- name: install essential packages
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - git
+    - python-pip
+    
 - name: add the nodejs ppa
   shell: curl -sL https://deb.nodesource.com/setup | sudo bash -
   sudo: yes
@@ -64,7 +71,7 @@
     - setupassets
 
 - name: Build static files
-  shell: node build.js
+  shell: node build.js --staticfiles
   args:
     chdir: /var/www/{{ ka_lite_distributed_prefix }}/
   sudo: yes
