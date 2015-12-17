@@ -7,7 +7,7 @@
 #   roles:
 #     - distributed
 
-- hosts: field
+- hosts: demoserver
   vars:
     - ka_lite_distributed_port: 8008
     - ka_lite_distributed_git_branch: master
