@@ -54,6 +54,9 @@ admins:
   ruth:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM2xuPHzxli5CrbrwyFI/XL41QZ5CYG15ejAo5JSJfrBtOeMOKs6urhvqYvQUoijTr/HyY0F6RKsCG5HJzs5wZmiowxm+DjnhjX6BpabMkQ8rB9gR+JmorzmTbLUskBGdqw54j0QT8HGTR6FXB12ozKeHh+jxQN9/T9ASYxK89MeUnZWNHiCJMb4CJkJHto1QaZLRmnuCmsjrFCr5sUbsUX0Y6LyXz2vQuvaKyxhCy3nGCEVMF64h9Rf9pau+IjxXvJaZhOxIilQ0XbSBzk+r9MAvrRT5GapNK7fy4H6Rr9uXz2SuRXLLth5Ek1MXK0502tjhTKrSf7WfS7oXaJGVn RUTHPARK@MIT.EDU
+  circleci:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXBLxKNjeAhPJDolqu/VJMJbOr12mBvBmXiygRvANSXBW+l2tbV9DqqksTO/qtgkrbgXTaJidcCGz8ifLuIy9tvJ4/UjRuomb/40SotsVxa0lt5ouI0yKASXNbF/5xS/mT1+3wSHODuFMLyAhtP+Xngr0D3XEB4okPb5FsDuw9OqFcezHNPahzlRuHEli6JrfVk1FIN4fpWKGeRxne4eS9grdLLbSqz4AbapB3vDRF1bBqMX31ylqeYXqlk6/9hhkVQ1/MUDaK8DOuGWI221N47DdsckuM2uK7ntemxFQyATb8d8S4W6DJSzBKJYM5JAtUyO4jQUhXuYMNXfVmOATj aron@learningequality.org
 
 former_admins:
   - chandan
@@ -103,6 +106,7 @@ permissions:
     - aron
     - mike
     - flebuildbox
+    - circleci
   videos:
     - jamalex
     - flebuildbox
