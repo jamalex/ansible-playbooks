@@ -2,6 +2,8 @@
 
 - name: Load the list of authorized users for the current host.
   set_fact: 'authorized_users="{{ permissions[inventory_hostname] }}"'
+  tags:
+  - sshusers
 
 - name: Set hostname to inventory name.
   hostname: name={{ inventory_hostname }}
@@ -84,21 +86,29 @@
   local_action: shell openssl passwd -in /dev/urandom | head -1
   changed_when: no
   register: password
+  tags:
+    - sshusers
 
 - name: Add accounts for admins and add them to the sudoers group.
   user: "name='{{ item }}' password='{{ password.stdout }}' groups='sudo' shell='/bin/bash' update_password='on_create'"
   with_items: admins.keys()
   sudo: yes
+  tags:
+    - sshusers
 
 - name: Remove accounts for former admins.
   user: "name='{{ item }}' state=absent"
   with_items: former_admins
   sudo: yes
+  tags:
+    - sshusers
 
 - name: Create the users' .ssh directories.
   file: "dest=/home/{{ item }}/.ssh owner={{ item }} state=directory"
   with_items: admins.keys()
   sudo: yes
+  tags:
+    - sshusers
 
 - name: Add authorized_keys for admin SSH logins.
   template: "src=authorized_keys.j2 dest=/home/{{ item }}/.ssh/authorized_keys"
@@ -108,6 +118,8 @@
   sudo_user: "{{ item }}"
   notify:
     - restart ssh
+  tags:
+    - sshusers
 
 - name: Remove authorized_keys for unauthorized admin SSH logins.
   copy: "content='' dest=/home/{{ item }}/.ssh/authorized_keys"
@@ -117,7 +129,11 @@
   sudo_user: "{{ item }}"
   notify:
     - restart ssh
+  tags:
+    - sshusers
 
 - name: Ensure sudoers don't need to enter password
   lineinfile: "dest=/etc/sudoers state=present regexp='^%sudo[\t ]+ALL' line='%sudo ALL=(ALL:ALL) NOPASSWD: ALL' validate='visudo -cf %s'"
   sudo: yes
+  tags:
+    - sshusers
