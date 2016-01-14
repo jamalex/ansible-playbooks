@@ -7,6 +7,12 @@ server {
         autoindex on;
     }
 
+    location /old_downloads {
+        alias {{ old_download_folder_location }};
+        autoindex on;
+    }
+
+
     location /favicon.ico {
         empty_gif;
     }
