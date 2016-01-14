@@ -21,6 +21,8 @@ ufw_allowed_ports:
 
 download_folder_location: /var/www/downloads
 
+old_download_folder_location: /var/www/old_downloads
+
 # Folder structure:
 # app - ka-lite
 # version - 0.13
