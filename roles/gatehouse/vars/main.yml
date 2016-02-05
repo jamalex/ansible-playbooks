@@ -15,19 +15,14 @@ nginx_worker_connections: 4096
 nginx_keepalive_timeout: 65
 
 # this is the certificate name to be used in the Nginx config
-nginx_ssl_certificate_name_to_use: multi_domain_june_2014
+nginx_ssl_certificate_name_to_use: wildcard_february_2016
 
 # this is the certificate to generate a key and csr for
-nginx_ssl_certificate_name_to_install: multi_domain_june_2014
+nginx_ssl_certificate_name_to_install: wildcard_february_2016
 
-ssl_certificate_domains:
-  - learningequality.org
-  - kalite.learningequality.org
-  - kalite.adhocsync.com
-  - forums.learningequality.org
-  - hub.learningequality.org
+legacy_ssl_domain: kalite.adhocsync.com
 
-primary_ssl_certificate_domain: learningequality.org
+wildcard_ssl_certificate_domain: "*.learningequality.org"
 
 
 ufw_enabled: yes

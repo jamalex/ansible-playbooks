@@ -56,7 +56,7 @@
     - ssl
 
 - name: Generate private SSL key along with a CSR.
-  command: 'openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.key -out /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr -subj "/C=US/ST=California/O=Foundation for Learning Equality, Inc/CN={{ primary_ssl_certificate_domain }}" creates=/etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr'
+  command: 'openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.key -out /etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr -subj "/C=US/ST=California/L=San Diego/O=Foundation for Learning Equality, Inc/CN={{ wildcard_ssl_certificate_domain }}/emailAddress=info@learningequality.org" creates=/etc/nginx/ssl/{{ nginx_ssl_certificate_name_to_install }}.csr'
   sudo: yes
   register: generate_csr
   when: nginx_ssl_certificate_name_to_install is defined
@@ -76,15 +76,14 @@
     - ssl
 
 - name: Unzip zip file containing certificates.
-  shell: unzip -o certificates.zip | grep -v -E 'AddTrust|SSL|COMODO' | grep -E '\w+\.crt' -o chdir=/etc/nginx/ssl/
+  shell: unzip -o certificates.zip chdir=/etc/nginx/ssl/
   sudo: yes
   when: cert_copy.changed is defined and cert_copy.changed
-  register: cert_unzip
   tags:
     - ssl
 
 - name: Bundle the certificates.
-  shell: 'cat {{ cert_unzip.stdout }} COMODORSADomainValidationSecureServerCA.crt AddTrustExternalCARoot.crt COMODORSAAddTrustCA.crt > {{ nginx_ssl_certificate_name_to_install }}.ca-bundle chdir=/etc/nginx/ssl/'
+  shell: 'cat STAR_learningequality_org.crt STAR_learningequality_org.ca-bundle > {{ nginx_ssl_certificate_name_to_install }}.ca-bundle chdir=/etc/nginx/ssl/'
   sudo: yes
   when: cert_copy.changed is defined and cert_copy.changed
   tags:
