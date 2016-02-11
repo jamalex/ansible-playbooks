@@ -57,6 +57,9 @@ admins:
   circleci:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXBLxKNjeAhPJDolqu/VJMJbOr12mBvBmXiygRvANSXBW+l2tbV9DqqksTO/qtgkrbgXTaJidcCGz8ifLuIy9tvJ4/UjRuomb/40SotsVxa0lt5ouI0yKASXNbF/5xS/mT1+3wSHODuFMLyAhtP+Xngr0D3XEB4okPb5FsDuw9OqFcezHNPahzlRuHEli6JrfVk1FIN4fpWKGeRxne4eS9grdLLbSqz4AbapB3vDRF1bBqMX31ylqeYXqlk6/9hhkVQ1/MUDaK8DOuGWI221N47DdsckuM2uK7ntemxFQyATb8d8S4W6DJSzBKJYM5JAtUyO4jQUhXuYMNXfVmOATj aron@learningequality.org
+  cyril:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCu2M9vk8a7bnViCQCPSJISejMBmhH4P7fuZMdixWEr+ZG+wMKkATYPH8Mbx/XhHYqB6c//lzvF7GPIYUSFtvCokRsYkkCHaXfO+6ayDDJftLL4dyJ50EY9ytmFjsyI1MTVujDydWaG+5QS5DvY9gwPXoTY1BZ2JhIUEAZn6wtePmpCrs7xtKPqqgv0budS08X7iqK/zsX8i08gcq4DRR1rfC48p/7Xr3ZNAOySr4QK6LGQMVxWM9ooBWKZ0zVKd5BWUGBhVUURkElCU7VPk5Dy3RXiPeHlz+/DwYKZBN9jl7XWACdMRa2os/Ps3Xzqy0aypi/oqBtL77DKnjbOOF7GSTsUlv8bi/YvK8FMKo6i3B2Uju7PZUApRPswD20a9d//DlXb4N5ZOOhBM+zPTYxbTiA43HqVlr4N+YeTtCokoEeD7DwZvU6F3hE9ygz/CUt7tugfgTCv010NY9na89CqoFgcDRFSGJcuAyG5VGk62rTJq0nsnOcM5nxl04paJ3IpRR1xUa2omn+hgw+DXaW3j9Okiq7YBJnbZtuCH9Vgi9jLuiYdpkLPKsj/9p4GUs4VJ2ZuNCCpyaCrSsX8dtlWlBlgVI0I2wmMv4LbVOrtOQnUBRzacGHgmTYaouWzlFDuH4nOjbdLyAQcBcGW2vKJE2KpY5qEDirIFWI3xTwU8Q== cpauya@gmail.com
 
 former_admins:
   - chandan
@@ -107,6 +110,7 @@ permissions:
     - mike
     - flebuildbox
     - circleci
+    - cyril
   videos:
     - jamalex
     - flebuildbox
@@ -115,3 +119,6 @@ permissions:
     - aron
     - haolan
     - akshay
+  demoserver:
+    - aron
+    - jamalex
