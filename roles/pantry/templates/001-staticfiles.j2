@@ -5,6 +5,24 @@ server {
     location /downloads {
         alias {{ download_folder_location }};
         autoindex on;
+      if ($request_method = 'OPTIONS') {
+          add_header 'Access-Control-Allow-Origin' '$http_origin';
+          add_header 'Access-Control-Allow-Methods' 'GET, OPTIONS';
+          #
+          # Custom headers and headers various browsers *should* be OK with but aren't
+          #
+          add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since';
+          return 200;
+      }
+
+      if ($request_method = 'GET') {
+          add_header 'Access-Control-Allow-Origin' '$http_origin';
+          add_header 'Access-Control-Allow-Methods' 'GET, OPTIONS';
+          #
+          # Custom headers and headers various browsers *should* be OK with but aren't
+          #
+          add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since';
+      }
     }
 
     location /old_downloads {
@@ -16,5 +34,4 @@ server {
     location /favicon.ico {
         empty_gif;
     }
-
 }
