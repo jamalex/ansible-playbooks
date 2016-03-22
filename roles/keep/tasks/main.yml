@@ -100,6 +100,8 @@
     - grunt
     - less
     - grunt-contrib-less
+    - grunt-contrib-jshint
+    - grunt-contrib-concat
   sudo: yes
   sudo_user: www-data
 
@@ -179,6 +181,13 @@
   sudo_user: www-data
   when: khan_api_consumer_secret is defined
   notify: restart apache2
+  tags:
+    - update_ka_lite_central
+
+- name: Create empty database template directory to avoid errors when running setup.
+  file: path={{ ka_lite_central_path }}/ka-lite-submodule/kalite/database/templates/content_items state=directory recurse=yes
+  sudo: yes
+  sudo_user: www-data
   tags:
     - update_ka_lite_central
 
