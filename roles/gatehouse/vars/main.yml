@@ -134,8 +134,6 @@ virtual_hosts:
         force_https: yes
       - path: ~ ^/(content|static)
         varnish: yes
-      - path: ~ ^/media/language_packs/(.*)
-        redirect: "http://keep.learningequality.org:{{ keep_ka_lite_central_port }}/media/language_packs/$1"
 
   - hosts:
       - flestaging.learningequality.org
@@ -155,8 +153,6 @@ virtual_hosts:
       - path: ~ ^/(accounts|wiki|contact|securesync|admin)
       - path: ~ ^/(content|static)
         varnish: yes
-      - path: ~ ^/media/language_packs/(.*)
-        redirect: "http://globe.learningequality.org:{{ keep_ka_lite_central_port }}/media/language_packs/$1"
 
   - hosts:
       - kalite.adhocsync.com
