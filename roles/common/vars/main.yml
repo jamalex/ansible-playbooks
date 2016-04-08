@@ -51,6 +51,7 @@ admins:
   flebuildbox:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6XyMVyVEQZCILul8pXb8UvQsDbbUGzMbX30MRrN0Xn09cbm40bKGxrAoW/OuyuWMUCJXiHOMD/24XhG+o4shN5pyxiOTIRGVWqOleKTS8+yf1OSYM6fBdla6B4gMzh6rJVAUdW3fnRaosRWX7gnH0OUpd5laHeKEE5ZHlnjwDDGFwMUb62tHv/x1NmlVytfCHlxN+OL80gFkKZDMgkQg85R0xlzXJze03JCsAFCw+lI5PJc7nANIKNq14lKl7SAXHnzLkGS9yescAzdkZGDTIg/wLBWe04CkwbWjfHOduj52WdAc9QAooMRPIeohFoTQKsTqk2PYS9CqidTmPJYE5 flebuildbox@flemacmini.local
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbWHf/jhe1ij+Dr7H+eIobYLl6peDT0C2KptGxm8Ix25WFNph1bYe+BPmZfPbfZG1HPFTYVBN92xs8GCq0dLyTfeMRvsCy9QSWaTQW6OjKCyF4y0AarbuQNj+UXlQgutamPjJ8/UXWX/4gXE04Q6U4kESOsH84lVsJ9IXamYjm+LYDIUdwUgNM1j9JnQUUkWHw9BXY+2CFpVg4a44VQUNrqEpsmZJ2IlnvkyAxFdKM7euKFZNIfuu9YSLMvjwvrLlVxNF07W0jqUVYFyUE4HIfuPGQ++G6nsuQEIkIkSbTNVjtSjK5hKWZ+VyOMhBmvCr7X8Pc30VbCxn6trlZDpNt jamalex@videos
   ruth:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM2xuPHzxli5CrbrwyFI/XL41QZ5CYG15ejAo5JSJfrBtOeMOKs6urhvqYvQUoijTr/HyY0F6RKsCG5HJzs5wZmiowxm+DjnhjX6BpabMkQ8rB9gR+JmorzmTbLUskBGdqw54j0QT8HGTR6FXB12ozKeHh+jxQN9/T9ASYxK89MeUnZWNHiCJMb4CJkJHto1QaZLRmnuCmsjrFCr5sUbsUX0Y6LyXz2vQuvaKyxhCy3nGCEVMF64h9Rf9pau+IjxXvJaZhOxIilQ0XbSBzk+r9MAvrRT5GapNK7fy4H6Rr9uXz2SuRXLLth5Ek1MXK0502tjhTKrSf7WfS7oXaJGVn RUTHPARK@MIT.EDU
@@ -59,7 +60,7 @@ admins:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXBLxKNjeAhPJDolqu/VJMJbOr12mBvBmXiygRvANSXBW+l2tbV9DqqksTO/qtgkrbgXTaJidcCGz8ifLuIy9tvJ4/UjRuomb/40SotsVxa0lt5ouI0yKASXNbF/5xS/mT1+3wSHODuFMLyAhtP+Xngr0D3XEB4okPb5FsDuw9OqFcezHNPahzlRuHEli6JrfVk1FIN4fpWKGeRxne4eS9grdLLbSqz4AbapB3vDRF1bBqMX31ylqeYXqlk6/9hhkVQ1/MUDaK8DOuGWI221N47DdsckuM2uK7ntemxFQyATb8d8S4W6DJSzBKJYM5JAtUyO4jQUhXuYMNXfVmOATj aron@learningequality.org
 
 former_admins:
-  - chandan
+  - videoserver
 
 permissions:
   gatehouse:
@@ -107,6 +108,7 @@ permissions:
     - mike
     - flebuildbox
     - circleci
+    - videoserver
   videos:
     - jamalex
     - flebuildbox
