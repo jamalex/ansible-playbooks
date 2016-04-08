@@ -94,8 +94,9 @@
 #     - update_ka_lite_central
 #   sudo: yes
 
-- name: Install required Node.js packages.
+- name: Install required ka-lite-central Node.js packages.
   npm: name={{ item }} path={{ ka_lite_central_path }}
+  when: ka_lite_central_clone.changed
   with_items:
     - grunt
     - less
@@ -104,6 +105,16 @@
     - grunt-contrib-concat
   sudo: yes
   sudo_user: www-data
+  tags:
+    - update_ka_lite_central
+
+- name: Install required ka-lite-submodule Node.js packages.
+  npm: path={{ ka_lite_central_path }}/ka-lite-submodule
+  sudo: yes
+  sudo_user: www-data
+  when: ka_lite_central_clone.changed
+  tags:
+    - update_ka_lite_central
 
 - name: Put the local_settings.py file into the KA Lite project directory.
   template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/centralserver/local_settings.py
@@ -191,6 +202,24 @@
   tags:
     - update_ka_lite_central
 
+- name: Compile the static KA Lite resources by running the Gruntfile.
+  command: grunt chdir={{ ka_lite_central_path }}
+  sudo: yes
+  sudo_user: www-data
+  changed_when: False
+  when: ka_lite_central_clone.changed
+  tags:
+    - update_ka_lite_central
+
+- name: Compile additional static KA Lite resources by running `node build.js`.
+  command: node build.js chdir={{ ka_lite_central_path }}/ka-lite-submodule/
+  sudo: yes
+  sudo_user: www-data
+  changed_when: False
+  when: ka_lite_central_clone.changed
+  tags:
+    - update_ka_lite_central
+
 - name: Run setup command to ensure KA Lite is initialized (new install or upgrade).
   shell: "echo 'yes\n' | {{ ka_lite_central_path }}/centralserver/manage.py setup --noinput -u {{ ka_lite_central_django_superuser_name }} -e {{ ka_lite_central_django_superuser_email }} -p {{ ka_lite_central_django_superuser_pass }} -o 'Central Server' -d 'The Actual Central Server' --no-assessment-items"
   register: setup
@@ -213,20 +242,10 @@
   tags:
     - update_ka_lite_central
 
-- name: Run collectstatic_js_reverse command to build required JS files for URL reversal.
-  shell: "{{ ka_lite_central_path }}/centralserver/manage.py collectstatic_js_reverse"
+- name: Run retrievecontentpack command to ensure KA Lite has a content pack (needed for coach reports).
+  shell: "{{ ka_lite_central_path }}/centralserver/manage.py retrievecontentpack --minimal download en"
   sudo: yes
   sudo_user: www-data
-  when: ka_lite_central_django_superuser_name is not defined or ka_lite_central_django_superuser_email is not defined or ka_lite_central_django_superuser_pass is not defined
-  changed_when: no
-  tags:
-    - update_ka_lite_central
-
-- name: Compile the static KA Lite resources by running the Gruntfile.
-  command: grunt chdir={{ ka_lite_central_path }}
-  sudo: yes
-  sudo_user: www-data
-  changed_when: False
   when: ka_lite_central_clone.changed
   tags:
     - update_ka_lite_central
