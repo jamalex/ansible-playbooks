@@ -103,6 +103,10 @@ permissions:
     - aron
     - richard
     - ruth
+  aflatoun:
+    - richard
+    - aron
+    - jamalex
   banner:
     - jamalex
     - aron

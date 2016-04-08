@@ -1,0 +1,6 @@
+---
+- hosts: aflatoun
+  roles:
+    - common
+    - server
+    - content-curation

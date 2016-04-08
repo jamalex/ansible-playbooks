@@ -1,0 +1,121 @@
+---
+
+- name: Create the /var/www directory and set it as belonging to the www-data user.
+  file: dest=/var/www owner=www-data state=directory
+  sudo: yes
+
+- name: clone the content curation repo
+  git: repo=https://github.com/fle-internal/content-curation.git version={{ content_curation_git_branch }} dest=/var/www/{{ content_curation_prefix }} update=yes
+  sudo: yes
+  sudo_user: www-data
+
+- name: add the nodejs ppa
+  shell: curl -sL https://deb.nodesource.com/setup | bash -
+  sudo: yes
+  tags:
+    - setupdeps
+
+- name: install deps
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - nodejs
+    - nginx
+    - python-dev
+  tags:
+    - setupdeps
+
+- name: setup nginx
+  template: src=nginx.content-curation.conf.j2 dest=/etc/nginx/sites-enabled/{{ content_curation_prefix }}
+  notify: restart nginx
+  sudo: yes
+  tags:
+    - setupnginx
+
+- name: install node deps
+  shell: npm install
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/
+  sudo: yes
+  sudo_user: www-data
+
+- name: install python deps
+  shell: pip install -r requirements.txt
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/
+  sudo: yes
+
+- name: run content curation migrations
+  shell: python manage.py migrate
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - setupcontentcuration
+
+- name: collect the assets
+  shell: python manage.py collectstatic --noinput && python manage.py collectstatic_js_reverse
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - buildassets
+    - setupcontentcuration
+
+- name: create the js/bundles folder
+  file: path=/var/www/{{ content_curation_prefix }}/contentcuration/static/js/bundles state=directory
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - buildassets
+    - setupcontentcuration
+
+- name: build the js bundles
+  shell: node build.js --staticfiles
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - buildassets
+    - setupcontentcuration
+
+- name: allow port 80 on our firewall
+  ufw: policy=allow to_port=80
+  sudo: yes
+  tags:
+    - setupcontentcuration
+
+- name: check if the app server pid file info
+  stat: path={{ content_curation_server_pid_file }}
+  register: pid_file
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - runserver
+
+- name: retrieve the app server pid file
+  fetch: src={{ content_curation_server_pid_file }} dest=/tmp/gunicorn.pid fail_on_missing=yes flat=yes
+  when: pid_file.stat.exists
+  tags:
+    - runserver
+
+- name: reload the app server when it is already running
+  shell: kill -s 1 {{ lookup('file', '/tmp/gunicorn.pid') }}
+  sudo: yes
+  sudo_user: www-data
+  when: pid_file.stat.exists
+  tags:
+    - runserver
+
+- name: run the server if it is not running
+  shell: gunicorn contentcuration.wsgi --workers 3 --daemon --reload --bind=unix:/var/www/{{ content_curation_prefix}}/gunicorn.sock --pid {{ content_curation_server_pid_file }}
+  args:
+    chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
+  sudo: yes
+  sudo_user: www-data
+  when: pid_file.stat.exists == False
+  tags:
+    - runserver
