@@ -58,6 +58,12 @@ admins:
   circleci:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXBLxKNjeAhPJDolqu/VJMJbOr12mBvBmXiygRvANSXBW+l2tbV9DqqksTO/qtgkrbgXTaJidcCGz8ifLuIy9tvJ4/UjRuomb/40SotsVxa0lt5ouI0yKASXNbF/5xS/mT1+3wSHODuFMLyAhtP+Xngr0D3XEB4okPb5FsDuw9OqFcezHNPahzlRuHEli6JrfVk1FIN4fpWKGeRxne4eS9grdLLbSqz4AbapB3vDRF1bBqMX31ylqeYXqlk6/9hhkVQ1/MUDaK8DOuGWI221N47DdsckuM2uK7ntemxFQyATb8d8S4W6DJSzBKJYM5JAtUyO4jQUhXuYMNXfVmOATj aron@learningequality.org
+  cyril:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCu2M9vk8a7bnViCQCPSJISejMBmhH4P7fuZMdixWEr+ZG+wMKkATYPH8Mbx/XhHYqB6c//lzvF7GPIYUSFtvCokRsYkkCHaXfO+6ayDDJftLL4dyJ50EY9ytmFjsyI1MTVujDydWaG+5QS5DvY9gwPXoTY1BZ2JhIUEAZn6wtePmpCrs7xtKPqqgv0budS08X7iqK/zsX8i08gcq4DRR1rfC48p/7Xr3ZNAOySr4QK6LGQMVxWM9ooBWKZ0zVKd5BWUGBhVUURkElCU7VPk5Dy3RXiPeHlz+/DwYKZBN9jl7XWACdMRa2os/Ps3Xzqy0aypi/oqBtL77DKnjbOOF7GSTsUlv8bi/YvK8FMKo6i3B2Uju7PZUApRPswD20a9d//DlXb4N5ZOOhBM+zPTYxbTiA43HqVlr4N+YeTtCokoEeD7DwZvU6F3hE9ygz/CUt7tugfgTCv010NY9na89CqoFgcDRFSGJcuAyG5VGk62rTJq0nsnOcM5nxl04paJ3IpRR1xUa2omn+hgw+DXaW3j9Okiq7YBJnbZtuCH9Vgi9jLuiYdpkLPKsj/9p4GUs4VJ2ZuNCCpyaCrSsX8dtlWlBlgVI0I2wmMv4LbVOrtOQnUBRzacGHgmTYaouWzlFDuH4nOjbdLyAQcBcGW2vKJE2KpY5qEDirIFWI3xTwU8Q== cpauya@gmail.com
+  benjamin:
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzvxtR0/WedVfalAgm+CV6X99o28aN/SYrTxSGWaTSP9ONwjXNl5J3EZFWLnCOGp4KACbxouuiKNYBI1K14hq/hmiMJDiT6eb+1cn6GGto5pJXDDPwuiEgItGvBXU8voq+BGQRxCFybtm+nyVwsdpCkGx/melLKYAv/21DHDFz0niNdEyw+J1N6T/5u5X6pJkRAueRnl+JeO27zJHFlSv1QqmFJyGSUqU3aMZ+x3BniqbF24CYmUKhaP/UI2dqeiG5Q3L3kNASJCmRBuozr+oRRtgY9zyow7PaPsidw5M1aVlS5W+GkJQSv1+qNrzJEet7n/OR20quf0XVuFNOyw58w== benjamin@botch
 
 former_admins:
   - videoserver
@@ -108,7 +114,8 @@ permissions:
     - mike
     - flebuildbox
     - circleci
-    - videoserver
+    - cyril
+    - benjamin
   videos:
     - jamalex
     - flebuildbox
@@ -117,3 +124,6 @@ permissions:
     - aron
     - haolan
     - akshay
+  demoserver:
+    - aron
+    - jamalex

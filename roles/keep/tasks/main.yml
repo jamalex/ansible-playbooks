@@ -270,21 +270,8 @@
   tags:
     - language_packs
 
-- name: Create cron script that will build language packs.
-  template: src=ka-lite-lang-pack-builder.sh.j2 dest={{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - language_packs
-
-- name: Make the language pack cron script executable.
-  action: file path={{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh mode=0775 owner=www-data group=www-data
-  sudo: yes
-  tags:
-    - language_packs
-
-- name: Create cron job to run language pack builder script.
-  cron: name="build language packs" minute="0" hour="23" job="{{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh" user=www-data
+- name: Make sure we delete the lang pack builder cron job
+  cron: name="build language packs" minute="0" hour="23" job="{{ ka_lite_central_path }}/../ka-lite-lang-pack-builder.sh" user=www-data state=absent
   sudo: yes
   sudo_user: www-data
   tags:
