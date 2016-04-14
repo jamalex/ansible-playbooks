@@ -103,6 +103,10 @@ permissions:
     - aron
     - richard
     - ruth
+  aflatoun:
+    - richard
+    - aron
+    - jamalex
   banner:
     - jamalex
     - aron
@@ -127,3 +131,7 @@ permissions:
   demoserver:
     - aron
     - jamalex
+  unicefdemo:
+    - jamalex
+    - aron
+    - richard

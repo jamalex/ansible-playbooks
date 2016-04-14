@@ -1,0 +1,12 @@
+---
+content_curation_prefix: content-curation
+content_curation_git_branch: master
+content_curation_port: 8008
+content_curation_server_pid_file: /tmp/content_curation_gunicorn.pid
+
+system_packages:
+  - nginx
+  - openssl
+
+python_packages:
+  - gunicorn
