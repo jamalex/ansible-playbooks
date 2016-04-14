@@ -131,3 +131,7 @@ permissions:
   demoserver:
     - aron
     - jamalex
+  unicefdemo:
+    - jamalex
+    - aron
+    - richard
