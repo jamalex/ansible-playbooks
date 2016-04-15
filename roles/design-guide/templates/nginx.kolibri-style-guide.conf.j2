@@ -1,0 +1,15 @@
+server {
+
+    listen {{ kolibri_style_guide_port }};
+
+    client_max_body_size 2G;
+
+    access_log /var/log/nginx-access.log;
+    error_log /var/log/nginx-error.log;
+
+    location / {
+        autoindex on;
+        root /var/www/{{ kolibri_style_guide_prefix }}/;
+    }
+
+}

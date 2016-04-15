@@ -1,0 +1,24 @@
+---
+
+- name: Create the /var/www directory and set it as belonging to the www-data user.
+  file: dest=/var/www owner=www-data state=directory
+  sudo: yes
+
+- name: clone the kolibri style guide repo
+  git: repo=https://github.com/learningequality/Kolibri_style_guide.git version=master dest=/var/www/{{ kolibri_style_guide_prefix }} update=yes
+  sudo: yes
+  sudo_user: www-data
+
+- name: setup nginx
+  template: src=nginx.kolibri-style-guide.conf.j2 dest=/etc/nginx/sites-enabled/{{ kolibri_style_guide_prefix }}
+  notify: restart nginx
+  sudo: yes
+  tags:
+    - setupnginx
+
+- name: remove default nginx config
+  file: dest=/etc/nginx/sites-enabled/default state=absent
+  notify: restart nginx
+  sudo: yes
+  tags:
+    - setupnginx

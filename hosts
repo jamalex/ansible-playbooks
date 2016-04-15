@@ -15,6 +15,7 @@ videos          ansible_ssh_host=videos.learningequality.org
 demoserver      ansible_ssh_host=192.237.170.139                    ufw_enabled=no
 benchmarking    ansible_ssh_host=benchmarks.learningequality.org
 aflatoun        ansible_ssh_host=198.61.166.139 ansible_ssh_port=22
+unicefdemo      ansible_ssh_host=192.237.179.50                     ufw_enabled=no
 
 [rackspace:vars]
 # these need to be the same (we need alternate_sshd_port for configuring SSHD)
