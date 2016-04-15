@@ -1,0 +1,7 @@
+---
+- hosts: unicefdemo
+  roles:
+    - common
+    - server
+    - design-guide
+    - content-curation

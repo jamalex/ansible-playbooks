@@ -1,0 +1,6 @@
+---
+kolibri_style_guide_prefix: kolibri_style_guide
+kolibri_style_guide_port: 9000
+
+system_packages:
+  - nginx
