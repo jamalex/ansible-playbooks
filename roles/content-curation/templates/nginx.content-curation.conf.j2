@@ -21,6 +21,11 @@ server {
         root /var/www/{{ content_curation_prefix }}/contentcuration/;
     }
 
+    location /media/ {
+        autoindex on;
+        root /var/www/{{ content_curation_prefix }}_media/;
+    }
+
     location / {
         # an HTTP header important enough to have its own Wikipedia entry:
         #   http://en.wikipedia.org/wiki/X-Forwarded-For
