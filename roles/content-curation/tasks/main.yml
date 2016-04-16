@@ -116,6 +116,30 @@
   tags:
     - setupcontentcuration
 
+- name: create the media file directory
+  file: path=/var/www/{{ content_curation_prefix }}_media/ state=directory
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - setupcontentcuration
+    - setupsettings
+
+- name: create the static file directory
+  file: path=/var/www/{{ content_curation_prefix }}_static/ state=directory
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - setupcontentcuration
+    - setupsettings
+
+- name: Copy production settings
+  template: src=production_settings.py.j2 dest=/var/www/{{ content_curation_prefix }}/contentcuration/contentcuration/production_settings.py
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - setupcontentcuration
+    - setupsettings
+
 - name: check if the app server pid file info
   stat: path={{ content_curation_server_pid_file }}
   register: pid_file
@@ -139,7 +163,7 @@
     - runserver
 
 - name: run the server if it is not running
-  shell: gunicorn contentcuration.wsgi --workers 3 --daemon --reload --bind=unix:/var/www/{{ content_curation_prefix}}/gunicorn.sock --pid {{ content_curation_server_pid_file }}
+  shell: gunicorn contentcuration.wsgi --workers 3 --daemon --reload --bind=unix:/var/www/{{ content_curation_prefix}}/gunicorn.sock --pid {{ content_curation_server_pid_file }} --env PYTHONPATH='.:contentcuration/' --env DJANGO_SETTINGS_MODULE=contentcuration.production_settings --log-file /tmp/content_curation.log --log-level debug
   args:
     chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
   sudo: yes
