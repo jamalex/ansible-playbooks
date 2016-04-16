@@ -52,8 +52,16 @@
     chdir: /var/www/{{ content_curation_prefix }}/
   sudo: yes
 
+- name: Copy production settings
+  template: src=production_settings.py.j2 dest=/var/www/{{ content_curation_prefix }}/contentcuration/contentcuration/production_settings.py
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - setupcontentcuration
+    - setupsettings
+
 - name: run content curation migrations
-  shell: python manage.py migrate
+  shell: DJANGO_SETTINGS_MODULE=contentcuration.production_settings python manage.py migrate
   args:
     chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
   sudo: yes
@@ -62,7 +70,7 @@
     - setupcontentcuration
 
 - name: collect the assets
-  shell: python manage.py collectstatic --noinput && python manage.py collectstatic_js_reverse
+  shell: DJANGO_SETTINGS_MODULE=contentcuration.production_settings python manage.py collectstatic --noinput && python manage.py collectstatic_js_reverse
   args:
     chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
   sudo: yes
@@ -72,7 +80,7 @@
     - setupcontentcuration
 
 - name: create a dummy superuser
-  shell: python manage.py createsuperuser --username=admin --email=admin@learningequality.org --noinput
+  shell: DJANGO_SETTINGS_MODULE=contentcuration.production_settings python manage.py createsuperuser --username=admin --email=admin@learningequality.org --noinput
   args:
     chdir: /var/www/{{ content_curation_prefix }}/contentcuration/
   sudo: yes
@@ -126,14 +134,6 @@
 
 - name: create the static file directory
   file: path=/var/www/{{ content_curation_prefix }}_static/ state=directory
-  sudo: yes
-  sudo_user: www-data
-  tags:
-    - setupcontentcuration
-    - setupsettings
-
-- name: Copy production settings
-  template: src=production_settings.py.j2 dest=/var/www/{{ content_curation_prefix }}/contentcuration/contentcuration/production_settings.py
   sudo: yes
   sudo_user: www-data
   tags:
