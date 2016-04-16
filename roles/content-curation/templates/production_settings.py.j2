@@ -3,22 +3,24 @@ from contentcuration.settings import *
 MEDIA_ROOT = "/var/www/{{ content_curation_prefix }}_media/"
 STATIC_ROOT = "/var/www/{{ content_curation_prefix }}_static/"
 
+MEDIA_URL = "/media/"
+CONTENT_COPY_DIR = MEDIA_ROOT
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        'console': {
+        'file': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-        },
-        'logfile': {
-            'level':'DEBUG',
-            'class':'logging.FileHandler',
-            'filename': "/tmp/django.log",
+            'class': 'logging.FileHandler',
+            'filename': '/tmp/django.log',
         },
     },
-    'root': {
-        'level': 'DEBUG',
-        'handlers': ['console', 'logfile']
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
     },
 }
