@@ -1,0 +1,49 @@
+---
+
+- name: Add pycurl which is needed by apt_repository
+  apt: name=python-pycurl state=present
+  sudo: yes
+  tags:
+    - upload_installers
+
+- name: Add the ka-lite PPA (for downloading the deb files)
+  apt_repository: repo='ppa:learningequality/ka-lite' state=present update_cache=yes
+  sudo: yes
+  tags:
+    - upload_installers
+
+- name: Make sure installer folders exist and www-data owns them
+  file: path={{ item }} owner=www-data recurse=yes state=directory
+  with_items:
+    - "{{ mac_installer_location }}"
+    - "{{ debian_installer_location }}"
+  sudo: yes
+
+
+  # TODO (aron): find a way to not hardcode the URL
+- name: Download the latest Mac installer
+  get_url:
+  args:
+    url: http://dungeon.learningequality.org/browse/KL-MT16-118/artifact/shared/KA-Lite-0.16-OSX-Installer/KA-Lite.pkg
+    dest: "{{ mac_installer_location }}/KA-Lite-{{ kalite_release_full_version }}.pkg"
+  sudo: yes
+  sudo_user: flebuildbox
+  tags:
+    - upload_installers
+    - upload_mac
+
+  # the shell command is magic, but basically the apt-get command extracts a URL that we can then use for wget
+  # why not apt-get download? Because we can't rename it easily.
+- name: Download the latest Debian installers
+  shell: wget $(apt-get install --reinstall --print-uris -qq {{ item }} | cut -d"'" -f2 | grep "{{ item }}_") -O {{ debian_installer_location }}/{{ item }}_{{ kalite_release_full_version }}.deb
+  args:
+    creates: "{{ debian_installer_location }}/{{ item }}_{{ kalite_release_full_version }}.deb"
+  with_items:
+    - ka-lite
+    - ka-lite-bundle
+    - ka-lite-raspberry-pi
+  sudo: yes
+  sudo_user: www-data
+  tags:
+    - upload_installers
+    - upload_deb

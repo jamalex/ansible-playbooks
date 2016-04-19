@@ -1,0 +1,13 @@
+---
+
+download_folder_location: /var/www/downloads
+
+kalite_release_major_version: 0
+kalite_release_minor_version: 16
+kalite_release_patch_version: 2
+kalite_release_short_version: "{{ kalite_release_major_version }}.{{ kalite_release_minor_version }}"
+kalite_release_full_version: "{{ kalite_release_short_version }}.{{ kalite_release_patch_version }}"
+
+installers_location: "{{ download_folder_location }}/ka-lite/{{ kalite_release_short_version }}/installers"
+mac_installer_location: "{{ installers_location }}/mac"
+debian_installer_location: "{{ installers_location }}/debian"
