@@ -16,18 +16,18 @@
 
 - name: Install common required system packages.
   apt: pkg={{ item }} state=installed update-cache=yes
-  with_items: common_system_packages
+  with_items: "{{ common_system_packages }}"
   sudo: yes
 
 - name: Install role-specific required system packages.
   apt: pkg={{ item }} state=installed update-cache=yes
-  with_items: system_packages
+  with_items: "{{ system_packages }}"
   when: system_packages is defined
   sudo: yes
 
 - name: Install common required Python packages.
   pip: name={{ item }}
-  with_items: common_python_packages
+  with_items: "{{ common_python_packages }}"
   sudo: yes
 
 - name: Install role-specific required Python packages.
@@ -91,21 +91,21 @@
 
 - name: Add accounts for admins and add them to the sudoers group.
   user: "name='{{ item }}' password='{{ password.stdout }}' groups='sudo' shell='/bin/bash' update_password='on_create'"
-  with_items: admins.keys()
+  with_items: "{{ admins.keys() }}"
   sudo: yes
   tags:
     - sshusers
 
 - name: Remove accounts for former admins.
   user: "name='{{ item }}' state=absent"
-  with_items: former_admins
+  with_items: "{{ former_admins }}"
   sudo: yes
   tags:
     - sshusers
 
 - name: Create the users' .ssh directories.
   file: "dest=/home/{{ item }}/.ssh owner={{ item }} state=directory"
-  with_items: admins.keys()
+  with_items: "{{ admins.keys() }}"
   sudo: yes
   tags:
     - sshusers
@@ -113,7 +113,7 @@
 - name: Add authorized_keys for admin SSH logins.
   template: "src=authorized_keys.j2 dest=/home/{{ item }}/.ssh/authorized_keys owner={{ item }}"
   when: item in authorized_users
-  with_items: admins.keys()
+  with_items: "{{ admins.keys() }}"
   sudo: yes
   notify:
     - restart ssh
@@ -121,11 +121,10 @@
     - sshusers
 
 - name: Remove authorized_keys for unauthorized admin SSH logins.
-  copy: "content='' dest=/home/{{ item }}/.ssh/authorized_keys"
+  copy: "content='' dest=/home/{{ item }}/.ssh/authorized_keys owner={{ item }}"
   when: item not in authorized_users
-  with_items: admins.keys()
+  with_items: "{{ admins.keys() }}"
   sudo: yes
-  sudo_user: "{{ item }}"
   notify:
     - restart ssh
   tags:
