@@ -72,9 +72,8 @@
     - update_fle_home
 
 - name: Put the local_settings.py file into the FLE Site project directory.
-  template: src=local_settings.py.j2 dest={{ fle_home_path }}/fle_site/local_settings.py
+  template: src=local_settings.py.j2 dest={{ fle_home_path }}/fle_site/local_settings.py owner=www-data
   sudo: yes
-  sudo_user: www-data
   notify: restart apache2
   tags:
     - update_fle_home

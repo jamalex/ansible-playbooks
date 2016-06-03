@@ -111,11 +111,10 @@
     - sshusers
 
 - name: Add authorized_keys for admin SSH logins.
-  template: "src=authorized_keys.j2 dest=/home/{{ item }}/.ssh/authorized_keys"
+  template: "src=authorized_keys.j2 dest=/home/{{ item }}/.ssh/authorized_keys owner={{ item }}"
   when: item in authorized_users
   with_items: admins.keys()
   sudo: yes
-  sudo_user: "{{ item }}"
   notify:
     - restart ssh
   tags:

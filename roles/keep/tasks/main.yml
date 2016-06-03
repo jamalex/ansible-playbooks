@@ -117,9 +117,8 @@
     - update_ka_lite_central
 
 - name: Put the local_settings.py file into the KA Lite project directory.
-  template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/centralserver/local_settings.py
+  template: src=local_settings.py.j2 dest={{ ka_lite_central_path }}/centralserver/local_settings.py owner=www-data
   sudo: yes
-  sudo_user: www-data
   notify: restart apache2
   tags:
     - update_ka_lite_central

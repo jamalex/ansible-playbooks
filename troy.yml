@@ -1,10 +1,10 @@
 ---
 - hosts: rackspace
   tasks:
-    ping: True
+    - ping: True
 - hosts: troy
   vars:
-    set_hosts_file: yes
+    - set_hosts_file: yes
   vars_files:
     - [roles/troy/vars/secrets.yml, roles/troy/vars/main.yml]
   roles:

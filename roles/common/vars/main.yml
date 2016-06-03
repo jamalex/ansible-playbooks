@@ -23,7 +23,7 @@ admins:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTJd5zZbDiCVEUxz+fbH8bBDPbO5D8wcuV5Q6s8MHw8mrRtC7Tm48Wv7ICBvsGrGbasfmL0tCpxCNBGVFror49js5uNxvpn6A3oH4VtW/f71J4CMu76zUWO1gbtgtCysv4qr+z2h3Jg0Wr5eRF8M7+kQaFIVEUO5fF0L/+SI/DQP7mvCqP5jZaKDg5UbZ5a++aVi85ZLzL3J+QX5TJinZ7bGbXMG+GMgw3vGb1VH87HQB+nycu8PypamYcmNONGeSqji6GrUB1u0MzBFo/jTEHUtjUSBTyJ7bHeKYXV7RYxY1NAp93tFvaDVc3NmzGeP3RDGZRI1htckpFCR2/+pFP aron@felicidad
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDn98qR7vl9XymPaTxAGyahR55TtwTzoCJa3PE3jc0W2nGaixo1WL5CHxnX3We4fLMOhxF8haWzSjWKdck1PBdpQ9RVEc6eN+OhgDPCiPO5Cp41z3JmO81uUFWErPSH5toNSM5N4EfWOFgKAxpAzYEGSRlcufHKcxFwE4EC1fIAIj8VYxoJaubiK9yY3WOBkS54xofqSGb3yUvUgGdzI22unXayeTe15Zmsamtb954kcxGl+flLTixL6K+biBBoEzKaOM3zijjPhK/KN9n346ouiiaw4bFgiMm08vHOLmkhb2XjpoyjyaQWivZ8e8ZnVhq9OKa/3I7u9nHpL7pbPIjD aron@contentment
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1SxHp5/jFhMVcf+5c5NnwjvjGA8tHjINLEh+yiuXYgiLFK8y9xMe7avyIQ7hDIdRxfGaCbllC25Yflzj3ydVQnkAFRMlu6ePgSYdmQsfYGSRf1gNROQVT4CUVwEQSDdBRniypmBIjVEwcc3zvJb00dJU09+hT6RNsVrO9h919EHX1Qa603QveEK6J9GRWwGiqhLAlXjPXtn+cLl+r2Off2meOMQbdE4JRdqz88KNo5NucZsKBTzCxQS7u0D7q5x8vegsTh/zaJPs7EZttPZqJvbn1xLqZOSBfB1mxA/pK+NqztG3RdkBWnPzoueDMaD79ZkJS3gS5ARN2YZ4OL8uN aron@ubuntu
-  jamalex:
+  jamalex: # jamie
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDvZbFyn5l3+JbD21ooVJ6pOoo7HaazEWiK3VAANgk0VaHz4K2PqPBOtFp5Geg4EixqHFF11Wa7jMTFw4svi6wAm3hLJeLi6Ghja//APRIHsKnVSR/2RPxoTlwrgmtZuZOr1xKdpALn7YulcItpCKvcFQWRg+J3ove1IJCxlFr/k7dDo2P8Ny18ULtLlaugyHQ3TE0kUP9W5hYkYFwMAr8Vvuuca7oXJXqXoISwkgRElGXPorMtWOmfyLWOV413kQvX21hz7sU6kyxStLxP9gZwwdZ9IjQ3tCucnAo5NLMYiOD99L3aevs59+3gihdIa9QDPp9b5lPICEC0tNruYX51 jamalex@ace
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgcmGfhjcENw4gUUD4Dhwyl0NmoQodtWSz1NB04P9ktXgXMljr8Hn8VQtZrG2Eu8HOdQI3p5Fd9cgRuD7W+07p/9sF1HnmAf+OJ5luCzmEzZpakXqOBULzyNuR4aPgX1z7HskDCETi3X9nY88R0PWP440MCfiffkM66tqV70PEOWw+87mR10SnsUdXYzitZ0pAt1JOTsZE+tgygV1yK4CTUf7r8HT/y+GNte0ixJ5MLvh8bXyBU2j9i6AAyNqG9IZOj5lCM0NbuTdjJz6rzGOIysvPqeoiTb8NbGi4PwcnPMznVhs7zOI+B8MGP1oMQPd5YLBDSbs2wyImuQ4D5WyD jamalex@fett
@@ -34,28 +34,10 @@ admins:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDZcBiLENmdTOjZtrJkPOKueyqir521+URrma244DNI93E7nPGUZCCWyc9PjjoS66wWIDyJt35BR47gyxg7yXvAjuDG1Fz9/q1/iYoVLvSyY3/rIzh4YLqKQw9c7LNQ9cz5bg780FnUKUOKUf6g94SBAKaWuy7K/AI8+R8puZR6+5rKFgEpQuh8VYs684H7i42vblfxWV8ncno4upy+4LkbuL4lt5eewL51sgk1KRRsAFahcdeYxZU2NCk12och7t7jYFoZ45HZtO7zhW3iHyzw2R84ohRFwel4uq4evaA720K2svNv+UTAMNLthfo40QhuJZTbIcDTqccH5OiKQdQJhWsk4ZbmAnncnnW4jpFhscbLZOq05gko5Eh49xQ1/rQVMimj2GNN3/VL1Ke/qZzdqDL3qB+7bNDvstylTtTxdPliowIJv+VuiiMTV7ATiZZ58Hzeu5ACSzBOBXoWiyjKiTpj7EBDgX/DmHB1jaEBhJQrSzGeGzdv7JC2sEvFT4UTpUE8Tw0j8oAgXpt7wVzpvtSENL1pWRTtSA5duIIvpUYFOWT9dF1SISVNpYRslshznQ9E9DMRYa6ds9PbWp5H+ARA8/0ArHViKeMvV0j4GSb6CwQZ/Km+oWNu6EW4DUVNwQl7nCKkCXEadRoBCn+5rK6vo/IuPp9gQ9ixz33EqQ== richard.tibbles@gmail.com
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/NIw+XcTs5ooMlo+fYOIzteQFH6EmCJ+4Losdplox6I1ph/57KYcbhYE8dWyb43/UfZmLxA1NXwidXDouZTKpcnbz6wn4uWM8kAk2pQ8EFPROlSlCuU0W2azzrci82J4gVj1++vCpHodVPqQ4zIJlvclpbD4Y0cy7z9HwqtF9uFGVwXAGsxqoCvBL0rV53fj+FSTBihHV1J/swsFSWsYUZLm3eqZg3pYggPhpTN3ndHOTBCciW4z21BFFD7J//P3ORu2rBsWRgUemg4n9k74VhfKNw1NEBnppTFDOTGZRIL20dHMq+YjkT5QEdkfsvJ/RxML1mz5Tazv1QStvQBfF richard.tibbles@gmail.com
-  mike:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDQ5HKDWXrXpmlzK6pKqP/u/5hcyEQ6vgpsnV2mneQnRCKKjeSVUx6KjVD4x8QlL1wK0VwgjxOVh7xHW5EhgV39iRa74qi9UCL44h7YRZoUL1OyPbj00A5tOUryZ4I8Mjha7r1A7Qx0fm7VvlLoPs2tGQJBNIIzk6ynpQB1y/vvlO9TsaoRftPLBZXcy9xvWqxpInOQ4OCa6Zn47lhHnEXu3qsF9XNQvqOfSqu4Cks9ukiDXuLObYcUAGnut46SsTR6WJTtm29zw6jrI94jDRXYr+BgdNkIl+8C/0G1t3tAAPoNlTmG88yXQ7RfpHCbV3Hn9wGHHUu6FWE4nRRFuFw== mike@laptop
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCtdDHlzHzw4mJLXrmzf8ivJijRBlB6MH/gRPDq6gsWf/3NpFtAaQqHn5It0bP1yax2UtLMnH2cydiL10/cCg84CwTPI6HC4o0kGvIUV80V5BP8v+bvKDRterQQrpSoJPZY5SwIgPNhk9WbKedCr0oDu+Y5Mnxe6592pbdiKPSdJvXO38v6vuqBQxGp6OFoCJnOYrqXpOzfMc/oTxkztNtq91gg7xN8kSMGOPk78vZW19OjyHQAirSPhXV4saw8EpM5hY+P7rpcQXMiEvsyw/AaT9O7b9iMu1u3M2wjZK+l+spQyZkZ07wV3wuM8hT8oz8Iop0GLJqCLUcupU8HJaz vagrant@testbox
-      - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAotUhoJn+/Va6tpIgyH7Xnt5O3MZOPw7ARvGdhGc6v2YTFWmhCcJ4NNQThMq14Tkdm2cgvBWSBHZOl1cIH3ZebtfFdUG/WxXmH7wvF00K5sGTwwZHUJbdukIY9e3ZpqMkkXwvU1oa8DoR6DpIvB8obVxTra3aqT/cGApsMd0YWATvIy2TdOSbTjdTb9t1m6K1yi3u6ePxT0PTWIeohNLq98Zc0WY43Z397HKf0e328SYnW3bsw/IdlIdhMaARu98zHJM9bRC9h5NLvNcKPpPNQt2FSLhLdGsWYaQhgv2WVLvbPADv+XcgCI5GzXVxEwthVER9wr8l1YJeq9Ndkv7LKQ== rsa-key-20150625
-  antriksh:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6MHlMn5ThW3w7E+iivq4LNi7vv38P/xd+apNly2uZBq3t5Kz5b8QxHvg0YtqeZCSFHxYAsa56QMighZ6WhcasMo3qZQc4u/9eaUCZJ1xcAG1K8uJM1UfYkYkK4tZj32wPEsVCEmGNx5c1vqE5rnAonG9EgyNiyvuJFJkyI3OoVlSHO8PGzr/4Mu6ojX1seS6wZIytkMtLupIcW+0eOzy5cFseqUUjD6+wR2oVhDMC9WpG2gitC4Q9YfFr5QCTpHbm6JSIRVLfrtEEaLctcHXXzg2fTXob75q8taGbiG08anq3ax4tfgm9SPoGW98Eov4kUrQqZf0jJHNzy8a8oEn Antriksh@Antrikshs-MacBook-Pro
-  haolan:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCw/iNXJpkRhMiKxXcd5gHs/8ZcIYjhUycY4GtyImz95X6AAQ3zkqeBpASQZ5JzW58b6EeJNfb2Elcoe6v8STOc7Fkg5AvQhaj2b+rRGClfDTvwuT4XdM9zWKj89Wwk++1YtVBX4gQLF2WYDXc7IkJlE/vUVMavBbPy07uBomUOdYT1+Geqc3hiospdJv0E73POxyTJ3GoPdx5CspK1SPEnJ8dP6zA84fYmtSynZFdoto7RTP3dNL7S9F+TuBCqAy+kMMkXlxFzSQXX1lesR8xlgR38EIbvyB982cCU2pTNN2OpGUta0rE+MXZS27z1gmp6Mvc3/4YSm+zc0CU/nsxf rophyll@rophyll-PC
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJekSF5s4BtwK3jOQdzt/NOW3nIYy9NQxBcjngWJHheP1lyfmQxdJGeRdJaXTuwXQBJifFhf/8NOOKfc6obU7EwN8RzSm0m9zYyFaAkdklwEteeG0b8aDcsCSnHFwxeHtEcRVjybA3475VJ6W8M914aw0e29EBWKfaoehh21H6BQj1m+GAV4ihRc3VdCNVMGQjOtUwZCxxHceNsytQT7cjYaItF1UGwMNKWnFjrcV6IkMSI2x/MBQlB077fmMfNZ0GCv3D2QmBsRgB1z5V+8Q7enOsHUlhVhdye2j1dr4gNpR6VG93uFEpZWcqw2thsbnB6dnJiwiSKgdPA4+O5yyj rophyll@rophyll-HP-Compaq-Pro-6300-SFF
-  akshay:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLI/nKbpLiBN0PwHFlbuKISbvudrR1dAKRLadJxu9YrPyTNzYhipFDQOi5Tn/Ns3w9Io8Wx6Rt76d0wsPIYIRDfwM4rKsQZiGsJtfcr4uKZ1qT082i2P66GTlGVnGn2beAuPiQZ4RilmXNXG9lJi7YLdNLAGjeRDQI/pBknSj0eL7F9k6BYXe8SyMhL98hkhTQyFUjZdvRTIfhkj0RxvJAe4MaTYfLcYSoorqTiYeFyPQyseU5q5wfj6LxP5NR8Hh1UHwCZjcTlvJ3VLDW11BrE4Fwrtu0amFfKVH38+4NP/5Y9at/yAYWe0Df1rKoR5L+plHsugEAx0k8YLvIBCt9 akshayaurora@yahoo.com
   flebuildbox:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6XyMVyVEQZCILul8pXb8UvQsDbbUGzMbX30MRrN0Xn09cbm40bKGxrAoW/OuyuWMUCJXiHOMD/24XhG+o4shN5pyxiOTIRGVWqOleKTS8+yf1OSYM6fBdla6B4gMzh6rJVAUdW3fnRaosRWX7gnH0OUpd5laHeKEE5ZHlnjwDDGFwMUb62tHv/x1NmlVytfCHlxN+OL80gFkKZDMgkQg85R0xlzXJze03JCsAFCw+lI5PJc7nANIKNq14lKl7SAXHnzLkGS9yescAzdkZGDTIg/wLBWe04CkwbWjfHOduj52WdAc9QAooMRPIeohFoTQKsTqk2PYS9CqidTmPJYE5 flebuildbox@flemacmini.local
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbWHf/jhe1ij+Dr7H+eIobYLl6peDT0C2KptGxm8Ix25WFNph1bYe+BPmZfPbfZG1HPFTYVBN92xs8GCq0dLyTfeMRvsCy9QSWaTQW6OjKCyF4y0AarbuQNj+UXlQgutamPjJ8/UXWX/4gXE04Q6U4kESOsH84lVsJ9IXamYjm+LYDIUdwUgNM1j9JnQUUkWHw9BXY+2CFpVg4a44VQUNrqEpsmZJ2IlnvkyAxFdKM7euKFZNIfuu9YSLMvjwvrLlVxNF07W0jqUVYFyUE4HIfuPGQ++G6nsuQEIkIkSbTNVjtSjK5hKWZ+VyOMhBmvCr7X8Pc30VbCxn6trlZDpNt jamalex@videos
-  ruth:
-    keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM2xuPHzxli5CrbrwyFI/XL41QZ5CYG15ejAo5JSJfrBtOeMOKs6urhvqYvQUoijTr/HyY0F6RKsCG5HJzs5wZmiowxm+DjnhjX6BpabMkQ8rB9gR+JmorzmTbLUskBGdqw54j0QT8HGTR6FXB12ozKeHh+jxQN9/T9ASYxK89MeUnZWNHiCJMb4CJkJHto1QaZLRmnuCmsjrFCr5sUbsUX0Y6LyXz2vQuvaKyxhCy3nGCEVMF64h9Rf9pau+IjxXvJaZhOxIilQ0XbSBzk+r9MAvrRT5GapNK7fy4H6Rr9uXz2SuRXLLth5Ek1MXK0502tjhTKrSf7WfS7oXaJGVn RUTHPARK@MIT.EDU
   circleci:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXBLxKNjeAhPJDolqu/VJMJbOr12mBvBmXiygRvANSXBW+l2tbV9DqqksTO/qtgkrbgXTaJidcCGz8ifLuIy9tvJ4/UjRuomb/40SotsVxa0lt5ouI0yKASXNbF/5xS/mT1+3wSHODuFMLyAhtP+Xngr0D3XEB4okPb5FsDuw9OqFcezHNPahzlRuHEli6JrfVk1FIN4fpWKGeRxne4eS9grdLLbSqz4AbapB3vDRF1bBqMX31ylqeYXqlk6/9hhkVQ1/MUDaK8DOuGWI221N47DdsckuM2uK7ntemxFQyATb8d8S4W6DJSzBKJYM5JAtUyO4jQUhXuYMNXfVmOATj aron@learningequality.org
@@ -65,9 +47,17 @@ admins:
   benjamin:
     keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzvxtR0/WedVfalAgm+CV6X99o28aN/SYrTxSGWaTSP9ONwjXNl5J3EZFWLnCOGp4KACbxouuiKNYBI1K14hq/hmiMJDiT6eb+1cn6GGto5pJXDDPwuiEgItGvBXU8voq+BGQRxCFybtm+nyVwsdpCkGx/melLKYAv/21DHDFz0niNdEyw+J1N6T/5u5X6pJkRAueRnl+JeO27zJHFlSv1QqmFJyGSUqU3aMZ+x3BniqbF24CYmUKhaP/UI2dqeiG5Q3L3kNASJCmRBuozr+oRRtgY9zyow7PaPsidw5M1aVlS5W+GkJQSv1+qNrzJEet7n/OR20quf0XVuFNOyw58w== benjamin@botch
+  tramanh: # elizabeth
+    keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCurVmjqj9it+i1l2vrzxy7EQgSgd92+n7nFM8Wtd/pySmbAb1qz/orBTAG2bAZsahTJHFujRvnsiY7YDzvx90S3Yf4UVw9d/M/FOVm7y/quZ0JywUPWA++Fcf6QFZ3VEZIpM4mr4QF6tObpJVXntkC/Fd5bHob5f3hZjinhqQO5mnpb+hFBhuG23oGn4Ms+PjqQ39CsjbEPUrukftmDTk3yMx8zshzZbPHauc3tEW5HllUz7UaMVsaxrdlNUmkuteYVUNBSwM5DdQhf+myBHlPOSKiCj8TL1DT1TbFXwCk5XlQnwb/RTkK6M7CmSCgy3QaRWYu0OPKUDk4/RmcG1YX tramanh@Tramanh
 
 former_admins:
   - videoserver
+  - ruth
+  - antriksh
+  - haolan
+  - mike
+  - akshay
 
 permissions:
   gatehouse:
@@ -84,26 +74,23 @@ permissions:
     - jamalex
     - aron
     - richard
-    - mike
   citadel:
     - jamalex
     - aron
+    - tramanh
   kitchen:
     - jamalex
     - aron
     - richard
-    - mike
-    - akshay
   globe:
     - jamalex
     - aron
     - richard
-    - mike
+    - tramanh
   troy:
     - jamalex
     - aron
     - richard
-    - ruth
   aflatoun:
     - richard
     - aron
@@ -112,11 +99,9 @@ permissions:
     - jamalex
     - aron
     - richard
-    - antriksh
   pantry:
     - jamalex
     - aron
-    - mike
     - flebuildbox
     - circleci
     - cyril
@@ -127,8 +112,6 @@ permissions:
     - aron
   benchmarking:
     - aron
-    - haolan
-    - akshay
   demoserver:
     - aron
     - jamalex

@@ -78,7 +78,7 @@
   sudo_user: www-data
 
 - name: Create cron job to delete the videos in the content directory frequently if desired.
-  cron: 'name="delete {{ ka_lite_distributed_prefix }} content" minute="0,20,40" job="rm /var/www/{{ ka_lite_distributed_prefix }}/content/*.*" user=www-data'
+  cron: 'name="delete {{ ka_lite_distributed_prefix }} content" minute="0,20,40" job="rm /var/www/{{ ka_lite_distributed_prefix }}/content/*.{mp4,png}" user=www-data'
   sudo: yes
   when: ka_lite_distributed_delete_content_frequently is defined and ka_lite_distributed_delete_content_frequently
   sudo_user: www-data
