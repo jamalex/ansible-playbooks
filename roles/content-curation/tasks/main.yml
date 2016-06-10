@@ -125,7 +125,7 @@
     - setupcontentcuration
 
 - name: create the media file directory
-  file: path=/var/www/{{ content_curation_prefix }}_media/ state=directory
+  file: path=/var/www/{{ content_curation_prefix }}_media/media/ state=directory
   sudo: yes
   sudo_user: www-data
   tags:

@@ -16,12 +16,12 @@ server {
     access_log /var/log/nginx-access.log;
     error_log /var/log/nginx-error.log;
 
-    location /static/ {
+    location /static {
         autoindex on;
         root /var/www/{{ content_curation_prefix }}/contentcuration/;
     }
 
-    location /media/ {
+    location /media {
         autoindex on;
         root /var/www/{{ content_curation_prefix }}_media/;
     }
