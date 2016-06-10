@@ -149,6 +149,24 @@
   tags:
     - update_fle_home
 
+- name: Update the INDIEGOGO_SUMMARY_URL in local_settings_secret.py if variable 'indiegogo_summary_url' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^INDIEGOGO_SUMMARY_URL =' line='INDIEGOGO_SUMMARY_URL = "{{ indiegogo_summary_url }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: indiegogo_summary_url is defined
+  notify: restart apache2
+  tags:
+    - update_fle_home
+
+- name: Update the INDIEGOGO_CONTRIBUTORS_URL in local_settings_secret.py if variable 'indiegogo_contributors_url' is defined.
+  lineinfile: dest={{ fle_home_path }}/fle_site/local_settings_secrets.py regexp='^INDIEGOGO_CONTRIBUTORS_URL =' line='INDIEGOGO_CONTRIBUTORS_URL = "{{ indiegogo_contributors_url }}"' owner="www-data"
+  sudo: yes
+  sudo_user: www-data
+  when: indiegogo_contributors_url is defined
+  notify: restart apache2
+  tags:
+    - update_fle_home
+
 - name: Create the data directory and set it as belonging to the www-data user.
   file: dest={{ fle_home_path }}/fle_site/data owner=www-data state=directory
   sudo: yes
@@ -259,6 +277,11 @@
 
 - name: Create cron job to download user resource files hourly.
   cron: 'name="download user resources" minute="0" job="{{ fle_home_path }}/manage.py download_user_resource_files" user=www-data'
+  sudo: yes
+  sudo_user: www-data
+
+- name: Create cron job to update Generosity data every minute.
+  cron: 'name="download generosity data" job="{{ fle_home_path }}/manage.py fetch_indiegogo_api_data" user=www-data'
   sudo: yes
   sudo_user: www-data
 
