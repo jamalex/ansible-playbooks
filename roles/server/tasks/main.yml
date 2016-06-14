@@ -25,6 +25,12 @@
   when: system_packages is defined
   sudo: yes
 
+- name: Uninstall role-specific system packages that are not desired.
+  apt: pkg={{ item }} state=absent
+  with_items: "{{ system_packages_to_remove }}"
+  when: system_packages_to_remove is defined
+  sudo: yes
+
 - name: Install common required Python packages.
   pip: name={{ item }}
   with_items: "{{ common_python_packages }}"

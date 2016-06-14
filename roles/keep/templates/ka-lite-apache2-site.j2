@@ -1,6 +1,7 @@
 Listen {{ keep_ka_lite_central_port }}
+Listen {{ keep_ka_lite_central_port_2 }}
 
-<VirtualHost *:{{ keep_ka_lite_central_port }}>
+<VirtualHost *:{{ keep_ka_lite_central_port }} *:{{ keep_ka_lite_central_port_2 }}>
 
     ServerName kalite.learningequality.org
 
