@@ -1,3 +1,7 @@
 ---
 ka_lite_distributed_path: /var/www/ka-lite
 ka_lite_distributed_channel: khan
+
+system_packages:
+  - git
+  - python-pip

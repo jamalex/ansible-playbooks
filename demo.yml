@@ -16,6 +16,7 @@
     - ka_lite_distributed_django_superuser_name: admin
     - ka_lite_distributed_django_superuser_email: aron@learningequality.org
     - ka_lite_distributed_django_superuser_pass: pass
+    - ka_lite_distributed_delete_content_frequently: yes
   roles:
     - common
     - server

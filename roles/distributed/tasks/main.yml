@@ -1,10 +1,4 @@
 ---
-- name: install essential packages
-  apt: name={{ item }}
-  sudo: yes
-  with_items:
-    - git
-    - python-pip
     
 - name: add the nodejs ppa
   shell: curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -28,21 +22,10 @@
   sudo_user: www-data
   register: ka_lite_distributed_clone
 
-- name: Put the local_settings.py file into the KA Lite project directory.
-  template: src=local_settings.py.j2 dest=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings.py
+- name: Put the custom settings file into the KA Lite data directory.
+  template: src=custom_settings.py.j2 dest=/var/www/.kalite/settings.py
   sudo: yes
   sudo_user: www-data
-
-- name: Ensure a local_settings_secret.py file exists.
-  sudo: yes
-  sudo_user: www-data
-  command: touch /var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py creates=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py
-
-# - name: Update the SECRET_KEY in local_settings_secret.py if variable 'ka_lite_distributed_secret_key' is defined.
-#   lineinfile: dest=/var/www/{{ ka_lite_distributed_prefix }}/kalite/local_settings_secrets.py regexp='^SECRET_KEY =' line='SECRET_KEY = "{{ ka_lite_distributed_secret_key }}"' owner="www-data"
-#   sudo: yes
-#   sudo_user: www-data
-#   when: ka_lite_distributed_secret_key is defined
 
 - name: install requirements
   pip: requirements=/var/www/{{ ka_lite_distributed_prefix }}/requirements_dev.txt
@@ -89,9 +72,15 @@
   changed_when: "'Migrating forwards' in setup.stdout"
   # failed_when: "setup.stderr"
 
-- name: Create cron job to download GitHub data.
+- name: Create cron job to start the demo server at boot.
   cron: 'name="run {{ ka_lite_distributed_prefix }} distributed server" special_time=reboot job="/var/www/{{ ka_lite_distributed_prefix }}/start.sh" user=www-data'
   sudo: yes
+  sudo_user: www-data
+
+- name: Create cron job to delete the videos in the content directory frequently if desired.
+  cron: 'name="delete {{ ka_lite_distributed_prefix }} content" minute="0,20,40" job="rm /var/www/{{ ka_lite_distributed_prefix }}/content/*.{mp4,png}" user=www-data'
+  sudo: yes
+  when: ka_lite_distributed_delete_content_frequently is defined and ka_lite_distributed_delete_content_frequently
   sudo_user: www-data
 
 - name: Run/restart the distributed server.

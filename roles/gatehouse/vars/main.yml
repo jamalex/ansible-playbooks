@@ -72,6 +72,10 @@ proxy_backends:
     host: 162.242.161.163
     port: 80
 
+  - name: support_discourse
+    host: support
+    port: 80
+
   - name: pantry_downloads
     host: pantry
     port: 80
@@ -168,6 +172,12 @@ virtual_hosts:
   - hosts:
       - forums.learningequality.org
     backend: scriptorium_forums
+    force_https: yes
+    allow_https: yes
+
+  - hosts:
+      - community.learningequality.org
+    backend: support_discourse
     force_https: yes
     allow_https: yes
 

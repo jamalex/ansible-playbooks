@@ -1,0 +1,9 @@
+---
+
+- hosts: support
+  vars_files:
+    - [roles/support/vars/secrets.yml, roles/support/vars/main.yml]
+  roles:
+    - common
+    - server
+    - support

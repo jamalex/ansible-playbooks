@@ -1,0 +1,6 @@
+system_packages:
+  - apt-transport-https
+  - ca-certificates
+
+discourse:
+  root_path: /var/www/discourse

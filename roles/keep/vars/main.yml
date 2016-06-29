@@ -16,6 +16,9 @@ python_packages:
   - requests
   - m2crypto
 
+system_packages_to_remove:
+  - nginx-common
+
 apache_request_timeout: 300
 
 apache_StartServers: 40
@@ -40,6 +43,7 @@ ufw_enabled: yes
 
 ufw_allowed_ports:
   - "{{ keep_ka_lite_central_port }}"
+  - "{{ keep_ka_lite_central_port_2 }}"
   - 8008
 
 ka_crowdin_project_id: "khanacademy"

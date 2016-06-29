@@ -1,0 +1,4 @@
+---
+- hosts: pantry
+  roles:
+    - upload_installers

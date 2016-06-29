@@ -1,13 +1,15 @@
 ---
 - hosts: rackspace
   tasks:
-    ping: True
+  - name: ping the servers
+    ping:
+
 - hosts: keep
   vars_files:
     - [roles/keep/vars/secrets.yml, roles/keep/vars/main.yml]
   vars:
     - set_hosts_file: yes
-    - ka_lite_central_db_name: "ka_lite_central"
+      ka_lite_central_db_name: "ka_lite_central"
   roles:
     - common
     - server
